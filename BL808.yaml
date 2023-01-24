@@ -3388,42 +3388,6 @@ peripherals:
           resetValue: 0
           fields: []
       - register:
-          name: core_cfg22
-          description: core_cfg22
-          addressOffset: 104
-          resetValue: 4294967295
-          fields:
-            - name: reg_e902_int_en0
-              bitRange: "[31:0]"
-              access: read-write
-      - register:
-          name: core_cfg23
-          description: core_cfg23
-          addressOffset: 108
-          resetValue: 4294967295
-          fields:
-            - name: reg_e902_int_en1
-              bitRange: "[31:0]"
-              access: read-write
-      - register:
-          name: core_cfg24
-          description: core_cfg24
-          addressOffset: 112
-          resetValue: 0
-          fields:
-            - name: sts_e902_int_bus_0
-              bitRange: "[31:0]"
-              access: read-only
-      - register:
-          name: core_cfg25
-          description: core_cfg25
-          addressOffset: 116
-          resetValue: 0
-          fields:
-            - name: sts_e902_int_bus_1
-              bitRange: "[31:0]"
-              access: read-only
-      - register:
           name: sys_cfg0
           description: sys_cfg0
           addressOffset: 144
@@ -3453,15 +3417,24 @@ peripherals:
             - name: reg_bclk_div
               bitRange: "[23:16]"
               access: read-write
-            - name: reserved_24_31
+            - name: reg_mcu_bclk_div
               bitRange: "[31:24]"
-              access: read-only
+              access: read-write
       - register:
           name: sys_cfg1
           description: sys_cfg1
           addressOffset: 148
           resetValue: 0
-          fields: []
+          fields:
+            - name: reserved_0_23
+              bitRange: "[23:0]"
+              access: read-only
+            - name: fclk_sw_state
+              bitRange: "[26:24]"
+              access: read-only
+            - name: reserved_27_31
+              bitRange: "[31:27]"
+              access: read-only
       - register:
           name: bus_cfg0
           description: bus_cfg0
@@ -3715,10 +3688,10 @@ peripherals:
               bitRange: "[7:4]"
               access: read-write
             - name: ir_rx_gpio_sel
-              bitRange: "[11:8]"
+              bitRange: "[9:8]"
               access: read-write
-            - name: reserved_12_30
-              bitRange: "[30:12]"
+            - name: reserved_10_30
+              bitRange: "[30:10]"
               access: read-only
             - name: pu_leddrv
               bitRange: "[31:31]"
@@ -3864,17 +3837,14 @@ peripherals:
             - name: reg_i2s_ref_clk_div
               bitRange: "[5:0]"
               access: read-write
-            - name: reg_i2s_di_ref_clk_sel
+            - name: reg_i2s_ref_clk_oe
               bitRange: "[6:6]"
               access: read-write
             - name: reg_i2s_ref_clk_en
               bitRange: "[7:7]"
               access: read-write
-            - name: reg_i2s_do_ref_clk_sel
-              bitRange: "[8:8]"
-              access: read-write
-            - name: reserved_9_31
-              bitRange: "[31:9]"
+            - name: reserved_8_31
+              bitRange: "[31:8]"
               access: read-only
       - register:
           name: spi_cfg0
@@ -3894,50 +3864,26 @@ peripherals:
             - name: spi_clk_sel
               bitRange: "[9:9]"
               access: read-write
-            - name: reserved_10_15
-              bitRange: "[15:10]"
-              access: read-only
-            - name: spi_swap_set
-              bitRange: "[19:16]"
-              access: read-write
-            - name: reserved_20_31
-              bitRange: "[31:20]"
+            - name: reserved_10_31
+              bitRange: "[31:10]"
               access: read-only
       - register:
           name: qdec_cfg0
           description: qdec_cfg0
           addressOffset: 448
-          resetValue: 0
+          resetValue: 31
           fields:
-            - name: reserved_0_31
-              bitRange: "[31:0]"
+            - name: qdec_clk_div
+              bitRange: "[4:0]"
+              access: read-write
+            - name: reserved_5_6
+              bitRange: "[6:5]"
               access: read-only
-      - register:
-          name: pwm_cfg0
-          description: pwm_cfg0
-          addressOffset: 464
-          resetValue: 0
-          fields:
-            - name: reg_pwm1_io_sel
-              bitRange: "[0:0]"
+            - name: qdec_clk_sel
+              bitRange: "[7:7]"
               access: read-write
-            - name: reg_pwm2_io_sel
-              bitRange: "[1:1]"
-              access: read-write
-            - name: reserved_2_31
-              bitRange: "[31:2]"
-              access: read-only
-      - register:
-          name: pdm_cfg0
-          description: pdm_cfg0
-          addressOffset: 480
-          resetValue: 0
-          fields:
-            - name: reg_pdm_io_sel
-              bitRange: "[0:0]"
-              access: read-write
-            - name: reserved_1_31
-              bitRange: "[31:1]"
+            - name: reserved_8_31
+              bitRange: "[31:8]"
               access: read-only
       - register:
           name: dig_clk_cfg0
@@ -3990,32 +3936,29 @@ peripherals:
           addressOffset: 596
           resetValue: 0
           fields:
-            - name: reg_mm_muxpll_160m_sel
+            - name: reg_muxpll_54m_sel
               bitRange: "[0:0]"
               access: read-write
-            - name: reg_mm_muxpll_240m_sel
+            - name: reg_muxpll_160m_sel
               bitRange: "[1:1]"
               access: read-write
-            - name: reg_mm_muxpll_320m_sel
+            - name: reg_muxpll_200m_sel
               bitRange: "[2:2]"
               access: read-write
-            - name: reserved_3_7
-              bitRange: "[7:3]"
-              access: read-only
-            - name: reg_top_muxpll_80m_sel
-              bitRange: "[9:8]"
+            - name: reg_muxpll_240m_sel
+              bitRange: "[3:3]"
               access: read-write
-            - name: reg_top_muxpll_160m_sel
-              bitRange: "[11:10]"
+            - name: reg_muxpll_320m_sel
+              bitRange: "[4:4]"
               access: read-write
-            - name: reserved_12_31
-              bitRange: "[31:12]"
+            - name: reserved_5_31
+              bitRange: "[31:5]"
               access: read-only
       - register:
           name: dig_clk_cfg2
           description: dig_clk_cfg2
           addressOffset: 600
-          resetValue: 3840
+          resetValue: 0
           fields:
             - name: chip_clk_out_0_sel
               bitRange: "[1:0]"
@@ -4029,41 +3972,8 @@ peripherals:
             - name: chip_clk_out_3_sel
               bitRange: "[7:6]"
               access: read-write
-            - name: chip_clk_out_0_en
-              bitRange: "[8:8]"
-              access: read-write
-            - name: chip_clk_out_1_en
-              bitRange: "[9:9]"
-              access: read-write
-            - name: chip_clk_out_2_en
-              bitRange: "[10:10]"
-              access: read-write
-            - name: chip_clk_out_3_en
-              bitRange: "[11:11]"
-              access: read-write
-            - name: gpio_tmr_clk_sel
-              bitRange: "[13:12]"
-              access: read-write
-            - name: gpio_mm_tmr_clk_sel
-              bitRange: "[15:14]"
-              access: read-write
-            - name: reserved_16_31
-              bitRange: "[31:16]"
-              access: read-only
-      - register:
-          name: dig_clk_cfg3
-          description: dig_clk_cfg3
-          addressOffset: 604
-          resetValue: 0
-          fields:
-            - name: dsi_txclkesc_sel
-              bitRange: "[0:0]"
-              access: read-write
-            - name: csi_txclkesc_sel
-              bitRange: "[1:1]"
-              access: read-write
-            - name: reserved_2_31
-              bitRange: "[31:2]"
+            - name: reserved_8_31
+              bitRange: "[31:8]"
               access: read-only
       - register:
           name: rf_cfg0
@@ -4146,11 +4056,254 @@ peripherals:
           addressOffset: 768
           resetValue: 0
           fields:
-            - name: mbist_mode
+            - name: irom_mbist_mode
               bitRange: "[0:0]"
               access: read-write
-            - name: reserved_1_31
-              bitRange: "[31:1]"
+            - name: hsram_mbist_mode
+              bitRange: "[1:1]"
+              access: read-write
+            - name: e906_cpu0_dcache_mbist_mode
+              bitRange: "[2:2]"
+              access: read-write
+            - name: e906_cpu0_icache_mbist_mode
+              bitRange: "[3:3]"
+              access: read-write
+            - name: e906_cpu1_dcache_mbist_mode
+              bitRange: "[4:4]"
+              access: read-write
+            - name: e906_cpu1_icache_mbist_mode
+              bitRange: "[5:5]"
+              access: read-write
+            - name: ocram_mbist_mode
+              bitRange: "[6:6]"
+              access: read-write
+            - name: wifi_mbist_mode
+              bitRange: "[7:7]"
+              access: read-write
+            - name: pico_l1c_mbist_mode
+              bitRange: "[8:8]"
+              access: read-write
+            - name: emi_mbist_mode
+              bitRange: "[9:9]"
+              access: read-write
+            - name: l2_sram0_mbist_mode
+              bitRange: "[10:10]"
+              access: read-write
+            - name: l2_sram1_mbist_mode
+              bitRange: "[11:11]"
+              access: read-write
+            - name: l2_bram_mbist_mode
+              bitRange: "[12:12]"
+              access: read-write
+            - name: c906_cpu0_dcache_mbist_mode
+              bitRange: "[13:13]"
+              access: read-write
+            - name: c906_cpu0_icache_mbist_mode
+              bitRange: "[14:14]"
+              access: read-write
+            - name: c906_cpu1_dcache_mbist_mode
+              bitRange: "[15:15]"
+              access: read-write
+            - name: c906_cpu1_icache_mbist_mode
+              bitRange: "[16:16]"
+              access: read-write
+            - name: blai_mbist_mode
+              bitRange: "[17:17]"
+              access: read-write
+            - name: mjpeg_mbist_mode
+              bitRange: "[18:18]"
+              access: read-write
+            - name: dvp2axi_mbist_mode
+              bitRange: "[19:19]"
+              access: read-write
+            - name: scalerA_mbist_mode
+              bitRange: "[20:20]"
+              access: read-write
+            - name: scalerB_mbist_mode
+              bitRange: "[21:21]"
+              access: read-write
+            - name: pico_rom_mbist_mode
+              bitRange: "[22:22]"
+              access: read-write
+            - name: l2_sram2_mbist_mode
+              bitRange: "[23:23]"
+              access: read-write
+            - name: l2_bram1_mbist_mode
+              bitRange: "[24:24]"
+              access: read-write
+            - name: reserved_25_30
+              bitRange: "[30:25]"
+              access: read-only
+            - name: reg_mbist_rst_n
+              bitRange: "[31:31]"
+              access: read-write
+      - register:
+          name: mbist_cfg2
+          description: mbist_cfg2
+          addressOffset: 776
+          resetValue: 0
+          fields:
+            - name: irom_mbist_done
+              bitRange: "[0:0]"
+              access: read-only
+            - name: hsram_mbist_done
+              bitRange: "[1:1]"
+              access: read-only
+            - name: e906_cpu0_dcache_mbist_done
+              bitRange: "[2:2]"
+              access: read-only
+            - name: e906_cpu0_icache_mbist_done
+              bitRange: "[3:3]"
+              access: read-only
+            - name: e906_cpu1_dcache_mbist_done
+              bitRange: "[4:4]"
+              access: read-only
+            - name: e906_cpu1_icache_mbist_done
+              bitRange: "[5:5]"
+              access: read-only
+            - name: ocram_mbist_done
+              bitRange: "[6:6]"
+              access: read-only
+            - name: wifi_mbist_done
+              bitRange: "[7:7]"
+              access: read-only
+            - name: pico_l1c_mbist_done
+              bitRange: "[8:8]"
+              access: read-only
+            - name: emi_mbist_done
+              bitRange: "[9:9]"
+              access: read-only
+            - name: l2_sram0_mbist_done
+              bitRange: "[10:10]"
+              access: read-only
+            - name: l2_sram1_mbist_done
+              bitRange: "[11:11]"
+              access: read-only
+            - name: l2_bram_mbist_done
+              bitRange: "[12:12]"
+              access: read-only
+            - name: c906_cpu0_dcache_mbist_done
+              bitRange: "[13:13]"
+              access: read-only
+            - name: c906_cpu0_icache_mbist_done
+              bitRange: "[14:14]"
+              access: read-only
+            - name: c906_cpu1_dcache_mbist_done
+              bitRange: "[15:15]"
+              access: read-only
+            - name: c906_cpu1_icache_mbist_done
+              bitRange: "[16:16]"
+              access: read-only
+            - name: blai_mbist_done
+              bitRange: "[17:17]"
+              access: read-only
+            - name: mjpeg_mbist_done
+              bitRange: "[18:18]"
+              access: read-only
+            - name: dvp2axi_mbist_done
+              bitRange: "[19:19]"
+              access: read-only
+            - name: scalerA_mbist_done
+              bitRange: "[20:20]"
+              access: read-only
+            - name: scalerB_mbist_done
+              bitRange: "[21:21]"
+              access: read-only
+            - name: pico_rom_mbist_done
+              bitRange: "[22:22]"
+              access: read-only
+            - name: l2_sram2_mbist_done
+              bitRange: "[23:23]"
+              access: read-only
+            - name: l2_bram1_mbist_done
+              bitRange: "[24:24]"
+              access: read-only
+            - name: reserved_25_31
+              bitRange: "[31:25]"
+              access: read-only
+      - register:
+          name: mbist_cfg4
+          description: mbist_cfg4
+          addressOffset: 784
+          resetValue: 0
+          fields:
+            - name: irom_mbist_fail
+              bitRange: "[0:0]"
+              access: read-only
+            - name: hsram_mbist_fail
+              bitRange: "[1:1]"
+              access: read-only
+            - name: e906_cpu0_dcache_mbist_fail
+              bitRange: "[2:2]"
+              access: read-only
+            - name: e906_cpu0_icache_mbist_fail
+              bitRange: "[3:3]"
+              access: read-only
+            - name: e906_cpu1_dcache_mbist_fail
+              bitRange: "[4:4]"
+              access: read-only
+            - name: e906_cpu1_icache_mbist_fail
+              bitRange: "[5:5]"
+              access: read-only
+            - name: ocram_mbist_fail
+              bitRange: "[6:6]"
+              access: read-only
+            - name: wifi_mbist_fail
+              bitRange: "[7:7]"
+              access: read-only
+            - name: pico_l1c_mbist_fail
+              bitRange: "[8:8]"
+              access: read-only
+            - name: emi_mbist_fail
+              bitRange: "[9:9]"
+              access: read-only
+            - name: l2_sram0_mbist_fail
+              bitRange: "[10:10]"
+              access: read-only
+            - name: l2_sram1_mbist_fail
+              bitRange: "[11:11]"
+              access: read-only
+            - name: l2_bram_mbist_fail
+              bitRange: "[12:12]"
+              access: read-only
+            - name: c906_cpu0_dcache_mbist_fail
+              bitRange: "[13:13]"
+              access: read-only
+            - name: c906_cpu0_icache_mbist_fail
+              bitRange: "[14:14]"
+              access: read-only
+            - name: c906_cpu1_dcache_mbist_fail
+              bitRange: "[15:15]"
+              access: read-only
+            - name: c906_cpu1_icache_mbist_fail
+              bitRange: "[16:16]"
+              access: read-only
+            - name: blai_mbist_fail
+              bitRange: "[17:17]"
+              access: read-only
+            - name: mjpeg_mbist_fail
+              bitRange: "[18:18]"
+              access: read-only
+            - name: dvp2axi_mbist_fail
+              bitRange: "[19:19]"
+              access: read-only
+            - name: scalerA_mbist_fail
+              bitRange: "[20:20]"
+              access: read-only
+            - name: scalerB_mbist_fail
+              bitRange: "[21:21]"
+              access: read-only
+            - name: pico_rom_mbist_fail
+              bitRange: "[22:22]"
+              access: read-only
+            - name: l2_sram2_mbist_fail
+              bitRange: "[23:23]"
+              access: read-only
+            - name: l2_bram1_mbist_fail
+              bitRange: "[24:24]"
+              access: read-only
+            - name: reserved_25_31
+              bitRange: "[31:25]"
               access: read-only
       - register:
           name: bmx_cfg0
@@ -4167,9 +4320,9 @@ peripherals:
             - name: reg_bmx_timeout_clr
               bitRange: "[6:6]"
               access: read-write
-            - name: reg_h_wthre_hw2ext
+            - name: reserved_7_8
               bitRange: "[8:7]"
-              access: read-write
+              access: read-only
             - name: bmx_busy_option_dis
               bitRange: "[9:9]"
               access: read-write
@@ -4191,14 +4344,29 @@ peripherals:
           addressOffset: 804
           resetValue: 0
           fields:
-            - name: reg_bmx_berr_int_en
+            - name: reg_bmx_dec_err_clr
               bitRange: "[0:0]"
               access: read-write
-            - name: reg_mcu_berr_int_en
+            - name: reg_bmx_dec_err_last
               bitRange: "[1:1]"
               access: read-write
-            - name: reserved_2_15
-              bitRange: "[15:2]"
+            - name: reserved_2_3
+              bitRange: "[3:2]"
+              access: read-only
+            - name: sts_bmx_dec_err_int
+              bitRange: "[4:4]"
+              access: read-only
+            - name: reserved_5
+              bitRange: "[5:5]"
+              access: read-only
+            - name: sts_bmx_dec_err_write
+              bitRange: "[6:6]"
+              access: read-only
+            - name: sts_bmx_dec_err_src
+              bitRange: "[10:7]"
+              access: read-only
+            - name: reserved_11_15
+              bitRange: "[15:11]"
               access: read-only
             - name: reg_bmx_qos_cpu
               bitRange: "[16:16]"
@@ -4243,19 +4411,10 @@ peripherals:
           name: bmx_cfg2
           description: bmx_cfg2
           addressOffset: 808
-          resetValue: 81919
+          resetValue: 0
           fields:
-            - name: reg_bmx_berr_en
-              bitRange: "[13:0]"
-              access: read-write
-            - name: reserved_14_15
-              bitRange: "[15:14]"
-              access: read-only
-            - name: reg_mcu_berr_en
-              bitRange: "[16:16]"
-              access: read-write
-            - name: reserved_17_31
-              bitRange: "[31:17]"
+            - name: sts_bmx_dec_err_addr
+              bitRange: "[31:0]"
               access: read-only
       - register:
           name: bmx_cfg3
@@ -4263,96 +4422,18 @@ peripherals:
           addressOffset: 812
           resetValue: 0
           fields:
-            - name: reg_bmx_berr_clr
-              bitRange: "[0:0]"
-              access: read-write
-            - name: reg_bmx_berr_last
-              bitRange: "[1:1]"
-              access: read-write
-            - name: reserved_2_7
-              bitRange: "[7:2]"
-              access: read-only
-            - name: reg_mcu_berr_clr
-              bitRange: "[8:8]"
-              access: read-write
-            - name: reg_mcu_berr_last
-              bitRange: "[9:9]"
-              access: read-write
-            - name: reserved_10_15
-              bitRange: "[15:10]"
-              access: read-only
-            - name: sts_bmx_berr
-              bitRange: "[16:16]"
-              access: read-only
-            - name: sts_mcu_berr
-              bitRange: "[17:17]"
-              access: read-only
-            - name: reserved_18_23
-              bitRange: "[23:18]"
-              access: read-only
-            - name: sts_bmx_berr_write
-              bitRange: "[24:24]"
-              access: read-only
-            - name: sts_mcu_berr_write
-              bitRange: "[25:25]"
-              access: read-only
-            - name: reserved_26_31
-              bitRange: "[31:26]"
-              access: read-only
-      - register:
-          name: bmx_cfg4
-          description: bmx_cfg4
-          addressOffset: 816
-          resetValue: 0
-          fields:
-            - name: sts_bmx_berr_src
-              bitRange: "[13:0]"
-              access: read-only
-            - name: reserved_14_15
-              bitRange: "[15:14]"
-              access: read-only
-            - name: sts_mcu_berr_src
-              bitRange: "[16:16]"
-              access: read-only
-            - name: reserved_17_23
-              bitRange: "[23:17]"
-              access: read-only
-            - name: sts_mcu_berr_id
-              bitRange: "[31:24]"
-              access: read-only
-      - register:
-          name: bmx_cfg5
-          description: bmx_cfg5
-          addressOffset: 820
-          resetValue: 0
-          fields:
-            - name: sts_bmx_berr_addr
-              bitRange: "[31:0]"
-              access: read-only
-      - register:
-          name: bmx_cfg6
-          description: bmx_cfg6
-          addressOffset: 824
-          resetValue: 0
-          fields:
-            - name: sts_mcu_berr_addr
+            - name: bmx_dbg_out
               bitRange: "[31:0]"
               access: read-only
       - register:
           name: audio_cfg0
           description: audio_cfg0
           addressOffset: 832
-          resetValue: 2156102531
+          resetValue: 2155970816
           fields:
-            - name: reg_audio_pdm_clk_div
-              bitRange: "[5:0]"
-              access: read-write
-            - name: reserved_6
-              bitRange: "[6:6]"
+            - name: reserved_0_7
+              bitRange: "[7:0]"
               access: read-only
-            - name: reg_audio_pdm_clk_en
-              bitRange: "[7:7]"
-              access: read-write
             - name: reg_audio_adc_clk_div
               bitRange: "[13:8]"
               access: read-write
@@ -4377,21 +4458,6 @@ peripherals:
             - name: reg_audio_auto_div_en
               bitRange: "[31:31]"
               access: read-write
-      - register:
-          name: audio_cfg1
-          description: audio_cfg1
-          addressOffset: 836
-          resetValue: 1120
-          fields:
-            - name: reg_padc_clk_div
-              bitRange: "[9:0]"
-              access: read-write
-            - name: reg_padc_clk_en
-              bitRange: "[10:10]"
-              access: read-write
-            - name: reserved_11_31
-              bitRange: "[31:11]"
-              access: read-only
       - register:
           name: eth_cfg0
           description: eth_cfg0
@@ -4420,12 +4486,192 @@ peripherals:
               bitRange: "[31:11]"
               access: read-only
       - register:
+          name: wifi_cfg0
+          description: wifi_cfg0
+          addressOffset: 944
+          resetValue: 1
+          fields:
+            - name: wifi_mac_core_div
+              bitRange: "[3:0]"
+              access: read-write
+            - name: wifi_mac_wt_div
+              bitRange: "[7:4]"
+              access: read-write
+            - name: reserved_8_31
+              bitRange: "[31:8]"
+              access: read-only
+      - register:
+          name: m154_cfg0
+          description: m154_cfg0
+          addressOffset: 976
+          resetValue: 33554432
+          fields:
+            - name: reserved_0_24
+              bitRange: "[24:0]"
+              access: read-only
+            - name: m1542_zbEn
+              bitRange: "[25:25]"
+              access: read-write
+            - name: reserved_26_31
+              bitRange: "[31:26]"
+              access: read-only
+      - register:
+          name: bz_cfg0
+          description: bz_cfg0
+          addressOffset: 992
+          resetValue: 118489088
+          fields:
+            - name: reserved_0_15
+              bitRange: "[15:0]"
+              access: read-only
+            - name: ble_clk_sel
+              bitRange: "[21:16]"
+              access: read-write
+            - name: reserved_22_23
+              bitRange: "[23:22]"
+              access: read-only
+            - name: ble_en
+              bitRange: "[24:24]"
+              access: read-write
+            - name: m154_zbEn
+              bitRange: "[25:25]"
+              access: read-write
+            - name: bz_ant2_en
+              bitRange: "[26:26]"
+              access: read-write
+            - name: reserved_27_31
+              bitRange: "[31:27]"
+              access: read-only
+      - register:
+          name: bz_cfg1
+          description: bz_cfg1
+          addressOffset: 996
+          resetValue: 0
+          fields:
+            - name: coex_bt_channel
+              bitRange: "[6:0]"
+              access: read-write
+            - name: coex_bt_pti
+              bitRange: "[10:7]"
+              access: read-write
+            - name: coex_bt_bw
+              bitRange: "[11:11]"
+              access: read-write
+            - name: en_gpio_bt_coex
+              bitRange: "[12:12]"
+              access: read-write
+            - name: reserved_13_31
+              bitRange: "[31:13]"
+              access: read-only
+      - register:
+          name: bz_cfg2
+          description: bz_cfg2
+          addressOffset: 1000
+          resetValue: 2147749632
+          fields:
+            - name: coex_en
+              bitRange: "[0:0]"
+              access: read-write
+            - name: wlan_en
+              bitRange: "[1:1]"
+              access: read-write
+            - name: ble_rx_ignore
+              bitRange: "[2:2]"
+              access: read-write
+            - name: m154_rx_ignore
+              bitRange: "[3:3]"
+              access: read-write
+            - name: bz_pri_thr
+              bitRange: "[7:4]"
+              access: read-write
+            - name: bz_pri_en
+              bitRange: "[8:8]"
+              access: read-write
+            - name: bz_pri_pol
+              bitRange: "[9:9]"
+              access: read-write
+            - name: bz_active_pol
+              bitRange: "[10:10]"
+              access: read-write
+            - name: bz_abort_pol
+              bitRange: "[11:11]"
+              access: read-write
+            - name: coex_pri
+              bitRange: "[12:12]"
+              access: read-write
+            - name: force_m154_win
+              bitRange: "[13:13]"
+              access: read-write
+            - name: force_ble_win
+              bitRange: "[14:14]"
+              access: read-write
+            - name: coex_option
+              bitRange: "[15:15]"
+              access: read-write
+            - name: coex_force_ch
+              bitRange: "[22:16]"
+              access: read-write
+            - name: reserved_23
+              bitRange: "[23:23]"
+              access: read-only
+            - name: m154_rx_abort_dis
+              bitRange: "[24:24]"
+              access: read-write
+            - name: m154_tx_abort_dis
+              bitRange: "[25:25]"
+              access: read-write
+            - name: ble_rx_abort_dis
+              bitRange: "[26:26]"
+              access: read-write
+            - name: ble_tx_abort_dis
+              bitRange: "[27:27]"
+              access: read-write
+            - name: coex_arb
+              bitRange: "[31:28]"
+              access: read-only
+      - register:
+          name: bz_cfg3
+          description: bz_cfg3
+          addressOffset: 1004
+          resetValue: 0
+          fields:
+            - name: coex2_en
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reserved_1
+              bitRange: "[1:1]"
+              access: read-only
+            - name: ble2_rx_ignore
+              bitRange: "[2:2]"
+              access: read-write
+            - name: m1542_rx_ignore
+              bitRange: "[3:3]"
+              access: read-write
+            - name: reserved_4_12
+              bitRange: "[12:4]"
+              access: read-only
+            - name: force_m1542_win
+              bitRange: "[13:13]"
+              access: read-write
+            - name: reserved_14_23
+              bitRange: "[23:14]"
+              access: read-only
+            - name: m1542_rx_abort_dis
+              bitRange: "[24:24]"
+              access: read-write
+            - name: m1542_tx_abort_dis
+              bitRange: "[25:25]"
+              access: read-write
+            - name: reserved_26_31
+              bitRange: "[31:26]"
+              access: read-only
+      - register:
           name: cam_cfg0
           description: cam_cfg0
           addressOffset: 1056
           resetValue: 0
           fields:
-            - name: reserved_0_26
+            - name: reserved_0_27
               bitRange: "[26:0]"
               access: read-only
             - name: reg_cam_ref_clk_en
@@ -4459,6 +4705,144 @@ peripherals:
               bitRange: "[31:14]"
               access: read-only
       - register:
+          name: usb_cfg0
+          description: usb_cfg0
+          addressOffset: 1104
+          resetValue: 256
+          fields:
+            - name: reserved_0_7
+              bitRange: "[7:0]"
+              access: read-only
+            - name: usb_clk_en
+              bitRange: "[8:8]"
+              access: read-write
+            - name: reserved_9_31
+              bitRange: "[31:9]"
+              access: read-only
+      - register:
+          name: usb_cfg1
+          description: usb_cfg1
+          addressOffset: 1108
+          resetValue: 2122547
+          fields:
+            - name: usb_ldo_vfb
+              bitRange: "[2:0]"
+              access: read-write
+            - name: pu_usb_ldo
+              bitRange: "[3:3]"
+              access: read-write
+            - name: usb_rout_nmos
+              bitRange: "[6:4]"
+              access: read-write
+            - name: reserved_7
+              bitRange: "[7:7]"
+              access: read-only
+            - name: usb_rout_pmos
+              bitRange: "[10:8]"
+              access: read-write
+            - name: reserved_11
+              bitRange: "[11:11]"
+              access: read-only
+            - name: usb_oeb_sel
+              bitRange: "[12:12]"
+              access: read-write
+            - name: usb_oeb_reg
+              bitRange: "[13:13]"
+              access: read-write
+            - name: usb_oeb
+              bitRange: "[14:14]"
+              access: read-only
+            - name: reserved_15
+              bitRange: "[15:15]"
+              access: read-only
+            - name: usb_data_convert
+              bitRange: "[16:16]"
+              access: read-write
+            - name: reserved_17_19
+              bitRange: "[19:17]"
+              access: read-only
+            - name: usb_enum
+              bitRange: "[20:20]"
+              access: read-write
+            - name: usb_spd
+              bitRange: "[21:21]"
+              access: read-write
+            - name: usb_sus
+              bitRange: "[22:22]"
+              access: read-write
+            - name: pu_usb
+              bitRange: "[23:23]"
+              access: read-write
+            - name: usb_bd
+              bitRange: "[24:24]"
+              access: read-only
+            - name: usb_vim
+              bitRange: "[25:25]"
+              access: read-only
+            - name: usb_vip
+              bitRange: "[26:26]"
+              access: read-only
+            - name: usb_rcv
+              bitRange: "[27:27]"
+              access: read-only
+            - name: reserved_28_31
+              bitRange: "[31:28]"
+              access: read-only
+      - register:
+          name: usb_cfg2
+          description: usb_cfg2
+          addressOffset: 1112
+          resetValue: 1128474773
+          fields:
+            - name: usb_v_hys_m
+              bitRange: "[1:0]"
+              access: read-write
+            - name: usb_v_hys_p
+              bitRange: "[3:2]"
+              access: read-write
+            - name: usb_bd_vth
+              bitRange: "[6:4]"
+              access: read-write
+            - name: reg_usb_use_xcvr
+              bitRange: "[7:7]"
+              access: read-write
+            - name: usb_str_drv
+              bitRange: "[10:8]"
+              access: read-write
+            - name: reg_usb_use_ctrl
+              bitRange: "[11:11]"
+              access: read-write
+            - name: usb_res_pullup_tune
+              bitRange: "[14:12]"
+              access: read-write
+            - name: reserved_15
+              bitRange: "[15:15]"
+              access: read-only
+            - name: usb_slewrate_m_fall
+              bitRange: "[18:16]"
+              access: read-write
+            - name: reserved_19
+              bitRange: "[19:19]"
+              access: read-only
+            - name: usb_slewrate_m_rise
+              bitRange: "[22:20]"
+              access: read-write
+            - name: reserved_23
+              bitRange: "[23:23]"
+              access: read-only
+            - name: usb_slewrate_p_fall
+              bitRange: "[26:24]"
+              access: read-write
+            - name: reserved_27
+              bitRange: "[27:27]"
+              access: read-only
+            - name: usb_slewrate_p_rise
+              bitRange: "[30:28]"
+              access: read-write
+            - name: reserved_31
+              bitRange: "[31:31]"
+              access: read-only
+      - register:
           name: tzc_cfg0
           description: tzc_cfg0
           addressOffset: 1168
@@ -4479,16 +4863,10 @@ peripherals:
             - name: tzc_glb_cpu2_reset_lock
               bitRange: "[15:15]"
               access: read-only
-            - name: reserved_16_20
-              bitRange: "[20:16]"
+            - name: reserved_16_22
+              bitRange: "[22:16]"
               access: read-only
-            - name: tzc_glb_pwr_lock
-              bitRange: "[21:21]"
-              access: read-only
-            - name: tzc_glb_int_lock
-              bitRange: "[22:22]"
-              access: read-only
-            - name: reserved_23
+            - name: tzc_glb_ethpll_lock
               bitRange: "[23:23]"
               access: read-only
             - name: tzc_glb_cpupll_lock
@@ -4524,14 +4902,14 @@ peripherals:
             - name: reg_bd_en
               bitRange: "[0:0]"
               access: read-write
-            - name: reserved_1
+            - name: reg_ext_rst_smt
               bitRange: "[1:1]"
-              access: read-only
-            - name: uart_swap_set
-              bitRange: "[5:2]"
               access: read-write
-            - name: reserved_6_7
-              bitRange: "[7:6]"
+            - name: uart_swap_set
+              bitRange: "[6:2]"
+              access: read-write
+            - name: reserved_7
+              bitRange: "[7:7]"
               access: read-only
             - name: swap_sflash_io_3_io_0
               bitRange: "[8:8]"
@@ -4539,9 +4917,9 @@ peripherals:
             - name: sel_embedded_sflash
               bitRange: "[9:9]"
               access: read-write
-            - name: reserved_10
+            - name: sflash_io_sel_dual
               bitRange: "[10:10]"
-              access: read-only
+              access: read-write
             - name: reg_sel_psram0_x16
               bitRange: "[11:11]"
               access: read-write
@@ -4557,9 +4935,9 @@ peripherals:
             - name: ant_switch_sel
               bitRange: "[15:15]"
               access: read-write
-            - name: reserved_16
+            - name: reg_func28_sel_audio_test
               bitRange: "[16:16]"
-              access: read-only
+              access: read-write
             - name: p1_adc_test_with_cci
               bitRange: "[17:17]"
               access: read-write
@@ -4921,7 +5299,7 @@ peripherals:
           name: cgen_cfg0
           description: cgen_m
           addressOffset: 1408
-          resetValue: 31
+          resetValue: 255
           fields:
             - name: cgen_m_cpu
               bitRange: "[0:0]"
@@ -4938,21 +5316,30 @@ peripherals:
             - name: cgen_m_cci
               bitRange: "[4:4]"
               access: read-write
-            - name: reserved_5_31
-              bitRange: "[31:5]"
+            - name: cgen_m_wifi_platform
+              bitRange: "[5:5]"
+              access: read-write
+            - name: cgen_m_wifi_mac_phy
+              bitRange: "[6:6]"
+              access: read-write
+            - name: cgen_m_wifi_phy
+              bitRange: "[7:7]"
+              access: read-write
+            - name: reserved_8_31
+              bitRange: "[31:8]"
               access: read-only
       - register:
           name: cgen_cfg1
           description: cgen_s1a + cgen_s1
           addressOffset: 1412
-          resetValue: 2602815485
+          resetValue: 2602815487
           fields:
             - name: cgen_s1_rsvd0
               bitRange: "[0:0]"
               access: read-write
-            - name: reserved_1
+            - name: cgen_s1_rf_top
               bitRange: "[1:1]"
-              access: read-only
+              access: read-write
             - name: cgen_s1_gpip
               bitRange: "[2:2]"
               access: read-write
@@ -5019,10 +5406,10 @@ peripherals:
             - name: cgen_s1a_cks
               bitRange: "[23:23]"
               access: read-write
-            - name: cgen_s1a_rsvd8
+            - name: cgen_s1a_qdec
               bitRange: "[24:24]"
               access: read-write
-            - name: cgen_s1a_i2c1
+            - name: cgen_s1a_kys
               bitRange: "[25:25]"
               access: read-write
             - name: cgen_s1a_uart2
@@ -5047,7 +5434,7 @@ peripherals:
           name: cgen_cfg2
           description: cgen_s1_ext + cgen_s3
           addressOffset: 1416
-          resetValue: 268373009
+          resetValue: 268373777
           fields:
             - name: cgen_s0
               bitRange: "[0:0]"
@@ -5058,9 +5445,15 @@ peripherals:
             - name: cgen_s2_wifi
               bitRange: "[4:4]"
               access: read-write
-            - name: reserved_5_9
-              bitRange: "[9:5]"
+            - name: reserved_5_7
+              bitRange: "[7:5]"
               access: read-only
+            - name: cgen_s3_bt_ble
+              bitRange: "[8:8]"
+              access: read-write
+            - name: cgen_s3_m154
+              bitRange: "[9:9]"
+              access: read-write
             - name: cgen_s3_bt_ble2
               bitRange: "[10:10]"
               access: read-write
@@ -5113,61 +5506,22 @@ peripherals:
           name: cgen_cfg3
           description: cgen_cfg3
           addressOffset: 1420
-          resetValue: 131071
+          resetValue: 1
           fields:
-            - name: cgen_mm_wifipll_160m
+            - name: cgen_mm_wifipll_240m
               bitRange: "[0:0]"
               access: read-write
-            - name: cgen_mm_wifipll_240m
+            - name: cgen_flash_cpupll_128m
               bitRange: "[1:1]"
               access: read-write
-            - name: cgen_mm_wifipll_320m
+            - name: cgen_psramB_cpupll_320m
               bitRange: "[2:2]"
               access: read-write
-            - name: cgen_mm_aupll_div1
+            - name: cgen_psramA_cpupll_640m
               bitRange: "[3:3]"
               access: read-write
-            - name: cgen_mm_aupll_div2
-              bitRange: "[4:4]"
-              access: read-write
-            - name: cgen_emi_cpupll_400m
-              bitRange: "[5:5]"
-              access: read-write
-            - name: cgen_emi_cpupll_200m
-              bitRange: "[6:6]"
-              access: read-write
-            - name: cgen_emi_wifipll_320m
-              bitRange: "[7:7]"
-              access: read-write
-            - name: cgen_emi_aupll_div1
-              bitRange: "[8:8]"
-              access: read-write
-            - name: cgen_top_cpupll_80m
-              bitRange: "[9:9]"
-              access: read-write
-            - name: cgen_top_cpupll_100m
-              bitRange: "[10:10]"
-              access: read-write
-            - name: cgen_top_cpupll_160m
-              bitRange: "[11:11]"
-              access: read-write
-            - name: cgen_top_cpupll_400m
-              bitRange: "[12:12]"
-              access: read-write
-            - name: cgen_top_wifipll_240m
-              bitRange: "[13:13]"
-              access: read-write
-            - name: cgen_top_wifipll_320m
-              bitRange: "[14:14]"
-              access: read-write
-            - name: cgen_top_aupll_div2
-              bitRange: "[15:15]"
-              access: read-write
-            - name: cgen_top_aupll_div1
-              bitRange: "[16:16]"
-              access: read-write
-            - name: reserved_17_31
-              bitRange: "[31:17]"
+            - name: reserved_4_31
+              bitRange: "[31:4]"
               access: read-only
       - register:
           name: hw_rsv0
@@ -5311,13 +5665,16 @@ peripherals:
           name: sram_cfg3
           description: sram_cfg3
           addressOffset: 1548
-          resetValue: 3
+          resetValue: 65520
           fields:
             - name: em_sel
-              bitRange: "[7:0]"
+              bitRange: "[11:0]"
               access: read-write
-            - name: reserved_8_27
-              bitRange: "[27:8]"
+            - name: em2_sel
+              bitRange: "[19:12]"
+              access: read-write
+            - name: reserved_20_27
+              bitRange: "[27:20]"
               access: read-only
             - name: reg_vram_sel
               bitRange: "[29:28]"
@@ -5359,10 +5716,25 @@ peripherals:
           name: psram_cfg0
           description: psram_cfg0
           addressOffset: 1568
-          resetValue: 134217728
+          resetValue: 134217984
           fields:
-            - name: reserved_0_26
-              bitRange: "[26:0]"
+            - name: reserved_0_7
+              bitRange: "[7:0]"
+              access: read-only
+            - name: reg_psramA_clk_en
+              bitRange: "[8:8]"
+              access: read-write
+            - name: reserved_9
+              bitRange: "[9:9]"
+              access: read-only
+            - name: reg_psramA_clk_sel
+              bitRange: "[11:10]"
+              access: read-write
+            - name: reg_psramA_clk_div
+              bitRange: "[13:12]"
+              access: read-write
+            - name: reserved_14_26
+              bitRange: "[26:14]"
               access: read-only
             - name: reg_psramB_clk_en
               bitRange: "[27:27]"
@@ -5374,933 +5746,477 @@ peripherals:
               bitRange: "[31:30]"
               access: read-write
       - register:
-          name: ldo28cis
-          description: ldo28cis
+          name: pwr_cfg0
+          description: pwr_cfg0
           addressOffset: 1728
-          resetValue: 138064721
+          resetValue: 1940964145
           fields:
-            - name: pu_ldo28cis
+            - name: pu_ldo18io
               bitRange: "[0:0]"
               access: read-write
-            - name: ldo28cis_bypass
+            - name: ldo18io_bypass
               bitRange: "[1:1]"
               access: read-write
-            - name: ldo28cis_pulldown
+            - name: ten_ldo18io
               bitRange: "[2:2]"
               access: read-write
-            - name: ldo28cis_pulldown_sel
+            - name: ldo18io_ocp_out
               bitRange: "[3:3]"
-              access: read-write
-            - name: ldo28cis_bm
+              access: read-only
+            - name: ldo18io_bm
               bitRange: "[6:4]"
               access: read-write
             - name: reserved_7
               bitRange: "[7:7]"
               access: read-only
-            - name: ldo28cis_cc
+            - name: ldo18io_cc
               bitRange: "[10:8]"
               access: read-write
-            - name: ldo28cis_ocp_out
+            - name: reserved_11
               bitRange: "[11:11]"
               access: read-only
-            - name: ldo28cis_ocp_th
+            - name: ldo18io_ocp_th
               bitRange: "[14:12]"
               access: read-write
-            - name: ldo28cis_ocp_en
+            - name: ldo18io_ocp
               bitRange: "[15:15]"
               access: read-write
-            - name: ldo28cis_sstart_delay
-              bitRange: "[18:16]"
+            - name: ldo18io_pulldown
+              bitRange: "[16:16]"
               access: read-write
-            - name: ldo28cis_sstart_en
-              bitRange: "[19:19]"
+            - name: ldo18io_pulldown_sel
+              bitRange: "[17:17]"
               access: read-write
-            - name: ldo28cis_vout_sel
-              bitRange: "[23:20]"
+            - name: reserved_18_19
+              bitRange: "[19:18]"
+              access: read-only
+            - name: ldo18io_sstart_delay
+              bitRange: "[22:20]"
               access: read-write
-            - name: ldo28cis_vout_trim
+            - name: ldo18io_sstart
+              bitRange: "[23:23]"
+              access: read-write
+            - name: ldo18io_vout_sel
               bitRange: "[27:24]"
               access: read-write
-            - name: reserved_28_31
+            - name: ldo18io_vout_trim
               bitRange: "[31:28]"
-              access: read-only
-      - register:
-          name: ldo18io
-          description: ldo18io
-          addressOffset: 1732
-          resetValue: 0
-          fields:
-            - name: reserved_0_31
-              bitRange: "[31:0]"
-              access: read-only
-      - register:
-          name: ldo15cis
-          description: ldo15cis
-          addressOffset: 1736
-          resetValue: 143307553
-          fields:
-            - name: pu_ldo15cis
-              bitRange: "[0:0]"
               access: read-write
-            - name: ldo15cis_bypass
-              bitRange: "[1:1]"
-              access: read-write
-            - name: ldo15cis_pulldown
-              bitRange: "[2:2]"
-              access: read-write
-            - name: ldo15cis_pulldown_sel
-              bitRange: "[3:3]"
-              access: read-write
-            - name: ldo15cis_bm
-              bitRange: "[6:4]"
-              access: read-write
-            - name: reserved_7
-              bitRange: "[7:7]"
-              access: read-only
-            - name: ldo15cis_cc
-              bitRange: "[10:8]"
-              access: read-write
-            - name: ldo15cis_ocp_out
-              bitRange: "[11:11]"
-              access: read-only
-            - name: ldo15cis_ocp_th
-              bitRange: "[14:12]"
-              access: read-write
-            - name: ldo15cis_ocp_en
-              bitRange: "[15:15]"
-              access: read-write
-            - name: ldo15cis_sstart_delay
-              bitRange: "[18:16]"
-              access: read-write
-            - name: ldo15cis_sstart_en
-              bitRange: "[19:19]"
-              access: read-write
-            - name: ldo15cis_vout_sel
-              bitRange: "[23:20]"
-              access: read-write
-            - name: ldo15cis_vout_trim
-              bitRange: "[27:24]"
-              access: read-write
-            - name: reserved_28_31
-              bitRange: "[31:28]"
-              access: read-only
-      - register:
-          name: ldo18flash
-          description: ldo18flash
-          addressOffset: 1740
-          resetValue: 121353008
-          fields:
-            - name: pu_ldo18flash
-              bitRange: "[0:0]"
-              access: read-write
-            - name: ldo18flash_bypass
-              bitRange: "[1:1]"
-              access: read-write
-            - name: ldo18flash_pulldown
-              bitRange: "[2:2]"
-              access: read-write
-            - name: ldo18flash_pulldown_sel
-              bitRange: "[3:3]"
-              access: read-write
-            - name: ldo18flash_bm
-              bitRange: "[6:4]"
-              access: read-write
-            - name: reserved_7
-              bitRange: "[7:7]"
-              access: read-only
-            - name: ldo18flash_cc
-              bitRange: "[10:8]"
-              access: read-write
-            - name: ldo18flash_ocp_out
-              bitRange: "[11:11]"
-              access: read-only
-            - name: ldo18flash_ocp_th
-              bitRange: "[14:12]"
-              access: read-write
-            - name: ldo18flash_ocp_en
-              bitRange: "[15:15]"
-              access: read-write
-            - name: ldo18flash_sstart_delay
-              bitRange: "[18:16]"
-              access: read-write
-            - name: ldo18flash_sstart_en
-              bitRange: "[19:19]"
-              access: read-write
-            - name: ldo18flash_vout_sel
-              bitRange: "[23:20]"
-              access: read-write
-            - name: ldo18flash_vout_trim
-              bitRange: "[27:24]"
-              access: read-write
-            - name: reserved_28_31
-              bitRange: "[31:28]"
-              access: read-only
-      - register:
-          name: ldo12uhs
-          description: ldo12uhs
-          addressOffset: 1744
-          resetValue: 138064672
-          fields:
-            - name: pu_ldo12uhs
-              bitRange: "[0:0]"
-              access: read-write
-            - name: ldo12uhs_bypass
-              bitRange: "[1:1]"
-              access: read-write
-            - name: ldo12uhs_pulldown
-              bitRange: "[2:2]"
-              access: read-write
-            - name: ldo12uhs_pulldown_sel
-              bitRange: "[3:3]"
-              access: read-write
-            - name: ldo12uhs_bm
-              bitRange: "[6:4]"
-              access: read-write
-            - name: reserved_7
-              bitRange: "[7:7]"
-              access: read-only
-            - name: ldo12uhs_cc
-              bitRange: "[10:8]"
-              access: read-write
-            - name: ldo12uhs_ocp_out
-              bitRange: "[11:11]"
-              access: read-only
-            - name: ldo12uhs_ocp_th
-              bitRange: "[14:12]"
-              access: read-write
-            - name: ldo12uhs_ocp_en
-              bitRange: "[15:15]"
-              access: read-write
-            - name: ldo12uhs_sstart_delay
-              bitRange: "[18:16]"
-              access: read-write
-            - name: ldo12uhs_sstart_en
-              bitRange: "[19:19]"
-              access: read-write
-            - name: ldo12uhs_vout_sel
-              bitRange: "[23:20]"
-              access: read-write
-            - name: ldo12uhs_vout_trim
-              bitRange: "[27:24]"
-              access: read-write
-            - name: reserved_28_31
-              bitRange: "[31:28]"
-              access: read-only
-      - register:
-          name: proc_mon
-          description: proc_mon
-          addressOffset: 1776
-          resetValue: 1024
-          fields:
-            - name: pu_proc_mon
-              bitRange: "[0:0]"
-              access: read-write
-            - name: osc_en_rvt
-              bitRange: "[1:1]"
-              access: read-write
-            - name: osc_en_lvt
-              bitRange: "[2:2]"
-              access: read-write
-            - name: osc_sel
-              bitRange: "[3:3]"
-              access: read-write
-            - name: rstn_ringcount
-              bitRange: "[4:4]"
-              access: read-write
-            - name: rstn_refcount
-              bitRange: "[5:5]"
-              access: read-write
-            - name: reserved_6_7
-              bitRange: "[7:6]"
-              access: read-only
-            - name: refcount_div_onehot
-              bitRange: "[11:8]"
-              access: read-write
-            - name: ring_freq
-              bitRange: "[27:12]"
-              access: read-only
-            - name: ring_freq_rdy
-              bitRange: "[28:28]"
-              access: read-only
-            - name: reserved_29_31
-              bitRange: "[31:29]"
-              access: read-only
       - register:
           name: dll_cfg0
           description: dll_cfg0
           addressOffset: 1792
-          resetValue: 0
+          resetValue: 542270704
           fields:
-            - name: reserved_0_31
-              bitRange: "[31:0]"
-              access: read-only
-      - register:
-          name: mipi_pll_cfg0
-          description: mipi_pll_cfg0
-          addressOffset: 1936
-          resetValue: 293
-          fields:
-            - name: mipipll_sdm_rstb
+            - name: dtest_en_dll_refclk
               bitRange: "[0:0]"
               access: read-write
-            - name: reserved_1
+            - name: dtest_en_dll_outclk
               bitRange: "[1:1]"
-              access: read-only
-            - name: mipipll_fbdv_rstb
+              access: read-write
+            - name: ten_dll
               bitRange: "[2:2]"
               access: read-write
-            - name: reserved_3_4
-              bitRange: "[4:3]"
-              access: read-only
-            - name: pu_mipipll_fbdv
+            - name: dll_clk_mmdiv_en
+              bitRange: "[3:3]"
+              access: read-write
+            - name: dll_clk_288M_en
+              bitRange: "[4:4]"
+              access: read-write
+            - name: dll_clk_144M_en
               bitRange: "[5:5]"
               access: read-write
-            - name: reserved_6_7
-              bitRange: "[7:6]"
+            - name: dll_clk_96M_en
+              bitRange: "[6:6]"
+              access: read-write
+            - name: dll_clk_57p6M_en
+              bitRange: "[7:7]"
+              access: read-write
+            - name: dll_vctrl_sel
+              bitRange: "[10:8]"
+              access: read-write
+            - name: reserved_11
+              bitRange: "[11:11]"
               access: read-only
-            - name: pu_mipipll_cp
+            - name: dll_prechg_sel
+              bitRange: "[12:12]"
+              access: read-write
+            - name: dll_prechg_reg
+              bitRange: "[13:13]"
+              access: read-write
+            - name: dll_prechg_en
+              bitRange: "[14:14]"
+              access: read-write
+            - name: dll_vctrl_force_en
+              bitRange: "[15:15]"
+              access: read-write
+            - name: dll_post_div
+              bitRange: "[19:16]"
+              access: read-write
+            - name: dll_delay_sel
+              bitRange: "[21:20]"
+              access: read-write
+            - name: dll_cp_op_en
+              bitRange: "[22:22]"
+              access: read-write
+            - name: dll_cp_hiz
+              bitRange: "[23:23]"
+              access: read-write
+            - name: reserved_24_27
+              bitRange: "[27:24]"
+              access: read-only
+            - name: dll_refclk_sel
+              bitRange: "[28:28]"
+              access: read-write
+            - name: dll_reset
+              bitRange: "[29:29]"
+              access: read-write
+            - name: pu_dll
+              bitRange: "[30:30]"
+              access: read-write
+            - name: ppu_dll
+              bitRange: "[31:31]"
+              access: read-write
+      - register:
+          name: audio_pll_cfg0
+          description: audio_pll_cfg0
+          addressOffset: 1872
+          resetValue: 496
+          fields:
+            - name: aupll_sdm_reset
+              bitRange: "[0:0]"
+              access: read-write
+            - name: aupll_reset_postdiv
+              bitRange: "[1:1]"
+              access: read-write
+            - name: aupll_reset_fbdv
+              bitRange: "[2:2]"
+              access: read-write
+            - name: aupll_reset_refdiv
+              bitRange: "[3:3]"
+              access: read-write
+            - name: aupll_pu_postdiv
+              bitRange: "[4:4]"
+              access: read-write
+            - name: aupll_pu_fbdv
+              bitRange: "[5:5]"
+              access: read-write
+            - name: aupll_pu_clamp_op
+              bitRange: "[6:6]"
+              access: read-write
+            - name: aupll_pu_pfd
+              bitRange: "[7:7]"
+              access: read-write
+            - name: aupll_pu_cp
               bitRange: "[8:8]"
               access: read-write
-            - name: pu_mipipll_sfreg
+            - name: pu_aupll_sfreg
               bitRange: "[9:9]"
               access: read-write
-            - name: pu_mipipll
+            - name: pu_aupll
               bitRange: "[10:10]"
               access: read-write
             - name: reserved_11_31
               bitRange: "[31:11]"
               access: read-only
       - register:
-          name: mipi_pll_cfg1
-          description: mipi_pll_cfg1
-          addressOffset: 1940
-          resetValue: 17826354
+          name: audio_pll_cfg1
+          description: audio_pll_cfg1
+          addressOffset: 1876
+          resetValue: 17826324
           fields:
-            - name: mipipll_even_div_ratio
+            - name: aupll_postdiv
               bitRange: "[6:0]"
               access: read-write
-            - name: mipipll_even_div_en
+            - name: reserved_7
               bitRange: "[7:7]"
-              access: read-write
-            - name: mipipll_refdiv_ratio
+              access: read-only
+            - name: aupll_refdiv_ratio
               bitRange: "[11:8]"
               access: read-write
             - name: reserved_12_15
               bitRange: "[15:12]"
               access: read-only
-            - name: mipipll_refclk_sel
+            - name: aupll_refclk_sel
               bitRange: "[17:16]"
               access: read-write
             - name: reserved_18_19
               bitRange: "[19:18]"
               access: read-only
-            - name: mipipll_vg11_sel
+            - name: aupll_vg11_sel
               bitRange: "[21:20]"
               access: read-write
             - name: reserved_22_23
               bitRange: "[23:22]"
               access: read-only
-            - name: mipipll_vg13_sel
+            - name: aupll_vg13_sel
               bitRange: "[25:24]"
               access: read-write
             - name: reserved_26_31
               bitRange: "[31:26]"
               access: read-only
       - register:
-          name: mipi_pll_cfg2
-          description: mipi_pll_cfg2
-          addressOffset: 1944
-          resetValue: 7729
+          name: audio_pll_cfg2
+          description: audio_pll_cfg2
+          addressOffset: 1880
+          resetValue: 1857
           fields:
-            - name: mipipll_sel_cp_bias
+            - name: aupll_sel_cp_bias
               bitRange: "[0:0]"
               access: read-write
             - name: reserved_1_3
               bitRange: "[3:1]"
               access: read-only
-            - name: mipipll_icp_5u
+            - name: aupll_icp_5u
               bitRange: "[5:4]"
               access: read-write
-            - name: mipipll_icp_1u
+            - name: aupll_icp_1u
               bitRange: "[7:6]"
               access: read-write
-            - name: mipipll_int_frac_sw
+            - name: aupll_int_frac_sw
               bitRange: "[8:8]"
               access: read-write
-            - name: mipipll_cp_startup_en
+            - name: aupll_cp_startup_en
               bitRange: "[9:9]"
               access: read-write
-            - name: mipipll_cp_opamp_en
-              bitRange: "[10:10]"
-              access: read-write
-            - name: mipipll_cp_ota_en
-              bitRange: "[11:11]"
-              access: read-write
-            - name: mipipll_pfd_en
-              bitRange: "[12:12]"
-              access: read-write
-            - name: reserved_13_31
-              bitRange: "[31:13]"
-              access: read-only
-      - register:
-          name: mipi_pll_cfg3
-          description: mipi_pll_cfg3
-          addressOffset: 1948
-          resetValue: 1155089
-          fields:
-            - name: mipipll_c4_en
-              bitRange: "[0:0]"
-              access: read-write
-            - name: reserved_1_3
-              bitRange: "[3:1]"
-              access: read-only
-            - name: mipipll_r4
-              bitRange: "[5:4]"
-              access: read-write
-            - name: reserved_6_7
-              bitRange: "[7:6]"
-              access: read-only
-            - name: mipipll_r4_short
-              bitRange: "[8:8]"
-              access: read-write
-            - name: reserved_9_11
-              bitRange: "[11:9]"
-              access: read-only
-            - name: mipipll_c3
-              bitRange: "[13:12]"
-              access: read-write
-            - name: mipipll_cz
-              bitRange: "[15:14]"
-              access: read-write
-            - name: mipipll_rz
-              bitRange: "[18:16]"
-              access: read-write
-            - name: mipipll_lf_test_en
-              bitRange: "[19:19]"
-              access: read-write
-            - name: mipipll_fast_lock_en
-              bitRange: "[20:20]"
-              access: read-write
-            - name: reserved_21_31
-              bitRange: "[31:21]"
-              access: read-only
-      - register:
-          name: mipi_pll_cfg4
-          description: mipi_pll_cfg4
-          addressOffset: 1952
-          resetValue: 33553
-          fields:
-            - name: mipipll_sel_sample_clk
-              bitRange: "[1:0]"
-              access: read-write
-            - name: reserved_2_3
-              bitRange: "[3:2]"
-              access: read-only
-            - name: mipipll_sel_fb_clk
-              bitRange: "[5:4]"
-              access: read-write
-            - name: reserved_6_7
-              bitRange: "[7:6]"
-              access: read-only
-            - name: mipipll_lock_det_en
-              bitRange: "[8:8]"
-              access: read-write
-            - name: mipipll_lock_clk_sel
-              bitRange: "[10:9]"
-              access: read-write
-            - name: reserved_11
-              bitRange: "[11:11]"
-              access: read-only
-            - name: mipipll_lock_clk_inv_en
-              bitRange: "[12:12]"
-              access: read-write
-            - name: reserved_13_14
-              bitRange: "[14:13]"
-              access: read-only
-            - name: mipipll_lock_win_sel
-              bitRange: "[16:15]"
-              access: read-write
-            - name: reserved_17_31
-              bitRange: "[31:17]"
-              access: read-only
-      - register:
-          name: mipi_pll_cfg5
-          description: mipi_pll_cfg5
-          addressOffset: 1956
-          resetValue: 1045
-          fields:
-            - name: mipipll_vco_speed
-              bitRange: "[2:0]"
-              access: read-write
-            - name: mipipll_vco_vdd_ctrl
-              bitRange: "[4:3]"
-              access: read-write
-            - name: mipipll_vco_vdd_ctrl_extra
-              bitRange: "[5:5]"
-              access: read-write
-            - name: reserved_6
-              bitRange: "[6:6]"
-              access: read-only
-            - name: mipipll_vco_postdiv_sel
-              bitRange: "[9:7]"
-              access: read-write
-            - name: mipipll_vco_postdiv_clk_en
+            - name: aupll_cp_opamp_en
               bitRange: "[10:10]"
               access: read-write
             - name: reserved_11_31
               bitRange: "[31:11]"
               access: read-only
       - register:
-          name: mipi_pll_cfg6
-          description: mipi_pll_cfg6
-          addressOffset: 1960
-          resetValue: 153600
+          name: audio_pll_cfg3
+          description: audio_pll_cfg3
+          addressOffset: 1884
+          resetValue: 368673
           fields:
-            - name: mipipll_sdmin
-              bitRange: "[18:0]"
+            - name: aupll_c4_en
+              bitRange: "[0:0]"
               access: read-write
-            - name: reserved_19_23
-              bitRange: "[23:19]"
+            - name: reserved_1_3
+              bitRange: "[3:1]"
               access: read-only
-            - name: mipipll_sdm_bypass
+            - name: aupll_r4
+              bitRange: "[5:4]"
+              access: read-write
+            - name: reserved_6_7
+              bitRange: "[7:6]"
+              access: read-only
+            - name: aupll_r4_short
+              bitRange: "[8:8]"
+              access: read-write
+            - name: reserved_9_11
+              bitRange: "[11:9]"
+              access: read-only
+            - name: aupll_c3
+              bitRange: "[13:12]"
+              access: read-write
+            - name: aupll_cz
+              bitRange: "[15:14]"
+              access: read-write
+            - name: aupll_rz
+              bitRange: "[18:16]"
+              access: read-write
+            - name: reserved_19_31
+              bitRange: "[31:19]"
+              access: read-only
+      - register:
+          name: audio_pll_cfg4
+          description: audio_pll_cfg4
+          addressOffset: 1888
+          resetValue: 17
+          fields:
+            - name: aupll_sel_sample_clk
+              bitRange: "[1:0]"
+              access: read-write
+            - name: reserved_2_3
+              bitRange: "[3:2]"
+              access: read-only
+            - name: aupll_sel_fb_clk
+              bitRange: "[5:4]"
+              access: read-write
+            - name: reserved_6_7
+              bitRange: "[7:6]"
+              access: read-only
+            - name: aupll_sdmclk_sel
+              bitRange: "[8:8]"
+              access: read-write
+            - name: reserved_9_31
+              bitRange: "[31:9]"
+              access: read-only
+      - register:
+          name: audio_pll_cfg5
+          description: audio_pll_cfg5
+          addressOffset: 1892
+          resetValue: 5
+          fields:
+            - name: aupll_vco_speed
+              bitRange: "[2:0]"
+              access: read-write
+            - name: reserved_3_31
+              bitRange: "[31:3]"
+              access: read-only
+      - register:
+          name: audio_pll_cfg6
+          description: audio_pll_cfg6
+          addressOffset: 1896
+          resetValue: 2899102
+          fields:
+            - name: aupll_sdmin
+              bitRange: "[23:0]"
+              access: read-write
+            - name: aupll_sdm_bypass
               bitRange: "[24:24]"
               access: read-write
             - name: reserved_25_31
               bitRange: "[31:25]"
               access: read-only
       - register:
-          name: mipi_pll_cfg7
-          description: mipi_pll_cfg7
-          addressOffset: 1964
+          name: audio_pll_cfg7
+          description: audio_pll_cfg7
+          addressOffset: 1900
           resetValue: 1
           fields:
-            - name: mipipll_sdm_order_sel
-              bitRange: "[0:0]"
-              access: read-write
-            - name: mipipll_sdm_dith_sel
-              bitRange: "[2:1]"
-              access: read-write
-            - name: reserved_3_31
-              bitRange: "[31:3]"
-              access: read-only
-      - register:
-          name: mipi_pll_cfg8
-          description: mipi_pll_cfg8
-          addressOffset: 1968
-          resetValue: 1024
-          fields:
-            - name: mipipll_dc_tp_out_en
-              bitRange: "[0:0]"
-              access: read-write
-            - name: mipipll_ten
-              bitRange: "[1:1]"
-              access: read-write
-            - name: mipipll_ten_sfreg
-              bitRange: "[2:2]"
-              access: read-write
-            - name: reserved_3
-              bitRange: "[3:3]"
-              access: read-only
-            - name: mipipll_dten_ckin
-              bitRange: "[4:4]"
-              access: read-write
-            - name: mipipll_dten_fref
-              bitRange: "[5:5]"
-              access: read-write
-            - name: mipipll_dten_fsdm
-              bitRange: "[6:6]"
-              access: read-write
-            - name: mipipll_dten_pupll
-              bitRange: "[7:7]"
-              access: read-write
-            - name: mipipll_dten_pll_locked
-              bitRange: "[8:8]"
-              access: read-write
-            - name: reserved_9
-              bitRange: "[9:9]"
-              access: read-only
-            - name: mipipll_dtest_pull_down
-              bitRange: "[10:10]"
-              access: read-write
-            - name: reserved_11_31
-              bitRange: "[31:11]"
-              access: read-only
-      - register:
-          name: mipi_pll_cfg9
-          description: mipi_pll_cfg9
-          addressOffset: 1972
-          resetValue: 87616
-          fields:
-            - name: mipipll_ssc_en
+            - name: aupll_sdm_order_sel
               bitRange: "[0:0]"
               access: read-write
             - name: reserved_1_3
               bitRange: "[3:1]"
               access: read-only
-            - name: mipipll_ssc_cnt
-              bitRange: "[11:4]"
-              access: read-write
-            - name: mipipll_ssc_gain
-              bitRange: "[14:12]"
-              access: read-write
-            - name: reserved_15
-              bitRange: "[15:15]"
-              access: read-only
-            - name: mipipll_ssc_start_gate_en
-              bitRange: "[16:16]"
-              access: read-write
-            - name: reserved_17_31
-              bitRange: "[31:17]"
-              access: read-only
-      - register:
-          name: uhs_pll_cfg0
-          description: uhs_pll_cfg0
-          addressOffset: 2000
-          resetValue: 293
-          fields:
-            - name: uhspll_sdm_rstb
-              bitRange: "[0:0]"
-              access: read-write
-            - name: reserved_1
-              bitRange: "[1:1]"
-              access: read-only
-            - name: uhspll_fbdv_rstb
-              bitRange: "[2:2]"
-              access: read-write
-            - name: reserved_3_4
-              bitRange: "[4:3]"
-              access: read-only
-            - name: pu_uhspll_fbdv
-              bitRange: "[5:5]"
+            - name: aupll_sdm_noi_prbs_sel
+              bitRange: "[5:4]"
               access: read-write
             - name: reserved_6_7
               bitRange: "[7:6]"
               access: read-only
-            - name: pu_uhspll_cp
+            - name: aupll_sdm_noi_prbs_en
               bitRange: "[8:8]"
               access: read-write
-            - name: pu_uhspll_sfreg
-              bitRange: "[9:9]"
-              access: read-write
-            - name: pu_uhspll
-              bitRange: "[10:10]"
-              access: read-write
-            - name: reserved_11_31
-              bitRange: "[31:11]"
+            - name: reserved_9_11
+              bitRange: "[11:9]"
               access: read-only
-      - register:
-          name: uhs_pll_cfg1
-          description: uhs_pll_cfg1
-          addressOffset: 2004
-          resetValue: 17826388
-          fields:
-            - name: uhspll_even_div_ratio
-              bitRange: "[6:0]"
+            - name: aupll_sdm_sig_prbs_sel
+              bitRange: "[13:12]"
               access: read-write
-            - name: uhspll_even_div_en
-              bitRange: "[7:7]"
-              access: read-write
-            - name: uhspll_refdiv_ratio
-              bitRange: "[11:8]"
-              access: read-write
-            - name: reserved_12_15
-              bitRange: "[15:12]"
+            - name: reserved_14_15
+              bitRange: "[15:14]"
               access: read-only
-            - name: uhspll_refclk_sel
+            - name: aupll_sdm_sig_dith_sel
               bitRange: "[17:16]"
               access: read-write
-            - name: reserved_18_19
-              bitRange: "[19:18]"
-              access: read-only
-            - name: uhspll_vg11_sel
-              bitRange: "[21:20]"
-              access: read-write
-            - name: reserved_22_23
-              bitRange: "[23:22]"
-              access: read-only
-            - name: uhspll_vg13_sel
-              bitRange: "[25:24]"
-              access: read-write
-            - name: reserved_26_31
-              bitRange: "[31:26]"
+            - name: reserved_18_31
+              bitRange: "[31:18]"
               access: read-only
       - register:
-          name: uhs_pll_cfg2
-          description: uhs_pll_cfg2
-          addressOffset: 2008
-          resetValue: 7729
+          name: audio_pll_cfg8
+          description: audio_pll_cfg8
+          addressOffset: 1904
+          resetValue: 256
           fields:
-            - name: uhspll_sel_cp_bias
+            - name: aupll_en_div1
               bitRange: "[0:0]"
               access: read-write
-            - name: reserved_1_3
-              bitRange: "[3:1]"
-              access: read-only
-            - name: uhspll_icp_5u
-              bitRange: "[5:4]"
-              access: read-write
-            - name: uhspll_icp_1u
-              bitRange: "[7:6]"
-              access: read-write
-            - name: uhspll_int_frac_sw
-              bitRange: "[8:8]"
-              access: read-write
-            - name: uhspll_cp_startup_en
-              bitRange: "[9:9]"
-              access: read-write
-            - name: uhspll_cp_opamp_en
-              bitRange: "[10:10]"
-              access: read-write
-            - name: uhspll_cp_ota_en
-              bitRange: "[11:11]"
-              access: read-write
-            - name: uhspll_pfd_en
-              bitRange: "[12:12]"
-              access: read-write
-            - name: reserved_13_31
-              bitRange: "[31:13]"
-              access: read-only
-      - register:
-          name: uhs_pll_cfg3
-          description: uhs_pll_cfg3
-          addressOffset: 2012
-          resetValue: 1155089
-          fields:
-            - name: uhspll_c4_en
-              bitRange: "[0:0]"
-              access: read-write
-            - name: reserved_1_3
-              bitRange: "[3:1]"
-              access: read-only
-            - name: uhspll_r4
-              bitRange: "[5:4]"
-              access: read-write
-            - name: reserved_6_7
-              bitRange: "[7:6]"
-              access: read-only
-            - name: uhspll_r4_short
-              bitRange: "[8:8]"
-              access: read-write
-            - name: reserved_9_11
-              bitRange: "[11:9]"
-              access: read-only
-            - name: uhspll_c3
-              bitRange: "[13:12]"
-              access: read-write
-            - name: uhspll_cz
-              bitRange: "[15:14]"
-              access: read-write
-            - name: uhspll_rz
-              bitRange: "[18:16]"
-              access: read-write
-            - name: uhspll_lf_test_en
-              bitRange: "[19:19]"
-              access: read-write
-            - name: uhspll_fast_lock_en
-              bitRange: "[20:20]"
-              access: read-write
-            - name: reserved_21_31
-              bitRange: "[31:21]"
-              access: read-only
-      - register:
-          name: uhs_pll_cfg4
-          description: uhs_pll_cfg4
-          addressOffset: 2016
-          resetValue: 33553
-          fields:
-            - name: uhspll_sel_sample_clk
-              bitRange: "[1:0]"
-              access: read-write
-            - name: reserved_2_3
-              bitRange: "[3:2]"
-              access: read-only
-            - name: uhspll_sel_fb_clk
-              bitRange: "[5:4]"
-              access: read-write
-            - name: reserved_6_7
-              bitRange: "[7:6]"
-              access: read-only
-            - name: uhspll_lock_det_en
-              bitRange: "[8:8]"
-              access: read-write
-            - name: uhspll_lock_clk_sel
-              bitRange: "[10:9]"
-              access: read-write
-            - name: reserved_11
-              bitRange: "[11:11]"
-              access: read-only
-            - name: uhspll_lock_clk_inv_en
-              bitRange: "[12:12]"
-              access: read-write
-            - name: reserved_13_14
-              bitRange: "[14:13]"
-              access: read-only
-            - name: uhspll_lock_win_sel
-              bitRange: "[16:15]"
-              access: read-write
-            - name: reserved_17_31
-              bitRange: "[31:17]"
-              access: read-only
-      - register:
-          name: uhs_pll_cfg5
-          description: uhs_pll_cfg5
-          addressOffset: 2020
-          resetValue: 1055
-          fields:
-            - name: uhspll_vco_speed
-              bitRange: "[2:0]"
-              access: read-write
-            - name: uhspll_vco_vdd_ctrl
-              bitRange: "[4:3]"
-              access: read-write
-            - name: uhspll_vco_vdd_ctrl_extra
-              bitRange: "[5:5]"
-              access: read-write
-            - name: reserved_6
-              bitRange: "[6:6]"
-              access: read-only
-            - name: uhspll_vco_postdiv_sel
-              bitRange: "[9:7]"
-              access: read-write
-            - name: uhspll_vco_postdiv_clk_en
-              bitRange: "[10:10]"
-              access: read-write
-            - name: reserved_11_31
-              bitRange: "[31:11]"
-              access: read-only
-      - register:
-          name: uhs_pll_cfg6
-          description: uhs_pll_cfg6
-          addressOffset: 2024
-          resetValue: 215040
-          fields:
-            - name: uhspll_sdmin
-              bitRange: "[18:0]"
-              access: read-write
-            - name: reserved_19_23
-              bitRange: "[23:19]"
-              access: read-only
-            - name: uhspll_sdm_bypass
-              bitRange: "[24:24]"
-              access: read-write
-            - name: reserved_25_31
-              bitRange: "[31:25]"
-              access: read-only
-      - register:
-          name: uhs_pll_cfg7
-          description: uhs_pll_cfg7
-          addressOffset: 2028
-          resetValue: 1
-          fields:
-            - name: uhspll_sdm_order_sel
-              bitRange: "[0:0]"
-              access: read-write
-            - name: uhspll_sdm_dith_sel
-              bitRange: "[2:1]"
-              access: read-write
-            - name: reserved_3_31
-              bitRange: "[31:3]"
-              access: read-only
-      - register:
-          name: uhs_pll_cfg8
-          description: uhs_pll_cfg8
-          addressOffset: 2032
-          resetValue: 1024
-          fields:
-            - name: uhspll_dc_tp_out_en
-              bitRange: "[0:0]"
-              access: read-write
-            - name: uhspll_ten
+            - name: aupll_en_div2
               bitRange: "[1:1]"
               access: read-write
-            - name: uhspll_ten_sfreg
+            - name: aupll_en_div2p5
+              bitRange: "[2:2]"
+              access: read-write
+            - name: aupll_en_div3
+              bitRange: "[3:3]"
+              access: read-write
+            - name: aupll_en_div4
+              bitRange: "[4:4]"
+              access: read-write
+            - name: aupll_en_div5
+              bitRange: "[5:5]"
+              access: read-write
+            - name: aupll_en_div6
+              bitRange: "[6:6]"
+              access: read-write
+            - name: aupll_en_div10
+              bitRange: "[7:7]"
+              access: read-write
+            - name: aupll_en_div15
+              bitRange: "[8:8]"
+              access: read-write
+            - name: aupll_sel_div1_div2
+              bitRange: "[9:9]"
+              access: read-write
+            - name: reserved_10_31
+              bitRange: "[31:10]"
+              access: read-only
+      - register:
+          name: audio_pll_cfg9
+          description: audio_pll_cfg9
+          addressOffset: 1908
+          resetValue: 496
+          fields:
+            - name: aupll_dc_tp_out_en
+              bitRange: "[0:0]"
+              access: read-write
+            - name: ten_aupll
+              bitRange: "[1:1]"
+              access: read-write
+            - name: ten_aupll_sfreg
               bitRange: "[2:2]"
               access: read-write
             - name: reserved_3
               bitRange: "[3:3]"
               access: read-only
-            - name: uhspll_dten_ckin
+            - name: dten_aupll_fin
               bitRange: "[4:4]"
               access: read-write
-            - name: uhspll_dten_fref
+            - name: dten_aupll_fref
               bitRange: "[5:5]"
               access: read-write
-            - name: uhspll_dten_fsdm
+            - name: dten_aupll_fsdm
               bitRange: "[6:6]"
               access: read-write
-            - name: uhspll_dten_pupll
+            - name: dten_aupll_div15
               bitRange: "[7:7]"
               access: read-write
-            - name: uhspll_dten_pll_locked
+            - name: dten_aupll_div5
               bitRange: "[8:8]"
               access: read-write
-            - name: reserved_9
+            - name: dten_aupll_postdiv_clk
               bitRange: "[9:9]"
-              access: read-only
-            - name: uhspll_dtest_pull_down
-              bitRange: "[10:10]"
               access: read-write
-            - name: reserved_11_31
-              bitRange: "[31:11]"
-              access: read-only
-      - register:
-          name: uhs_pll_cfg9
-          description: uhs_pll_cfg9
-          addressOffset: 2036
-          resetValue: 87616
-          fields:
-            - name: uhspll_ssc_en
-              bitRange: "[0:0]"
-              access: read-write
-            - name: reserved_1_3
-              bitRange: "[3:1]"
-              access: read-only
-            - name: uhspll_ssc_cnt
-              bitRange: "[11:4]"
-              access: read-write
-            - name: uhspll_ssc_gain
-              bitRange: "[14:12]"
-              access: read-write
-            - name: reserved_15
-              bitRange: "[15:15]"
-              access: read-only
-            - name: uhspll_ssc_start_gate_en
-              bitRange: "[16:16]"
-              access: read-write
-            - name: reserved_17_31
-              bitRange: "[31:17]"
+            - name: reserved_10_31
+              bitRange: "[31:10]"
               access: read-only
       - register:
           name: wifi_pll_cfg0
           description: wifi_pll_cfg0
           addressOffset: 2064
-          resetValue: 2543
+          resetValue: 496
           fields:
-            - name: wifipll_sdm_rstb
+            - name: wifipll_sdm_reset
               bitRange: "[0:0]"
               access: read-write
-            - name: wifipll_postdiv_rstb
+            - name: wifipll_reset_postdiv
               bitRange: "[1:1]"
               access: read-write
-            - name: wifipll_fbdv_rstb
+            - name: wifipll_reset_fbdv
               bitRange: "[2:2]"
               access: read-write
-            - name: wifipll_refdiv_rstb
+            - name: wifipll_reset_refdiv
               bitRange: "[3:3]"
               access: read-write
-            - name: pu_wifipll_postdiv
+            - name: wifipll_pu_postdiv
               bitRange: "[4:4]"
               access: read-write
-            - name: pu_wifipll_fbdv
+            - name: wifipll_pu_fbdv
               bitRange: "[5:5]"
               access: read-write
-            - name: pu_wifipll_clamp_op
+            - name: wifipll_pu_clamp_op
               bitRange: "[6:6]"
               access: read-write
-            - name: pu_wifipll_pfd
+            - name: wifipll_pu_pfd
               bitRange: "[7:7]"
               access: read-write
-            - name: pu_wifipll_cp
+            - name: wifipll_pu_cp
               bitRange: "[8:8]"
               access: read-write
             - name: pu_wifipll_sfreg
@@ -6309,17 +6225,14 @@ peripherals:
             - name: pu_wifipll
               bitRange: "[10:10]"
               access: read-write
-            - name: pu_wifipll_clktree
-              bitRange: "[11:11]"
-              access: read-write
-            - name: reserved_12_31
-              bitRange: "[31:12]"
+            - name: reserved_11_31
+              bitRange: "[31:11]"
               access: read-only
       - register:
           name: wifi_pll_cfg1
           description: wifi_pll_cfg1
           addressOffset: 2068
-          resetValue: 17891862
+          resetValue: 17826324
           fields:
             - name: wifipll_postdiv
               bitRange: "[6:0]"
@@ -6385,7 +6298,7 @@ peripherals:
           name: wifi_pll_cfg3
           description: wifi_pll_cfg3
           addressOffset: 2076
-          resetValue: 221472
+          resetValue: 94496
           fields:
             - name: wifipll_c4_en
               bitRange: "[0:0]"
@@ -6421,7 +6334,7 @@ peripherals:
           name: wifi_pll_cfg4
           description: wifi_pll_cfg4
           addressOffset: 2080
-          resetValue: 273
+          resetValue: 17
           fields:
             - name: wifipll_sel_sample_clk
               bitRange: "[1:0]"
@@ -6445,52 +6358,28 @@ peripherals:
           name: wifi_pll_cfg5
           description: wifi_pll_cfg5
           addressOffset: 2084
-          resetValue: 4357
+          resetValue: 7
           fields:
             - name: wifipll_vco_speed
               bitRange: "[2:0]"
               access: read-write
-            - name: reserved_3
-              bitRange: "[3:3]"
-              access: read-only
-            - name: wifipll_vco_div1_en
-              bitRange: "[4:4]"
-              access: read-write
-            - name: reserved_5_7
-              bitRange: "[7:5]"
-              access: read-only
-            - name: wifipll_vco_div2_en
-              bitRange: "[8:8]"
-              access: read-write
-            - name: reserved_9_11
-              bitRange: "[11:9]"
-              access: read-only
-            - name: wifipll_vco_div3_en
-              bitRange: "[12:12]"
-              access: read-write
-            - name: reserved_13_31
-              bitRange: "[31:13]"
+            - name: reserved_3_31
+              bitRange: "[31:3]"
               access: read-only
       - register:
           name: wifi_pll_cfg6
           description: wifi_pll_cfg6
           addressOffset: 2088
-          resetValue: 25165824
+          resetValue: 19922944
           fields:
             - name: wifipll_sdmin
-              bitRange: "[25:0]"
+              bitRange: "[23:0]"
               access: read-write
-            - name: reserved_26_27
-              bitRange: "[27:26]"
-              access: read-only
             - name: wifipll_sdm_bypass
-              bitRange: "[28:28]"
+              bitRange: "[24:24]"
               access: read-write
-            - name: wifipll_sdm_bypass_hw
-              bitRange: "[29:29]"
-              access: read-only
-            - name: reserved_30
-              bitRange: "[30:30]"
+            - name: reserved_25_30
+              bitRange: "[30:25]"
               access: read-only
             - name: wifipll_sdm_ctrl_hw
               bitRange: "[31:31]"
@@ -6499,13 +6388,13 @@ peripherals:
           name: wifi_pll_cfg7
           description: wifi_pll_cfg7
           addressOffset: 2092
-          resetValue: 50
+          resetValue: 1
           fields:
             - name: wifipll_sdm_order_sel
-              bitRange: "[1:0]"
+              bitRange: "[0:0]"
               access: read-write
-            - name: reserved_2_3
-              bitRange: "[3:2]"
+            - name: reserved_1_3
+              bitRange: "[3:1]"
               access: read-only
             - name: wifipll_sdm_noi_prbs_sel
               bitRange: "[5:4]"
@@ -6535,49 +6424,43 @@ peripherals:
           name: wifi_pll_cfg8
           description: wifi_pll_cfg8
           addressOffset: 2096
-          resetValue: 4607
+          resetValue: 256
           fields:
-            - name: wifipll_en_div2
+            - name: wifipll_en_div1
               bitRange: "[0:0]"
               access: read-write
-            - name: wifipll_en_div4
+            - name: wifipll_en_div2
               bitRange: "[1:1]"
               access: read-write
-            - name: wifipll_en_div5
+            - name: wifipll_en_div2p5
               bitRange: "[2:2]"
               access: read-write
-            - name: wifipll_en_div6
+            - name: wifipll_en_div3
               bitRange: "[3:3]"
               access: read-write
-            - name: wifipll_en_div8
+            - name: wifipll_en_div4
               bitRange: "[4:4]"
               access: read-write
-            - name: wifipll_en_div10
+            - name: wifipll_en_div5
               bitRange: "[5:5]"
               access: read-write
-            - name: wifipll_en_div12
+            - name: wifipll_en_div6
               bitRange: "[6:6]"
               access: read-write
-            - name: wifipll_en_div20
+            - name: wifipll_en_div10
               bitRange: "[7:7]"
               access: read-write
-            - name: wifipll_en_div30
+            - name: wifipll_en_div15
               bitRange: "[8:8]"
               access: read-write
-            - name: wifipll_sel_div2_div4
+            - name: wifipll_sel_div1_div2
               bitRange: "[9:9]"
               access: read-write
-            - name: en_wifipll_div30_bz_adc
+            - name: en_wifipll_div15_bz_adc
               bitRange: "[10:10]"
               access: read-write
-            - name: reserved_11
-              bitRange: "[11:11]"
-              access: read-only
-            - name: wifipll_en_div2_hw
-              bitRange: "[12:12]"
-              access: read-only
-            - name: reserved_13_30
-              bitRange: "[30:13]"
+            - name: reserved_11_30
+              bitRange: "[30:11]"
               access: read-only
             - name: wifipll_en_ctrl_hw
               bitRange: "[31:31]"
@@ -6586,7 +6469,7 @@ peripherals:
           name: wifi_pll_cfg9
           description: wifi_pll_cfg9
           addressOffset: 2100
-          resetValue: 4096
+          resetValue: 496
           fields:
             - name: wifipll_dc_tp_out_en
               bitRange: "[0:0]"
@@ -6609,284 +6492,23 @@ peripherals:
             - name: dten_wifipll_fsdm
               bitRange: "[6:6]"
               access: read-write
-            - name: dten_wifipll_div30
+            - name: dten_wifipll_div15
               bitRange: "[7:7]"
               access: read-write
-            - name: dten_wifipll_div10
+            - name: dten_wifipll_div5
               bitRange: "[8:8]"
               access: read-write
             - name: dten_wifipll_postdiv_clk
               bitRange: "[9:9]"
               access: read-write
-            - name: usbpll_dtest_pclk_en
-              bitRange: "[10:10]"
-              access: read-write
-            - name: usbpll_dtest_clkout_en
-              bitRange: "[11:11]"
-              access: read-write
-            - name: dtest_wifipll_pulldown
-              bitRange: "[12:12]"
-              access: read-write
-            - name: reserved_13_31
-              bitRange: "[31:13]"
-              access: read-only
-      - register:
-          name: wifi_pll_cfg10
-          description: wifi_pll_cfg10
-          addressOffset: 2104
-          resetValue: 288359476
-          fields:
-            - name: reserved_0_1
-              bitRange: "[1:0]"
-              access: read-only
-            - name: usbpll_ssc_start
-              bitRange: "[2:2]"
-              access: read-write
-            - name: usbpll_ssc_start_gate_en
-              bitRange: "[3:3]"
-              access: read-write
-            - name: usbpll_ssc_gain
-              bitRange: "[6:4]"
-              access: read-write
-            - name: reserved_7
-              bitRange: "[7:7]"
-              access: read-only
-            - name: usbpll_ssc_en
-              bitRange: "[8:8]"
-              access: read-write
-            - name: usbpll_sdm_bypass
-              bitRange: "[9:9]"
-              access: read-write
-            - name: usbpll_sdm_order_sel
-              bitRange: "[10:10]"
-              access: read-write
-            - name: reserved_11_15
-              bitRange: "[15:11]"
-              access: read-only
-            - name: usbpll_sdm_sig_dith_sel
-              bitRange: "[17:16]"
-              access: read-write
-            - name: reserved_18_19
-              bitRange: "[19:18]"
-              access: read-only
-            - name: usbpll_div2_en
-              bitRange: "[20:20]"
-              access: read-write
-            - name: usbpll_clkout_en
-              bitRange: "[21:21]"
-              access: read-write
-            - name: reserved_22_23
-              bitRange: "[23:22]"
-              access: read-only
-            - name: usbpll_sel_sample_clk
-              bitRange: "[25:24]"
-              access: read-write
-            - name: reserved_26_27
-              bitRange: "[27:26]"
-              access: read-only
-            - name: usbpll_rstb
-              bitRange: "[28:28]"
-              access: read-write
-            - name: pu_usbpll_mmdiv
-              bitRange: "[29:29]"
-              access: read-write
-            - name: reserved_30_31
-              bitRange: "[31:30]"
-              access: read-only
-      - register:
-          name: wifi_pll_cfg11
-          description: wifi_pll_cfg11
-          addressOffset: 2108
-          resetValue: 163840
-          fields:
-            - name: usbpll_sdmin
-              bitRange: "[18:0]"
-              access: read-write
-            - name: reserved_19_31
-              bitRange: "[31:19]"
-              access: read-only
-      - register:
-          name: wifi_pll_cfg12
-          description: wifi_pll_cfg12
-          addressOffset: 2112
-          resetValue: 240
-          fields:
-            - name: usbpll_ssc_cnt
-              bitRange: "[8:0]"
-              access: read-write
-            - name: reserved_9_31
-              bitRange: "[31:9]"
-              access: read-only
-      - register:
-          name: wifi_pll_cfg13
-          description: wifi_pll_cfg13
-          addressOffset: 2116
-          resetValue: 0
-          fields:
-            - name: wifipll_resv
-              bitRange: "[15:0]"
-              access: read-write
-            - name: reserved_16_20
-              bitRange: "[20:16]"
-              access: read-only
-            - name: usbpll_dl_ctrl
-              bitRange: "[21:21]"
-              access: read-write
-            - name: wifipll_dl_ctrl_30_bz_adc
-              bitRange: "[22:22]"
-              access: read-write
-            - name: wifipll_dl_ctrl_30
-              bitRange: "[23:23]"
-              access: read-write
-            - name: wifipll_dl_ctrl_20
-              bitRange: "[24:24]"
-              access: read-write
-            - name: wifipll_dl_ctrl_12
-              bitRange: "[25:25]"
-              access: read-write
-            - name: wifipll_dl_ctrl_10
-              bitRange: "[26:26]"
-              access: read-write
-            - name: wifipll_dl_ctrl_8
-              bitRange: "[27:27]"
-              access: read-write
-            - name: wifipll_dl_ctrl_6
-              bitRange: "[28:28]"
-              access: read-write
-            - name: wifipll_dl_ctrl_5
-              bitRange: "[29:29]"
-              access: read-write
-            - name: wifipll_dl_ctrl_4
-              bitRange: "[30:30]"
-              access: read-write
-            - name: wifipll_dl_ctrl_2
-              bitRange: "[31:31]"
-              access: read-write
-      - register:
-          name: gauge
-          description: gauge
-          addressOffset: 2212
-          resetValue: 134228392
-          fields:
-            - name: gauge_reserve
-              bitRange: "[2:0]"
-              access: read-write
-            - name: gauge_ictrl_adc
-              bitRange: "[4:3]"
-              access: read-write
-            - name: gauge_dem_en
-              bitRange: "[5:5]"
-              access: read-write
-            - name: gauge_ckb_en
-              bitRange: "[6:6]"
-              access: read-write
-            - name: gauge_chop_phas
-              bitRange: "[7:7]"
-              access: read-write
-            - name: gauge_chop_freq
-              bitRange: "[10:8]"
-              access: read-write
-            - name: gauge_chop_en
-              bitRange: "[11:11]"
-              access: read-write
-            - name: gauge_sel_edge
-              bitRange: "[12:12]"
-              access: read-write
-            - name: gauge_quan_gain
-              bitRange: "[14:13]"
-              access: read-write
-            - name: gauge_sdm_pu
-              bitRange: "[15:15]"
-              access: read-write
-            - name: gauge_channel_sel
-              bitRange: "[16:16]"
-              access: read-write
-            - name: gauge_channel_en
-              bitRange: "[17:17]"
-              access: read-write
-            - name: gauge_lp_mode
-              bitRange: "[18:18]"
-              access: read-write
-            - name: reserved_19
-              bitRange: "[19:19]"
-              access: read-only
-            - name: tmux_gauge_power
-              bitRange: "[22:20]"
-              access: read-write
-            - name: ten_gauge_power
-              bitRange: "[23:23]"
-              access: read-write
-            - name: ntc_bias_sel
-              bitRange: "[27:24]"
-              access: read-write
-            - name: ntc_bias_en
-              bitRange: "[28:28]"
-              access: read-write
-            - name: gauge_ldo_pu
-              bitRange: "[29:29]"
-              access: read-write
-            - name: gauge_vcm_pu
-              bitRange: "[30:30]"
-              access: read-write
-            - name: gauge_bg_pu
-              bitRange: "[31:31]"
-              access: read-write
-      - register:
-          name: gauge_rx_fifo_ctrl
-          description: gauge_rx_fifo_ctrl
-          addressOffset: 2232
-          resetValue: 0
-          fields: []
-      - register:
-          name: gauge_rx_fifo_status
-          description: gauge_rx_fifo_status
-          addressOffset: 2236
-          resetValue: 0
-          fields:
-            - name: reserved_0
-              bitRange: "[0:0]"
-              access: read-only
-            - name: gauge_rxo_int
-              bitRange: "[1:1]"
-              access: read-only
-            - name: gauge_rxu_int
-              bitRange: "[2:2]"
-              access: read-only
-            - name: reserved_3
-              bitRange: "[3:3]"
-              access: read-only
-            - name: gauge_rxa_int
-              bitRange: "[4:4]"
-              access: read-only
-            - name: reserved_5_15
-              bitRange: "[15:5]"
-              access: read-only
-            - name: gauge_rxa_cnt
-              bitRange: "[18:16]"
-              access: read-only
-            - name: reserved_19_23
-              bitRange: "[23:19]"
-              access: read-only
-            - name: gauge_rxa
-              bitRange: "[24:24]"
-              access: read-only
-            - name: reserved_25_31
-              bitRange: "[31:25]"
-              access: read-only
-      - register:
-          name: gauge_rx_fifo_data
-          description: gauge_rx_fifo_data
-          addressOffset: 2240
-          resetValue: 0
-          fields:
-            - name: gauge_rx_data
-              bitRange: "[31:0]"
+            - name: reserved_10_31
+              bitRange: "[31:10]"
               access: read-only
       - register:
           name: gpio_cfg0
           description: gpio_cfg0
           addressOffset: 2244
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_0_ie
               bitRange: "[0:0]"
@@ -6937,7 +6559,7 @@ peripherals:
           name: gpio_cfg1
           description: gpio_cfg1
           addressOffset: 2248
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_1_ie
               bitRange: "[0:0]"
@@ -6988,7 +6610,7 @@ peripherals:
           name: gpio_cfg2
           description: gpio_cfg2
           addressOffset: 2252
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_2_ie
               bitRange: "[0:0]"
@@ -7192,7 +6814,7 @@ peripherals:
           name: gpio_cfg6
           description: gpio_cfg6
           addressOffset: 2268
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_6_ie
               bitRange: "[0:0]"
@@ -7243,7 +6865,7 @@ peripherals:
           name: gpio_cfg7
           description: gpio_cfg7
           addressOffset: 2272
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_7_ie
               bitRange: "[0:0]"
@@ -7294,7 +6916,7 @@ peripherals:
           name: gpio_cfg8
           description: gpio_cfg8
           addressOffset: 2276
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_8_ie
               bitRange: "[0:0]"
@@ -7345,7 +6967,7 @@ peripherals:
           name: gpio_cfg9
           description: gpio_cfg9
           addressOffset: 2280
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_9_ie
               bitRange: "[0:0]"
@@ -7396,7 +7018,7 @@ peripherals:
           name: gpio_cfg10
           description: gpio_cfg10
           addressOffset: 2284
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_10_ie
               bitRange: "[0:0]"
@@ -7447,7 +7069,7 @@ peripherals:
           name: gpio_cfg11
           description: gpio_cfg11
           addressOffset: 2288
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_11_ie
               bitRange: "[0:0]"
@@ -7498,7 +7120,7 @@ peripherals:
           name: gpio_cfg12
           description: gpio_cfg12
           addressOffset: 2292
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_12_ie
               bitRange: "[0:0]"
@@ -7549,7 +7171,7 @@ peripherals:
           name: gpio_cfg13
           description: gpio_cfg13
           addressOffset: 2296
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_13_ie
               bitRange: "[0:0]"
@@ -7600,7 +7222,7 @@ peripherals:
           name: gpio_cfg14
           description: gpio_cfg14
           addressOffset: 2300
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_14_ie
               bitRange: "[0:0]"
@@ -7651,7 +7273,7 @@ peripherals:
           name: gpio_cfg15
           description: gpio_cfg15
           addressOffset: 2304
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_15_ie
               bitRange: "[0:0]"
@@ -7702,7 +7324,7 @@ peripherals:
           name: gpio_cfg16
           description: gpio_cfg16
           addressOffset: 2308
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_16_ie
               bitRange: "[0:0]"
@@ -7753,7 +7375,7 @@ peripherals:
           name: gpio_cfg17
           description: gpio_cfg17
           addressOffset: 2312
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_17_ie
               bitRange: "[0:0]"
@@ -7804,7 +7426,7 @@ peripherals:
           name: gpio_cfg18
           description: gpio_cfg18
           addressOffset: 2316
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_18_ie
               bitRange: "[0:0]"
@@ -7855,7 +7477,7 @@ peripherals:
           name: gpio_cfg19
           description: gpio_cfg19
           addressOffset: 2320
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_19_ie
               bitRange: "[0:0]"
@@ -7906,7 +7528,7 @@ peripherals:
           name: gpio_cfg20
           description: gpio_cfg20
           addressOffset: 2324
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_20_ie
               bitRange: "[0:0]"
@@ -7957,7 +7579,7 @@ peripherals:
           name: gpio_cfg21
           description: gpio_cfg21
           addressOffset: 2328
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_21_ie
               bitRange: "[0:0]"
@@ -8008,7 +7630,7 @@ peripherals:
           name: gpio_cfg22
           description: gpio_cfg22
           addressOffset: 2332
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_22_ie
               bitRange: "[0:0]"
@@ -8059,7 +7681,7 @@ peripherals:
           name: gpio_cfg23
           description: gpio_cfg23
           addressOffset: 2336
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_23_ie
               bitRange: "[0:0]"
@@ -8110,7 +7732,7 @@ peripherals:
           name: gpio_cfg24
           description: gpio_cfg24
           addressOffset: 2340
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_24_ie
               bitRange: "[0:0]"
@@ -8161,7 +7783,7 @@ peripherals:
           name: gpio_cfg25
           description: gpio_cfg25
           addressOffset: 2344
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_25_ie
               bitRange: "[0:0]"
@@ -8212,7 +7834,7 @@ peripherals:
           name: gpio_cfg26
           description: gpio_cfg26
           addressOffset: 2348
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_26_ie
               bitRange: "[0:0]"
@@ -8263,7 +7885,7 @@ peripherals:
           name: gpio_cfg27
           description: gpio_cfg27
           addressOffset: 2352
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_27_ie
               bitRange: "[0:0]"
@@ -8314,7 +7936,7 @@ peripherals:
           name: gpio_cfg28
           description: gpio_cfg28
           addressOffset: 2356
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_28_ie
               bitRange: "[0:0]"
@@ -8365,7 +7987,7 @@ peripherals:
           name: gpio_cfg29
           description: gpio_cfg29
           addressOffset: 2360
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_29_ie
               bitRange: "[0:0]"
@@ -8416,7 +8038,7 @@ peripherals:
           name: gpio_cfg30
           description: gpio_cfg30
           addressOffset: 2364
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_30_ie
               bitRange: "[0:0]"
@@ -8467,7 +8089,7 @@ peripherals:
           name: gpio_cfg31
           description: gpio_cfg31
           addressOffset: 2368
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_31_ie
               bitRange: "[0:0]"
@@ -8518,7 +8140,7 @@ peripherals:
           name: gpio_cfg32
           description: gpio_cfg32
           addressOffset: 2372
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_32_ie
               bitRange: "[0:0]"
@@ -8569,7 +8191,7 @@ peripherals:
           name: gpio_cfg33
           description: gpio_cfg33
           addressOffset: 2376
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_33_ie
               bitRange: "[0:0]"
@@ -8620,7 +8242,7 @@ peripherals:
           name: gpio_cfg34
           description: gpio_cfg34
           addressOffset: 2380
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_34_ie
               bitRange: "[0:0]"
@@ -8671,7 +8293,7 @@ peripherals:
           name: gpio_cfg35
           description: gpio_cfg35
           addressOffset: 2384
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_35_ie
               bitRange: "[0:0]"
@@ -8722,7 +8344,7 @@ peripherals:
           name: gpio_cfg36
           description: gpio_cfg36
           addressOffset: 2388
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_36_ie
               bitRange: "[0:0]"
@@ -8773,7 +8395,7 @@ peripherals:
           name: gpio_cfg37
           description: gpio_cfg37
           addressOffset: 2392
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_37_ie
               bitRange: "[0:0]"
@@ -8824,7 +8446,7 @@ peripherals:
           name: gpio_cfg38
           description: gpio_cfg38
           addressOffset: 2396
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_38_ie
               bitRange: "[0:0]"
@@ -8875,7 +8497,7 @@ peripherals:
           name: gpio_cfg39
           description: gpio_cfg39
           addressOffset: 2400
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_39_ie
               bitRange: "[0:0]"
@@ -8926,7 +8548,7 @@ peripherals:
           name: gpio_cfg40
           description: gpio_cfg40
           addressOffset: 2404
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_40_ie
               bitRange: "[0:0]"
@@ -8977,7 +8599,7 @@ peripherals:
           name: gpio_cfg41
           description: gpio_cfg41
           addressOffset: 2408
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_41_ie
               bitRange: "[0:0]"
@@ -9028,7 +8650,7 @@ peripherals:
           name: gpio_cfg42
           description: gpio_cfg42
           addressOffset: 2412
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_42_ie
               bitRange: "[0:0]"
@@ -9079,7 +8701,7 @@ peripherals:
           name: gpio_cfg43
           description: gpio_cfg43
           addressOffset: 2416
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_43_ie
               bitRange: "[0:0]"
@@ -9130,7 +8752,7 @@ peripherals:
           name: gpio_cfg44
           description: gpio_cfg44
           addressOffset: 2420
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_44_ie
               bitRange: "[0:0]"
@@ -9181,7 +8803,7 @@ peripherals:
           name: gpio_cfg45
           description: gpio_cfg45
           addressOffset: 2424
-          resetValue: 4197122
+          resetValue: 4197123
           fields:
             - name: reg_gpio_45_ie
               bitRange: "[0:0]"
@@ -9232,7 +8854,7 @@ peripherals:
           name: gpio_cfg46
           description: gpio_cfg46
           addressOffset: 2428
-          resetValue: 2
+          resetValue: 4197123
           fields:
             - name: reg_gpio_46_ie
               bitRange: "[0:0]"
@@ -9249,14 +8871,41 @@ peripherals:
             - name: reg_gpio_46_pd
               bitRange: "[5:5]"
               access: read-write
-            - name: reserved_6_31
-              bitRange: "[31:6]"
+            - name: reg_gpio_46_oe
+              bitRange: "[6:6]"
+              access: read-write
+            - name: reserved_7
+              bitRange: "[7:7]"
               access: read-only
+            - name: reg_gpio_46_func_sel
+              bitRange: "[12:8]"
+              access: read-write
+            - name: reserved_13_15
+              bitRange: "[15:13]"
+              access: read-only
+            - name: reg_gpio_46_int_mode_set
+              bitRange: "[19:16]"
+              access: read-write
+            - name: reg_gpio_46_int_clr
+              bitRange: "[20:20]"
+              access: read-write
+            - name: gpio_46_int_stat
+              bitRange: "[21:21]"
+              access: read-only
+            - name: reg_gpio_46_int_mask
+              bitRange: "[22:22]"
+              access: read-write
+            - name: reserved_23
+              bitRange: "[23:23]"
+              access: read-only
+            - name: reg_gpio_46_o
+              bitRange: "[24:24]"
+              access: read-write
       - register:
           name: gpio_cfg47
           description: gpio_cfg47
           addressOffset: 2432
-          resetValue: 2
+          resetValue: 4197123
           fields:
             - name: reg_gpio_47_ie
               bitRange: "[0:0]"
@@ -9273,14 +8922,41 @@ peripherals:
             - name: reg_gpio_47_pd
               bitRange: "[5:5]"
               access: read-write
-            - name: reserved_6_31
-              bitRange: "[31:6]"
+            - name: reg_gpio_47_oe
+              bitRange: "[6:6]"
+              access: read-write
+            - name: reserved_7
+              bitRange: "[7:7]"
               access: read-only
+            - name: reg_gpio_47_func_sel
+              bitRange: "[12:8]"
+              access: read-write
+            - name: reserved_13_15
+              bitRange: "[15:13]"
+              access: read-only
+            - name: reg_gpio_47_int_mode_set
+              bitRange: "[19:16]"
+              access: read-write
+            - name: reg_gpio_47_int_clr
+              bitRange: "[20:20]"
+              access: read-write
+            - name: gpio_47_int_stat
+              bitRange: "[21:21]"
+              access: read-only
+            - name: reg_gpio_47_int_mask
+              bitRange: "[22:22]"
+              access: read-write
+            - name: reserved_23
+              bitRange: "[23:23]"
+              access: read-only
+            - name: reg_gpio_47_o
+              bitRange: "[24:24]"
+              access: read-write
       - register:
           name: gpio_cfg48
           description: gpio_cfg48
           addressOffset: 2436
-          resetValue: 2
+          resetValue: 4197123
           fields:
             - name: reg_gpio_48_ie
               bitRange: "[0:0]"
@@ -9297,14 +8973,41 @@ peripherals:
             - name: reg_gpio_48_pd
               bitRange: "[5:5]"
               access: read-write
-            - name: reserved_6_31
-              bitRange: "[31:6]"
+            - name: reg_gpio_48_oe
+              bitRange: "[6:6]"
+              access: read-write
+            - name: reserved_7
+              bitRange: "[7:7]"
               access: read-only
+            - name: reg_gpio_48_func_sel
+              bitRange: "[12:8]"
+              access: read-write
+            - name: reserved_13_15
+              bitRange: "[15:13]"
+              access: read-only
+            - name: reg_gpio_48_int_mode_set
+              bitRange: "[19:16]"
+              access: read-write
+            - name: reg_gpio_48_int_clr
+              bitRange: "[20:20]"
+              access: read-write
+            - name: gpio_48_int_stat
+              bitRange: "[21:21]"
+              access: read-only
+            - name: reg_gpio_48_int_mask
+              bitRange: "[22:22]"
+              access: read-write
+            - name: reserved_23
+              bitRange: "[23:23]"
+              access: read-only
+            - name: reg_gpio_48_o
+              bitRange: "[24:24]"
+              access: read-write
       - register:
           name: gpio_cfg49
           description: gpio_cfg49
           addressOffset: 2440
-          resetValue: 2
+          resetValue: 4197123
           fields:
             - name: reg_gpio_49_ie
               bitRange: "[0:0]"
@@ -9321,14 +9024,41 @@ peripherals:
             - name: reg_gpio_49_pd
               bitRange: "[5:5]"
               access: read-write
-            - name: reserved_6_31
-              bitRange: "[31:6]"
+            - name: reg_gpio_49_oe
+              bitRange: "[6:6]"
+              access: read-write
+            - name: reserved_7
+              bitRange: "[7:7]"
               access: read-only
+            - name: reg_gpio_49_func_sel
+              bitRange: "[12:8]"
+              access: read-write
+            - name: reserved_13_15
+              bitRange: "[15:13]"
+              access: read-only
+            - name: reg_gpio_49_int_mode_set
+              bitRange: "[19:16]"
+              access: read-write
+            - name: reg_gpio_49_int_clr
+              bitRange: "[20:20]"
+              access: read-write
+            - name: gpio_49_int_stat
+              bitRange: "[21:21]"
+              access: read-only
+            - name: reg_gpio_49_int_mask
+              bitRange: "[22:22]"
+              access: read-write
+            - name: reserved_23
+              bitRange: "[23:23]"
+              access: read-only
+            - name: reg_gpio_49_o
+              bitRange: "[24:24]"
+              access: read-write
       - register:
           name: gpio_cfg50
           description: gpio_cfg50
           addressOffset: 2444
-          resetValue: 2
+          resetValue: 4197123
           fields:
             - name: reg_gpio_50_ie
               bitRange: "[0:0]"
@@ -9345,14 +9075,41 @@ peripherals:
             - name: reg_gpio_50_pd
               bitRange: "[5:5]"
               access: read-write
-            - name: reserved_6_31
-              bitRange: "[31:6]"
+            - name: reg_gpio_50_oe
+              bitRange: "[6:6]"
+              access: read-write
+            - name: reserved_7
+              bitRange: "[7:7]"
               access: read-only
+            - name: reg_gpio_50_func_sel
+              bitRange: "[12:8]"
+              access: read-write
+            - name: reserved_13_15
+              bitRange: "[15:13]"
+              access: read-only
+            - name: reg_gpio_50_int_mode_set
+              bitRange: "[19:16]"
+              access: read-write
+            - name: reg_gpio_50_int_clr
+              bitRange: "[20:20]"
+              access: read-write
+            - name: gpio_50_int_stat
+              bitRange: "[21:21]"
+              access: read-only
+            - name: reg_gpio_50_int_mask
+              bitRange: "[22:22]"
+              access: read-write
+            - name: reserved_23
+              bitRange: "[23:23]"
+              access: read-only
+            - name: reg_gpio_50_o
+              bitRange: "[24:24]"
+              access: read-write
       - register:
           name: gpio_cfg51
           description: gpio_cfg51
           addressOffset: 2448
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_51_ie
               bitRange: "[0:0]"
@@ -9376,7 +9133,7 @@ peripherals:
           name: gpio_cfg52
           description: gpio_cfg52
           addressOffset: 2452
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_52_ie
               bitRange: "[0:0]"
@@ -9400,7 +9157,7 @@ peripherals:
           name: gpio_cfg53
           description: gpio_cfg53
           addressOffset: 2456
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_53_ie
               bitRange: "[0:0]"
@@ -9424,7 +9181,7 @@ peripherals:
           name: gpio_cfg54
           description: gpio_cfg54
           addressOffset: 2460
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_54_ie
               bitRange: "[0:0]"
@@ -9448,7 +9205,7 @@ peripherals:
           name: gpio_cfg55
           description: gpio_cfg55
           addressOffset: 2464
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_55_ie
               bitRange: "[0:0]"
@@ -9472,7 +9229,7 @@ peripherals:
           name: gpio_cfg56
           description: gpio_cfg56
           addressOffset: 2468
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_56_ie
               bitRange: "[0:0]"
@@ -9496,7 +9253,7 @@ peripherals:
           name: gpio_cfg57
           description: gpio_cfg57
           addressOffset: 2472
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_57_ie
               bitRange: "[0:0]"
@@ -9520,7 +9277,7 @@ peripherals:
           name: gpio_cfg58
           description: gpio_cfg58
           addressOffset: 2476
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_58_ie
               bitRange: "[0:0]"
@@ -9544,7 +9301,7 @@ peripherals:
           name: gpio_cfg59
           description: gpio_cfg59
           addressOffset: 2480
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_59_ie
               bitRange: "[0:0]"
@@ -9568,7 +9325,7 @@ peripherals:
           name: gpio_cfg60
           description: gpio_cfg60
           addressOffset: 2484
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_60_ie
               bitRange: "[0:0]"
@@ -9592,7 +9349,7 @@ peripherals:
           name: gpio_cfg61
           description: gpio_cfg61
           addressOffset: 2488
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_61_ie
               bitRange: "[0:0]"
@@ -9616,7 +9373,7 @@ peripherals:
           name: gpio_cfg62
           description: gpio_cfg62
           addressOffset: 2492
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_62_ie
               bitRange: "[0:0]"
@@ -9640,7 +9397,7 @@ peripherals:
           name: gpio_cfg63
           description: gpio_cfg63
           addressOffset: 2496
-          resetValue: 2
+          resetValue: 3
           fields:
             - name: reg_gpio_63_ie
               bitRange: "[0:0]"
@@ -9659,6 +9416,708 @@ peripherals:
               access: read-write
             - name: reserved_6_31
               bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg64
+          description: gpio_cfg64
+          addressOffset: 2500
+          resetValue: 3
+          fields:
+            - name: reg_gpio_64_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_64_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_64_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_64_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_64_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg65
+          description: gpio_cfg65
+          addressOffset: 2504
+          resetValue: 3
+          fields:
+            - name: reg_gpio_65_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_65_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_65_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_65_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_65_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg66
+          description: gpio_cfg66
+          addressOffset: 2508
+          resetValue: 3
+          fields:
+            - name: reg_gpio_66_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_66_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_66_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_66_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_66_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg67
+          description: gpio_cfg67
+          addressOffset: 2512
+          resetValue: 3
+          fields:
+            - name: reg_gpio_67_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_67_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_67_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_67_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_67_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg68
+          description: gpio_cfg68
+          addressOffset: 2516
+          resetValue: 3
+          fields:
+            - name: reg_gpio_68_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_68_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_68_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_68_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_68_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg69
+          description: gpio_cfg69
+          addressOffset: 2520
+          resetValue: 3
+          fields:
+            - name: reg_gpio_69_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_69_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_69_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_69_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_69_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg70
+          description: gpio_cfg70
+          addressOffset: 2524
+          resetValue: 3
+          fields:
+            - name: reg_gpio_70_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_70_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_70_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_70_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_70_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg71
+          description: gpio_cfg71
+          addressOffset: 2528
+          resetValue: 3
+          fields:
+            - name: reg_gpio_71_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_71_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_71_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_71_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_71_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg72
+          description: gpio_cfg72
+          addressOffset: 2532
+          resetValue: 3
+          fields:
+            - name: reg_gpio_72_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_72_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_72_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_72_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_72_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg73
+          description: gpio_cfg73
+          addressOffset: 2536
+          resetValue: 3
+          fields:
+            - name: reg_gpio_73_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_73_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_73_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_73_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_73_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg74
+          description: gpio_cfg74
+          addressOffset: 2540
+          resetValue: 3
+          fields:
+            - name: reg_gpio_74_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_74_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_74_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_74_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_74_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg75
+          description: gpio_cfg75
+          addressOffset: 2544
+          resetValue: 3
+          fields:
+            - name: reg_gpio_75_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_75_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_75_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_75_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_75_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg76
+          description: gpio_cfg76
+          addressOffset: 2548
+          resetValue: 3
+          fields:
+            - name: reg_gpio_76_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_76_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_76_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_76_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_76_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg77
+          description: gpio_cfg77
+          addressOffset: 2552
+          resetValue: 3
+          fields:
+            - name: reg_gpio_77_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_77_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_77_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_77_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_77_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg78
+          description: gpio_cfg78
+          addressOffset: 2556
+          resetValue: 3
+          fields:
+            - name: reg_gpio_78_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_78_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_78_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_78_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_78_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg79
+          description: gpio_cfg79
+          addressOffset: 2560
+          resetValue: 3
+          fields:
+            - name: reg_gpio_79_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_79_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_79_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_79_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_79_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg80
+          description: gpio_cfg80
+          addressOffset: 2564
+          resetValue: 3
+          fields:
+            - name: reg_gpio_80_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_80_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_80_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_80_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_80_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg81
+          description: gpio_cfg81
+          addressOffset: 2568
+          resetValue: 3
+          fields:
+            - name: reg_gpio_81_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_81_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_81_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_81_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_81_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg82
+          description: gpio_cfg82
+          addressOffset: 2572
+          resetValue: 3
+          fields:
+            - name: reg_gpio_82_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_82_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_82_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_82_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_82_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg83
+          description: gpio_cfg83
+          addressOffset: 2576
+          resetValue: 3
+          fields:
+            - name: reg_gpio_83_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_83_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_83_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_83_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_83_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg84
+          description: gpio_cfg84
+          addressOffset: 2580
+          resetValue: 3
+          fields:
+            - name: reg_gpio_84_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_84_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_84_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_84_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_84_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg85
+          description: gpio_cfg85
+          addressOffset: 2584
+          resetValue: 3
+          fields:
+            - name: reg_gpio_85_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_85_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_85_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_85_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_85_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg86
+          description: gpio_cfg86
+          addressOffset: 2588
+          resetValue: 3
+          fields:
+            - name: reg_gpio_86_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_86_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_86_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_86_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_86_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg87
+          description: gpio_cfg87
+          addressOffset: 2592
+          resetValue: 3
+          fields:
+            - name: reg_gpio_87_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_87_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_87_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_87_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_87_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg88
+          description: gpio_cfg88
+          addressOffset: 2596
+          resetValue: 3
+          fields:
+            - name: reg_gpio_88_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_88_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_88_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_88_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_88_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg89
+          description: gpio_cfg89
+          addressOffset: 2600
+          resetValue: 3
+          fields:
+            - name: reg_gpio_89_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_89_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_89_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_89_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_89_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg90
+          description: gpio_cfg90
+          addressOffset: 2604
+          resetValue: 3
+          fields:
+            - name: reg_gpio_90_ie
+              bitRange: "[0:0]"
+              access: read-write
+            - name: reg_gpio_90_smt
+              bitRange: "[1:1]"
+              access: read-write
+            - name: reg_gpio_90_drv
+              bitRange: "[3:2]"
+              access: read-write
+            - name: reg_gpio_90_pu
+              bitRange: "[4:4]"
+              access: read-write
+            - name: reg_gpio_90_pd
+              bitRange: "[5:5]"
+              access: read-write
+            - name: reserved_6_31
+              bitRange: "[31:6]"
+              access: read-only
+      - register:
+          name: gpio_cfg94
+          description: gpio_cfg94
+          addressOffset: 2620
+          resetValue: 0
+          fields:
+            - name: reserved_0_31
+              bitRange: "[31:0]"
+              access: read-only
+      - register:
+          name: gpio_cfg95
+          description: gpio_cfg95
+          addressOffset: 2624
+          resetValue: 0
+          fields:
+            - name: reserved_0_31
+              bitRange: "[31:0]"
+              access: read-only
+      - register:
+          name: gpio_cfg96
+          description: gpio_cfg96
+          addressOffset: 2628
+          resetValue: 0
+          fields:
+            - name: reserved_0_31
+              bitRange: "[31:0]"
+              access: read-only
+      - register:
+          name: gpio_cfg97
+          description: gpio_cfg97
+          addressOffset: 2632
+          resetValue: 0
+          fields:
+            - name: reserved_0_31
+              bitRange: "[31:0]"
+              access: read-only
+      - register:
+          name: gpio_cfg98
+          description: gpio_cfg98
+          addressOffset: 2636
+          resetValue: 0
+          fields:
+            - name: reserved_0_31
+              bitRange: "[31:0]"
+              access: read-only
+      - register:
+          name: gpio_cfg99
+          description: gpio_cfg99
+          addressOffset: 2640
+          resetValue: 0
+          fields:
+            - name: reserved_0_31
+              bitRange: "[31:0]"
               access: read-only
       - register:
           name: gpio_cfg128
@@ -9810,8 +10269,23 @@ peripherals:
             - name: reg2_gpio_45_i
               bitRange: "[13:13]"
               access: read-only
-            - name: reserved_14_31
-              bitRange: "[31:14]"
+            - name: reg2_gpio_46_i
+              bitRange: "[14:14]"
+              access: read-only
+            - name: reg2_gpio_47_i
+              bitRange: "[15:15]"
+              access: read-only
+            - name: reg2_gpio_48_i
+              bitRange: "[16:16]"
+              access: read-only
+            - name: reg2_gpio_49_i
+              bitRange: "[17:17]"
+              access: read-only
+            - name: reg2_gpio_50_i
+              bitRange: "[18:18]"
+              access: read-only
+            - name: reserved_19_31
+              bitRange: "[31:19]"
               access: read-only
       - register:
           name: gpio_cfg136
@@ -9963,8 +10437,23 @@ peripherals:
             - name: reg2_gpio_45_o
               bitRange: "[13:13]"
               access: read-write
-            - name: reserved_14_31
-              bitRange: "[31:14]"
+            - name: reg2_gpio_46_o
+              bitRange: "[14:14]"
+              access: read-write
+            - name: reg2_gpio_47_o
+              bitRange: "[15:15]"
+              access: read-write
+            - name: reg2_gpio_48_o
+              bitRange: "[16:16]"
+              access: read-write
+            - name: reg2_gpio_49_o
+              bitRange: "[17:17]"
+              access: read-write
+            - name: reg2_gpio_50_o
+              bitRange: "[18:18]"
+              access: read-write
+            - name: reserved_19_31
+              bitRange: "[31:19]"
               access: read-only
       - register:
           name: gpio_cfg138
@@ -9976,12 +10465,6 @@ peripherals:
           name: gpio_cfg139
           description: gpio_cfg139
           addressOffset: 2800
-          resetValue: 0
-          fields: []
-      - register:
-          name: gpio_cfg140
-          description: gpio_cfg140
-          addressOffset: 2804
           resetValue: 0
           fields: []
       - register:
