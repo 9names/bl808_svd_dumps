@@ -15996,6 +15996,7 @@ peripherals:
           name: SD_SYS_ADDR_LOW
           description: System Address Low Register
           addressOffset: 0
+          size: 16
           resetValue: 0
           fields:
             - name: DMA_ADDR_L
@@ -16005,6 +16006,7 @@ peripherals:
           name: SD_SYS_ADDR_HIGH
           description: System Address High Register
           addressOffset: 2
+          size: 16
           resetValue: 0
           fields:
             - name: DMA_ADDR_H
@@ -16014,6 +16016,7 @@ peripherals:
           name: SD_BLOCK_SIZE
           description: Block Size Register
           addressOffset: 4
+          size: 16
           resetValue: 0
           fields:
             - name: BLOCK_SIZE
@@ -16029,6 +16032,7 @@ peripherals:
           name: SD_BLOCK_COUNT
           description: Block Count Register
           addressOffset: 6
+          size: 16
           resetValue: 0
           fields:
             - name: BLOCK_COUNT
@@ -16038,6 +16042,7 @@ peripherals:
           name: SD_ARG_LOW
           description: Argument Low Register
           addressOffset: 8
+          size: 16
           resetValue: 0
           fields:
             - name: ARG_L
@@ -16047,6 +16052,7 @@ peripherals:
           name: SD_ARG_HIGH
           description: Argument High Register
           addressOffset: 10
+          size: 16
           resetValue: 0
           fields:
             - name: ARG_H
@@ -16056,6 +16062,7 @@ peripherals:
           name: SD_TRANSFER_MODE
           description: Transfer Mode Register
           addressOffset: 12
+          size: 16
           resetValue: 0
           fields:
             - name: DMA_EN
@@ -16080,6 +16087,7 @@ peripherals:
           name: SD_CMD
           description: Command Register
           addressOffset: 14
+          size: 16
           resetValue: 0
           fields:
             - name: RESP_TYPE
@@ -16110,6 +16118,7 @@ peripherals:
           name: SD_RESP_0
           description: Response Register 0
           addressOffset: 16
+          size: 16
           resetValue: 0
           fields:
             - name: RESP0
@@ -16119,6 +16128,7 @@ peripherals:
           name: SD_RESP_1
           description: Response Register 1
           addressOffset: 18
+          size: 16
           resetValue: 0
           fields:
             - name: RESP1
@@ -16128,6 +16138,7 @@ peripherals:
           name: SD_RESP_2
           description: Response Register 2
           addressOffset: 20
+          size: 16
           resetValue: 0
           fields:
             - name: RESP2
@@ -16137,6 +16148,7 @@ peripherals:
           name: SD_RESP_3
           description: Response Register 3
           addressOffset: 22
+          size: 16
           resetValue: 0
           fields:
             - name: RESP3
@@ -16146,6 +16158,7 @@ peripherals:
           name: SD_RESP_4
           description: Response Register 4
           addressOffset: 24
+          size: 16
           resetValue: 0
           fields:
             - name: RESP4
@@ -16155,6 +16168,7 @@ peripherals:
           name: SD_RESP_5
           description: Response Register 5
           addressOffset: 26
+          size: 16
           resetValue: 0
           fields:
             - name: RESP5
@@ -16164,6 +16178,7 @@ peripherals:
           name: SD_RESP_6
           description: Response Register 6
           addressOffset: 28
+          size: 16
           resetValue: 0
           fields:
             - name: RESP6
@@ -16173,6 +16188,7 @@ peripherals:
           name: SD_RESP_7
           description: Response Register 7
           addressOffset: 30
+          size: 16
           resetValue: 0
           fields:
             - name: RESP7
@@ -16182,6 +16198,7 @@ peripherals:
           name: SD_BUFFER_DATA_PORT_0
           description: Buffer Data Port 0 Register
           addressOffset: 32
+          size: 16
           resetValue: 0
           fields:
             - name: CPU_DATA0
@@ -16191,6 +16208,7 @@ peripherals:
           name: SD_BUFFER_DATA_PORT_1
           description: Buffer Data Port 1 Register
           addressOffset: 34
+          size: 16
           resetValue: 0
           fields:
             - name: CPU_DATA1
@@ -16200,6 +16218,7 @@ peripherals:
           name: SD_PRESENT_STATE_1
           description: Present State Register 1
           addressOffset: 36
+          size: 16
           resetValue: 1024
           fields:
             - name: CMD_INHIBIT_CMD
@@ -16236,6 +16255,7 @@ peripherals:
           name: SD_PRESENT_STATE_2
           description: Present State Register 2
           addressOffset: 38
+          size: 16
           resetValue: 496
           fields:
             - name: CARD_INSERTED
@@ -16263,6 +16283,7 @@ peripherals:
           name: SD_HOST_CTRL
           description: Host Control Register
           addressOffset: 40
+          size: 16
           resetValue: 0
           fields:
             - name: LED_CTRL
@@ -16299,6 +16320,7 @@ peripherals:
           name: SD_BLOCK_GAP_CTRL
           description: Block Gap Control Register
           addressOffset: 42
+          size: 16
           resetValue: 0
           fields:
             - name: STOP_AT_BLOCK_GAP_REQ
@@ -16332,6 +16354,7 @@ peripherals:
           name: SD_CLOCK_CTRL
           description: Clock Control Register
           addressOffset: 44
+          size: 16
           resetValue: 0
           fields:
             - name: INT_CLK_EN
@@ -16359,6 +16382,7 @@ peripherals:
           name: SD_TIMEOUT_CTRL_SW_RESET
           description: Timeout Control/Software Reset Register
           addressOffset: 46
+          size: 16
           resetValue: 0
           fields:
             - name: TIMEOUT_VALUE
@@ -16383,6 +16407,7 @@ peripherals:
           name: SD_NORMAL_INT_STATUS
           description: Normal Interrupt Status Register
           addressOffset: 48
+          size: 16
           resetValue: 16
           fields:
             - name: CMD_COMPLETE
@@ -16434,6 +16459,7 @@ peripherals:
           name: SD_ERROR_INT_STATUS
           description: Error Interrupt Status Register
           addressOffset: 50
+          size: 16
           resetValue: 0
           fields:
             - name: CMD_TIMEOUT_ERR
@@ -16488,6 +16514,7 @@ peripherals:
           name: SD_NORMAL_INT_STATUS_EN
           description: Normal Interrupt Status Enable Register
           addressOffset: 52
+          size: 16
           resetValue: 0
           fields:
             - name: CMD_COMPLETE_EN
@@ -16536,6 +16563,7 @@ peripherals:
           name: SD_ERROR_INT_STATUS_EN
           description: Error Interrupt Status Enable Register
           addressOffset: 54
+          size: 16
           resetValue: 0
           fields:
             - name: CMD_TIMEOUT_ERR_EN
@@ -16590,6 +16618,7 @@ peripherals:
           name: SD_NORMAL_INT_STATUS_INT_EN
           description: Normal Interrupt Status Interrupt Enable Register
           addressOffset: 56
+          size: 16
           resetValue: 0
           fields:
             - name: CMD_COMPLETE_INT_EN
@@ -16638,6 +16667,7 @@ peripherals:
           name: SD_ERROR_INT_STATUS_INT_EN
           description: Error Interrupt Status Interrupt Enable Register
           addressOffset: 58
+          size: 16
           resetValue: 0
           fields:
             - name: CMD_TIMEOUT_ERR_INT_EN
@@ -16692,6 +16722,7 @@ peripherals:
           name: SD_AUTO_CMD12_ERROR_STATUS
           description: Auto CMD12 Error Status Register
           addressOffset: 60
+          size: 16
           resetValue: 0
           fields:
             - name: AUTO_CMD12_NOT_EXE
@@ -16722,6 +16753,7 @@ peripherals:
           name: HOST_CTRL_2
           description: Host Control 2 Register
           addressOffset: 62
+          size: 16
           resetValue: 16384
           fields:
             - name: UHS_MODE_SEL
@@ -16752,6 +16784,7 @@ peripherals:
           name: SD_CAPABILITIES_1
           description: Capabilities Register 1
           addressOffset: 64
+          size: 16
           resetValue: 128
           fields:
             - name: TIMEOUT_FREQ
@@ -16770,6 +16803,7 @@ peripherals:
           name: SD_CAPABILITIES_2
           description: Capabilities Register 2
           addressOffset: 66
+          size: 16
           resetValue: 9724
           fields:
             - name: MAX_BLK_LEN
@@ -16818,6 +16852,7 @@ peripherals:
           name: SD_CAPABILITIES_3
           description: Capabilities Register 3
           addressOffset: 68
+          size: 16
           resetValue: 12151
           fields:
             - name: SDR50_SUPPORT
@@ -16860,6 +16895,7 @@ peripherals:
           name: SD_CAPABILITIES_4
           description: Capabilities Register 4
           addressOffset: 70
+          size: 16
           resetValue: 0
           fields:
             - name: clk_multiplier
@@ -16872,6 +16908,7 @@ peripherals:
           name: SD_MAX_CURRENT_1
           description: Maximum Current Register 1
           addressOffset: 72
+          size: 16
           resetValue: 0
           fields:
             - name: MAX_CUR_33
@@ -16884,6 +16921,7 @@ peripherals:
           name: SD_MAX_CURRENT_2
           description: Maximum Current Register 2
           addressOffset: 74
+          size: 16
           resetValue: 0
           fields:
             - name: MAX_CUR_18
@@ -16896,6 +16934,7 @@ peripherals:
           name: SD_MAX_CURRENT_3
           description: Maximum Current Register 3
           addressOffset: 76
+          size: 16
           resetValue: 0
           fields:
             - name: Reserved_15_0
@@ -16905,6 +16944,7 @@ peripherals:
           name: SD_MAX_CURRENT_4
           description: Maximum Current Register 4
           addressOffset: 78
+          size: 16
           resetValue: 0
           fields:
             - name: Reserved_15_0
@@ -16914,6 +16954,7 @@ peripherals:
           name: SD_FORCE_EVENT_AUTO_CMD12_ERROR
           description: Force Event Auto cmd12 Error Register
           addressOffset: 80
+          size: 16
           resetValue: 0
           fields:
             - name: F_ACMD12_NEXE_ERR
@@ -16944,6 +16985,7 @@ peripherals:
           name: SD_FORCE_EVENT_FOR_ERROR_STATUS
           description: Force Event for Error Status Register
           addressOffset: 82
+          size: 16
           resetValue: 0
           fields:
             - name: F_CMD_TO_ERR
@@ -16995,6 +17037,7 @@ peripherals:
           name: SD_ADMA_ERROR_STATUS
           description: ADMA Error Status Register
           addressOffset: 84
+          size: 16
           resetValue: 0
           fields:
             - name: ADMA_STATE
@@ -17010,6 +17053,7 @@ peripherals:
           name: SD_ADMA_SYS_ADDR_1
           description: ADMA System Address Register 1
           addressOffset: 88
+          size: 16
           resetValue: 0
           fields:
             - name: ADMA_SYS_ADDR
@@ -17019,6 +17063,7 @@ peripherals:
           name: SD_ADMA_SYS_ADDR_2
           description: ADMA System Address Register 2
           addressOffset: 90
+          size: 16
           resetValue: 0
           fields:
             - name: ADMA_SYS_ADDR
@@ -17028,6 +17073,7 @@ peripherals:
           name: SD_ADMA_SYS_ADDR_3
           description: ADMA System Address Register 3
           addressOffset: 92
+          size: 16
           resetValue: 0
           fields:
             - name: ADMA_SYS_ADDR
@@ -17037,6 +17083,7 @@ peripherals:
           name: SD_ADMA_SYS_ADDR_4
           description: ADMA System Address Register 4
           addressOffset: 94
+          size: 16
           resetValue: 0
           fields:
             - name: ADMA_SYS_ADDR
@@ -17046,6 +17093,7 @@ peripherals:
           name: PRESET_VALUE_FOR_INIT
           description: Preset Value Register for Initialization
           addressOffset: 96
+          size: 16
           resetValue: 256
           fields:
             - name: SDCLK_FREQ_SEL_VAL
@@ -17064,6 +17112,7 @@ peripherals:
           name: PRESET_VALUE_FOR_DS
           description: Preset Value Register for Default Speed
           addressOffset: 98
+          size: 16
           resetValue: 4
           fields:
             - name: SDCLK_FREQ_SEL_VAL
@@ -17082,6 +17131,7 @@ peripherals:
           name: PRESET_VALUE_FOR_HS
           description: Preset Value Register for High Speed
           addressOffset: 100
+          size: 16
           resetValue: 2
           fields:
             - name: SDCLK_FREQ_SEL_VAL
@@ -17100,6 +17150,7 @@ peripherals:
           name: PRESET_VALUE_FOR_SDR12
           description: Preset Value Register for SDR12
           addressOffset: 102
+          size: 16
           resetValue: 4
           fields:
             - name: SDCLK_FREQ_SEL_VAL
@@ -17118,6 +17169,7 @@ peripherals:
           name: PRESET_VALUE_FOR_SDR25
           description: Preset Value Register for SDR25
           addressOffset: 104
+          size: 16
           resetValue: 2
           fields:
             - name: SDCLK_FREQ_SEL_VAL
@@ -17136,6 +17188,7 @@ peripherals:
           name: PRESET_VALUE_FOR_SDR50
           description: Preset Value Register for SDR50
           addressOffset: 106
+          size: 16
           resetValue: 1
           fields:
             - name: SDCLK_FREQ_SEL_VAL
@@ -17154,6 +17207,7 @@ peripherals:
           name: PRESET_VALUE_FOR_SDR104
           description: Preset Value Register for SDR104
           addressOffset: 108
+          size: 16
           resetValue: 0
           fields:
             - name: SDCLK_FREQ_SEL_VAL
@@ -17172,6 +17226,7 @@ peripherals:
           name: PRESET_VALUE_FOR_DDR50
           description: Preset Value Register for DDR50
           addressOffset: 110
+          size: 16
           resetValue: 2
           fields:
             - name: SDCLK_FREQ_SEL_VAL
@@ -17232,6 +17287,7 @@ peripherals:
           name: SD_SLOT_INT_STATUS
           description: Slot Interrupt Status Register
           addressOffset: 252
+          size: 16
           resetValue: 0
           fields:
             - name: SLOT_INT0
@@ -17247,6 +17303,7 @@ peripherals:
           name: SD_HOST_CTRL_VER
           description: Host Control Version Register
           addressOffset: 254
+          size: 16
           resetValue: 2
           fields:
             - name: SD_VER
@@ -17343,6 +17400,7 @@ peripherals:
           name: SD_SPI_MODE
           description: SPI Mode Register
           addressOffset: 264
+          size: 16
           resetValue: 0
           fields:
             - name: SPI_EN
@@ -17361,6 +17419,7 @@ peripherals:
           name: SD_CLOCK_AND_BURST_SIZE_SETUP
           description: Clock and Burst Size Setup Register
           addressOffset: 266
+          size: 16
           resetValue: 206
           fields:
             - name: BRST_SIZE
@@ -17394,6 +17453,7 @@ peripherals:
           name: SD_CE_ATA_1
           description: CE-ATA Register 1
           addressOffset: 268
+          size: 16
           resetValue: 16383
           fields:
             - name: CPL_TIMEOUT
@@ -17406,6 +17466,7 @@ peripherals:
           name: SD_CE_ATA_2
           description: CE-ATA Register 2
           addressOffset: 270
+          size: 16
           resetValue: 2048
           fields:
             - name: MISC_INT_INT_EN

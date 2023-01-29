@@ -25485,6 +25485,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_SYS_ADDR_LOW</name>
           <description>System Address Low Register</description>
           <addressOffset>0x0</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25498,6 +25499,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_SYS_ADDR_HIGH</name>
           <description>System Address High Register</description>
           <addressOffset>0x2</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25511,6 +25513,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_BLOCK_SIZE</name>
           <description>Block Size Register</description>
           <addressOffset>0x4</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25534,6 +25537,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_BLOCK_COUNT</name>
           <description>Block Count Register</description>
           <addressOffset>0x6</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25547,6 +25551,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ARG_LOW</name>
           <description>Argument Low Register</description>
           <addressOffset>0x8</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25560,6 +25565,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ARG_HIGH</name>
           <description>Argument High Register</description>
           <addressOffset>0xA</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25573,6 +25579,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_TRANSFER_MODE</name>
           <description>Transfer Mode Register</description>
           <addressOffset>0xC</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25611,6 +25618,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CMD</name>
           <description>Command Register</description>
           <addressOffset>0xE</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25659,6 +25667,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_RESP_0</name>
           <description>Response Register 0</description>
           <addressOffset>0x10</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25672,6 +25681,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_RESP_1</name>
           <description>Response Register 1</description>
           <addressOffset>0x12</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25685,6 +25695,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_RESP_2</name>
           <description>Response Register 2</description>
           <addressOffset>0x14</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25698,6 +25709,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_RESP_3</name>
           <description>Response Register 3</description>
           <addressOffset>0x16</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25711,6 +25723,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_RESP_4</name>
           <description>Response Register 4</description>
           <addressOffset>0x18</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25724,6 +25737,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_RESP_5</name>
           <description>Response Register 5</description>
           <addressOffset>0x1A</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25737,6 +25751,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_RESP_6</name>
           <description>Response Register 6</description>
           <addressOffset>0x1C</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25750,6 +25765,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_RESP_7</name>
           <description>Response Register 7</description>
           <addressOffset>0x1E</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25763,6 +25779,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_BUFFER_DATA_PORT_0</name>
           <description>Buffer Data Port 0 Register</description>
           <addressOffset>0x20</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25776,6 +25793,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_BUFFER_DATA_PORT_1</name>
           <description>Buffer Data Port 1 Register</description>
           <addressOffset>0x22</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25789,6 +25807,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_PRESENT_STATE_1</name>
           <description>Present State Register 1</description>
           <addressOffset>0x24</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000400</resetValue>
           <fields>
             <field>
@@ -25847,6 +25866,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_PRESENT_STATE_2</name>
           <description>Present State Register 2</description>
           <addressOffset>0x26</addressOffset>
+          <size>0x10</size>
           <resetValue>0x000001F0</resetValue>
           <fields>
             <field>
@@ -25890,6 +25910,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_HOST_CTRL</name>
           <description>Host Control Register</description>
           <addressOffset>0x28</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -25948,6 +25969,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_BLOCK_GAP_CTRL</name>
           <description>Block Gap Control Register</description>
           <addressOffset>0x2A</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26001,6 +26023,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CLOCK_CTRL</name>
           <description>Clock Control Register</description>
           <addressOffset>0x2C</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26044,6 +26067,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_TIMEOUT_CTRL_SW_RESET</name>
           <description>Timeout Control/Software Reset Register</description>
           <addressOffset>0x2E</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26082,6 +26106,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_NORMAL_INT_STATUS</name>
           <description>Normal Interrupt Status Register</description>
           <addressOffset>0x30</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000010</resetValue>
           <fields>
             <field>
@@ -26165,6 +26190,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ERROR_INT_STATUS</name>
           <description>Error Interrupt Status Register</description>
           <addressOffset>0x32</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26253,6 +26279,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_NORMAL_INT_STATUS_EN</name>
           <description>Normal Interrupt Status Enable Register</description>
           <addressOffset>0x34</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26331,6 +26358,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ERROR_INT_STATUS_EN</name>
           <description>Error Interrupt Status Enable Register</description>
           <addressOffset>0x36</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26419,6 +26447,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_NORMAL_INT_STATUS_INT_EN</name>
           <description>Normal Interrupt Status Interrupt Enable Register</description>
           <addressOffset>0x38</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26497,6 +26526,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ERROR_INT_STATUS_INT_EN</name>
           <description>Error Interrupt Status Interrupt Enable Register</description>
           <addressOffset>0x3A</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26585,6 +26615,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_AUTO_CMD12_ERROR_STATUS</name>
           <description>Auto CMD12 Error Status Register</description>
           <addressOffset>0x3C</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26633,6 +26664,7 @@ See the Mulan PSL v2 for more details.
           <name>HOST_CTRL_2</name>
           <description>Host Control 2 Register</description>
           <addressOffset>0x3E</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00004000</resetValue>
           <fields>
             <field>
@@ -26681,6 +26713,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CAPABILITIES_1</name>
           <description>Capabilities Register 1</description>
           <addressOffset>0x40</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000080</resetValue>
           <fields>
             <field>
@@ -26709,6 +26742,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CAPABILITIES_2</name>
           <description>Capabilities Register 2</description>
           <addressOffset>0x42</addressOffset>
+          <size>0x10</size>
           <resetValue>0x000025FC</resetValue>
           <fields>
             <field>
@@ -26787,6 +26821,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CAPABILITIES_3</name>
           <description>Capabilities Register 3</description>
           <addressOffset>0x44</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00002F77</resetValue>
           <fields>
             <field>
@@ -26855,6 +26890,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CAPABILITIES_4</name>
           <description>Capabilities Register 4</description>
           <addressOffset>0x46</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26873,6 +26909,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_MAX_CURRENT_1</name>
           <description>Maximum Current Register 1</description>
           <addressOffset>0x48</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26891,6 +26928,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_MAX_CURRENT_2</name>
           <description>Maximum Current Register 2</description>
           <addressOffset>0x4A</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26909,6 +26947,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_MAX_CURRENT_3</name>
           <description>Maximum Current Register 3</description>
           <addressOffset>0x4C</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26922,6 +26961,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_MAX_CURRENT_4</name>
           <description>Maximum Current Register 4</description>
           <addressOffset>0x4E</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26935,6 +26975,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_FORCE_EVENT_AUTO_CMD12_ERROR</name>
           <description>Force Event Auto cmd12 Error Register</description>
           <addressOffset>0x50</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -26983,6 +27024,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_FORCE_EVENT_FOR_ERROR_STATUS</name>
           <description>Force Event for Error Status Register</description>
           <addressOffset>0x52</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27066,6 +27108,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ADMA_ERROR_STATUS</name>
           <description>ADMA Error Status Register</description>
           <addressOffset>0x54</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27089,6 +27132,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ADMA_SYS_ADDR_1</name>
           <description>ADMA System Address Register 1</description>
           <addressOffset>0x58</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27102,6 +27146,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ADMA_SYS_ADDR_2</name>
           <description>ADMA System Address Register 2</description>
           <addressOffset>0x5A</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27115,6 +27160,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ADMA_SYS_ADDR_3</name>
           <description>ADMA System Address Register 3</description>
           <addressOffset>0x5C</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27128,6 +27174,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_ADMA_SYS_ADDR_4</name>
           <description>ADMA System Address Register 4</description>
           <addressOffset>0x5E</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27141,6 +27188,7 @@ See the Mulan PSL v2 for more details.
           <name>PRESET_VALUE_FOR_INIT</name>
           <description>Preset Value Register for Initialization</description>
           <addressOffset>0x60</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000100</resetValue>
           <fields>
             <field>
@@ -27169,6 +27217,7 @@ See the Mulan PSL v2 for more details.
           <name>PRESET_VALUE_FOR_DS</name>
           <description>Preset Value Register for Default Speed</description>
           <addressOffset>0x62</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000004</resetValue>
           <fields>
             <field>
@@ -27197,6 +27246,7 @@ See the Mulan PSL v2 for more details.
           <name>PRESET_VALUE_FOR_HS</name>
           <description>Preset Value Register for High Speed</description>
           <addressOffset>0x64</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000002</resetValue>
           <fields>
             <field>
@@ -27225,6 +27275,7 @@ See the Mulan PSL v2 for more details.
           <name>PRESET_VALUE_FOR_SDR12</name>
           <description>Preset Value Register for SDR12</description>
           <addressOffset>0x66</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000004</resetValue>
           <fields>
             <field>
@@ -27253,6 +27304,7 @@ See the Mulan PSL v2 for more details.
           <name>PRESET_VALUE_FOR_SDR25</name>
           <description>Preset Value Register for SDR25</description>
           <addressOffset>0x68</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000002</resetValue>
           <fields>
             <field>
@@ -27281,6 +27333,7 @@ See the Mulan PSL v2 for more details.
           <name>PRESET_VALUE_FOR_SDR50</name>
           <description>Preset Value Register for SDR50</description>
           <addressOffset>0x6A</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000001</resetValue>
           <fields>
             <field>
@@ -27309,6 +27362,7 @@ See the Mulan PSL v2 for more details.
           <name>PRESET_VALUE_FOR_SDR104</name>
           <description>Preset Value Register for SDR104</description>
           <addressOffset>0x6C</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27337,6 +27391,7 @@ See the Mulan PSL v2 for more details.
           <name>PRESET_VALUE_FOR_DDR50</name>
           <description>Preset Value Register for DDR50</description>
           <addressOffset>0x6E</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000002</resetValue>
           <fields>
             <field>
@@ -27433,6 +27488,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_SLOT_INT_STATUS</name>
           <description>Slot Interrupt Status Register</description>
           <addressOffset>0xFC</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27456,6 +27512,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_HOST_CTRL_VER</name>
           <description>Host Control Version Register</description>
           <addressOffset>0xFE</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000002</resetValue>
           <fields>
             <field>
@@ -27610,6 +27667,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_SPI_MODE</name>
           <description>SPI Mode Register</description>
           <addressOffset>0x108</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000000</resetValue>
           <fields>
             <field>
@@ -27638,6 +27696,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CLOCK_AND_BURST_SIZE_SETUP</name>
           <description>Clock and Burst Size Setup Register</description>
           <addressOffset>0x10A</addressOffset>
+          <size>0x10</size>
           <resetValue>0x000000CE</resetValue>
           <fields>
             <field>
@@ -27691,6 +27750,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CE_ATA_1</name>
           <description>CE-ATA Register 1</description>
           <addressOffset>0x10C</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00003FFF</resetValue>
           <fields>
             <field>
@@ -27709,6 +27769,7 @@ See the Mulan PSL v2 for more details.
           <name>SD_CE_ATA_2</name>
           <description>CE-ATA Register 2</description>
           <addressOffset>0x10E</addressOffset>
+          <size>0x10</size>
           <resetValue>0x00000800</resetValue>
           <fields>
             <field>
