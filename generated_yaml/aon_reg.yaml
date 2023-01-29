@@ -1,0 +1,1514 @@
+aon:
+  description: aon
+  addressOffset: 0x800
+  resetValue: 0x0040000F
+  fields:
+    aon_resv:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reserved_8_11:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-only
+    pu_aon_dc_tbuf:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    reserved_13_19:
+      bitOffset: 13
+      bitWidth: 7
+      access: read-only
+    ldo11_rt_pulldown:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    ldo11_rt_pulldown_sel:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    sw_pu_ldo11_rt:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    reserved_23_31:
+      bitOffset: 23
+      bitWidth: 9
+      access: read-only
+aon_common:
+  description: aon_common
+  addressOffset: 0x804
+  resetValue: 0x00000000
+  fields:
+    tmux_aon:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-write
+    pmip_dc_tp_out_en_aon:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    ten_bg_sys_aon:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    ten_dcdc11_0_aon:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    ten_dcdc11_1_aon:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    ten_dcdc18_0_aon:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    ten_dcdc18_1_aon:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    ten_ldo12uhs:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    ten_ldo18flash:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    ten_ldo15cis:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    ten_ldo18io_aon:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    ten_ldo28cis:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    ten_rc32m:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    ten_ldo15rf_aon:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    ten_xtal_aon:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    dten_xtal_aon:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    ten_mbg_aon:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    ten_cip_misc_aon:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    ten_aon:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    reserved_22_31:
+      bitOffset: 22
+      bitWidth: 10
+      access: read-only
+aon_misc:
+  description: aon_misc
+  addressOffset: 0x808
+  resetValue: 0x00000003
+  fields:
+    sw_soc_en_aon:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    sw_wb_en_aon:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2_31:
+      bitOffset: 2
+      bitWidth: 30
+      access: read-only
+bg_sys_top:
+  description: bg_sys_top
+  addressOffset: 0x810
+  resetValue: 0x00000003
+  fields:
+    pu_bg_sys_aon:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    istart_ctrl_aon:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2_31:
+      bitOffset: 2
+      bitWidth: 30
+      access: read-only
+dcdc_top_0:
+  description: dcdc_top_0
+  addressOffset: 0x814
+  resetValue: 0x14474420
+  fields:
+    dcdc11_sstart_time_aon:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    dcdc11_stby_lp_cur_aon:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    dcdc11_vc_clamp_vth_aon:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    dcdc11_vout_sel_aon:
+      bitOffset: 11
+      bitWidth: 5
+      access: read-write
+    dcdc11_vout_trim_aon:
+      bitOffset: 16
+      bitWidth: 4
+      access: read-write
+    dcdc11_vpfm_aon:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-write
+    dcdc11_zvs_td_opt_aon:
+      bitOffset: 24
+      bitWidth: 3
+      access: read-write
+    reserved_27:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-only
+    dcdc11_vstby_aon:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+dcdc_top_1:
+  description: dcdc_top_1
+  addressOffset: 0x818
+  resetValue: 0x18808400
+  fields:
+    dcdc11_nonoverlap_td_aon:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-write
+    dcdc11_ocp_out_aon:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    dcdc11_ocp_rst_aon:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    dcdc11_ocp_vth_aon:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    dcdc11_osc_2m_mode_aon:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    dcdc11_osc_freq_trim_aon:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-write
+    dcdc11_pulldown_aon:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_19:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-only
+    dcdc11_rc_sel_aon:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-write
+    dcdc11_rdy_aon:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-only
+    reserved_25:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-only
+    dcdc11_slope_curr_sel_aon:
+      bitOffset: 26
+      bitWidth: 5
+      access: read-write
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+ldo11soc_and_dctest:
+  description: ldo11soc_and_dctest
+  addressOffset: 0x81C
+  resetValue: 0x46F44180
+  fields:
+    reserved_0_3:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-only
+    dcdc11_cfb_sel_aon:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-write
+    dcdc11_chf_sel_aon:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-write
+    dcdc11_comp_gm_sel_aon:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    dcdc11_cs_delay_aon:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    dcdc11_drv_sr_aon:
+      bitOffset: 20
+      bitWidth: 2
+      access: read-write
+    dcdc11_en_antiring_aon:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    dcdc11_en_osc_inhibit_t2_aon:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    dcdc11_en_slow_osc_aon:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    dcdc11_en_stby_lp_aon:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    dcdc11_en_stop_osc_aon:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    dcdc11_force_en_cs_zvs_aon:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    dcdc11_isense_trim_aon:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+dcdc18_top_0:
+  description: move to 0x2000F000[23]
+  addressOffset: 0x820
+  resetValue: 0x1447DC20
+  fields:
+    dcdc18_sstart_time_aon:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    dcdc18_stby_lp_cur_aon:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    dcdc18_vc_clamp_vth_aon:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    dcdc18_vout_sel_aon:
+      bitOffset: 11
+      bitWidth: 5
+      access: read-write
+    dcdc18_vout_trim_aon:
+      bitOffset: 16
+      bitWidth: 4
+      access: read-write
+    dcdc18_vpfm_aon:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-write
+    dcdc18_zvs_td_opt_aon:
+      bitOffset: 24
+      bitWidth: 3
+      access: read-write
+    reserved_27:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-only
+    dcdc18_vstby_aon:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+dcdc18_top_1:
+  description: dcdc18_top_1
+  addressOffset: 0x824
+  resetValue: 0x28808400
+  fields:
+    dcdc18_nonoverlap_td_aon:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-write
+    dcdc18_ocp_out_aon:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    dcdc18_ocp_rst_aon:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    dcdc18_ocp_vth_aon:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    dcdc18_osc_2m_mode_aon:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    dcdc18_osc_freq_trim_aon:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-write
+    dcdc18_pulldown_aon:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_19:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-only
+    dcdc18_rc_sel_aon:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-write
+    dcdc18_rdy_aon:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-only
+    reserved_25:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-only
+    dcdc18_slope_curr_sel_aon:
+      bitOffset: 26
+      bitWidth: 5
+      access: read-write
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+dcdc18_top_2:
+  description: dcdc18_top_2
+  addressOffset: 0x828
+  resetValue: 0x46744180
+  fields:
+    reserved_0_3:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-only
+    dcdc18_cfb_sel_aon:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-write
+    dcdc18_chf_sel_aon:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-write
+    dcdc18_comp_gm_sel_aon:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    dcdc18_cs_delay_aon:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    dcdc18_drv_sr_aon:
+      bitOffset: 20
+      bitWidth: 2
+      access: read-write
+    dcdc18_en_antiring_aon:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    dcdc18_en_osc_inhibit_t2_aon:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    dcdc18_en_slow_osc_aon:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    dcdc18_en_stby_lp_aon:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    dcdc18_en_stop_osc_aon:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    dcdc18_force_en_cs_zvs_aon:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    dcdc18_isense_trim_aon:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+psw_irrcv:
+  description: psw_irrcv
+  addressOffset: 0x82C
+  resetValue: 0x1A000000
+  fields:
+    pu_psw_irrcv_aon:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_18:
+      bitOffset: 1
+      bitWidth: 18
+      access: read-only
+    usb20_rref_ext_en_aon:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    en_por33_aon:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    usb20_rref_hiz_aon:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    reserved_22_23:
+      bitOffset: 22
+      bitWidth: 2
+      access: read-only
+    usb20_rcal_code_aon:
+      bitOffset: 24
+      bitWidth: 6
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+rf_top_aon:
+  description: rf_top_aon
+  addressOffset: 0x880
+  resetValue: 0x00020137
+  fields:
+    pu_mbg_aon:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    pu_ldo15rf_aon:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    pu_sfreg_aon:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    pu_xtal_buf_aon:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    pu_xtal_aon:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    ldo15rf_sstart_sel_aon:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    ldo15rf_sstart_delay_aon:
+      bitOffset: 9
+      bitWidth: 2
+      access: read-write
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    ldo15rf_pulldown_aon:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    ldo15rf_pulldown_sel_aon:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    reserved_14_15:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+    ldo15rf_vout_sel_aon:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    reserved_19_23:
+      bitOffset: 19
+      bitWidth: 5
+      access: read-only
+    ldo15rf_cc_aon:
+      bitOffset: 24
+      bitWidth: 2
+      access: read-write
+    reserved_26_27:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-only
+    ldo15rf_bypass_aon:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    reserved_29_31:
+      bitOffset: 29
+      bitWidth: 3
+      access: read-only
+xtal_cfg:
+  description: xtal_cfg
+  addressOffset: 0x884
+  resetValue: 0xB410F0E1
+  fields:
+    xtal_bk_aon:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    xtal_capcode_extra_aon:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    xtal_ext_sel_aon:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    xtal_buf_en_aon:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-write
+    xtal_buf_hp_aon:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-write
+    xtal_fast_startup_aon:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    xtal_sleep_aon:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    xtal_amp_ctrl_aon:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-write
+    xtal_capcode_out_aon:
+      bitOffset: 16
+      bitWidth: 6
+      access: read-write
+    xtal_capcode_in_aon:
+      bitOffset: 22
+      bitWidth: 6
+      access: read-write
+    xtal_gm_boost_aon:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-write
+    xtal_rdy_sel_aon:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+xtal_cfg2:
+  description: xtal_cfg2
+  addressOffset: 0x888
+  resetValue: 0x400000D0
+  fields:
+    wifi_xtal_ldo33_bypass_aon:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    wifi_xtal_ldo33_sel_aon:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-write
+    wifi_xtal_ldo18_sel_aon:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    wifi_xtal_ldo33_pu_aon:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    wifi_xtal_ldo18_pu_aon:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reserved_8_9:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-only
+    wifi_xtal_reserve:
+      bitOffset: 10
+      bitWidth: 4
+      access: read-write
+    reserved_14_15:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+    wifi_xtal_ldo18_short_filter_aon:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_29:
+      bitOffset: 17
+      bitWidth: 13
+      access: read-only
+    xtal_buf_drv_aon:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+xtal_cfg3:
+  description: xtal_cfg3
+  addressOffset: 0x88C
+  resetValue: 0x40120000
+  fields:
+    reserved_0_11:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-only
+    wifi_xtal_clk_inv_en_aon:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    reserved_13_15:
+      bitOffset: 13
+      bitWidth: 3
+      access: read-only
+    wifi_xtal_cml_en_aon:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    wifi_xtal_cml_r_sel_aon:
+      bitOffset: 17
+      bitWidth: 2
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    wifi_xtal_clk_en_aon:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    reserved_21_29:
+      bitOffset: 21
+      bitWidth: 9
+      access: read-only
+    wifi_xtal_buf_drv_aon:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+tsen:
+  description: tsen
+  addressOffset: 0x890
+  resetValue: 0x78FF08FF
+  fields:
+    tsen_refcode_corner:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    tsen_refcode_rfcal:
+      bitOffset: 16
+      bitWidth: 12
+      access: read-write
+    xtal_rdy:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-only
+    xtal_inn_cfg_en_aon:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    xtal_rdy_int_sel_aon:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+ldo18io:
+  description: ldo18io
+  addressOffset: 0x8C4
+  resetValue: 0x075BB338
+  fields:
+    reserved_0:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    ldo18io_bypass_iso_aon:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    ldo18io_pulldown_aon:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    ldo18io_pulldown_sel_aon:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    ldo18io_bm_aon:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    ldo18io_cc_aon:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    ldo18io_ocp_out_aon:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    ldo18io_ocp_th_aon:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    ldo18io_ocp_en_aon:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    ldo18io_sstart_delay_aon:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    ldo18io_sstart_en_aon:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    ldo18io_vout_sel_aon:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-write
+    ldo18io_vout_trim_aon:
+      bitOffset: 24
+      bitWidth: 4
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+acomp0_ctrl:
+  description: acomp0_ctrl
+  addressOffset: 0x900
+  resetValue: 0x00000000
+  fields:
+    acomp0_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    acomp0_hyst_seln:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-write
+    acomp0_hyst_selp:
+      bitOffset: 7
+      bitWidth: 3
+      access: read-write
+    acomp0_bias_prog:
+      bitOffset: 10
+      bitWidth: 2
+      access: read-write
+    acomp0_level_sel:
+      bitOffset: 12
+      bitWidth: 6
+      access: read-write
+    acomp0_neg_sel:
+      bitOffset: 18
+      bitWidth: 4
+      access: read-write
+    acomp0_pos_sel:
+      bitOffset: 22
+      bitWidth: 4
+      access: read-write
+    acomp0_muxen:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    reserved_27_31:
+      bitOffset: 27
+      bitWidth: 5
+      access: read-only
+acomp1_ctrl:
+  description: acomp1_ctrl
+  addressOffset: 0x904
+  resetValue: 0x00000000
+  fields:
+    acomp1_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    acomp1_hyst_seln:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-write
+    acomp1_hyst_selp:
+      bitOffset: 7
+      bitWidth: 3
+      access: read-write
+    acomp1_bias_prog:
+      bitOffset: 10
+      bitWidth: 2
+      access: read-write
+    acomp1_level_sel:
+      bitOffset: 12
+      bitWidth: 6
+      access: read-write
+    acomp1_neg_sel:
+      bitOffset: 18
+      bitWidth: 4
+      access: read-write
+    acomp1_pos_sel:
+      bitOffset: 22
+      bitWidth: 4
+      access: read-write
+    acomp1_muxen:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    reserved_27_31:
+      bitOffset: 27
+      bitWidth: 5
+      access: read-only
+acomp_ctrl:
+  description: acomp_ctrl
+  addressOffset: 0x908
+  resetValue: 0x00000003
+  fields:
+    acomp1_rstn_ana:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    acomp0_rstn_ana:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    acomp1_test_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    acomp0_test_en:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    acomp1_test_sel:
+      bitOffset: 10
+      bitWidth: 2
+      access: read-write
+    acomp0_test_sel:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-write
+    reserved_14_16:
+      bitOffset: 14
+      bitWidth: 3
+      access: read-only
+    acomp1_out_raw:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-only
+    reserved_18:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-only
+    acomp0_out_raw:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    reserved_20_23:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-only
+    acomp_vref_sel:
+      bitOffset: 24
+      bitWidth: 6
+      access: read-write
+    acomp_reserved:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+gpadc_reg_cmd:
+  description: gpadc_reg_cmd
+  addressOffset: 0x90C
+  resetValue: 0x00000F78
+  fields:
+    gpadc_global_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    gpadc_conv_start:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    gpadc_soft_rst:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    gpadc_neg_sel:
+      bitOffset: 3
+      bitWidth: 5
+      access: read-write
+    gpadc_pos_sel:
+      bitOffset: 8
+      bitWidth: 5
+      access: read-write
+    gpadc_neg_gnd:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    gpadc_micbias_en:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    gpadc_micpga_en:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    gpadc_byp_micboost:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    gpadc_rcal_en:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    gpadc_dwa_en:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    gpadc_mic2_diff:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    gpadc_mic1_diff:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    gpadc_mic_pga2_gain:
+      bitOffset: 21
+      bitWidth: 2
+      access: read-write
+    gpadc_micboost_32db_en:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    reserved_24_26:
+      bitOffset: 24
+      bitWidth: 3
+      access: read-only
+    gpadc_chip_sen_pu:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    gpadc_sen_sel:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    gpadc_sen_test_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+gpadc_reg_config1:
+  description: gpadc_reg_config1
+  addressOffset: 0x910
+  resetValue: 0x000C0002
+  fields:
+    gpadc_cal_os_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    gpadc_cont_conv_en:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    gpadc_res_sel:
+      bitOffset: 2
+      bitWidth: 3
+      access: read-write
+    reserved_5_7:
+      bitOffset: 5
+      bitWidth: 3
+      access: read-only
+    gpadc_vcm_sel_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    gpadc_vcm_hyst_sel:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    gpadc_lowv_det_en:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    gpadc_pwm_trg_en:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    gpadc_clk_ana_dly:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-write
+    gpadc_clk_ana_dly_en:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    gpadc_clk_ana_inv:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    gpadc_clk_div_ratio:
+      bitOffset: 18
+      bitWidth: 3
+      access: read-write
+    gpadc_scan_length:
+      bitOffset: 21
+      bitWidth: 4
+      access: read-write
+    gpadc_scan_en:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    gpadc_dither_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    gpadc_v11_sel:
+      bitOffset: 27
+      bitWidth: 2
+      access: read-write
+    gpadc_v18_sel:
+      bitOffset: 29
+      bitWidth: 2
+      access: read-write
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+gpadc_reg_config2:
+  description: gpadc_reg_config2
+  addressOffset: 0x914
+  resetValue: 0x00019100
+  fields:
+    reserved_0_1:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    gpadc_diff_mode:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    gpadc_vref_sel:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    gpadc_vbat_en:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    gpadc_tsext_sel:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    gpadc_ts_en:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    gpadc_pga_vcm:
+      bitOffset: 7
+      bitWidth: 2
+      access: read-write
+    gpadc_pga_os_cal:
+      bitOffset: 9
+      bitWidth: 4
+      access: read-write
+    gpadc_pga_en:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    gpadc_pga_vcmi_en:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    gpadc_chop_mode:
+      bitOffset: 15
+      bitWidth: 2
+      access: read-write
+    gpadc_bias_sel:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    gpadc_test_en:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    gpadc_test_sel:
+      bitOffset: 19
+      bitWidth: 3
+      access: read-write
+    gpadc_pga2_gain:
+      bitOffset: 22
+      bitWidth: 3
+      access: read-write
+    gpadc_pga1_gain:
+      bitOffset: 25
+      bitWidth: 3
+      access: read-write
+    gpadc_dly_sel:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    gpadc_tsvbe_low:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+gpadc_reg_scn_pos1:
+  description: adc converation sequence 1
+  addressOffset: 0x918
+  resetValue: 0x1EF7BDEF
+  fields:
+    gpadc_scan_pos_0:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_1:
+      bitOffset: 5
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_2:
+      bitOffset: 10
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_3:
+      bitOffset: 15
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_4:
+      bitOffset: 20
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_5:
+      bitOffset: 25
+      bitWidth: 5
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+gpadc_reg_scn_pos2:
+  description: adc converation sequence 2
+  addressOffset: 0x91C
+  resetValue: 0x1EF7BDEF
+  fields:
+    gpadc_scan_pos_6:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_7:
+      bitOffset: 5
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_8:
+      bitOffset: 10
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_9:
+      bitOffset: 15
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_10:
+      bitOffset: 20
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_pos_11:
+      bitOffset: 25
+      bitWidth: 5
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+gpadc_reg_scn_neg1:
+  description: adc converation sequence 3
+  addressOffset: 0x920
+  resetValue: 0x1EF7BDEF
+  fields:
+    gpadc_scan_neg_0:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_1:
+      bitOffset: 5
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_2:
+      bitOffset: 10
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_3:
+      bitOffset: 15
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_4:
+      bitOffset: 20
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_5:
+      bitOffset: 25
+      bitWidth: 5
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+gpadc_reg_scn_neg2:
+  description: adc converation sequence 4
+  addressOffset: 0x924
+  resetValue: 0x1EF7BDEF
+  fields:
+    gpadc_scan_neg_6:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_7:
+      bitOffset: 5
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_8:
+      bitOffset: 10
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_9:
+      bitOffset: 15
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_10:
+      bitOffset: 20
+      bitWidth: 5
+      access: read-write
+    gpadc_scan_neg_11:
+      bitOffset: 25
+      bitWidth: 5
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+gpadc_reg_status:
+  description: gpadc_reg_status
+  addressOffset: 0x928
+  resetValue: 0x00000000
+  fields:
+    gpadc_data_rdy:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    reserved_1_15:
+      bitOffset: 1
+      bitWidth: 15
+      access: read-only
+    gpadc_reserved:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+gpadc_reg_isr:
+  description: gpadc_reg_isr
+  addressOffset: 0x92C
+  resetValue: 0x00000000
+  fields:
+    gpadc_neg_satur:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    gpadc_pos_satur:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    gpadc_neg_satur_clr:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    gpadc_pos_satur_clr:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    gpadc_neg_satur_mask:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    gpadc_pos_satur_mask:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_31:
+      bitOffset: 10
+      bitWidth: 22
+      access: read-only
+gpadc_reg_result:
+  description: gpadc_reg_result
+  addressOffset: 0x930
+  resetValue: 0x01EF0000
+  fields:
+    gpadc_data_out:
+      bitOffset: 0
+      bitWidth: 26
+      access: read-only
+    reserved_26_31:
+      bitOffset: 26
+      bitWidth: 6
+      access: read-only
+gpadc_reg_raw_result:
+  description: gpadc_reg_raw_result
+  addressOffset: 0x934
+  resetValue: 0x00000000
+  fields:
+    gpadc_raw_data:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-only
+    reserved_12_31:
+      bitOffset: 12
+      bitWidth: 20
+      access: read-only
+gpadc_reg_define:
+  description: gpadc_reg_define
+  addressOffset: 0x938
+  resetValue: 0x00000000
+  fields:
+    gpadc_os_cal_data:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+hbncore_resv0:
+  description: hbncore_resv0
+  addressOffset: 0x93C
+  resetValue: 0x00000000
+  fields:
+    hbncore_resv0_data:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+hbncore_resv1:
+  description: hbncore_resv1
+  addressOffset: 0x940
+  resetValue: 0xFFFFFFFF
+  fields:
+    hbncore_resv1_data:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write

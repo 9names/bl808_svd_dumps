@@ -1,0 +1,692 @@
+CPU0_Boot:
+  description: CPU0_Boot
+  addressOffset: 0x0
+  resetValue: 0x3EFF0000
+  fields:
+    reg_cpu0_rvba:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+CPU_cfg:
+  description: CPU_cfg
+  addressOffset: 0x8
+  resetValue: 0x0000001C
+  fields:
+    reg_cpu0_apb_base:
+      bitOffset: 0
+      bitWidth: 13
+      access: read-write
+    reserved_13_27:
+      bitOffset: 13
+      bitWidth: 15
+      access: read-only
+    cpu0_ndm_rstn_en:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    cpu0_hart_rstn_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+CPU_sts1:
+  description: CPU_sts1
+  addressOffset: 0xC
+  resetValue: 0x00000000
+  fields:
+    reserved_0_3:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-only
+    cpu0_lpmd_b:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-only
+    reserved_6_15:
+      bitOffset: 6
+      bitWidth: 10
+      access: read-only
+    cpu0_retire_pc_39_32:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-only
+    cpu0_retire:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-only
+    cpu0_pad_halted:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-only
+    reserved_26_27:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-only
+    cpu0_ndm_rstn_req:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-only
+    cpu0_hart_rstn_req:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-only
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+CPU_sts2:
+  description: CPU_sts2
+  addressOffset: 0x10
+  resetValue: 0x00000000
+  fields:
+    cpu0_retire_pc_31_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+CPU_RTC:
+  description: CPU_RTC
+  addressOffset: 0x18
+  resetValue: 0x0000000A
+  fields:
+    c906_rtc_div:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-write
+    reserved_10_29:
+      bitOffset: 10
+      bitWidth: 20
+      access: read-only
+    c906_rtc_rst:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    c906_rtc_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+tzc_mmsys_misc:
+  description: tzc_mmsys_misc
+  addressOffset: 0x1C
+  resetValue: 0x00000000
+  fields:
+    tzc_mm_cpu0_lock:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    reserved_1:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    tzc_mm_sram_lock:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    reserved_3_31:
+      bitOffset: 3
+      bitWidth: 29
+      access: read-only
+peri_apb_ctrl:
+  description: peri_apb_ctrl
+  addressOffset: 0x20
+  resetValue: 0x00000000
+  fields:
+    reg_mminfra_berr_int_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_berr_int_en:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reg_codec_berr_int_en:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reg_mmcpu_berr_int_en:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reserved_4_7:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    reg_mm_x2hs_sp_bypass:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_15:
+      bitOffset: 9
+      bitWidth: 7
+      access: read-only
+    rg_pclk_force_on:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+mm_infra_qos_ctrl:
+  description: mm_infra_qos_ctrl
+  addressOffset: 0x2C
+  resetValue: 0x00000000
+  fields:
+    reserved_0_1:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    reg_mmcpu0_awqos:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reg_mmcpu0_arqos:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reserved_4_15:
+      bitOffset: 4
+      bitWidth: 12
+      access: read-only
+    reg_h_wthre_mm2conn:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reg_h_wthre_conn2mm:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-write
+    reg_x_wthre_mmhw2pA:
+      bitOffset: 20
+      bitWidth: 2
+      access: read-write
+    reg_x_wthre_mmhw2ext:
+      bitOffset: 22
+      bitWidth: 2
+      access: read-write
+    reg_x_wthre_pUHS:
+      bitOffset: 24
+      bitWidth: 2
+      access: read-write
+    reserved_26_31:
+      bitOffset: 26
+      bitWidth: 6
+      access: read-only
+dma_clk_ctrl:
+  description: dma_clk_ctrl
+  addressOffset: 0x40
+  resetValue: 0x000000FF
+  fields:
+    dma_clk_en:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reserved_8_31:
+      bitOffset: 8
+      bitWidth: 24
+      access: read-only
+vram_ctrl:
+  description: vram_ctrl
+  addressOffset: 0x50
+  resetValue: 0x00000000
+  fields:
+    reg_sysram_set:
+      bitOffset: 0
+      bitWidth: 1
+      access: write-only
+    reg_h2pf_sram_rel:
+      bitOffset: 1
+      bitWidth: 2
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    reg_vram_sram_rel:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reserved_5:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    reg_sub_sram_rel:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reg_blai_sram_rel:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reg_h2pf_sram_sel:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-only
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    reg_vram_sram_sel:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-only
+    reserved_13:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-only
+    reg_sub_sram_sel:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-only
+    reg_blai_sram_sel:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+sram_parm:
+  description: sram_parm
+  addressOffset: 0x60
+  resetValue: 0x0C0C0C0C
+  fields:
+    reg_sram_cpu_ram_dvs:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    reg_sram_cpu_ram_dvse:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reg_sram_cpu_ram_nap:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    reg_sram_l2ram_dvs:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-write
+    reg_sram_l2ram_dvse:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    reg_sram_l2ram_nap:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    reserved_14_15:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+    reg_sram_cdc_ram_dvs:
+      bitOffset: 16
+      bitWidth: 4
+      access: read-write
+    reg_sram_cdc_ram_dvse:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    reg_sram_cdc_ram_nap:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    reserved_22_23:
+      bitOffset: 22
+      bitWidth: 2
+      access: read-only
+    reg_sram_sub_ram_dvs:
+      bitOffset: 24
+      bitWidth: 4
+      access: read-write
+    reg_sram_sub_ram_dvse:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    reg_sram_sub_ram_nap:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+MM_INT_STA0:
+  description: MM_INT_STA0
+  addressOffset: 0xA0
+  resetValue: 0x00000000
+  fields:
+    mm_int_sta0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+MM_INT_MASK0:
+  description: MM_INT_MASK0
+  addressOffset: 0xA4
+  resetValue: 0x00000000
+  fields:
+    mm_int_mask0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+MM_INT_CLR_0:
+  description: MM_INT_CLR_0
+  addressOffset: 0xA8
+  resetValue: 0x00000000
+  fields:
+    mm_int_clr0:
+      bitOffset: 0
+      bitWidth: 32
+      access: write-only
+MM_INT_STA1:
+  description: MM_INT_STA1
+  addressOffset: 0xAC
+  resetValue: 0x00000000
+  fields:
+    mm_int_sta1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+MM_INT_MASK1:
+  description: MM_INT_MASK1
+  addressOffset: 0xB0
+  resetValue: 0x00000000
+  fields:
+    mm_int_mask1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+MM_INT_CLR_1:
+  description: MM_INT_CLR_1
+  addressOffset: 0xB4
+  resetValue: 0x00000000
+  fields:
+    mm_int_clr1:
+      bitOffset: 0
+      bitWidth: 32
+      access: write-only
+mmsys_debug_sel:
+  description: mmsys_debug_sel
+  addressOffset: 0xF0
+  resetValue: 0x00000000
+  fields:
+    mmsys_debug_sel:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    reserved_4_31:
+      bitOffset: 4
+      bitWidth: 28
+      access: read-only
+mmsys_misc_dummy:
+  description: mmsys_misc_dummy
+  addressOffset: 0xFC
+  resetValue: 0xFFF00000
+  fields:
+    PIR_ctrl_o:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    Light_sensor_ctrl_o:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    IR_cut_ctrl_o:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    dvp_sensor_pwdn:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    dummy_reg:
+      bitOffset: 4
+      bitWidth: 28
+      access: read-write
+DDR_debug:
+  description: DDR_debug
+  addressOffset: 0x100
+  resetValue: 0x00000000
+  fields:
+    ddr_calib_done:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    reserved_1_31:
+      bitOffset: 1
+      bitWidth: 31
+      access: read-only
+mm_berr_cfg0:
+  description: mm_berr_cfg0
+  addressOffset: 0x140
+  resetValue: 0x1F010707
+  fields:
+    reg_berr_en:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-write
+    reserved_3_7:
+      bitOffset: 3
+      bitWidth: 5
+      access: read-only
+    reg_codec_berr_en:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    reserved_11_15:
+      bitOffset: 11
+      bitWidth: 5
+      access: read-only
+    reg_mmcpu_berr_en:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_23:
+      bitOffset: 17
+      bitWidth: 7
+      access: read-only
+    reg_mminfra_berr_en:
+      bitOffset: 24
+      bitWidth: 5
+      access: read-write
+    reserved_29_31:
+      bitOffset: 29
+      bitWidth: 3
+      access: read-only
+mm_berr_cfg1:
+  description: mm_berr_cfg1
+  addressOffset: 0x144
+  resetValue: 0x00000000
+  fields:
+    reg_berr_clr:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_codec_berr_clr:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reg_mmcpu_berr_clr:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reg_mminfra_berr_clr:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reserved_4_7:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    reg_berr_last:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reg_codec_berr_last:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reg_mmcpu_berr_last:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reg_mminfra_berr_last:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    sts_berr:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-only
+    sts_codec_berr:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-only
+    sts_mmcpu_berr:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-only
+    sts_mminfra_berr:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    reserved_20_23:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-only
+    sts_berr_write:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-only
+    sts_codec_berr_write:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-only
+    sts_mmcpu_berr_write:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-only
+    sts_mminfra_berr_write:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-only
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+mm_berr_cfg2:
+  description: mm_berr_cfg2
+  addressOffset: 0x148
+  resetValue: 0x00000000
+  fields:
+    sts_berr_src:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-only
+    reserved_3_7:
+      bitOffset: 3
+      bitWidth: 5
+      access: read-only
+    sts_berr_id:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-only
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    sts_codec_berr_src:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-only
+    reserved_19_23:
+      bitOffset: 19
+      bitWidth: 5
+      access: read-only
+    sts_codec_berr_id:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-only
+    reserved_25_31:
+      bitOffset: 25
+      bitWidth: 7
+      access: read-only
+mm_berr_cfg3:
+  description: mm_berr_cfg3
+  addressOffset: 0x14C
+  resetValue: 0x00000000
+  fields:
+    sts_mmcpu_berr_src:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    reserved_1_7:
+      bitOffset: 1
+      bitWidth: 7
+      access: read-only
+    sts_mmcpu_berr_id:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-only
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    sts_mminfra_berr_src:
+      bitOffset: 16
+      bitWidth: 5
+      access: read-only
+    reserved_21_23:
+      bitOffset: 21
+      bitWidth: 3
+      access: read-only
+    sts_mminfra_berr_id:
+      bitOffset: 24
+      bitWidth: 6
+      access: read-only
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+mm_berr_cfg4:
+  description: mm_berr_cfg4
+  addressOffset: 0x150
+  resetValue: 0x00000000
+  fields:
+    sts_berr_addr:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+mm_berr_cfg5:
+  description: mm_berr_cfg5
+  addressOffset: 0x154
+  resetValue: 0x00000000
+  fields:
+    sts_codec_berr_addr:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+mm_berr_cfg6:
+  description: mm_berr_cfg6
+  addressOffset: 0x158
+  resetValue: 0x00000000
+  fields:
+    sts_mmcpu_berr_addr:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+mm_berr_cfg7:
+  description: mm_berr_cfg7
+  addressOffset: 0x15C
+  resetValue: 0x00000000
+  fields:
+    sts_mminfra_berr_addr:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only

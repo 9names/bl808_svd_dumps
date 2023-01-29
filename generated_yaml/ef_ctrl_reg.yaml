@@ -1,0 +1,570 @@
+ef_if_ctrl_0:
+  description: ef_if_ctrl_0
+  addressOffset: 0x800
+  resetValue: 0x00240003
+  fields:
+    ef_if_0_autoload_p1_done:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    ef_if_0_autoload_done:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    ef_if_0_busy:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    ef_if_0_rw:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    ef_if_0_trig:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    ef_if_0_manual_en:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    ef_if_0_cyc_modify:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    ef_if_prot_code_ctrl:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    ef_if_por_dig:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    ef_pclk_force_on:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    ef_if_auto_rd_en:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    ef_if_cyc_modify_lock:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    ef_if_0_int:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-only
+    ef_if_0_int_clr:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    ef_if_0_int_set:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    reserved_23:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-only
+    ef_if_prot_code_cyc:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+ef_if_cyc_0:
+  description: ef_if_cyc_0
+  addressOffset: 0x804
+  resetValue: 0x16000040
+  fields:
+    ef_if_cyc_rd_dmy:
+      bitOffset: 0
+      bitWidth: 6
+      access: read-write
+    ef_if_cyc_rd_dat:
+      bitOffset: 6
+      bitWidth: 6
+      access: read-write
+    ef_if_cyc_rd_adr:
+      bitOffset: 12
+      bitWidth: 6
+      access: read-write
+    ef_if_cyc_cs:
+      bitOffset: 18
+      bitWidth: 6
+      access: read-write
+    ef_if_cyc_pd_cs_s:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+ef_if_cyc_1:
+  description: ef_if_cyc_1
+  addressOffset: 0x808
+  resetValue: 0x00206609
+  fields:
+    ef_if_cyc_pi:
+      bitOffset: 0
+      bitWidth: 6
+      access: read-write
+    ef_if_cyc_pp:
+      bitOffset: 6
+      bitWidth: 8
+      access: read-write
+    ef_if_cyc_wr_adr:
+      bitOffset: 14
+      bitWidth: 6
+      access: read-write
+    ef_if_cyc_ps_cs:
+      bitOffset: 20
+      bitWidth: 6
+      access: read-write
+    ef_if_cyc_pd_cs_h:
+      bitOffset: 26
+      bitWidth: 6
+      access: read-write
+ef_if_0_manual:
+  description: ef_if_0_manual
+  addressOffset: 0x80C
+  resetValue: 0x0000E400
+  fields:
+    ef_if_a:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-write
+    ef_if_pd:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    ef_if_ps:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    ef_if_strobe:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    ef_if_pgenb:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    ef_if_load:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    ef_if_csb:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    ef_if_0_q:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-only
+    ef_if_prot_code_manual:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+ef_if_0_status:
+  description: ef_if_0_status
+  addressOffset: 0x810
+  resetValue: 0x0000E400
+  fields:
+    ef_if_0_status:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+ef_if_cfg_0:
+  description: ef_if_cfg_0
+  addressOffset: 0x814
+  resetValue: 0x00000000
+  fields:
+    ef_if_sf_aes_mode:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    ef_if_ai_dis:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    ef_if_cpu0_dis:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    ef_if_sboot_en:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-only
+    ef_if_uart_dis:
+      bitOffset: 6
+      bitWidth: 4
+      access: read-only
+    ef_if_ble2_dis:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    ef_if_m1542_dis:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    ef_if_sf_key_re_sel:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-only
+    ef_if_sdu_dis:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-only
+    ef_if_btdm_dis:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    ef_if_wifi_dis:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-only
+    ef_if_0_key_enc_en:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-only
+    ef_if_cam_dis:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-only
+    ef_if_m154_dis:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    ef_if_cpu1_dis:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-only
+    ef_if_cpu_rst_dbg_dis:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-only
+    ef_if_se_dbg_dis:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-only
+    ef_if_efuse_dbg_dis:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-only
+    ef_if_dbg_jtag_1_dis:
+      bitOffset: 24
+      bitWidth: 2
+      access: read-only
+    ef_if_dbg_jtag_0_dis:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-only
+    ef_if_dbg_mode:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+ef_sw_cfg_0:
+  description: ef_sw_cfg_0
+  addressOffset: 0x818
+  resetValue: 0x00000000
+  fields:
+    ef_sw_sf_aes_mode:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    ef_sw_ai_dis:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    ef_sw_cpu0_dis:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    ef_sw_sboot_en:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    ef_sw_uart_dis:
+      bitOffset: 6
+      bitWidth: 4
+      access: read-write
+    ef_sw_ble2_dis:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    ef_sw_m1542_dis:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    ef_sw_sf_key_re_sel:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-write
+    ef_sw_sdu_dis:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    ef_sw_btdm_dis:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    ef_sw_wifi_dis:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    ef_sw_0_key_enc_en:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    ef_sw_cam_dis:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    ef_sw_m154_dis:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    ef_sw_cpu1_dis:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    ef_sw_cpu_rst_dbg_dis:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    ef_sw_se_dbg_dis:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    ef_sw_efuse_dbg_dis:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    ef_sw_dbg_jtag_1_dis:
+      bitOffset: 24
+      bitWidth: 2
+      access: read-write
+    ef_sw_dbg_jtag_0_dis:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-write
+    ef_sw_dbg_mode:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-write
+ef_reserved:
+  description: ef_reserved
+  addressOffset: 0x81C
+  resetValue: 0x0000FFFF
+  fields:
+    ef_reserved:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_if_sw_usage_0:
+  description: ef_if_sw_usage_0
+  addressOffset: 0x820
+  resetValue: 0x00000000
+  fields:
+    ef_if_sw_usage_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+ef_if_sw_usage_1:
+  description: ef_if_sw_usage_1
+  addressOffset: 0x824
+  resetValue: 0x00000000
+  fields:
+    ef_if_sw_usage_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+ef_if_ctrl_1:
+  description: ef_if_ctrl_1
+  addressOffset: 0x900
+  resetValue: 0x00200000
+  fields:
+    reserved_0_1:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    ef_if_1_busy:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    ef_if_1_rw:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    ef_if_1_trig:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    ef_if_1_manual_en:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    ef_if_1_cyc_modify:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reserved_7_19:
+      bitOffset: 7
+      bitWidth: 13
+      access: read-only
+    ef_if_1_int:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-only
+    ef_if_1_int_clr:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    ef_if_1_int_set:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    reserved_23_31:
+      bitOffset: 23
+      bitWidth: 9
+      access: read-only
+ef_if_1_manual:
+  description: ef_if_1_manual
+  addressOffset: 0x904
+  resetValue: 0x00000000
+  fields:
+    reserved_0_15:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    ef_if_1_q:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-only
+    reserved_24_31:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-only
+ef_if_1_status:
+  description: ef_if_1_status
+  addressOffset: 0x908
+  resetValue: 0x0000E400
+  fields:
+    ef_if_1_status:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+ef_if_ctrl_2:
+  description: ef_if_ctrl_2
+  addressOffset: 0x910
+  resetValue: 0x00000000
+  fields:
+    reserved_0_31:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+ef_if_2_manual:
+  description: ef_if_2_manual
+  addressOffset: 0x914
+  resetValue: 0x00000000
+  fields:
+    reserved_0_31:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+ef_if_2_status:
+  description: ef_if_2_status
+  addressOffset: 0x918
+  resetValue: 0x00000000
+  fields:
+    reserved_0_31:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+ef_crc_ctrl_0:
+  description: ef_crc_ctrl_0
+  addressOffset: 0xA00
+  resetValue: 0x00FF0224
+  fields:
+    ef_crc_busy:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    ef_crc_trig:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    ef_crc_en:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    ef_crc_mode:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    ef_crc_error:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-only
+    ef_crc_dout_inv_en:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    ef_crc_dout_endian:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    ef_crc_din_endian:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    ef_crc_int:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-only
+    ef_crc_int_clr:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    ef_crc_int_set:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    ef_crc_lock:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    ef_crc_slp_n:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+ef_crc_ctrl_1:
+  description: ef_crc_ctrl_1
+  addressOffset: 0xA04
+  resetValue: 0x00000000
+  fields:
+ef_crc_ctrl_2:
+  description: ef_crc_ctrl_2
+  addressOffset: 0xA08
+  resetValue: 0x00000000
+  fields:
+ef_crc_ctrl_3:
+  description: ef_crc_ctrl_3
+  addressOffset: 0xA0C
+  resetValue: 0x00000000
+  fields:
+ef_crc_ctrl_4:
+  description: ef_crc_ctrl_4
+  addressOffset: 0xA10
+  resetValue: 0x00000000
+  fields:
+ef_crc_ctrl_5:
+  description: ef_crc_ctrl_5
+  addressOffset: 0xA14
+  resetValue: 0x00000000
+  fields:

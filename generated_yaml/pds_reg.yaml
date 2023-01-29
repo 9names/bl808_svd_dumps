@@ -1,0 +1,1922 @@
+PDS_CTL:
+  description: PDS_CTL
+  addressOffset: 0x0
+  resetValue: 0x14006B00
+  fields:
+    pds_start_ps:
+      bitOffset: 0
+      bitWidth: 1
+      access: write-only
+    cr_sleep_forever:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    cr_xtal_force_off:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    cr_pds_wifi_save_state:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    cr_pds_pd_dcdc11:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    cr_pds_pd_bg_sys:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_gpio_ie_pu_pd:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    cr_pds_pd_dcdc18:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    cr_pds_gate_clk:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    cr_pds_mem_stby:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    cr_pds_glb_reg_reset_protect:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    cr_pds_iso_en:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    cr_pds_wait_xtal_rdy:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    cr_pds_pwr_off:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    cr_pds_pd_xtal:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_soc_enb:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    cr_pds_rst_soc:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    cr_pds_rc32m_off_dis:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    cr_pds_dcdc11_vsel_en:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_usbpll_pd:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_aupll_pd:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_cpupll_pd:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_wifipll_pd:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    cr_pds_dcdc11_vol:
+      bitOffset: 23
+      bitWidth: 5
+      access: read-write
+    cr_pds_ctrl_rf:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-write
+    cr_pds_start_use_tbtt_sleep:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    cr_pds_gpio_iso_mode:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+PDS_TIME1:
+  description: PDS_TIME1
+  addressOffset: 0x4
+  resetValue: 0x00000CA8
+  fields:
+    cr_sleep_duration:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+PDS_INT:
+  description: PDS_INT
+  addressOffset: 0xC
+  resetValue: 0x001FFC00
+  fields:
+    ro_pds_wake_int:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    ro_pds_rf_done_int:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    ro_pds_wifi_tbtt_sleep_irq:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    ro_pds_wifi_tbtt_wakeup_irq:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    cr_pds_wake_int_mask:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    cr_pds_rf_done_int_mask:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    cr_pds_wifi_tbtt_sleep_irq_mask:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    cr_pds_wifi_tbtt_wakeup_irq_mask:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    cr_pds_int_clr:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-only
+    cr_pds_wakeup_src_en:
+      bitOffset: 10
+      bitWidth: 11
+      access: read-write
+    ro_pds_wakeup_event:
+      bitOffset: 21
+      bitWidth: 11
+      access: read-only
+PDS_CTL2:
+  description: PDS_CTL2
+  addressOffset: 0x10
+  resetValue: 0x00022222
+  fields:
+    reserved_0:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    cr_pds_force_mm_pwr_off:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    cr_pds_force_usb_pwr_off:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reserved_4:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-only
+    cr_pds_force_mm_iso_en:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reserved_6:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-only
+    cr_pds_force_usb_iso_en:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_np_pds_rst:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_mm_pds_rst:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_wb_pds_rst:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_usb_pds_rst:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_np_mem_stby:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_mm_mem_stby:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_wb_mem_stby:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_usb_mem_stby:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_np_gate_clk:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_mm_gate_clk:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_wb_gate_clk:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    cr_pds_force_usb_gate_clk:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    reserved_20_31:
+      bitOffset: 20
+      bitWidth: 12
+      access: read-only
+PDS_CTL3:
+  description: PDS_CTL3
+  addressOffset: 0x14
+  resetValue: 0x64000000
+  fields:
+    reserved_0:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    cr_pds_force_misc_pwr_off:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    cr_pds_force_misc_iso_en:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reserved_5_6:
+      bitOffset: 5
+      bitWidth: 2
+      access: read-only
+    cr_pds_force_misc_pds_rst:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reserved_8_9:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-only
+    cr_pds_force_misc_mem_stby:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reserved_11_12:
+      bitOffset: 11
+      bitWidth: 2
+      access: read-only
+    cr_pds_force_misc_gate_clk:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    reserved_14_25:
+      bitOffset: 14
+      bitWidth: 12
+      access: read-only
+    cr_pds_mm_iso_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    reserved_27_28:
+      bitOffset: 27
+      bitWidth: 2
+      access: read-only
+    cr_pds_usb_iso_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    cr_pds_misc_iso_en:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+PDS_CTL4:
+  description: PDS_CTL4
+  addressOffset: 0x18
+  resetValue: 0x0FF0EF0E
+  fields:
+    reserved_0:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    cr_pds_np_reset:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    cr_pds_np_mem_stby:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    cr_pds_np_gate_clk:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reserved_4_7:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    cr_pds_mm_pwr_off:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    cr_pds_mm_reset:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    cr_pds_mm_mem_stby:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    cr_pds_mm_gate_clk:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reserved_12:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-only
+    cr_pds_wb_reset:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    cr_pds_wb_mem_stby:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    cr_pds_wb_gate_clk:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    reserved_16_19:
+      bitOffset: 16
+      bitWidth: 4
+      access: read-only
+    cr_pds_usb_pwr_off:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    cr_pds_usb_reset:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    cr_pds_usb_mem_stby:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    cr_pds_usb_gate_clk:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    cr_pds_misc_pwr_off:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    cr_pds_misc_reset:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    cr_pds_misc_mem_stby:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    cr_pds_misc_gate_clk:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+pds_stat:
+  description: pds_stat
+  addressOffset: 0x1C
+  resetValue: 0x00000000
+  fields:
+    ro_pds_state:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-only
+    reserved_5_7:
+      bitOffset: 5
+      bitWidth: 3
+      access: read-only
+    ro_pds_rf_state:
+      bitOffset: 8
+      bitWidth: 5
+      access: read-only
+    reserved_13_23:
+      bitOffset: 13
+      bitWidth: 11
+      access: read-only
+    pds_reset_event:
+      bitOffset: 24
+      bitWidth: 3
+      access: read-only
+    reserved_27_30:
+      bitOffset: 27
+      bitWidth: 4
+      access: read-only
+    pds_clr_reset_event:
+      bitOffset: 31
+      bitWidth: 1
+      access: write-only
+pds_ram1:
+  description: pds_ram1
+  addressOffset: 0x20
+  resetValue: 0x00180800
+  fields:
+    cr_ocram_slp:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    cr_ocram_ret:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-write
+    cr_pds_ram_clk_cnt:
+      bitOffset: 8
+      bitWidth: 6
+      access: read-write
+    reserved_14_15:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+    cr_pds_ram_clk2_cnt:
+      bitOffset: 16
+      bitWidth: 6
+      access: read-write
+    reserved_22_23:
+      bitOffset: 22
+      bitWidth: 2
+      access: read-only
+    cr_pds_ctrl_np_ram_clk:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_mm_ram_clk:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_wb_ram_clk:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_usb_ram_clk:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_misc_ram_clk:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    reserved_29:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-only
+    cr_pds_ctrl_ram_clk2:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    cr_pds_ctrl_ram_clk:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+PDS_CTL5:
+  description: PDS_CTL5
+  addressOffset: 0x24
+  resetValue: 0x00070000
+  fields:
+    cr_np_wfi_mask:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    cr_mm_wfi_mask:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    cr_pico_wfi_mask:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reserved_5_7:
+      bitOffset: 5
+      bitWidth: 3
+      access: read-only
+    cr_pds_ctrl_usb33:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    cr_pds_pd_ldo18io:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    cr_pds_gpio_keep_en:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    reserved_19_31:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-only
+PDS_RAM2:
+  description: PDS_RAM2
+  addressOffset: 0x28
+  resetValue: 0x00000000
+  fields:
+    cr_wram_slp:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-write
+    cr_wram_ret:
+      bitOffset: 10
+      bitWidth: 10
+      access: read-write
+    reserved_20_31:
+      bitOffset: 20
+      bitWidth: 12
+      access: read-only
+pds_gpio_i_set:
+  description: pds_gpio_i_set
+  addressOffset: 0x30
+  resetValue: 0x00000000
+  fields:
+    cr_pds_gpio_ie_set:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-write
+    cr_pds_gpio_pd_set:
+      bitOffset: 3
+      bitWidth: 3
+      access: read-write
+    cr_pds_gpio_pu_set:
+      bitOffset: 6
+      bitWidth: 3
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only
+pds_gpio_pd_set:
+  description: pds_gpio_pd_set
+  addressOffset: 0x34
+  resetValue: 0xFFFFFFFF
+  fields:
+    cr_pds_gpio_set_int_mask:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+pds_gpio_int:
+  description: pds_gpio_int
+  addressOffset: 0x40
+  resetValue: 0x00000000
+  fields:
+    reserved_0_1:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    pds_gpio_set1_int_clr:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    pds_gpio_set1_int_mode:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-write
+    reserved_8_9:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-only
+    pds_gpio_set2_int_clr:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    pds_gpio_set2_int_mode:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-write
+    reserved_16_17:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-only
+    pds_gpio_set3_int_clr:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    pds_gpio_set3_int_mode:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-write
+    reserved_24_25:
+      bitOffset: 24
+      bitWidth: 2
+      access: read-only
+    pds_gpio_set4_int_clr:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    reserved_27:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-only
+    pds_gpio_set4_int_mode:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-write
+pds_gpio_stat:
+  description: pds_gpio_stat
+  addressOffset: 0x44
+  resetValue: 0x00000000
+  fields:
+    pds_gpio_int_stat:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+cpu_core_cfg0:
+  description: cpu_core_cfg0
+  addressOffset: 0x110
+  resetValue: 0x00000000
+  fields:
+    reserved_0_27:
+      bitOffset: 0
+      bitWidth: 28
+      access: read-only
+    reg_pico_clk_en:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    e902_dfs_req:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    e902_dfs_ack:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-only
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+cpu_core_cfg1:
+  description: cpu_core_cfg1
+  addressOffset: 0x114
+  resetValue: 0x00000130
+  fields:
+    reserved_0_3:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-only
+    reg_pll_sel:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    reg_mcu1_clk_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only
+cpu_core_cfg7:
+  description: cpu_core_cfg7
+  addressOffset: 0x12C
+  resetValue: 0x00000001
+  fields:
+    reg_pico_div:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reserved_8_27:
+      bitOffset: 8
+      bitWidth: 20
+      access: read-only
+    e902_lpmd_b:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-only
+    reserved_30:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-only
+    pico_rst_mask:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+cpu_core_cfg8:
+  description: cpu_core_cfg8
+  addressOffset: 0x130
+  resetValue: 0x0000000A
+  fields:
+    e902_rtc_div:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-write
+    reserved_10_29:
+      bitOffset: 10
+      bitWidth: 20
+      access: read-only
+    e902_rtc_rst:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    e902_rtc_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+cpu_core_cfg9:
+  description: cpu_core_cfg9
+  addressOffset: 0x134
+  resetValue: 0x00000000
+  fields:
+    pico_rtc_cnt_l:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+cpu_core_cfg10:
+  description: cpu_core_cfg10
+  addressOffset: 0x138
+  resetValue: 0x00000000
+  fields:
+    pico_rtc_cnt_h:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+cpu_core_cfg12:
+  description: cpu_core_cfg12
+  addressOffset: 0x140
+  resetValue: 0x00000000
+  fields:
+    e902_iahbl_base:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    e902_iahbl_mask:
+      bitOffset: 16
+      bitWidth: 12
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+cpu_core_cfg13:
+  description: cpu_core_cfg13
+  addressOffset: 0x144
+  resetValue: 0x22010000
+  fields:
+    e902_rst_addr:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+cpu_core_cfg14:
+  description: cpu_core_cfg14
+  addressOffset: 0x148
+  resetValue: 0x90000000
+  fields:
+    e906_rst_addr:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+tzc_pds:
+  description: tzc_pds
+  addressOffset: 0x14C
+  resetValue: 0x00000000
+  fields:
+    cr_e902_cfg_wr_lock:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    cr_e906_cfg_wr_lock:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2_31:
+      bitOffset: 2
+      bitWidth: 30
+      access: read-only
+rc32m_ctrl0:
+  description: rc32m_ctrl0
+  addressOffset: 0x300
+  resetValue: 0x18080018
+  fields:
+    rc32m_cal_done:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    rc32m_rdy:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    rc32m_cal_inprogress:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    rc32m_cal_div:
+      bitOffset: 3
+      bitWidth: 2
+      access: read-write
+    rc32m_cal_precharge:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    rc32m_dig_code_fr_cal:
+      bitOffset: 6
+      bitWidth: 8
+      access: read-only
+    reserved_14_16:
+      bitOffset: 14
+      bitWidth: 3
+      access: read-only
+    rc32m_allow_cal:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    rc32m_refclk_half:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    rc32m_ext_code_en:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    rc32m_cal_en:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    rc32m_pd:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    rc32m_code_fr_ext:
+      bitOffset: 22
+      bitWidth: 8
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+rc32m_ctrl1:
+  description: rc32m_ctrl1
+  addressOffset: 0x304
+  resetValue: 0x0F000000
+  fields:
+    rc32m_test_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    rc32m_soft_rst:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    rc32m_clk_soft_rst:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    rc32m_clk_inv:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    rc32m_clk_force_on:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reserved_5_23:
+      bitOffset: 5
+      bitWidth: 19
+      access: read-only
+    rc32m_reserved:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+pu_rst_clkpll:
+  description: pu_rst_clkpll
+  addressOffset: 0x400
+  resetValue: 0x00000000
+  fields:
+    reserved_0_8:
+      bitOffset: 0
+      bitWidth: 9
+      access: read-only
+    cr_pds_pu_clkpll_sfreg:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    cr_pds_pu_clkpll:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reserved_11_31:
+      bitOffset: 11
+      bitWidth: 21
+      access: read-only
+usb_ctl:
+  description: usb_ctl
+  addressOffset: 0x500
+  resetValue: 0x00000021
+  fields:
+    reg_usb_sw_rst_n:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_usb_ext_susp_n:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reg_usb_wakeup:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reg_usb_l1_wakeup:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reg_usb_drvbus_pol:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reg_usb_iddig:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reserved_6_31:
+      bitOffset: 6
+      bitWidth: 26
+      access: read-only
+usb_phy_ctrl:
+  description: usb_phy_ctrl
+  addressOffset: 0x504
+  resetValue: 0x00000000
+  fields:
+    reg_usb_phy_ponrst:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_usb_phy_oscouten:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reg_usb_phy_xtlsel:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    reg_usb_phy_outclksel:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reg_usb_phy_pllaliv:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reg_pu_usb20_psw:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reserved_7_31:
+      bitOffset: 7
+      bitWidth: 25
+      access: read-only
+touch1:
+  description: touch channel, clock, ana config1
+  addressOffset: 0xA00
+  resetValue: 0x00A3001B
+  fields:
+    touch_vref_sel:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-write
+    touch_vldo_sel:
+      bitOffset: 3
+      bitWidth: 3
+      access: read-write
+    touch_comp_hys_sel:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    touch_current_sel:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reserved_8_15:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-only
+    touch_clk_sel:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    touch_clk_div_ratio:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    touch_pcharge_high:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    touch_pcharge_low:
+      bitOffset: 23
+      bitWidth: 3
+      access: read-write
+    touch_cont_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    touch_cycle_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    touch_ulp_en:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    reserved_29:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-only
+    pu_touch:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+touch2:
+  description: touch channel, clock, ana config2
+  addressOffset: 0xA04
+  resetValue: 0x0000FFF0
+  fields:
+    touch_channel_sel:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    touch_channel0_highz_en:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    touch_channel1_highz_en:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    touch_channel2_highz_en:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    touch_channel3_highz_en:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    touch_channel4_highz_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    touch_channel5_highz_en:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    touch_channel6_highz_en:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    touch_channel7_highz_en:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    touch_channel8_highz_en:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    touch_channel9_highz_en:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    touch_channel10_highz_en:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    touch_channel11_highz_en:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+touch3:
+  description: touch data process
+  addressOffset: 0xA08
+  resetValue: 0x00000660
+  fields:
+    touch_channel_cal_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    touch_force_value_en:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    touch_data_hys_en:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    touch_lta_en:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    touch_lta_order:
+      bitOffset: 5
+      bitWidth: 3
+      access: read-write
+    touch_flt_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    touch_flt_order:
+      bitOffset: 9
+      bitWidth: 3
+      access: read-write
+    touch_self_mutual_sel:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    touch_vldo_ccsel:
+      bitOffset: 13
+      bitWidth: 2
+      access: read-write
+    reserved_15_17:
+      bitOffset: 15
+      bitWidth: 3
+      access: read-only
+    ten_touch:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    reserved_19_31:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-only
+Touch_sleep_time:
+  description: Touch_sleep_time
+  addressOffset: 0xA0C
+  resetValue: 0x0007FFFF
+  fields:
+    touch_sleep_cycle:
+      bitOffset: 0
+      bitWidth: 23
+      access: read-write
+    reserved_23_31:
+      bitOffset: 23
+      bitWidth: 9
+      access: read-only
+touch_data_hystersis:
+  description: touch_data_hystersis
+  addressOffset: 0xA10
+  resetValue: 0x00000000
+  fields:
+    touch_data_hys:
+      bitOffset: 0
+      bitWidth: 9
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only
+Channel_force_data_0:
+  description: Channel_force_data_0
+  addressOffset: 0xA14
+  resetValue: 0x04000400
+  fields:
+    touch_force_data_ch0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    touch_force_data_ch1:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+Channel_force_data_1:
+  description: Channel_force_data_1
+  addressOffset: 0xA18
+  resetValue: 0x04000400
+  fields:
+    touch_force_data_ch2:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    touch_force_data_ch3:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+Channel_force_data_2:
+  description: Channel_force_data_2
+  addressOffset: 0xA1C
+  resetValue: 0x04000400
+  fields:
+    touch_force_data_ch4:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    touch_force_data_ch5:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+Channel_force_data_3:
+  description: Channel_force_data_3
+  addressOffset: 0xA20
+  resetValue: 0x04000400
+  fields:
+    touch_force_data_ch6:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    touch_force_data_ch7:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+Channel_force_data_4:
+  description: Channel_force_data_4
+  addressOffset: 0xA24
+  resetValue: 0x04000400
+  fields:
+    touch_force_data_ch8:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    touch_force_data_ch9:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+Channel_force_data_5:
+  description: Channel_force_data_5
+  addressOffset: 0xA28
+  resetValue: 0x04000400
+  fields:
+    touch_force_data_ch10:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    touch_force_data_ch11:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+Channel_vth_data_0:
+  description: Channel_vth_data_0
+  addressOffset: 0xA2C
+  resetValue: 0x3F3F3F3F
+  fields:
+    touch_vth_data_ch0:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch1:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch2:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch3:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+Channel_vth_data_1:
+  description: Channel_vth_data_1
+  addressOffset: 0xA30
+  resetValue: 0x3F1F1F1F
+  fields:
+    touch_vth_data_ch4:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch5:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch6:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch7:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+Channel_vth_data_2:
+  description: Channel_vth_data_2
+  addressOffset: 0xA34
+  resetValue: 0x3F3F3F3F
+  fields:
+    touch_vth_data_ch8:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch9:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch10:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    touch_vth_data_ch11:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+Channel_raw_data_0:
+  description: Channel_raw_data_0
+  addressOffset: 0xA38
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_1:
+  description: Channel_raw_data_1
+  addressOffset: 0xA3C
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch1:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_2:
+  description: Channel_raw_data_2
+  addressOffset: 0xA40
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch2:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_3:
+  description: Channel_raw_data_3
+  addressOffset: 0xA44
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch3:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_4:
+  description: Channel_raw_data_4
+  addressOffset: 0xA48
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch4:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_5:
+  description: Channel_raw_data_5
+  addressOffset: 0xA4C
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch5:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_6:
+  description: Channel_raw_data_6
+  addressOffset: 0xA50
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch6:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_7:
+  description: Channel_raw_data_7
+  addressOffset: 0xA54
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch7:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_8:
+  description: Channel_raw_data_8
+  addressOffset: 0xA58
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch8:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_9:
+  description: Channel_raw_data_9
+  addressOffset: 0xA5C
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch9:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_10:
+  description: Channel_raw_data_10
+  addressOffset: 0xA60
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch10:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_raw_data_11:
+  description: Channel_raw_data_11
+  addressOffset: 0xA64
+  resetValue: 0x00000000
+  fields:
+    touch_raw_data_ch11:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_0:
+  description: Channel_LTA_data_0
+  addressOffset: 0xA68
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_1:
+  description: Channel_LTA_data_1
+  addressOffset: 0xA6C
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch1:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_2:
+  description: Channel_LTA_data_2
+  addressOffset: 0xA70
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch2:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_3:
+  description: Channel_LTA_data_3
+  addressOffset: 0xA74
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch3:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_4:
+  description: Channel_LTA_data_4
+  addressOffset: 0xA78
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch4:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_5:
+  description: Channel_LTA_data_5
+  addressOffset: 0xA7C
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch5:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_6:
+  description: Channel_LTA_data_6
+  addressOffset: 0xA80
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch6:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_7:
+  description: Channel_LTA_data_7
+  addressOffset: 0xA84
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch7:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_8:
+  description: Channel_LTA_data_8
+  addressOffset: 0xA88
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch8:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_9:
+  description: Channel_LTA_data_9
+  addressOffset: 0xA8C
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch9:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_10:
+  description: Channel_LTA_data_10
+  addressOffset: 0xA90
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch10:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_LTA_data_11:
+  description: Channel_LTA_data_11
+  addressOffset: 0xA94
+  resetValue: 0x00000000
+  fields:
+    touch_lta_data_ch11:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_0:
+  description: Channel_FLT_data_0
+  addressOffset: 0xA98
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_1:
+  description: Channel_FLT_data_1
+  addressOffset: 0xA9C
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch1:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_2:
+  description: Channel_FLT_data_2
+  addressOffset: 0xAA0
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch2:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_3:
+  description: Channel_FLT_data_3
+  addressOffset: 0xAA4
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch3:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_4:
+  description: Channel_FLT_data_4
+  addressOffset: 0xAA8
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch4:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_5:
+  description: Channel_FLT_data_5
+  addressOffset: 0xAAC
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch5:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_6:
+  description: Channel_FLT_data_6
+  addressOffset: 0xAB0
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch6:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_7:
+  description: Channel_FLT_data_7
+  addressOffset: 0xAB4
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch7:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_8:
+  description: Channel_FLT_data_8
+  addressOffset: 0xAB8
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch8:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_9:
+  description: Channel_FLT_data_9
+  addressOffset: 0xABC
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch9:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_10:
+  description: Channel_FLT_data_10
+  addressOffset: 0xAC0
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch10:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+Channel_FLT_data_11:
+  description: Channel_FLT_data_11
+  addressOffset: 0xAC4
+  resetValue: 0x00000000
+  fields:
+    touch_flt_data_ch11:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+touch_rsvd:
+  description: touch_rsvd
+  addressOffset: 0xAC8
+  resetValue: 0x00000000
+  fields:
+    touch_reserved:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reserved_8_31:
+      bitOffset: 8
+      bitWidth: 24
+      access: read-only
+touch_int_setting:
+  description: touch_int_setting
+  addressOffset: 0xACC
+  resetValue: 0x80000000
+  fields:
+    touch_int_clr:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    touch_int_mask:
+      bitOffset: 16
+      bitWidth: 12
+      access: read-write
+    reserved_28_30:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-only
+    touch_int_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+touch_int_status:
+  description: touch_int_status
+  addressOffset: 0xAD0
+  resetValue: 0x00000000
+  fields:
+    touch_int_status:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-only
+    touch_end_flag:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-only
+    reserved_13_31:
+      bitOffset: 13
+      bitWidth: 19
+      access: read-only

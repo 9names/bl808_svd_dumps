@@ -1,0 +1,1909 @@
+SD_SYS_ADDR_LOW:
+  description: System Address Low Register
+  addressOffset: 0x00
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    DMA_ADDR_L:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_SYS_ADDR_HIGH:
+  description: System Address High Register
+  addressOffset: 0x02
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    DMA_ADDR_H:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_BLOCK_SIZE:
+  description: Block Size Register
+  addressOffset: 0x04
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    BLOCK_SIZE:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-write
+    HOST_DMA_BDRY:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    Reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+SD_BLOCK_COUNT:
+  description: Block Count Register
+  addressOffset: 0x06
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    BLOCK_COUNT:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_ARG_LOW:
+  description: Argument Low Register
+  addressOffset: 0x08
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    ARG_L:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_ARG_HIGH:
+  description: Argument High Register
+  addressOffset: 0x0A
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    ARG_H:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_TRANSFER_MODE:
+  description: Transfer Mode Register
+  addressOffset: 0x0C
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    DMA_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    BLK_CNT_EN:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    AUTO_CMD_EN:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    TO_HOST_DIR:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    MULTI_BLK_SEL:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    Reserved_15_6:
+      bitOffset: 6
+      bitWidth: 10
+      access: read-only
+SD_CMD:
+  description: Command Register
+  addressOffset: 0x0E
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP_TYPE:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    Reserved_2:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    CMD_CRC_CHK_EN:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    CMD_INDEX_CHK_EN:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    DATA_PRESENT:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    CMD_TYPE:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-write
+    CMD_INDEX:
+      bitOffset: 8
+      bitWidth: 6
+      access: read-write
+    Reserved_15_14:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+SD_RESP_0:
+  description: Response Register 0
+  addressOffset: 0x10
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_RESP_1:
+  description: Response Register 1
+  addressOffset: 0x12
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP1:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_RESP_2:
+  description: Response Register 2
+  addressOffset: 0x14
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP2:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_RESP_3:
+  description: Response Register 3
+  addressOffset: 0x16
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP3:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_RESP_4:
+  description: Response Register 4
+  addressOffset: 0x18
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP4:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_RESP_5:
+  description: Response Register 5
+  addressOffset: 0x1A
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP5:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_RESP_6:
+  description: Response Register 6
+  addressOffset: 0x1C
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP6:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_RESP_7:
+  description: Response Register 7
+  addressOffset: 0x1E
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    RESP7:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_BUFFER_DATA_PORT_0:
+  description: Buffer Data Port 0 Register
+  addressOffset: 0x20
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    CPU_DATA0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_BUFFER_DATA_PORT_1:
+  description: Buffer Data Port 1 Register
+  addressOffset: 0x22
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    CPU_DATA1:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_PRESENT_STATE_1:
+  description: Present State Register 1
+  addressOffset: 0x24
+  size: 16
+  resetValue: 0x00000400
+  fields:
+    CMD_INHIBIT_CMD:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    CMD_INHIBIT_DAT:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    _DAT_ACTIVE:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    RETUNING_REQ:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    Reserved_7_4:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    TX_ACTIVE:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-only
+    RX_ACTIVE:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-only
+    BUFFER_WR_EN:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    BUFFER_RD_EN:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    Reserved_15_12:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+SD_PRESENT_STATE_2:
+  description: Present State Register 2
+  addressOffset: 0x26
+  size: 16
+  resetValue: 0x000001F0
+  fields:
+    CARD_INSERTED:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    CARD_STABLE:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    CARD_DET:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    WRITE_PROT:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    DAT_LEVEL:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    CMD_LEVEL:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-only
+    Reserved_15_9:
+      bitOffset: 9
+      bitWidth: 7
+      access: read-only
+SD_HOST_CTRL:
+  description: Host Control Register
+  addressOffset: 0x28
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    LED_CTRL:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    DATA_WIDTH:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    HI_SPEED_EN:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    DMA_SEL:
+      bitOffset: 3
+      bitWidth: 2
+      access: read-write
+    EX_DATA_WIDTH:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    CARD_DET_L:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    CARD_DET_S:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    SD_BUS_POWER:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    SD_BUS_VLT:
+      bitOffset: 9
+      bitWidth: 3
+      access: read-write
+    Reserved_15_12:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+SD_BLOCK_GAP_CTRL:
+  description: Block Gap Control Register
+  addressOffset: 0x2A
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    STOP_AT_BLOCK_GAP_REQ:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    CONT_REQ:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    RD_WAIT_CTL:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    INT_BLK_GAP:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    Reserved_7_4:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    W_CARD_INT:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    W_INSERTION:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    W_REMOVAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    Reserved_15_11:
+      bitOffset: 11
+      bitWidth: 5
+      access: read-only
+SD_CLOCK_CTRL:
+  description: Clock Control Register
+  addressOffset: 0x2C
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    INT_CLK_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    INT_CLK_STABLE:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    SD_CLK_EN:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    Reserved_4_3:
+      bitOffset: 3
+      bitWidth: 2
+      access: read-only
+    CLK_GEN_SEL:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    SD_FREQ_SEL_HI:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-write
+    SD_FREQ_SEL_LO:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+SD_TIMEOUT_CTRL_SW_RESET:
+  description: Timeout Control/Software Reset Register
+  addressOffset: 0x2E
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    TIMEOUT_VALUE:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    Reserved_7_4:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    SW_RST_ALL:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    SW_RST_CMD:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    SW_RST_DAT:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    Reserved_15_11:
+      bitOffset: 11
+      bitWidth: 5
+      access: read-only
+SD_NORMAL_INT_STATUS:
+  description: Normal Interrupt Status Register
+  addressOffset: 0x30
+  size: 16
+  resetValue: 0x00000010
+  fields:
+    CMD_COMPLETE:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    XFER_COMPLETE:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    BLOCK_GAP_EVT:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    DMA_INT:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    TX_RDY:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    RX_RDY:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    CARD_INS_INT:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    CARD_REM_INT:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    CARD_INT:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-only
+    INT_A:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    INT_B:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    INT_C:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    RETUNING_INT:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    Reserved_14_13:
+      bitOffset: 13
+      bitWidth: 2
+      access: read-only
+    ERR_INT:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+SD_ERROR_INT_STATUS:
+  description: Error Interrupt Status Register
+  addressOffset: 0x32
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    CMD_TIMEOUT_ERR:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    CMD_CRC_ERR:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    CMD_END_BIT_ERR:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    CMD_INDEX_ERR:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    DATA_TIMEOUT_ERR:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    RD_DATA_CRC_ERR:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    RD_DATA_END_BIT_ERR:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    CUR_LIMIT_ERR:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    AUTO_CMD12_ERR:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    ADMA_ERR:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    TUNE_ERR:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    Reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    SPI_ERR:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    AXI_RESP_ERR:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    CPL_TIMEOUT_ERR:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    CRC_STATUS_ERR:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+SD_NORMAL_INT_STATUS_EN:
+  description: Normal Interrupt Status Enable Register
+  addressOffset: 0x34
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    CMD_COMPLETE_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    XFER_COMPLETE_EN:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    BLOCK_GAP_EVT_EN:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    DMA_INT_EN:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    TX_RDY_EN:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    RD_RDY_EN:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    CARD_INS_EN:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    CARD_REM_EN:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    CARD_INT_EN:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    INT_A_INT_EN:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    INT_B_INT_EN:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    INT_C_INT_EN:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    RETUNE_INT_EN:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    Reserved_15_13:
+      bitOffset: 13
+      bitWidth: 3
+      access: read-only
+SD_ERROR_INT_STATUS_EN:
+  description: Error Interrupt Status Enable Register
+  addressOffset: 0x36
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    CMD_TIMEOUT_ERR_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    CMD_CRC_ERR_EN:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    CMD_END_BIT_ERR_EN:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    CMD_INDEX_ERR_EN:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    DATA_TIMEOUT_ERR_EN:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    RD_DATA_CRC_ERR_EN:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    RD_DATA_END_BIT_ERR_EN:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    CUR_LIM_ERR_EN:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    AUTO_CMD12_ERR_EN:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    ADMA_ERR_EN:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    TUNING_ERR_EN:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    Reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    SPI_ERR_EN:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    AXI_RESP_ERR_EN:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    CPL_TIMEOUT_ERR_EN:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    CRC_STATUS_ERR_EN:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+SD_NORMAL_INT_STATUS_INT_EN:
+  description: Normal Interrupt Status Interrupt Enable Register
+  addressOffset: 0x38
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    CMD_COMPLETE_INT_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    XFER_COMPLETE_INT_EN:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    BLOCK_GAP_EVT_INT_EN:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    DMA_INT_INT_EN:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    TX_RDY_INT_EN:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    RX_RDY_INT_EN:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    CARD_INS_INT_EN:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    CARD_REM_INT_EN:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    CARD_INT_INT_EN:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    INT_A_INT_INT_EN:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    INT_B_INT_INT_EN:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    INT_C_INT_INT_EN:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    RETUNE_INT_INT_EN:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    Reserved_15_13:
+      bitOffset: 13
+      bitWidth: 3
+      access: read-only
+SD_ERROR_INT_STATUS_INT_EN:
+  description: Error Interrupt Status Interrupt Enable Register
+  addressOffset: 0x3A
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    CMD_TIMEOUT_ERR_INT_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    CMD_CRC_ERR_INT_EN:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    CMD_END_BIT_ERR_INT_EN:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    CMD_INDEX_ERR_INT_EN:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    DATA_TIMEOUT_ERR_INT_EN:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    RD_DATA_CRC_ERR_INT_EN:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    RD_DATA_END_BIT_ERR_INT_EN:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    CUR_LIM_ERR_INT_EN:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    AUTO_CMD12_ERR_INT_EN:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    ADMA_ERR_INT_EN:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    TUNE_ERR_INT_EN:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    Reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    SPI_ERR_INT_EN:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    AXI_RESP_ERR_INT_EN:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    CPL_TIMEOUT_ERR_INT_EN:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    CRC_STATUS_ERR_INT_EN:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+SD_AUTO_CMD12_ERROR_STATUS:
+  description: Auto CMD12 Error Status Register
+  addressOffset: 0x3C
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    AUTO_CMD12_NOT_EXE:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    AUTO_CMD_TIMEOUT_ERR:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    AUTO_CMD_CRC_ERR:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    AUTO_CMD_END_BIT_ERR:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    AUTO_CMD_INDEX_ERR:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    Reserved_6_5:
+      bitOffset: 5
+      bitWidth: 2
+      access: read-only
+    CMD_NOT_ISSUED:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    Reserved_15_8:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-only
+HOST_CTRL_2:
+  description: Host Control 2 Register
+  addressOffset: 0x3e
+  size: 16
+  resetValue: 0x00004000
+  fields:
+    UHS_MODE_SEL:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-write
+    SDH_V18_EN:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    DRV_STRENGTH_SEL:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    EXE_TUNING:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    SAMPLING_CLK_SEL:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    Reserved_13_8:
+      bitOffset: 8
+      bitWidth: 6
+      access: read-only
+    ASYNC_INT_EN:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    PRE_VAL_EN:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+SD_CAPABILITIES_1:
+  description: Capabilities Register 1
+  addressOffset: 0x40
+  size: 16
+  resetValue: 0x00000080
+  fields:
+    TIMEOUT_FREQ:
+      bitOffset: 0
+      bitWidth: 6
+      access: read-only
+    Reserved_6:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-only
+    TIMEOUT_UNIT:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    BASE_FREQ:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-only
+SD_CAPABILITIES_2:
+  description: Capabilities Register 2
+  addressOffset: 0x42
+  size: 16
+  resetValue: 0x000025FC
+  fields:
+    MAX_BLK_LEN:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    EX_DATA_WIDTH_SUPPORT:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    ADMA2_SUPPORT:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    ADMA1_SUPPORT:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-only
+    HI_SPEED_SUPPORT:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    SDMA_SUPPORT:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-only
+    SUS_RES_SUPPORT:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    VLG_33_SUPPORT:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-only
+    VLG_30_SUPPORT:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-only
+    VLG_18_SUPPORT:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    SYS_BUS_64_SUPPORT:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-only
+    ASYNC_INT_SUPPORT:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-only
+    CFG_SLOT_TYPE:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-write
+SD_CAPABILITIES_3:
+  description: Capabilities Register 3
+  addressOffset: 0x44
+  size: 16
+  resetValue: 0x00002F77
+  fields:
+    SDR50_SUPPORT:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    SDR104_SUPPORT:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    DDR50_SUPPORT:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    Reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    DRV_TYPE_A:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-only
+    DRV_TYPE_C:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    DRV_TYPE_D:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-only
+    Reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    TMR_RETUNE:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-only
+    Reserved_12:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-only
+    SDR50_TUNE:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-only
+    RETUNE_MODES:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+SD_CAPABILITIES_4:
+  description: Capabilities Register 4
+  addressOffset: 0x46
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    clk_multiplier:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-only
+    Reserved_15_8:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-only
+SD_MAX_CURRENT_1:
+  description: Maximum Current Register 1
+  addressOffset: 0x48
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    MAX_CUR_33:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-only
+    MAX_CUR_30:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-only
+SD_MAX_CURRENT_2:
+  description: Maximum Current Register 2
+  addressOffset: 0x4A
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    MAX_CUR_18:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-only
+    Reserved_15_8:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-only
+SD_MAX_CURRENT_3:
+  description: Maximum Current Register 3
+  addressOffset: 0x4C
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    Reserved_15_0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_MAX_CURRENT_4:
+  description: Maximum Current Register 4
+  addressOffset: 0x4E
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    Reserved_15_0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+SD_FORCE_EVENT_AUTO_CMD12_ERROR:
+  description: Force Event Auto cmd12 Error Register
+  addressOffset: 0x50
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    F_ACMD12_NEXE_ERR:
+      bitOffset: 0
+      bitWidth: 1
+      access: write-only
+    F_ACMD_TO_ERR:
+      bitOffset: 1
+      bitWidth: 1
+      access: write-only
+    F_ACMD_CRC_ERR:
+      bitOffset: 2
+      bitWidth: 1
+      access: write-only
+    F__ACMD_EBIT_ERR:
+      bitOffset: 3
+      bitWidth: 1
+      access: write-only
+    F_ACMD_INDEX_ERR:
+      bitOffset: 4
+      bitWidth: 1
+      access: write-only
+    Reserved_6_5:
+      bitOffset: 5
+      bitWidth: 2
+      access: read-only
+    F_ACMD12_ISSUE_ERR:
+      bitOffset: 7
+      bitWidth: 1
+      access: write-only
+    Reserved_15_8:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-only
+SD_FORCE_EVENT_FOR_ERROR_STATUS:
+  description: Force Event for Error Status Register
+  addressOffset: 0x52
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    F_CMD_TO_ERR:
+      bitOffset: 0
+      bitWidth: 1
+      access: write-only
+    F_CMD_CRC_ERR:
+      bitOffset: 1
+      bitWidth: 1
+      access: write-only
+    F_CMD_END_BIT_ERR:
+      bitOffset: 2
+      bitWidth: 1
+      access: write-only
+    F_CMD_INDEX_ERR:
+      bitOffset: 3
+      bitWidth: 1
+      access: write-only
+    F_DAT_TO_ERR:
+      bitOffset: 4
+      bitWidth: 1
+      access: write-only
+    F_DAT_CRC_ERR:
+      bitOffset: 5
+      bitWidth: 1
+      access: write-only
+    F_DAT_END_BIT_ERR:
+      bitOffset: 6
+      bitWidth: 1
+      access: write-only
+    F_CURRENT_ERR:
+      bitOffset: 7
+      bitWidth: 1
+      access: write-only
+    F_ACMD12_ERR:
+      bitOffset: 8
+      bitWidth: 1
+      access: write-only
+    F_ADMA_ERR:
+      bitOffset: 9
+      bitWidth: 1
+      access: write-only
+    Reserved_11_10:
+      bitOffset: 10
+      bitWidth: 2
+      access: read-only
+    F_SPI_ERR:
+      bitOffset: 12
+      bitWidth: 1
+      access: write-only
+    F_AXI_RESP_ERR:
+      bitOffset: 13
+      bitWidth: 1
+      access: write-only
+    F_CPL_TIMEOUT_ERR:
+      bitOffset: 14
+      bitWidth: 1
+      access: write-only
+    F_CRC_STATUS_ERR:
+      bitOffset: 15
+      bitWidth: 1
+      access: write-only
+SD_ADMA_ERROR_STATUS:
+  description: ADMA Error Status Register
+  addressOffset: 0x54
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    ADMA_STATE:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    ADMA_LEN_ERR:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    Reserved_15_3:
+      bitOffset: 3
+      bitWidth: 13
+      access: read-only
+SD_ADMA_SYS_ADDR_1:
+  description: ADMA System Address Register 1
+  addressOffset: 0x58
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    ADMA_SYS_ADDR:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_ADMA_SYS_ADDR_2:
+  description: ADMA System Address Register 2
+  addressOffset: 0x5A
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    ADMA_SYS_ADDR:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_ADMA_SYS_ADDR_3:
+  description: ADMA System Address Register 3
+  addressOffset: 0x5C
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    ADMA_SYS_ADDR:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+SD_ADMA_SYS_ADDR_4:
+  description: ADMA System Address Register 4
+  addressOffset: 0x5E
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    ADMA_SYS_ADDR:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+PRESET_VALUE_FOR_INIT:
+  description: Preset Value Register for Initialization
+  addressOffset: 0x60
+  size: 16
+  resetValue: 0x00000100
+  fields:
+    SDCLK_FREQ_SEL_VAL:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-only
+    CLKGEN_SEL_VAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_13_11:
+      bitOffset: 11
+      bitWidth: 3
+      access: read-only
+    DRV_STRENGTH_VAL:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+PRESET_VALUE_FOR_DS:
+  description: Preset Value Register for Default Speed
+  addressOffset: 0x62
+  size: 16
+  resetValue: 0x00000004
+  fields:
+    SDCLK_FREQ_SEL_VAL:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-only
+    CLKGEN_SEL_VAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_13_11:
+      bitOffset: 11
+      bitWidth: 3
+      access: read-only
+    DRV_STRENGTH_VAL:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+PRESET_VALUE_FOR_HS:
+  description: Preset Value Register for High Speed
+  addressOffset: 0x64
+  size: 16
+  resetValue: 0x00000002
+  fields:
+    SDCLK_FREQ_SEL_VAL:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-only
+    CLKGEN_SEL_VAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_13_11:
+      bitOffset: 11
+      bitWidth: 3
+      access: read-only
+    DRV_STRENGTH_VAL:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+PRESET_VALUE_FOR_SDR12:
+  description: Preset Value Register for SDR12
+  addressOffset: 0x66
+  size: 16
+  resetValue: 0x00000004
+  fields:
+    SDCLK_FREQ_SEL_VAL:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-only
+    CLKGEN_SEL_VAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_13_11:
+      bitOffset: 11
+      bitWidth: 3
+      access: read-only
+    DRV_STRENGTH_VAL:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+PRESET_VALUE_FOR_SDR25:
+  description: Preset Value Register for SDR25
+  addressOffset: 0x68
+  size: 16
+  resetValue: 0x00000002
+  fields:
+    SDCLK_FREQ_SEL_VAL:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-only
+    CLKGEN_SEL_VAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_13_11:
+      bitOffset: 11
+      bitWidth: 3
+      access: read-only
+    DRV_STRENGTH_VAL:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+PRESET_VALUE_FOR_SDR50:
+  description: Preset Value Register for SDR50
+  addressOffset: 0x6a
+  size: 16
+  resetValue: 0x00000001
+  fields:
+    SDCLK_FREQ_SEL_VAL:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-only
+    CLKGEN_SEL_VAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_13_11:
+      bitOffset: 11
+      bitWidth: 3
+      access: read-only
+    DRV_STRENGTH_VAL:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+PRESET_VALUE_FOR_SDR104:
+  description: Preset Value Register for SDR104
+  addressOffset: 0x6c
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    SDCLK_FREQ_SEL_VAL:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-only
+    CLKGEN_SEL_VAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_13_11:
+      bitOffset: 11
+      bitWidth: 3
+      access: read-only
+    DRV_STRENGTH_VAL:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+PRESET_VALUE_FOR_DDR50:
+  description: Preset Value Register for DDR50
+  addressOffset: 0x6e
+  size: 16
+  resetValue: 0x00000002
+  fields:
+    SDCLK_FREQ_SEL_VAL:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-only
+    CLKGEN_SEL_VAL:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    Reserved_13_11:
+      bitOffset: 11
+      bitWidth: 3
+      access: read-only
+    DRV_STRENGTH_VAL:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+SHARED_BUS_CTRL:
+  description: Shared Bus Control Register
+  addressOffset: 0xe0
+  resetValue: 0x00000000
+  fields:
+    NUM_CLK_PINS:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-only
+    Reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    NUM_INT_PINS:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-only
+    Reserved_7_6:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    BUS_WIDTH_PRESET:
+      bitOffset: 8
+      bitWidth: 7
+      access: read-only
+    Reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    CLK_PIN_SEL:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    Reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    INT_PIN_SEL:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    Reserved_23:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-only
+    BEND_PWR_CTRL:
+      bitOffset: 24
+      bitWidth: 7
+      access: read-write
+    Reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+SD_SLOT_INT_STATUS:
+  description: Slot Interrupt Status Register
+  addressOffset: 0xFC
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    SLOT_INT0:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    SLOT_INT1:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    Reserved_15_2:
+      bitOffset: 2
+      bitWidth: 14
+      access: read-only
+SD_HOST_CTRL_VER:
+  description: Host Control Version Register
+  addressOffset: 0xFE
+  size: 16
+  resetValue: 0x00000002
+  fields:
+    SD_VER:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-only
+    VENDOR_VER:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-only
+SD_CFG_FIFO_PARAM:
+  description: SD Extra Parameters Register
+  addressOffset: 0x100
+  resetValue: 0x4A000000
+  fields:
+    Reserved_0:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    Reserved_2_1:
+      bitOffset: 1
+      bitWidth: 2
+      access: read-only
+    BOOT_ACK:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    SQU_EMPTY_CHK:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    SQU_FULL_CHK:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    GEN_PAD_CLK_ON:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    Reserved_23_7:
+      bitOffset: 7
+      bitWidth: 17
+      access: read-only
+    GEN_PAD_CLK_CNT:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+SD_FIFO_PARAM:
+  description: FIFO Parameters Register
+  addressOffset: 0x104
+  resetValue: 0x00070005
+  fields:
+    RTC:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    WTC:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    FIFO_CLK:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    FIFO_CS:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    PDWN:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    use_dat3:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    CLK_GATE_CTL:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    CLK_GATE_ON:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    Reserved_10:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-only
+    OVRRD_CLK_OEN:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    FORCE_CLK_ON:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    PDFVSSM:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    PDLVMC:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    Reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    PRE_GATE_CLK_CNT:
+      bitOffset: 16
+      bitWidth: 4
+      access: read-write
+    Reserved_31_20:
+      bitOffset: 20
+      bitWidth: 12
+      access: read-only
+SD_SPI_MODE:
+  description: SPI Mode Register
+  addressOffset: 0x108
+  size: 16
+  resetValue: 0x00000000
+  fields:
+    SPI_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    Reserved_7_1:
+      bitOffset: 1
+      bitWidth: 7
+      access: read-only
+    SPI_ERR_TOKEN:
+      bitOffset: 8
+      bitWidth: 5
+      access: read-write
+    Reserved_15_13:
+      bitOffset: 13
+      bitWidth: 3
+      access: read-only
+SD_CLOCK_AND_BURST_SIZE_SETUP:
+  description: Clock and Burst Size Setup Register
+  addressOffset: 0x10a
+  size: 16
+  resetValue: 0x000000CE
+  fields:
+    BRST_SIZE:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    DMA_SIZE:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    priority:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    AXI_NON_POST_WR:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    RD_ENDIAN:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    WR_ENDIAN:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    Reserved_13_8:
+      bitOffset: 8
+      bitWidth: 6
+      access: read-only
+    RD_OSTDG:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    WR_OSTDG:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+SD_CE_ATA_1:
+  description: CE-ATA Register 1
+  addressOffset: 0x10c
+  size: 16
+  resetValue: 0x00003FFF
+  fields:
+    CPL_TIMEOUT:
+      bitOffset: 0
+      bitWidth: 14
+      access: read-write
+    Reserved_15_14:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+SD_CE_ATA_2:
+  description: CE-ATA Register 2
+  addressOffset: 0x10e
+  size: 16
+  resetValue: 0x00000800
+  fields:
+    MISC_INT_INT_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    MISC_INT_EN:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    MISC_INT:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    Reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    CPL_COMPLETE_INT_EN:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    CPL_COMPLETE_EN:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    CPL_COMPLETE:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    Reserved_10_7:
+      bitOffset: 7
+      bitWidth: 4
+      access: read-only
+    MMC_RESETN:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    MMC_CARD:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    CEATA_CARD:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    SND_CPL:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    CHK_CPL:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+SD_PAD_IO_SETUP:
+  description: PAD I/O Setup Register
+  addressOffset: 0x110
+  resetValue: 0x00000002
+  fields:
+    ASYNC_IO_EN:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    INAND_SEL:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    Reserved_15_2:
+      bitOffset: 2
+      bitWidth: 14
+      access: read-only
+    ECO_REG:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    Reserved_31_24:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-only
+RX_CFG_REG:
+  description: RX Configuration Register
+  addressOffset: 0x114
+  resetValue: 0x00000000
+  fields:
+    SDCLK_SEL0:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    SDCLK_SEL1:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    Reserved_7_4:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    SDCLK_DELAY:
+      bitOffset: 8
+      bitWidth: 10
+      access: read-write
+    TUNING_DLY_INC:
+      bitOffset: 18
+      bitWidth: 10
+      access: read-write
+    Reserved_31_28:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+TX_CFG_REG:
+  description: TX Configuration Register
+  addressOffset: 0x118
+  resetValue: 0x00290070
+  fields:
+    TX_HOLD_DELAY0:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-write
+    Reserved_15_10:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    TX_HOLD_DELAY1:
+      bitOffset: 16
+      bitWidth: 10
+      access: read-write
+    Reserved_29_26:
+      bitOffset: 26
+      bitWidth: 4
+      access: read-only
+    TX_INT_CLK_SEL:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    TX_MUX_SEL:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+TUNING_CFG_REG:
+  description: TUNING CONFIG Register
+  addressOffset: 0x11c
+  resetValue: 0x00000A27
+  fields:
+    TUNING_TT_CNT:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    TUNING_WD_CNT:
+      bitOffset: 8
+      bitWidth: 6
+      access: read-write
+    TUNING_CLK_DLY:
+      bitOffset: 14
+      bitWidth: 10
+      access: read-only

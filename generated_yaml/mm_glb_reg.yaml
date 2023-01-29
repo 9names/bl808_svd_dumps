@@ -1,0 +1,508 @@
+mm_clk_ctrl_cpu:
+  description: mm_clk_ctrl_cpu
+  addressOffset: 0x0
+  resetValue: 0x0510000F
+  fields:
+    reg_pll_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_cpu_clk_en:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reg_bclk_en:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reg_mm_cpu_clk_en:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reg_uart_clk_sel:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reg_i2c_clk_sel:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reg_spi_clk_sel:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reg_cpu_clk_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reg_xclk_clk_sel:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reg_cpu_root_clk_sel:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reg_mmcpu0_clk_en:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    reg_bclk1x_sel:
+      bitOffset: 13
+      bitWidth: 2
+      access: read-write
+    reserved_15_17:
+      bitOffset: 15
+      bitWidth: 3
+      access: read-only
+    reg_bclk2x_div_act_pulse:
+      bitOffset: 18
+      bitWidth: 1
+      access: write-only
+    reg_bclk2x_div_bypass:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    sts_bclk2x_prot_done:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-only
+    reserved_21_23:
+      bitOffset: 21
+      bitWidth: 3
+      access: read-only
+    reg_bclk2x_sw_done_cnt:
+      bitOffset: 24
+      bitWidth: 4
+      access: read-write
+    cpu_clk_sw_state:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-only
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+mm_clk_cpu:
+  description: mm_clk_cpu
+  addressOffset: 0x4
+  resetValue: 0x00000100
+  fields:
+    reg_cpu_clk_div:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_cnn_clk_div_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reg_cnn_clk_sel:
+      bitOffset: 9
+      bitWidth: 2
+      access: read-write
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    reg_cnn_clk_div:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    reg_bclk2x_div:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_bclk1x_div:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+dp_clk:
+  description: dp_clk
+  addressOffset: 0x8
+  resetValue: 0x00010000
+  fields:
+    reserved_0_15:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-only
+    reg_dp_clk_div_en:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reg_dp_clk_sel:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    reserved_18_19:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-only
+    reg_dp_clk_div:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-write
+    reserved_24_31:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-only
+codec_clk:
+  description: codec_clk
+  addressOffset: 0xC
+  resetValue: 0x00000100
+  fields:
+    reserved_0_7:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-only
+    reg_h264_clk_div_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reg_h264_clk_sel:
+      bitOffset: 9
+      bitWidth: 2
+      access: read-write
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    reg_h264_clk_div:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    reserved_15_31:
+      bitOffset: 15
+      bitWidth: 17
+      access: read-only
+mm_clk_ctrl_peri:
+  description: mm_clk_ctrl_peri
+  addressOffset: 0x10
+  resetValue: 0x00810300
+  fields:
+    reg_i2c0_clk_div:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_i2c0_clk_div_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reg_i2c0_clk_en:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    reg_uart0_clk_div_en:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reg_uart0_clk_div:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    reserved_20_22:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-only
+    reg_spi_clk_div_en:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    reg_spi_clk_div:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+mm_clk_ctrl_peri3:
+  description: mm_clk_ctrl_peri3
+  addressOffset: 0x18
+  resetValue: 0x00010300
+  fields:
+    reg_i2c1_clk_div:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_i2c1_clk_div_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reg_i2c1_clk_en:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    reg_uart1_clk_div_en:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reg_uart1_clk_div:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    reserved_20_31:
+      bitOffset: 20
+      bitWidth: 12
+      access: read-only
+mm_sw_sys_reset:
+  description: mm_sw_sys_reset
+  addressOffset: 0x40
+  resetValue: 0x00000100
+  fields:
+    reg_ctrl_sys_reset:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    reg_ctrl_pwron_rst:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3_7:
+      bitOffset: 3
+      bitWidth: 5
+      access: read-only
+    reg_ctrl_mmcpu0_reset:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only
+sw_reset_mm_peri:
+  description: sw_reset_mm_peri
+  addressOffset: 0x44
+  resetValue: 0x00000000
+  fields:
+    swrst_mm_misc:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    swrst_dma:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    swrst_uart0:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    swrst_i2c0:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    swrst_i2c1:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    swrst_ipc:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    swrst_dma2d:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    swrst_spi:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    swrst_timer:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    swrst_i2s0:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    swrst_i2s1:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    swrst_pdm0:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    swrst_pdm1:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    swrst_uart1:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    swrst_pUHS:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+sw_reset_sub:
+  description: sw_reset_sub
+  addressOffset: 0x48
+  resetValue: 0x00000000
+  fields:
+    swrst_misc:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    swrst_main:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    swrst_tsrc:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    swrst_dp_tsrc:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    swrst_nr3d_ctrl:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    swrst_dvp2busA:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    swrst_dvp2busB:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    swrst_dvp2busC:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    swrst_dvp2busD:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    swrst_mipi:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    swrst_reg:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    swrst_dvp2busE:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    swrst_dvp2busF:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    swrst_dvp2busG:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    swrst_dvp2busH:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    reserved_21_31:
+      bitOffset: 21
+      bitWidth: 11
+      access: read-only
+sw_reset_codec_sub:
+  description: sw_reset_codec_sub
+  addressOffset: 0x4C
+  resetValue: 0x00000000
+  fields:
+    swrst_codec_misc:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    swrst_mjpeg:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    swrst_h264:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    swrst_mjpeg_dec:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    swrst_cnn:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reserved_5_15:
+      bitOffset: 5
+      bitWidth: 11
+      access: read-only
+    swrst_vram:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_31:
+      bitOffset: 17
+      bitWidth: 15
+      access: read-only
+image_sensor_ctrl:
+  description: image_sensor_ctrl
+  addressOffset: 0x50
+  resetValue: 0x00000001
+  fields:
+    rg_is_rst_n:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_31:
+      bitOffset: 1
+      bitWidth: 31
+      access: read-only
+tz_mm_clkrst:
+  description: tz_mm_clkrst
+  addressOffset: 0x60
+  resetValue: 0x00000000
+  fields:
+    tzc_mm_swrst_lock:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    tzc_mm_sys_reset_lock:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    tzc_mm_pwron_rst_lock:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    tzc_mm_cpu0_reset_lock:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    tzc_mm_clk_lock:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-only
+    reserved_5_31:
+      bitOffset: 5
+      bitWidth: 27
+      access: read-only

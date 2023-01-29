@@ -1,0 +1,209 @@
+codec_bus_ctrl:
+  description: codec_bus_ctrl
+  addressOffset: 0x00
+  resetValue: 0x0000FFFF
+  fields:
+    rg_pclk_force_on:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+codec_qos_ctrl:
+  description: codec_qos_ctrl
+  addressOffset: 0x04
+  resetValue: 0x00000000
+  fields:
+    reg_jenc_awqos:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_jenc_arqos:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reg_jdec_awqos:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reg_jdec_arqos:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reg_vdo0_awqos:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reg_vdo0_arqos:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reg_vdo1_awqos:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reg_vdo1_arqos:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reg_ref_awqos:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reg_ref_arqos:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reg_cnn_awqos:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reg_cnn_arqos:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reserved_12_31:
+      bitOffset: 12
+      bitWidth: 20
+      access: read-only
+codec_bus_thre:
+  description: codec_bus_thre
+  addressOffset: 0x08
+  resetValue: 0x00000000
+  fields:
+    reg_x_wthre_blai2sysram:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reg_x_wthre_blai2ext:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    reg_x_wthre_vdo2pb:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reg_x_wthre_vdo2pa:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-write
+    reg_x_wthre_vdo2sysram:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_31:
+      bitOffset: 10
+      bitWidth: 22
+      access: read-only
+codec_bus_dec_err:
+  description: codec_bus_dec_err
+  addressOffset: 0x10
+  resetValue: 0x00000000
+  fields:
+    reg_dec_err_clr:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_dec_err_latch_last:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    codec_hs_dec_err_lat:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-only
+    codec_hs_dec_err_write:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-only
+    reserved_10_11:
+      bitOffset: 10
+      bitWidth: 2
+      access: read-only
+    codec_hs_dec_err_src:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-only
+    reserved_14_15:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+    codec_hs_dec_err_id:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-only
+    reserved_17_31:
+      bitOffset: 17
+      bitWidth: 15
+      access: read-only
+codec_bus_dec_err_addr:
+  description: codec_bus_dec_err_addr
+  addressOffset: 0x14
+  resetValue: 0x00000000
+  fields:
+    codec_hs_dec_err_addr:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+blai_lmtr_rd:
+  description: blai_lmtr_rd
+  addressOffset: 0x20
+  resetValue: 0x00000000
+  fields:
+    reg_blai_rcmd_cnt:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reserved_16_30:
+      bitOffset: 16
+      bitWidth: 15
+      access: read-only
+    reg_blai_rcmd_mode:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+blai_lmtr_wr:
+  description: blai_lmtr_wr
+  addressOffset: 0x24
+  resetValue: 0x00000000
+  fields:
+    reg_blai_wcmd_cnt:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reserved_16_30:
+      bitOffset: 16
+      bitWidth: 15
+      access: read-only
+    reg_blai_wcmd_mode:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+id_selection:
+  description: id_selection
+  addressOffset: 0x28
+  resetValue: 0x00000000
+  fields:
+    rg_jenc_id_sel:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_31:
+      bitOffset: 1
+      bitWidth: 31
+      access: read-only
+CODEC_MISC_Dummy:
+  description: CODEC_MISC_Dummy
+  addressOffset: 0xFC
+  resetValue: 0xFFFF0000
+  fields:
+    dummy_reg:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write

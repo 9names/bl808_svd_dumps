@@ -1,0 +1,195 @@
+gpadc_config:
+  description: gpadc_config
+  addressOffset: 0x0
+  resetValue: 0x00000000
+  fields:
+    gpadc_dma_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    gpadc_fifo_clr:
+      bitOffset: 1
+      bitWidth: 1
+      access: write-only
+    gpadc_fifo_ne:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    gpadc_fifo_full:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    gpadc_rdy:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-only
+    gpadc_fifo_overrun:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    gpadc_fifo_underrun:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-only
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    gpadc_rdy_clr:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    gpadc_fifo_overrun_clr:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    gpadc_fifo_underrun_clr:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    gpadc_rdy_mask:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    gpadc_fifo_overrun_mask:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    gpadc_fifo_underrun_mask:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    gpadc_fifo_data_count:
+      bitOffset: 16
+      bitWidth: 6
+      access: read-only
+    gpadc_fifo_thl:
+      bitOffset: 22
+      bitWidth: 2
+      access: read-write
+    rsvd_31_24:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-only
+gpadc_dma_rdata:
+  description: gpadc_dma_rdata
+  addressOffset: 0x4
+  resetValue: 0x00000000
+  fields:
+    gpadc_dma_rdata:
+      bitOffset: 0
+      bitWidth: 26
+      access: read-only
+    rsvd_31_26:
+      bitOffset: 26
+      bitWidth: 6
+      access: read-only
+gpadc_pir_train:
+  description: gpadc_pir_train
+  addressOffset: 0x20
+  resetValue: 0x0000000F
+  fields:
+    pir_extend:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-write
+    reserved_5_7:
+      bitOffset: 5
+      bitWidth: 3
+      access: read-only
+    pir_cnt_v:
+      bitOffset: 8
+      bitWidth: 5
+      access: read-only
+    reserved_13_15:
+      bitOffset: 13
+      bitWidth: 3
+      access: read-only
+    pir_train:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    pir_stop:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-only
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+gpdac_config:
+  description: gpdac_config
+  addressOffset: 0x40
+  resetValue: 0x00000000
+  fields:
+    gpdac_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+gpdac_dma_config:
+  description: gpdac_dma_config
+  addressOffset: 0x44
+  resetValue: 0x00000000
+  fields:
+    gpdac_dma_tx_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    gpdac_dma_inv_msb:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    gpdac_dma_format:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-write
+    reserved_8_31:
+      bitOffset: 8
+      bitWidth: 24
+      access: read-only
+gpdac_dma_wdata:
+  description: gpdac_dma_wdata
+  addressOffset: 0x48
+  resetValue: 0x00000000
+  fields:
+gpdac_tx_fifo_status:
+  description: gpdac_tx_fifo_status
+  addressOffset: 0x4C
+  resetValue: 0x00000080
+  fields:
+    tx_fifo_empty:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    tx_fifo_full:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    tx_cs:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    TxFifoRdPtr:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    TxFifoWrPtr:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-only
+    reserved_10_31:
+      bitOffset: 10
+      bitWidth: 22
+      access: read-only

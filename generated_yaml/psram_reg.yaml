@@ -1,0 +1,1029 @@
+psram_configure:
+  description: psram_configure
+  addressOffset: 0x0
+  resetValue: 0xA080C002
+  fields:
+    reg_vendor_sel:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    reg_ap_mr:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    reg_wb_reg_sel:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    reg_config_w_pusle:
+      bitOffset: 12
+      bitWidth: 1
+      access: write-only
+    reg_config_r_pusle:
+      bitOffset: 13
+      bitWidth: 1
+      access: write-only
+    sts_config_w_done:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-only
+    sts_config_r_done:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    reg_config_req:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reg_config_gnt:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-only
+    reg_x16_mode:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    reg_wb_hyper3:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    reg_pck_s_div:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    reg_clkn_free:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    reserved_24_27:
+      bitOffset: 24
+      bitWidth: 4
+      access: read-only
+    reg_linear_bnd_b:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-write
+psram_manual_control:
+  description: psram_manual_control
+  addressOffset: 0x4
+  resetValue: 0x00004800
+  fields:
+    reg_wc_sw:
+      bitOffset: 0
+      bitWidth: 7
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    reg_wc_sw_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reg_state_hold_tick:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reg_dqs_latch_inv:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reg_wb_bl2_mask:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reg_force_ceb_low:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    reg_force_ceb_high:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    reg_psram_resetb:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    reg_ck_edge_nali:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    sts_config_read:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+fifo_thres_control:
+  description: fifo_thres_control
+  addressOffset: 0x8
+  resetValue: 0x00000000
+  fields:
+    reg_mask_w_fifo_cnt:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reg_mask_r_fifo_rem:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-write
+psram_manual_control2:
+  description: psram_manual_control2
+  addressOffset: 0xC
+  resetValue: 0x1F082008
+  fields:
+    reg_hold_cycle_sw:
+      bitOffset: 0
+      bitWidth: 7
+      access: read-write
+    reg_hc_sw_en:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reg_dqs_rel_val:
+      bitOffset: 8
+      bitWidth: 7
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    reg_pwrap_sw_sht_b:
+      bitOffset: 16
+      bitWidth: 4
+      access: read-write
+    reserved_20_22:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-only
+    reg_pwrap_sw_en:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    reg_addr_mask:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+winbond_psram_configure:
+  description: winbond_psram_configure
+  addressOffset: 0x10
+  resetValue: 0x40003782
+  fields:
+    reg_wb_latency:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    reg_wb_drive_st:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-write
+    reg_wb_hybrid_en:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reg_wb_burst_length:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    reg_wb_fix_latency:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    reg_wb_dpd_dis:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    reserved_14_15:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+    reg_wb_pasr:
+      bitOffset: 16
+      bitWidth: 5
+      access: read-write
+    reserved_21_23:
+      bitOffset: 21
+      bitWidth: 3
+      access: read-only
+    reg_wb_hybrid_slp:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    reg_wb_linear_dis:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    reserved_26_28:
+      bitOffset: 26
+      bitWidth: 3
+      access: read-only
+    reg_wb_ipd:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    reg_wb_mclk_type:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    reg_wb_sw_rst:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+winbond_psram_status:
+  description: winbond_psram_status
+  addressOffset: 0x14
+  resetValue: 0x40003382
+  fields:
+    sts_wb_latency:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-only
+    sts_wb_drive_st:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-only
+    sts_wb_hybrid_en:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    sts_wb_burst_length:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-only
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    sts_wb_fix_latency:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-only
+    sts_wb_dpd_dis:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-only
+    reserved_14_15:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-only
+    sts_wb_pasr:
+      bitOffset: 16
+      bitWidth: 5
+      access: read-only
+    reserved_21_23:
+      bitOffset: 21
+      bitWidth: 3
+      access: read-only
+    sts_wb_hybrid_slp:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-only
+    reserved_25_29:
+      bitOffset: 25
+      bitWidth: 5
+      access: read-only
+    sts_wb_mclk_type:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-only
+    reserved_31:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+winbond_psram_configure2:
+  description: winbond_psram_configure2
+  addressOffset: 0x18
+  resetValue: 0x00000000
+  fields:
+    reg_wb_zq_code:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    reserved_4_31:
+      bitOffset: 4
+      bitWidth: 28
+      access: read-only
+apmemory_psram_configure:
+  description: apmemory_psram_configure
+  addressOffset: 0x20
+  resetValue: 0x00212011
+  fields:
+    reg_ap_burst_length:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    reg_ap_burst_type:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reg_ap_rbx:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reg_ap_dpd:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    reg_ap_sleep:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reg_ap_pasr:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    reg_ap_w_latency_code:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    reg_ap_drive_st:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reg_ap_rf:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-write
+    reg_ap_r_latency_code:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    reserved_23:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-only
+    reg_ap_r_latency_type:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    reg_ap_linear_dis:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    reserved_26_27:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-only
+    reg_glb_reset_pulse:
+      bitOffset: 28
+      bitWidth: 1
+      access: write-only
+    reserved_29_31:
+      bitOffset: 29
+      bitWidth: 3
+      access: read-only
+apmemory_psram_status:
+  description: apmemory_psram_status
+  addressOffset: 0x24
+  resetValue: 0x00212011
+  fields:
+    sts_ap_burst_length:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    sts_ap_burst_type:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-only
+    sts_ap_rbx:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    sts_ap_x16_mode:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-only
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    sts_ap_pasr:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-only
+    reserved_11:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-only
+    sts_ap_w_latency_code:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-only
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    sts_ap_drive_st:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-only
+    sts_ap_rf:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-only
+    sts_ap_r_latency_code:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-only
+    reserved_23:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-only
+    sts_ap_r_latency_type:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-only
+    reserved_25_31:
+      bitOffset: 25
+      bitWidth: 7
+      access: read-only
+psram_manual_control3:
+  description: psram_manual_control3
+  addressOffset: 0x30
+  resetValue: 0x00000120
+  fields:
+    reg_adq_rel_val:
+      bitOffset: 0
+      bitWidth: 7
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    reg_wrap2incr_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only
+psram_intf_delay_ctrl0:
+  description: psram_intf_delay_ctrl0
+  addressOffset: 0x80
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_o_dqs_oen0:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_ceb:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_clk_n:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_clk:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl1:
+  description: psram_intf_delay_ctrl1
+  addressOffset: 0x84
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_o_adq1:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq0:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq_oen0:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_dqs0:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl2:
+  description: psram_intf_delay_ctrl2
+  addressOffset: 0x88
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_o_adq5:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq4:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq3:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq2:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl3:
+  description: psram_intf_delay_ctrl3
+  addressOffset: 0x8C
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_i_adq1:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq0:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq7:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq6:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl4:
+  description: psram_intf_delay_ctrl4
+  addressOffset: 0x90
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_i_adq5:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq4:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq3:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq2:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl5:
+  description: psram_intf_delay_ctrl5
+  addressOffset: 0x94
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_i_dqs0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reg_delay_sel_i_adq7:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq6:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl6:
+  description: psram_intf_delay_ctrl6
+  addressOffset: 0x98
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_o_adq9:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq8:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq_oen1:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_dqs1:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl7:
+  description: psram_intf_delay_ctrl7
+  addressOffset: 0x9C
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_o_adq13:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq12:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq11:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq10:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl8:
+  description: psram_intf_delay_ctrl8
+  addressOffset: 0xA0
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_i_adq9:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq8:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq15:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_adq14:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrl9:
+  description: psram_intf_delay_ctrl9
+  addressOffset: 0xA4
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_i_adq13:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq12:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq11:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq10:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrlA:
+  description: psram_intf_delay_ctrlA
+  addressOffset: 0xA8
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_i_dqs1:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reg_delay_sel_i_adq15:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_i_adq14:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_intf_delay_ctrlB:
+  description: psram_intf_delay_ctrlB
+  addressOffset: 0xAC
+  resetValue: 0x00000000
+  fields:
+    reg_delay_sel_o_dqs_mask:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_delay_sel_o_dqs_oen1:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only
+psram_dbg_sel:
+  description: psram_dbg_sel
+  addressOffset: 0xC0
+  resetValue: 0x00000000
+  fields:
+    reg_psram_dbg_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    reg_psram_dbg_sel:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-write
+    reserved_8_31:
+      bitOffset: 8
+      bitWidth: 24
+      access: read-only
+psram_dummy_reg:
+  description: psram_dummy_reg
+  addressOffset: 0xF0
+  resetValue: 0xFFFF0000
+  fields:
+    reg_psram_dummy_reg:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+psram_timeout_reg:
+  description: psram_timeout_reg
+  addressOffset: 0xF4
+  resetValue: 0x01000000
+  fields:
+    reg_timeout_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_timeout_clr:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    sts_timeout:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    reserved_3_15:
+      bitOffset: 3
+      bitWidth: 13
+      access: read-only
+    reg_timeout_cnt:
+      bitOffset: 16
+      bitWidth: 12
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+psram_rough_delay_ctrl0:
+  description: psram_rough_delay_ctrl0
+  addressOffset: 0x100
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_o_dqs_oen0:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_ceb:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_clk_n:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_clk:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl1:
+  description: psram_rough_delay_ctrl1
+  addressOffset: 0x104
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_o_adq1:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq0:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq_oen0:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_dqs0:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl2:
+  description: psram_rough_delay_ctrl2
+  addressOffset: 0x108
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_o_adq5:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq4:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq3:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq2:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl3:
+  description: psram_rough_delay_ctrl3
+  addressOffset: 0x10C
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_i_adq1:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq0:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq7:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq6:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl4:
+  description: psram_rough_delay_ctrl4
+  addressOffset: 0x110
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_i_adq5:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq4:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq3:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq2:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl5:
+  description: psram_rough_delay_ctrl5
+  addressOffset: 0x114
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_i_dqs0:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reg_rough_sel_i_adq7:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq6:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl6:
+  description: psram_rough_delay_ctrl6
+  addressOffset: 0x118
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_o_adq9:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq8:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq_oen1:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_dqs1:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl7:
+  description: psram_rough_delay_ctrl7
+  addressOffset: 0x11C
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_o_adq13:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq12:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq11:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq10:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl8:
+  description: psram_rough_delay_ctrl8
+  addressOffset: 0x120
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_i_adq9:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq8:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq15:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_adq14:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrl9:
+  description: psram_rough_delay_ctrl9
+  addressOffset: 0x124
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_i_adq13:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq12:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq11:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq10:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrlA:
+  description: psram_rough_delay_ctrlA
+  addressOffset: 0x128
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_i_dqs1:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reg_rough_sel_i_adq15:
+      bitOffset: 16
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_i_adq14:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+psram_rough_delay_ctrlB:
+  description: psram_rough_delay_ctrlB
+  addressOffset: 0x12C
+  resetValue: 0x00000000
+  fields:
+    reg_rough_sel_o_dqs_mask:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_rough_sel_o_dqs_oen1:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    reserved_16_31:
+      bitOffset: 16
+      bitWidth: 16
+      access: read-only

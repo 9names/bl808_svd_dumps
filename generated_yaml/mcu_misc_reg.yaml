@@ -1,0 +1,235 @@
+mcu_bus_cfg0:
+  description: mcu_bus_cfg0
+  addressOffset: 0x0
+  resetValue: 0x00000000
+  fields:
+    reg_mcu_infra_timeout_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_mcu_infra_timeout_clr:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reserved_2_15:
+      bitOffset: 2
+      bitWidth: 14
+      access: read-only
+    sts_mcu_infra_timeout:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-only
+    reserved_17_31:
+      bitOffset: 17
+      bitWidth: 15
+      access: read-only
+mcu_bus_cfg1:
+  description: mcu_bus_cfg1
+  addressOffset: 0x4
+  resetValue: 0x00000000
+  fields:
+    reg_mcu1_hqos:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reg_mcu1_awqos:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    reg_mcu1_arqos:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reg_mcu_x2hs_sp_bypass:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reserved_4_6:
+      bitOffset: 4
+      bitWidth: 3
+      access: read-only
+    reg_x_wthre_mcu2ext:
+      bitOffset: 7
+      bitWidth: 2
+      access: read-write
+    reserved_9_15:
+      bitOffset: 9
+      bitWidth: 7
+      access: read-only
+    reg_mcu_infra_arb_mode:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_31:
+      bitOffset: 17
+      bitWidth: 15
+      access: read-only
+mcu_e907_rtc:
+  description: mcu_e907_rtc
+  addressOffset: 0x14
+  resetValue: 0x8000000A
+  fields:
+    reg_mcu_rtc_div:
+      bitOffset: 0
+      bitWidth: 10
+      access: read-write
+    reserved_10_29:
+      bitOffset: 10
+      bitWidth: 20
+      access: read-only
+    reg_mcu_rtc_rst:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    reg_mcu_rtc_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+mcu_cfg1:
+  description: mcu_cfg1
+  addressOffset: 0x100
+  resetValue: 0x00000030
+  fields:
+    reg_mcu1_dfs_req:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    sts_mcu1_dfs_ack:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    reg_mcu1_srst_en:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reserved_6_9:
+      bitOffset: 6
+      bitWidth: 4
+      access: read-only
+    sts_mcu1_lpmd_b:
+      bitOffset: 10
+      bitWidth: 2
+      access: read-only
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    MCU1_WFI_FORCE:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_27:
+      bitOffset: 17
+      bitWidth: 11
+      access: read-only
+    mcu1_ndm_rstn_en:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    mcu1_hart_rstn_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+mcu1_log1:
+  description: mcu1_log1
+  addressOffset: 0x110
+  resetValue: 0x00000000
+  fields:
+    sts_mcu1_mcause:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+mcu1_log2:
+  description: mcu1_log2
+  addressOffset: 0x114
+  resetValue: 0x00000000
+  fields:
+    sts_mcu1_mintstatus:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+mcu1_log3:
+  description: mcu1_log3
+  addressOffset: 0x118
+  resetValue: 0x00000000
+  fields:
+    sts_mcu1_mstatus:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+mcu1_log4:
+  description: mcu1_log4
+  addressOffset: 0x11C
+  resetValue: 0x00000000
+  fields:
+    sts_mcu1_sp:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    sts_mcu1_pc:
+      bitOffset: 1
+      bitWidth: 31
+      access: read-only
+mcu1_log5:
+  description: mcu1_log5
+  addressOffset: 0x120
+  resetValue: 0x00000000
+  fields:
+    reserved_0_23:
+      bitOffset: 0
+      bitWidth: 24
+      access: read-only
+    sts_mcu1_lockup:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-only
+    sts_mcu1_halted:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-only
+    reserved_26_27:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-only
+    mcu1_ndm_rstn_req:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-only
+    mcu1_hart_rstn_req:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-only
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+irom1_misr_dataout_0:
+  description: irom1_misr_dataout_0
+  addressOffset: 0x208
+  resetValue: 0x00000000
+  fields:
+    reserved_0_31:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+irom1_misr_dataout_1:
+  description: irom1_misr_dataout_1
+  addressOffset: 0x20C
+  resetValue: 0x00000000
+  fields:
+    reserved_0_31:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only

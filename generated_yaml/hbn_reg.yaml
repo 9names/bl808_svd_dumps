@@ -1,0 +1,620 @@
+HBN_CTL:
+  description: HBN_CTL
+  addressOffset: 0x0
+  resetValue: 0x01D50020
+  fields:
+    rtc_ctl:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    rtc_dly_option:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    pu_ldo18io_aon:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reserved_6:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-only
+    hbn_mode:
+      bitOffset: 7
+      bitWidth: 1
+      access: write-only
+    trap_mode:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-only
+    pwrdn_hbn_core:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_11:
+      bitOffset: 10
+      bitWidth: 2
+      access: read-only
+    sw_rst:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    hbn_dis_pwr_off_ldo11:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    hbn_dis_pwr_off_ldo11_rt:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    hbn_ldo11_rt_vout_sel:
+      bitOffset: 15
+      bitWidth: 4
+      access: read-write
+    hbn_ldo11_aon_vout_sel:
+      bitOffset: 19
+      bitWidth: 4
+      access: read-write
+    pu_dcdc_aon:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    pu_dcdc18_aon:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    pwr_on_option:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sram_slp_option:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    sram_slp:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-only
+    hbn_state:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+HBN_TIME_L:
+  description: HBN_TIME_L
+  addressOffset: 0x4
+  resetValue: 0x00000000
+  fields:
+    hbn_time_l:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+HBN_TIME_H:
+  description: HBN_TIME_H
+  addressOffset: 0x8
+  resetValue: 0x00000000
+  fields:
+    hbn_time_h:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reserved_8_31:
+      bitOffset: 8
+      bitWidth: 24
+      access: read-only
+RTC_TIME_L:
+  description: RTC_TIME_L
+  addressOffset: 0xC
+  resetValue: 0x00000000
+  fields:
+    rtc_time_latch_l:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+RTC_TIME_H:
+  description: RTC_TIME_H
+  addressOffset: 0x10
+  resetValue: 0x00000000
+  fields:
+    rtc_time_latch_h:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-only
+    reserved_8_30:
+      bitOffset: 8
+      bitWidth: 23
+      access: read-only
+    rtc_time_latch:
+      bitOffset: 31
+      bitWidth: 1
+      access: write-only
+HBN_IRQ_MODE:
+  description: HBN_IRQ_MODE
+  addressOffset: 0x14
+  resetValue: 0x03010005
+  fields:
+    hbn_pin_wakeup_mode:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    hbn_pin_wakeup_mask:
+      bitOffset: 4
+      bitWidth: 9
+      access: read-write
+    reserved_13_15:
+      bitOffset: 13
+      bitWidth: 3
+      access: read-only
+    reg_en_hw_pu_pd:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-only
+    irq_bor_en:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    irq_acomp0_en:
+      bitOffset: 20
+      bitWidth: 2
+      access: read-write
+    irq_acomp1_en:
+      bitOffset: 22
+      bitWidth: 2
+      access: read-write
+    pin_wakeup_sel:
+      bitOffset: 24
+      bitWidth: 3
+      access: read-write
+    pin_wakeup_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+HBN_IRQ_STAT:
+  description: HBN_IRQ_STAT
+  addressOffset: 0x18
+  resetValue: 0x00000000
+  fields:
+    irq_stat:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+HBN_IRQ_CLR:
+  description: HBN_IRQ_CLR
+  addressOffset: 0x1C
+  resetValue: 0x00000000
+  fields:
+    irq_clr:
+      bitOffset: 0
+      bitWidth: 32
+      access: write-only
+HBN_PIR_CFG:
+  description: HBN_PIR_CFG
+  addressOffset: 0x20
+  resetValue: 0x00000000
+  fields:
+    pir_hpf_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    pir_lpf_sel:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    pir_dis:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reserved_6:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-only
+    pir_en:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    gpadc_cs:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only
+HBN_PIR_VTH:
+  description: HBN_PIR_VTH
+  addressOffset: 0x24
+  resetValue: 0x000003FF
+  fields:
+    pir_vth:
+      bitOffset: 0
+      bitWidth: 14
+      access: read-write
+    reserved_14_31:
+      bitOffset: 14
+      bitWidth: 18
+      access: read-only
+HBN_PIR_INTERVAL:
+  description: HBN_PIR_INTERVAL
+  addressOffset: 0x28
+  resetValue: 0x00000A3D
+  fields:
+    pir_interval:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-write
+    reserved_12_31:
+      bitOffset: 12
+      bitWidth: 20
+      access: read-only
+HBN_BOR_CFG:
+  description: HBN_BOR_CFG
+  addressOffset: 0x2C
+  resetValue: 0x0000000A
+  fields:
+    bod_sel:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    bod_vth:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-write
+    pu_bod:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    r_bod_out:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    reserved_6_31:
+      bitOffset: 6
+      bitWidth: 26
+      access: read-only
+HBN_GLB:
+  description: HBN_GLB
+  addressOffset: 0x30
+  resetValue: 0xAA0A0000
+  fields:
+    hbn_root_clk_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    hbn_uart_clk_sel:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    hbn_f32k_sel:
+      bitOffset: 3
+      bitWidth: 2
+      access: read-write
+    reserved_5_6:
+      bitOffset: 5
+      bitWidth: 2
+      access: read-only
+    hbn_reset_event:
+      bitOffset: 7
+      bitWidth: 6
+      access: read-only
+    hbn_clr_reset_event:
+      bitOffset: 13
+      bitWidth: 1
+      access: read-write
+    reserved_14:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-only
+    hbn_uart_clk_sel2:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    sw_ldo11soc_vout_sel_aon:
+      bitOffset: 16
+      bitWidth: 4
+      access: read-write
+    reserved_20_23:
+      bitOffset: 20
+      bitWidth: 4
+      access: read-only
+    sw_ldo11_rt_vout_sel:
+      bitOffset: 24
+      bitWidth: 4
+      access: read-write
+    sw_ldo11_aon_vout_sel:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-write
+HBN_SRAM:
+  description: HBN_SRAM
+  addressOffset: 0x34
+  resetValue: 0x00000000
+  fields:
+    reserved_0_5:
+      bitOffset: 0
+      bitWidth: 6
+      access: read-only
+    retram_ret:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    retram_slp:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reserved_8_31:
+      bitOffset: 8
+      bitWidth: 24
+      access: read-only
+HBN_PAD_CTRL_0:
+  description: HBN_PAD_CTRL_0
+  addressOffset: 0x38
+  resetValue: 0x18000000
+  fields:
+    reg_aon_pad_ie_smt:
+      bitOffset: 0
+      bitWidth: 9
+      access: read-write
+    reserved_9:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-only
+    reg_aon_led_sel:
+      bitOffset: 10
+      bitWidth: 9
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    reg_en_aon_ctrl_gpio:
+      bitOffset: 20
+      bitWidth: 9
+      access: read-write
+    reserved_29_30:
+      bitOffset: 29
+      bitWidth: 2
+      access: read-only
+    reg_aon_gpio_iso_mode:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+HBN_PAD_CTRL_1:
+  description: HBN_PAD_CTRL_1
+  addressOffset: 0x3C
+  resetValue: 0x00000000
+  fields:
+    reg_aon_pad_oe:
+      bitOffset: 0
+      bitWidth: 9
+      access: read-write
+    reserved_9:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-only
+    reg_aon_pad_pd:
+      bitOffset: 10
+      bitWidth: 9
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    reg_aon_pad_pu:
+      bitOffset: 20
+      bitWidth: 9
+      access: read-write
+    reserved_29_31:
+      bitOffset: 29
+      bitWidth: 3
+      access: read-only
+HBN_RSV0:
+  description: HBN_RSV0
+  addressOffset: 0x100
+  resetValue: 0x00000000
+  fields:
+    HBN_RSV0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+HBN_RSV1:
+  description: HBN_RSV1
+  addressOffset: 0x104
+  resetValue: 0xFFFFFFFF
+  fields:
+    HBN_RSV1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+HBN_RSV2:
+  description: HBN_RSV2
+  addressOffset: 0x108
+  resetValue: 0x00000000
+  fields:
+    HBN_RSV2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+HBN_RSV3:
+  description: HBN_RSV3
+  addressOffset: 0x10C
+  resetValue: 0xFFFFFFFF
+  fields:
+    HBN_RSV3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+rc32k_ctrl0:
+  description: rc32k_ctrl0
+  addressOffset: 0x200
+  resetValue: 0x4B28801B
+  fields:
+    rc32k_cal_done:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    rc32k_rdy:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    rc32k_cal_inprogress:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    rc32k_cal_div:
+      bitOffset: 3
+      bitWidth: 2
+      access: read-write
+    rc32k_cal_precharge:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    rc32k_dig_code_fr_cal:
+      bitOffset: 6
+      bitWidth: 10
+      access: read-only
+    rc32k_vref_dly:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    rc32k_allow_cal:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    rc32k_ext_code_en:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    rc32k_cal_en:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    pu_rc32k:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    rc32k_code_fr_ext:
+      bitOffset: 22
+      bitWidth: 10
+      access: read-write
+xtal32k:
+  description: xtal32k
+  addressOffset: 0x204
+  resetValue: 0x00150228
+  fields:
+    reserved_0_1:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    xtal32k_ext_sel:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    xtal32k_amp_ctrl:
+      bitOffset: 3
+      bitWidth: 2
+      access: read-write
+    xtal32k_reg:
+      bitOffset: 5
+      bitWidth: 2
+      access: read-write
+    xtal32k_outbuf_stre:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    xtal32k_otf_short:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    xtal32k_inv_stre:
+      bitOffset: 9
+      bitWidth: 2
+      access: read-write
+    xtal32k_capbank:
+      bitOffset: 11
+      bitWidth: 6
+      access: read-write
+    xtal32k_ac_cap_short:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    pu_xtal32k_buf:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    pu_xtal32k:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    xtal32k_hiz_en:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    reserved_21:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-only
+    dten_xtal32k:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    ten_xtal32k:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    f32k_sel_rtc:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    reserved_25_31:
+      bitOffset: 25
+      bitWidth: 7
+      access: read-only
+rtc_rst_ctrl:
+  description: rtc_rst_ctrl
+  addressOffset: 0x208
+  resetValue: 0x50943C00
+  fields:
+    rtc_rst_wait_cnt_rtc:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    rtc_rst_refdiv_rtc:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    rtc_rst_ctrl_misc:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-write
+rtc_rst_ctrl2:
+  description: rtc_rst_ctrl2
+  addressOffset: 0x20C
+  resetValue: 0x00000000
+  fields:
+    rtc_resv:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    reg_en_hw_pu_rc32k:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only

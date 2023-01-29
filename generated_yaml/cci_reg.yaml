@@ -1,0 +1,1013 @@
+cci_cfg:
+  description: cci_cfg
+  addressOffset: 0x0
+  resetValue: 0x00000221
+  fields:
+    cci_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    cci_slv_sel_cci2:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    cci_mas_sel_cci2:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    cci_mas_hw_mode:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    reg_m_cci_sclk_en:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reg_div_m_cci_sclk:
+      bitOffset: 5
+      bitWidth: 2
+      access: read-write
+    cfg_cci1_pre_read:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reg_scci_clk_inv:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reg_mcci_clk_inv:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_31:
+      bitOffset: 10
+      bitWidth: 22
+      access: read-only
+cci_addr:
+  description: cci_addr
+  addressOffset: 0x4
+  resetValue: 0x00000000
+  fields:
+    apb_cci_addr:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+cci_wdata:
+  description: cci_wdata
+  addressOffset: 0x8
+  resetValue: 0x00000000
+  fields:
+    apb_cci_wdata:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+cci_rdata:
+  description: cci_rdata
+  addressOffset: 0xC
+  resetValue: 0x00000000
+  fields:
+    apb_cci_rdata:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+cci_ctl:
+  description: cci_ctl
+  addressOffset: 0x10
+  resetValue: 0x00000000
+  fields:
+    cci_write_flag:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    cci_read_flag:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    ahb_state:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    reserved_4_31:
+      bitOffset: 4
+      bitWidth: 28
+      access: read-only
+audio_pll_cfg0:
+  description: audio_pll_cfg0
+  addressOffset: 0x750
+  resetValue: 0x000009FF
+  fields:
+    aupll_sdm_rstb:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    aupll_postdiv_rstb:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    aupll_fbdv_rstb:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    aupll_refdiv_rstb:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    pu_aupll_postdiv:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    pu_aupll_fbdv:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    pu_aupll_clamp_op:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    pu_aupll_pfd:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    pu_aupll_cp:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    pu_aupll_sfreg:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    pu_aupll:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    pu_aupll_clktree:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reserved_12_31:
+      bitOffset: 12
+      bitWidth: 20
+      access: read-only
+audio_pll_cfg1:
+  description: audio_pll_cfg1
+  addressOffset: 0x754
+  resetValue: 0x01100412
+  fields:
+    aupll_postdiv:
+      bitOffset: 0
+      bitWidth: 7
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    aupll_refdiv_ratio:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    aupll_refclk_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_19:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-only
+    aupll_vg11_sel:
+      bitOffset: 20
+      bitWidth: 2
+      access: read-write
+    reserved_22_23:
+      bitOffset: 22
+      bitWidth: 2
+      access: read-only
+    aupll_vg13_sel:
+      bitOffset: 24
+      bitWidth: 2
+      access: read-write
+    reserved_26_31:
+      bitOffset: 26
+      bitWidth: 6
+      access: read-only
+audio_pll_cfg2:
+  description: audio_pll_cfg2
+  addressOffset: 0x758
+  resetValue: 0x00000741
+  fields:
+    aupll_sel_cp_bias:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    aupll_icp_5u:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    aupll_icp_1u:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-write
+    aupll_int_frac_sw:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    aupll_cp_startup_en:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    aupll_cp_opamp_en:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reserved_11_31:
+      bitOffset: 11
+      bitWidth: 21
+      access: read-only
+audio_pll_cfg3:
+  description: audio_pll_cfg3
+  addressOffset: 0x75C
+  resetValue: 0x0005A021
+  fields:
+    aupll_c4_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    aupll_r4:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    aupll_r4_short:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_11:
+      bitOffset: 9
+      bitWidth: 3
+      access: read-only
+    aupll_c3:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-write
+    aupll_cz:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-write
+    aupll_rz:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    reserved_19_31:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-only
+audio_pll_cfg4:
+  description: audio_pll_cfg4
+  addressOffset: 0x760
+  resetValue: 0x00000111
+  fields:
+    aupll_sel_sample_clk:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    aupll_sel_fb_clk:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    aupll_sdmclk_sel:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only
+audio_pll_cfg5:
+  description: audio_pll_cfg5
+  addressOffset: 0x764
+  resetValue: 0x00000003
+  fields:
+    aupll_vco_speed:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-write
+    reserved_3_31:
+      bitOffset: 3
+      bitWidth: 29
+      access: read-only
+audio_pll_cfg6:
+  description: audio_pll_cfg6
+  addressOffset: 0x768
+  resetValue: 0x000161E5
+  fields:
+    aupll_sdmin:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_23:
+      bitOffset: 19
+      bitWidth: 5
+      access: read-only
+    aupll_sdm_bypass:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    reserved_25_31:
+      bitOffset: 25
+      bitWidth: 7
+      access: read-only
+audio_pll_cfg7:
+  description: audio_pll_cfg7
+  addressOffset: 0x76C
+  resetValue: 0x00000001
+  fields:
+    aupll_sdm_order_sel:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_15:
+      bitOffset: 1
+      bitWidth: 15
+      access: read-only
+    aupll_sdm_sig_dith_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+audio_pll_cfg8:
+  description: audio_pll_cfg8
+  addressOffset: 0x770
+  resetValue: 0x00000000
+  fields:
+    aupll_en_div1:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    aupll_en_div2:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    aupll_en_div2p5:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    aupll_en_div3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    aupll_en_div4:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    aupll_en_div5:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    aupll_en_div6:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    aupll_en_div10:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    aupll_en_div15:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    aupll_sel_div1_div2:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_31:
+      bitOffset: 10
+      bitWidth: 22
+      access: read-only
+audio_pll_cfg9:
+  description: audio_pll_cfg9
+  addressOffset: 0x774
+  resetValue: 0x00000400
+  fields:
+    aupll_dc_tp_out_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    ten_aupll:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    ten_aupll_sfreg:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    dten_aupll_fin:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    dten_aupll_fref:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    dten_aupll_fsdm:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    dten_aupll_div15:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    dten_aupll_div5:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    dten_aupll_postdiv_clk:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    dtest_aupll_pulldown:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reserved_11_31:
+      bitOffset: 11
+      bitWidth: 21
+      access: read-only
+audio_pll_cfg10:
+  description: audio_pll_cfg10
+  addressOffset: 0x778
+  resetValue: 0x00104640
+  fields:
+    aupll_ssc_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    aupll_ssc_cnt:
+      bitOffset: 4
+      bitWidth: 8
+      access: read-write
+    aupll_ssc_gain:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    aupll_ssc_start_gate_en:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_19:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-only
+    aupll_ssc_start:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    reserved_21_31:
+      bitOffset: 21
+      bitWidth: 11
+      access: read-only
+audio_pll_cfg11:
+  description: audio_pll_cfg11
+  addressOffset: 0x77C
+  resetValue: 0x00000000
+  fields:
+    aupll_resv:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reserved_16_22:
+      bitOffset: 16
+      bitWidth: 7
+      access: read-only
+    aupll_dl_ctrl_15:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    aupll_dl_ctrl_10:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    aupll_dl_ctrl_6:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    aupll_dl_ctrl_5:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    aupll_dl_ctrl_4:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    aupll_dl_ctrl_3:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    aupll_dl_ctrl_2p5:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    aupll_dl_ctrl_2:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    aupll_dl_ctrl_1:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+cpu_pll_cfg0:
+  description: cpu_pll_cfg0
+  addressOffset: 0x7D0
+  resetValue: 0x000009EF
+  fields:
+    cpupll_sdm_rstb:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    cpupll_postdiv_rstb:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    cpupll_fbdv_rstb:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    cpupll_refdiv_rstb:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    pu_cpupll_postdiv:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    pu_cpupll_fbdv:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    pu_cpupll_clamp_op:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    pu_cpupll_pfd:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    pu_cpupll_cp:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    pu_cpupll_sfreg:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    pu_cpupll:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    pu_cpupll_clktree:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reserved_12_31:
+      bitOffset: 12
+      bitWidth: 20
+      access: read-only
+cpu_pll_cfg1:
+  description: cpu_pll_cfg1
+  addressOffset: 0x7D4
+  resetValue: 0x01100418
+  fields:
+    cpupll_postdiv:
+      bitOffset: 0
+      bitWidth: 7
+      access: read-write
+    reserved_7:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-only
+    cpupll_refdiv_ratio:
+      bitOffset: 8
+      bitWidth: 4
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    cpupll_refclk_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_19:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-only
+    cpupll_vg11_sel:
+      bitOffset: 20
+      bitWidth: 2
+      access: read-write
+    reserved_22_23:
+      bitOffset: 22
+      bitWidth: 2
+      access: read-only
+    cpupll_vg13_sel:
+      bitOffset: 24
+      bitWidth: 2
+      access: read-write
+    reserved_26_31:
+      bitOffset: 26
+      bitWidth: 6
+      access: read-only
+cpu_pll_cfg2:
+  description: cpu_pll_cfg2
+  addressOffset: 0x7D8
+  resetValue: 0x00000741
+  fields:
+    cpupll_sel_cp_bias:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    cpupll_icp_5u:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    cpupll_icp_1u:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-write
+    cpupll_int_frac_sw:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    cpupll_cp_startup_en:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    cpupll_cp_opamp_en:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reserved_11_31:
+      bitOffset: 11
+      bitWidth: 21
+      access: read-only
+cpu_pll_cfg3:
+  description: cpu_pll_cfg3
+  addressOffset: 0x7DC
+  resetValue: 0x0005A021
+  fields:
+    cpupll_c4_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    cpupll_r4:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    cpupll_r4_short:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_11:
+      bitOffset: 9
+      bitWidth: 3
+      access: read-only
+    cpupll_c3:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-write
+    cpupll_cz:
+      bitOffset: 14
+      bitWidth: 2
+      access: read-write
+    cpupll_rz:
+      bitOffset: 16
+      bitWidth: 3
+      access: read-write
+    reserved_19_31:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-only
+cpu_pll_cfg4:
+  description: cpu_pll_cfg4
+  addressOffset: 0x7E0
+  resetValue: 0x00000111
+  fields:
+    cpupll_sel_sample_clk:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_3:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-only
+    cpupll_sel_fb_clk:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    cpupll_sdmclk_sel:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    reserved_9_31:
+      bitOffset: 9
+      bitWidth: 23
+      access: read-only
+cpu_pll_cfg5:
+  description: cpu_pll_cfg5
+  addressOffset: 0x7E4
+  resetValue: 0x00000003
+  fields:
+    cpupll_vco_speed:
+      bitOffset: 0
+      bitWidth: 3
+      access: read-write
+    reserved_3_31:
+      bitOffset: 3
+      bitWidth: 29
+      access: read-only
+cpu_pll_cfg6:
+  description: cpu_pll_cfg6
+  addressOffset: 0x7E8
+  resetValue: 0x000161E5
+  fields:
+    cpupll_sdmin:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_23:
+      bitOffset: 19
+      bitWidth: 5
+      access: read-only
+    cpupll_sdm_bypass:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    reserved_25_31:
+      bitOffset: 25
+      bitWidth: 7
+      access: read-only
+cpu_pll_cfg7:
+  description: cpu_pll_cfg7
+  addressOffset: 0x7EC
+  resetValue: 0x00000001
+  fields:
+    cpupll_sdm_order_sel:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_15:
+      bitOffset: 1
+      bitWidth: 15
+      access: read-only
+    cpupll_sdm_sig_dith_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+cpu_pll_cfg8:
+  description: cpu_pll_cfg8
+  addressOffset: 0x7F0
+  resetValue: 0x00000001
+  fields:
+    cpupll_en_div1:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    cpupll_en_div2:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    cpupll_en_div2p5:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    cpupll_en_div3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    cpupll_en_div4:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    cpupll_en_div5:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    cpupll_en_div6:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    cpupll_en_div10:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    cpupll_en_div15:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    cpupll_sel_div1_div2:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    reserved_10_31:
+      bitOffset: 10
+      bitWidth: 22
+      access: read-only
+cpu_pll_cfg9:
+  description: cpu_pll_cfg9
+  addressOffset: 0x7F4
+  resetValue: 0x00000400
+  fields:
+    cpupll_dc_tp_out_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    ten_cpupll:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    ten_cpupll_sfreg:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-only
+    dten_cpupll_fin:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    dten_cpupll_fref:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    dten_cpupll_fsdm:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    dten_cpupll_div15:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    dten_cpupll_div5:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    dten_cpupll_postdiv_clk:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    dtest_cpupll_pulldown:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    reserved_11_31:
+      bitOffset: 11
+      bitWidth: 21
+      access: read-only
+cpu_pll_cfg10:
+  description: cpu_pll_cfg10
+  addressOffset: 0x7F8
+  resetValue: 0x00104640
+  fields:
+    cpupll_ssc_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    reserved_1_3:
+      bitOffset: 1
+      bitWidth: 3
+      access: read-only
+    cpupll_ssc_cnt:
+      bitOffset: 4
+      bitWidth: 8
+      access: read-write
+    cpupll_ssc_gain:
+      bitOffset: 12
+      bitWidth: 3
+      access: read-write
+    reserved_15:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-only
+    cpupll_ssc_start_gate_en:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    reserved_17_19:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-only
+    cpupll_ssc_start:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    reserved_21_31:
+      bitOffset: 21
+      bitWidth: 11
+      access: read-only
+cpu_pll_cfg11:
+  description: cpu_pll_cfg11
+  addressOffset: 0x7FC
+  resetValue: 0x00000000
+  fields:
+    cpupll_resv:
+      bitOffset: 0
+      bitWidth: 16
+      access: read-write
+    reserved_16_22:
+      bitOffset: 16
+      bitWidth: 7
+      access: read-only
+    cpupll_dl_ctrl_15:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    cpupll_dl_ctrl_10:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    cpupll_dl_ctrl_6:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    cpupll_dl_ctrl_5:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    cpupll_dl_ctrl_4:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    cpupll_dl_ctrl_3:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    cpupll_dl_ctrl_2p5:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    cpupll_dl_ctrl_2:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    cpupll_dl_ctrl_1:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write

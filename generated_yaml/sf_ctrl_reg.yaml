@@ -1,0 +1,2300 @@
+sf_ctrl_0:
+  description: sf_ctrl_0
+  addressOffset: 0x0
+  resetValue: 0x1AF2001C
+  fields:
+    reserved_0_1:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    sf_clk_sf_rx_inv_sel:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    sf_clk_out_gate_en:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    sf_clk_out_inv_sel:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    reserved_5_7:
+      bitOffset: 5
+      bitWidth: 3
+      access: read-only
+    sf_if_read_dly_n:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    sf_if_read_dly_en:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    sf_if_int:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-only
+    sf_if_int_clr:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    sf_if_int_set:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    sf_if_32b_adr_en:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    sf_aes_dout_endian:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    sf_aes_din_endian:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    sf_aes_key_endian:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    sf_aes_iv_endian:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    sf_id:
+      bitOffset: 24
+      bitWidth: 8
+      access: read-write
+sf_ctrl_1:
+  description: sf_ctrl_1
+  addressOffset: 0x4
+  resetValue: 0xF3600000
+  fields:
+    sf_if_sr_pat_mask:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    sf_if_sr_pat:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    sf_if_sr_int:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-only
+    sf_if_sr_int_en:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    sf_if_sr_int_set:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    sf_if_0_ack_lat:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    sf_ahb2sif_diswrap:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    sf_if_reg_hold:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    sf_if_reg_wp:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sf_ahb2sif_stopped:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-only
+    sf_ahb2sif_stop:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    sf_if_fn_sel:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    sf_if_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    sf_ahb2sif_en:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    sf_ahb2sram_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_if_sahb_0:
+  description: sf_if_sahb_0
+  addressOffset: 0x8
+  resetValue: 0x0D0403FC
+  fields:
+    sf_if_busy:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    sf_if_0_trig:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    sf_if_0_dat_byte:
+      bitOffset: 2
+      bitWidth: 10
+      access: read-write
+    sf_if_0_dmy_byte:
+      bitOffset: 12
+      bitWidth: 5
+      access: read-write
+    sf_if_0_adr_byte:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    sf_if_0_cmd_byte:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    sf_if_0_dat_rw:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    sf_if_0_dat_en:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    sf_if_0_dmy_en:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sf_if_0_adr_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    sf_if_0_cmd_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    sf_if_0_spi_mode:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    sf_if_0_qpi_mode_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_if_sahb_1:
+  description: sf_if_sahb_1
+  addressOffset: 0xC
+  resetValue: 0x03000000
+  fields:
+    sf_if_0_cmd_buf_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if_sahb_2:
+  description: sf_if_sahb_2
+  addressOffset: 0x10
+  resetValue: 0x00000000
+  fields:
+    sf_if_0_cmd_buf_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if_iahb_0:
+  description: sf_if_iahb_0
+  addressOffset: 0x14
+  resetValue: 0x0D040000
+  fields:
+    reserved_0_11:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-only
+    sf_if_1_dmy_byte:
+      bitOffset: 12
+      bitWidth: 5
+      access: read-write
+    sf_if_1_adr_byte:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    sf_if_1_cmd_byte:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    sf_if_1_dat_rw:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    sf_if_1_dat_en:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    sf_if_1_dmy_en:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sf_if_1_adr_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    sf_if_1_cmd_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    sf_if_1_spi_mode:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    sf_if_1_qpi_mode_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_if_iahb_1:
+  description: sf_if_iahb_1
+  addressOffset: 0x18
+  resetValue: 0x03000000
+  fields:
+    sf_if_1_cmd_buf_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if_iahb_2:
+  description: sf_if_iahb_2
+  addressOffset: 0x1C
+  resetValue: 0x00000000
+  fields:
+    sf_if_1_cmd_buf_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if_status_0:
+  description: sf_if_status_0
+  addressOffset: 0x20
+  resetValue: 0x00000000
+  fields:
+    sf_if_status_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+sf_if_status_1:
+  description: sf_if_status_1
+  addressOffset: 0x24
+  resetValue: 0x20000000
+  fields:
+    sf_if_status_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+sf_aes:
+  description: sf_aes
+  addressOffset: 0x28
+  resetValue: 0x00000040
+  fields:
+    sf_aes_en:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-write
+    sf_aes_mode:
+      bitOffset: 1
+      bitWidth: 2
+      access: read-write
+    sf_aes_blk_mode:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    sf_aes_xts_key_opt:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    sf_aes_status:
+      bitOffset: 5
+      bitWidth: 27
+      access: read-only
+sf_ahb2sif_status:
+  description: sf_ahb2sif_status
+  addressOffset: 0x2C
+  resetValue: 0x01010003
+  fields:
+    sf_ahb2sif_status:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-only
+sf_if_io_dly_0:
+  description: sf_if_io_dly_0
+  addressOffset: 0x30
+  resetValue: 0x00000000
+  fields:
+    sf_cs_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    sf_cs2_dly_sel:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    reserved_4_7:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    sf_clk_out_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_25:
+      bitOffset: 10
+      bitWidth: 16
+      access: read-only
+    sf_dqs_oe_dly_sel:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-write
+    sf_dqs_di_dly_sel:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-write
+    sf_dqs_do_dly_sel:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+sf_if_io_dly_1:
+  description: sf_if_io_dly_1
+  addressOffset: 0x34
+  resetValue: 0x00000000
+  fields:
+    sf_io_0_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf_io_0_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf_io_0_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf_if_io_dly_2:
+  description: sf_if_io_dly_2
+  addressOffset: 0x38
+  resetValue: 0x00000000
+  fields:
+    sf_io_1_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf_io_1_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf_io_1_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf_if_io_dly_3:
+  description: sf_if_io_dly_3
+  addressOffset: 0x3C
+  resetValue: 0x00000000
+  fields:
+    sf_io_2_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf_io_2_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf_io_2_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf_if_io_dly_4:
+  description: sf_if_io_dly_4
+  addressOffset: 0x40
+  resetValue: 0x00000000
+  fields:
+    sf_io_3_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf_io_3_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf_io_3_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf_reserved:
+  description: sf_reserved
+  addressOffset: 0x44
+  resetValue: 0x0000FFFF
+  fields:
+    sf_reserved:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf2_if_io_dly_0:
+  description: sf2_if_io_dly_0
+  addressOffset: 0x48
+  resetValue: 0x00000000
+  fields:
+    sf2_cs_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    sf2_cs2_dly_sel:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    reserved_4_7:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    sf2_clk_out_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_25:
+      bitOffset: 10
+      bitWidth: 16
+      access: read-only
+    sf2_dqs_oe_dly_sel:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-write
+    sf2_dqs_di_dly_sel:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-write
+    sf2_dqs_do_dly_sel:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+sf2_if_io_dly_1:
+  description: sf2_if_io_dly_1
+  addressOffset: 0x4C
+  resetValue: 0x00000000
+  fields:
+    sf2_io_0_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf2_io_0_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf2_io_0_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf2_if_io_dly_2:
+  description: sf2_if_io_dly_2
+  addressOffset: 0x50
+  resetValue: 0x00000000
+  fields:
+    sf2_io_1_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf2_io_1_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf2_io_1_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf2_if_io_dly_3:
+  description: sf2_if_io_dly_3
+  addressOffset: 0x54
+  resetValue: 0x00000000
+  fields:
+    sf2_io_2_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf2_io_2_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf2_io_2_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf2_if_io_dly_4:
+  description: sf2_if_io_dly_4
+  addressOffset: 0x58
+  resetValue: 0x00000000
+  fields:
+    sf2_io_3_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf2_io_3_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf2_io_3_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf3_if_io_dly_0:
+  description: sf3_if_io_dly_0
+  addressOffset: 0x5C
+  resetValue: 0x00000000
+  fields:
+    sf3_cs_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    sf3_cs2_dly_sel:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    reserved_4_7:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    sf3_clk_out_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_25:
+      bitOffset: 10
+      bitWidth: 16
+      access: read-only
+    sf3_dqs_oe_dly_sel:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-write
+    sf3_dqs_di_dly_sel:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-write
+    sf3_dqs_do_dly_sel:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+sf3_if_io_dly_1:
+  description: sf3_if_io_dly_1
+  addressOffset: 0x60
+  resetValue: 0x00000000
+  fields:
+    sf3_io_0_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf3_io_0_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf3_io_0_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf3_if_io_dly_2:
+  description: sf3_if_io_dly_2
+  addressOffset: 0x64
+  resetValue: 0x00000000
+  fields:
+    sf3_io_1_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf3_io_1_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf3_io_1_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf3_if_io_dly_3:
+  description: sf3_if_io_dly_3
+  addressOffset: 0x68
+  resetValue: 0x00000000
+  fields:
+    sf3_io_2_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf3_io_2_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf3_io_2_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf3_if_io_dly_4:
+  description: sf3_if_io_dly_4
+  addressOffset: 0x6C
+  resetValue: 0x00000000
+  fields:
+    sf3_io_3_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    sf3_io_3_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    sf3_io_3_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf_ctrl_2:
+  description: sf_ctrl_2
+  addressOffset: 0x70
+  resetValue: 0x00000000
+  fields:
+    sf_if_pad_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    sf_if_pad_sel_lock:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    sf_if_dtr_en:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    sf_if_dqs_en:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    sf_if_trig_wr_prot:
+      bitOffset: 6
+      bitWidth: 1
+      access: read-write
+    sf_id_offset_lock:
+      bitOffset: 7
+      bitWidth: 1
+      access: read-write
+    reserved_8_24:
+      bitOffset: 8
+      bitWidth: 17
+      access: read-only
+    sf_ahb2sif_remap_lock:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sf_ahb2sif_remap:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-write
+    sf_if_bk_swap:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    sf_if_bk2_mode:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    sf_if_bk2_en:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    sf_if_0_bk_sel:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_ctrl_3:
+  description: sf_ctrl_3
+  addressOffset: 0x74
+  resetValue: 0x2010C156
+  fields:
+    sf_cmds_2_wrap_len:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    sf_cmds_2_en:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    sf_cmds_2_bt_dly:
+      bitOffset: 5
+      bitWidth: 3
+      access: read-write
+    sf_cmds_2_bt_en:
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    sf_cmds_2_wrap_q_ini:
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    sf_cmds_2_wrap_mode:
+      bitOffset: 10
+      bitWidth: 2
+      access: read-write
+    sf_cmds_2_wrap_q:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-only
+    sf_cmds_1_wrap_len:
+      bitOffset: 13
+      bitWidth: 4
+      access: read-write
+    sf_cmds_1_en:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    sf_cmds_1_wrap_mode:
+      bitOffset: 18
+      bitWidth: 2
+      access: read-write
+    sf_cmds_core_en:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    reserved_21_28:
+      bitOffset: 21
+      bitWidth: 8
+      access: read-only
+    sf_if_1_ack_lat:
+      bitOffset: 29
+      bitWidth: 3
+      access: read-write
+sf_if_iahb_3:
+  description: sf_if_iahb_3
+  addressOffset: 0x78
+  resetValue: 0x8D840000
+  fields:
+    reserved_0_11:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-only
+    sf_if_2_dmy_byte:
+      bitOffset: 12
+      bitWidth: 5
+      access: read-write
+    sf_if_2_adr_byte:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    sf_if_2_cmd_byte:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    sf_if_2_dat_rw:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    sf_if_2_dat_en:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    sf_if_2_dmy_en:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sf_if_2_adr_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    sf_if_2_cmd_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    sf_if_2_spi_mode:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    sf_if_2_qpi_mode_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_if_iahb_4:
+  description: sf_if_iahb_4
+  addressOffset: 0x7C
+  resetValue: 0x38000000
+  fields:
+    sf_if_2_cmd_buf_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if_iahb_5:
+  description: sf_if_iahb_5
+  addressOffset: 0x80
+  resetValue: 0x00000000
+  fields:
+    sf_if_2_cmd_buf_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if_iahb_6:
+  description: sf_if_iahb_6
+  addressOffset: 0x84
+  resetValue: 0x88000000
+  fields:
+    reserved_0_16:
+      bitOffset: 0
+      bitWidth: 17
+      access: read-only
+    sf_if_3_adr_byte:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    sf_if_3_cmd_byte:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    reserved_23_25:
+      bitOffset: 23
+      bitWidth: 3
+      access: read-only
+    sf_if_3_adr_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    sf_if_3_cmd_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    sf_if_3_spi_mode:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    sf_if_3_qpi_mode_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_if_iahb_7:
+  description: sf_if_iahb_7
+  addressOffset: 0x88
+  resetValue: 0x00000000
+  fields:
+sf_if_iahb_8:
+  description: sf_if_iahb_8
+  addressOffset: 0x8C
+  resetValue: 0x00000000
+  fields:
+    sf_if_3_cmd_buf_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if_iahb_9:
+  description: sf_if_iahb_9
+  addressOffset: 0x90
+  resetValue: 0x8F042000
+  fields:
+    reserved_0_11:
+      bitOffset: 0
+      bitWidth: 12
+      access: read-only
+    sf_if_4_dmy_byte:
+      bitOffset: 12
+      bitWidth: 5
+      access: read-write
+    sf_if_4_adr_byte:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    sf_if_4_cmd_byte:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    sf_if_4_dat_rw:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    sf_if_4_dat_en:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    sf_if_4_dmy_en:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sf_if_4_adr_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    sf_if_4_cmd_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    sf_if_4_spi_mode:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    sf_if_4_qpi_mode_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_if_iahb_10:
+  description: sf_if_iahb_10
+  addressOffset: 0x94
+  resetValue: 0x00000000
+  fields:
+sf_if_iahb_11:
+  description: sf_if_iahb_11
+  addressOffset: 0x98
+  resetValue: 0x00000000
+  fields:
+    sf_if_4_cmd_buf_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if_iahb_12:
+  description: sf_if_iahb_12
+  addressOffset: 0x9C
+  resetValue: 0x00000030
+  fields:
+    reserved_0_1:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    sf2_clk_sf_rx_inv_sel:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    sf2_clk_sf_rx_inv_src:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    sf2_clk_out_inv_sel:
+      bitOffset: 4
+      bitWidth: 1
+      access: read-write
+    sf3_clk_out_inv_sel:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-write
+    reserved_6_7:
+      bitOffset: 6
+      bitWidth: 2
+      access: read-only
+    sf2_if_read_dly_n:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    sf2_if_read_dly_en:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    sf2_if_read_dly_src:
+      bitOffset: 12
+      bitWidth: 1
+      access: read-write
+    reserved_13_31:
+      bitOffset: 13
+      bitWidth: 19
+      access: read-only
+sf_id0_offset:
+  description: sf_id0_offset
+  addressOffset: 0xA0
+  resetValue: 0x00000000
+  fields:
+    sf_id0_offset:
+      bitOffset: 0
+      bitWidth: 28
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+sf_id1_offset:
+  description: sf_id1_offset
+  addressOffset: 0xA4
+  resetValue: 0x00000000
+  fields:
+    sf_id1_offset:
+      bitOffset: 0
+      bitWidth: 28
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+sf_bk2_id0_offset:
+  description: sf_bk2_id0_offset
+  addressOffset: 0xA8
+  resetValue: 0x00000000
+  fields:
+    sf_bk2_id0_offset:
+      bitOffset: 0
+      bitWidth: 28
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+sf_bk2_id1_offset:
+  description: sf_bk2_id1_offset
+  addressOffset: 0xAC
+  resetValue: 0x00000000
+  fields:
+    sf_bk2_id1_offset:
+      bitOffset: 0
+      bitWidth: 28
+      access: read-write
+    reserved_28_31:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-only
+sf_dbg:
+  description: sf_dbg
+  addressOffset: 0xB0
+  resetValue: 0x00000001
+  fields:
+    sf_autoload_st:
+      bitOffset: 0
+      bitWidth: 5
+      access: read-only
+    sf_autoload_st_done:
+      bitOffset: 5
+      bitWidth: 1
+      access: read-only
+    reserved_6_31:
+      bitOffset: 6
+      bitWidth: 26
+      access: read-only
+sf_if2_ctrl_0:
+  description: sf_if2_ctrl_0
+  addressOffset: 0xC0
+  resetValue: 0x00020004
+  fields:
+    reserved_0_1:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-only
+    sf_clk_sf_if2_rx_inv_sel:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3_7:
+      bitOffset: 3
+      bitWidth: 5
+      access: read-only
+    sf_if2_read_dly_n:
+      bitOffset: 8
+      bitWidth: 3
+      access: read-write
+    sf_if2_read_dly_en:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    reserved_12_15:
+      bitOffset: 12
+      bitWidth: 4
+      access: read-only
+    sf_if2_int:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-only
+    sf_if2_int_clr:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    sf_if2_int_set:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    reserved_19_22:
+      bitOffset: 19
+      bitWidth: 4
+      access: read-only
+    sf_if2_replace_sf1:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    sf_if2_replace_sf2:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    sf_if2_replace_sf3:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sf_if2_pad_sel:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-write
+    sf_if2_bk_swap:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    sf_if2_bk2_mode:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    sf_if2_bk2_en:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    sf_if2_bk_sel:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_if2_ctrl_1:
+  description: sf_if2_ctrl_1
+  addressOffset: 0xC4
+  resetValue: 0x23600000
+  fields:
+    sf_if2_sr_pat_mask:
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+    sf_if2_sr_pat:
+      bitOffset: 8
+      bitWidth: 8
+      access: read-write
+    sf_if2_sr_int:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-only
+    sf_if2_sr_int_en:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    sf_if2_sr_int_set:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    reserved_19:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-only
+    sf_if2_ack_lat:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    reserved_23:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-only
+    sf_if2_reg_hold:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    sf_if2_reg_wp:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    reserved_26_27:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-only
+    sf_if2_fn_sel:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    sf_if2_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    reserved_30_31:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-only
+sf_if2_sahb_0:
+  description: sf_if2_sahb_0
+  addressOffset: 0xC8
+  resetValue: 0x0D0403FC
+  fields:
+    sf_if2_busy:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    sf_if2_0_trig:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    sf_if2_0_dat_byte:
+      bitOffset: 2
+      bitWidth: 10
+      access: read-write
+    sf_if2_0_dmy_byte:
+      bitOffset: 12
+      bitWidth: 5
+      access: read-write
+    sf_if2_0_adr_byte:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    sf_if2_0_cmd_byte:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    sf_if2_0_dat_rw:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    sf_if2_0_dat_en:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    sf_if2_0_dmy_en:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    sf_if2_0_adr_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    sf_if2_0_cmd_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    sf_if2_0_spi_mode:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    sf_if2_0_qpi_mode_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_if2_sahb_1:
+  description: sf_if2_sahb_1
+  addressOffset: 0xCC
+  resetValue: 0x03000000
+  fields:
+    sf_if2_0_cmd_buf_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_if2_sahb_2:
+  description: sf_if2_sahb_2
+  addressOffset: 0xD0
+  resetValue: 0x00000000
+  fields:
+    sf_if2_0_cmd_buf_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_ctrl_prot_en_rd:
+  description: sf_ctrl_prot_en_rd
+  addressOffset: 0x100
+  resetValue: 0x00000006
+  fields:
+    reserved_0:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    sf_ctrl_id0_en_rd:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-only
+    sf_ctrl_id1_en_rd:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-only
+    reserved_3_27:
+      bitOffset: 3
+      bitWidth: 25
+      access: read-only
+    sf_sec_tzsid_lock:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-only
+    sf_if2_0_trig_wr_lock:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-only
+    sf_if_0_trig_wr_lock:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-only
+    sf_dbg_dis:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-only
+sf_ctrl_prot_en:
+  description: sf_ctrl_prot_en
+  addressOffset: 0x104
+  resetValue: 0x00000006
+  fields:
+    reserved_0:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    sf_ctrl_id0_en:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    sf_ctrl_id1_en:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    reserved_3_31:
+      bitOffset: 3
+      bitWidth: 29
+      access: read-only
+sf_aes_key_r0_0:
+  description: sf_aes_key_r0_0
+  addressOffset: 0x200
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r0_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r0_1:
+  description: sf_aes_key_r0_1
+  addressOffset: 0x204
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r0_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r0_2:
+  description: sf_aes_key_r0_2
+  addressOffset: 0x208
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r0_2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r0_3:
+  description: sf_aes_key_r0_3
+  addressOffset: 0x20C
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r0_3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r0_4:
+  description: sf_aes_key_r0_4
+  addressOffset: 0x210
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r0_4:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r0_5:
+  description: sf_aes_key_r0_5
+  addressOffset: 0x214
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r0_5:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r0_6:
+  description: sf_aes_key_r0_6
+  addressOffset: 0x218
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r0_6:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r0_7:
+  description: sf_aes_key_r0_7
+  addressOffset: 0x21C
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r0_7:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r0_w0:
+  description: sf_aes_iv_r0_w0
+  addressOffset: 0x220
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r0_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r0_w1:
+  description: sf_aes_iv_r0_w1
+  addressOffset: 0x224
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r0_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r0_w2:
+  description: sf_aes_iv_r0_w2
+  addressOffset: 0x228
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r0_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r0_w3:
+  description: sf_aes_iv_r0_w3
+  addressOffset: 0x22C
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r0_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_r0_start:
+  description: sf_aes_r0_start
+  addressOffset: 0x230
+  resetValue: 0x00000000
+  fields:
+    sf_aes_region_r0_start:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_28:
+      bitOffset: 19
+      bitWidth: 10
+      access: read-only
+    sf_aes_region_r0_hw_key_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    sf_aes_region_r0_en:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    sf_aes_region_r0_lock:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_aes_r0_end:
+  description: sf_aes_r0_end
+  addressOffset: 0x234
+  resetValue: 0x00003FFF
+  fields:
+    sf_aes_region_r0_end:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_31:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-only
+sf_aes_key_r1_0:
+  description: sf_aes_key_r1_0
+  addressOffset: 0x280
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r1_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r1_1:
+  description: sf_aes_key_r1_1
+  addressOffset: 0x284
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r1_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r1_2:
+  description: sf_aes_key_r1_2
+  addressOffset: 0x288
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r1_2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r1_3:
+  description: sf_aes_key_r1_3
+  addressOffset: 0x28C
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r1_3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r1_4:
+  description: sf_aes_key_r1_4
+  addressOffset: 0x290
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r1_4:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r1_5:
+  description: sf_aes_key_r1_5
+  addressOffset: 0x294
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r1_5:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r1_6:
+  description: sf_aes_key_r1_6
+  addressOffset: 0x298
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r1_6:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r1_7:
+  description: sf_aes_key_r1_7
+  addressOffset: 0x29C
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r1_7:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r1_w0:
+  description: sf_aes_iv_r1_w0
+  addressOffset: 0x2A0
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r1_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r1_w1:
+  description: sf_aes_iv_r1_w1
+  addressOffset: 0x2A4
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r1_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r1_w2:
+  description: sf_aes_iv_r1_w2
+  addressOffset: 0x2A8
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r1_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r1_w3:
+  description: sf_aes_iv_r1_w3
+  addressOffset: 0x2AC
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r1_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_r1_start:
+  description: sf_aes_r1_start
+  addressOffset: 0x2B0
+  resetValue: 0x00000000
+  fields:
+    sf_aes_r1_start:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_28:
+      bitOffset: 19
+      bitWidth: 10
+      access: read-only
+    sf_aes_r1_hw_key_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    sf_aes_r1_en:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    sf_aes_r1_lock:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_aes_r1_end:
+  description: sf_aes_r1_end
+  addressOffset: 0x2B4
+  resetValue: 0x00003FFF
+  fields:
+    sf_aes_r1_end:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_31:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-only
+sf_aes_key_r2_0:
+  description: sf_aes_key_r2_0
+  addressOffset: 0x300
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r2_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r2_1:
+  description: sf_aes_key_r2_1
+  addressOffset: 0x304
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r2_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r2_2:
+  description: sf_aes_key_r2_2
+  addressOffset: 0x308
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r2_2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r2_3:
+  description: sf_aes_key_r2_3
+  addressOffset: 0x30C
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r2_3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r2_4:
+  description: sf_aes_key_r2_4
+  addressOffset: 0x310
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r2_4:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r2_5:
+  description: sf_aes_key_r2_5
+  addressOffset: 0x314
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r2_5:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r2_6:
+  description: sf_aes_key_r2_6
+  addressOffset: 0x318
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r2_6:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_r2_7:
+  description: sf_aes_key_r2_7
+  addressOffset: 0x31C
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_r2_7:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r2_w0:
+  description: sf_aes_iv_r2_w0
+  addressOffset: 0x320
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r2_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r2_w1:
+  description: sf_aes_iv_r2_w1
+  addressOffset: 0x324
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r2_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r2_w2:
+  description: sf_aes_iv_r2_w2
+  addressOffset: 0x328
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r2_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_r2_w3:
+  description: sf_aes_iv_r2_w3
+  addressOffset: 0x32C
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_r2_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_r2_start:
+  description: sf_aes_r2_start
+  addressOffset: 0x330
+  resetValue: 0x00000000
+  fields:
+    sf_aes_r2_start:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_28:
+      bitOffset: 19
+      bitWidth: 10
+      access: read-only
+    sf_aes_r2_hw_key_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    sf_aes_r2_en:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    sf_aes_r2_lock:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_aes_r2_end:
+  description: sf_aes_r2_end
+  addressOffset: 0x334
+  resetValue: 0x00003FFF
+  fields:
+    sf_aes_r2_end:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_31:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-only
+if_sahb_0:
+  description: sf_if_sahb_0
+  addressOffset: 0x0
+  resetValue: 0x0D0403FC
+  fields:
+    if_busy:
+      bitOffset: 0
+      bitWidth: 1
+      access: read-only
+    if_0_trig:
+      bitOffset: 1
+      bitWidth: 1
+      access: read-write
+    if_0_dat_byte:
+      bitOffset: 2
+      bitWidth: 10
+      access: read-write
+    if_0_dmy_byte:
+      bitOffset: 12
+      bitWidth: 5
+      access: read-write
+    if_0_adr_byte:
+      bitOffset: 17
+      bitWidth: 3
+      access: read-write
+    if_0_cmd_byte:
+      bitOffset: 20
+      bitWidth: 3
+      access: read-write
+    if_0_dat_rw:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    if_0_dat_en:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    if_0_dmy_en:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    if_0_adr_en:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    if_0_cmd_en:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    if_0_spi_mode:
+      bitOffset: 28
+      bitWidth: 3
+      access: read-write
+    if_0_qpi_mode_en:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+if_sahb_1:
+  description: sf_if_sahb_1
+  addressOffset: 0x4
+  resetValue: 0x03000000
+  fields:
+    if_0_cmd_buf_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+if_sahb_2:
+  description: sf_if_sahb_2
+  addressOffset: 0x8
+  resetValue: 0x00000000
+  fields:
+    if_0_cmd_buf_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+io_dly_0:
+  description: if_io_dly_0
+  addressOffset: 0x0
+  resetValue: 0x00000000
+  fields:
+    cs_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    cs2_dly_sel:
+      bitOffset: 2
+      bitWidth: 2
+      access: read-write
+    reserved_4_7:
+      bitOffset: 4
+      bitWidth: 4
+      access: read-only
+    clk_out_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_25:
+      bitOffset: 10
+      bitWidth: 16
+      access: read-only
+    dqs_oe_dly_sel:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-write
+    dqs_di_dly_sel:
+      bitOffset: 28
+      bitWidth: 2
+      access: read-write
+    dqs_do_dly_sel:
+      bitOffset: 30
+      bitWidth: 2
+      access: read-write
+io_dly_1:
+  description: if_io_dly_1
+  addressOffset: 0x4
+  resetValue: 0x00000000
+  fields:
+    io_0_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    io_0_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    io_0_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+io_dly_2:
+  description: if_io_dly_2
+  addressOffset: 0x8
+  resetValue: 0x00000000
+  fields:
+    io_1_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    io_1_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    io_1_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+io_dly_3:
+  description: if_io_dly_3
+  addressOffset: 0xc
+  resetValue: 0x00000000
+  fields:
+    io_2_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    io_2_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    io_2_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+io_dly_4:
+  description: if_io_dly_4
+  addressOffset: 0x10
+  resetValue: 0x00000000
+  fields:
+    io_3_oe_dly_sel:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    reserved_2_7:
+      bitOffset: 2
+      bitWidth: 6
+      access: read-only
+    io_3_di_dly_sel:
+      bitOffset: 8
+      bitWidth: 2
+      access: read-write
+    reserved_10_15:
+      bitOffset: 10
+      bitWidth: 6
+      access: read-only
+    io_3_do_dly_sel:
+      bitOffset: 16
+      bitWidth: 2
+      access: read-write
+    reserved_18_31:
+      bitOffset: 18
+      bitWidth: 14
+      access: read-only
+sf_aes_key_0:
+  description: sf_aes_key_0
+  addressOffset: 0x0
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_1:
+  description: sf_aes_key_1
+  addressOffset: 0x4
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_2:
+  description: sf_aes_key_2
+  addressOffset: 0x8
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_3:
+  description: sf_aes_key_3
+  addressOffset: 0xc
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_4:
+  description: sf_aes_key_4
+  addressOffset: 0x10
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_4:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_5:
+  description: sf_aes_key_5
+  addressOffset: 0x14
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_5:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_6:
+  description: sf_aes_key_6
+  addressOffset: 0x18
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_6:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_key_7:
+  description: sf_aes_key_7
+  addressOffset: 0x1c
+  resetValue: 0x00000000
+  fields:
+    sf_aes_key_7:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_w0:
+  description: sf_aes_iv_w0
+  addressOffset: 0x20
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_w1:
+  description: sf_aes_iv_w1
+  addressOffset: 0x24
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_w2:
+  description: sf_aes_iv_w2
+  addressOffset: 0x28
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_iv_w3:
+  description: sf_aes_iv_w3
+  addressOffset: 0x2c
+  resetValue: 0x00000000
+  fields:
+    sf_aes_iv_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+sf_aes_start:
+  description: sf_aes_start
+  addressOffset: 0x30
+  resetValue: 0x00000000
+  fields:
+    sf_aes_region_start:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_28:
+      bitOffset: 19
+      bitWidth: 10
+      access: read-only
+    sf_aes_region_hw_key_en:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    sf_aes_region_en:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    sf_aes_region_lock:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
+sf_aes_end:
+  description: sf_aes_end
+  addressOffset: 0x34
+  resetValue: 0x00003FFF
+  fields:
+    sf_aes_region_end:
+      bitOffset: 0
+      bitWidth: 19
+      access: read-write
+    reserved_19_31:
+      bitOffset: 19
+      bitWidth: 13
+      access: read-only

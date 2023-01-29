@@ -1,0 +1,444 @@
+ef_cfg_0:
+  description: ef_cfg_0
+  addressOffset: 0x0
+  resetValue: 0x00000000
+  fields:
+    ef_sf_aes_mode:
+      bitOffset: 0
+      bitWidth: 2
+      access: read-write
+    ef_ai_dis:
+      bitOffset: 2
+      bitWidth: 1
+      access: read-write
+    ef_cpu0_dis:
+      bitOffset: 3
+      bitWidth: 1
+      access: read-write
+    ef_sboot_en:
+      bitOffset: 4
+      bitWidth: 2
+      access: read-write
+    ef_uart_dis:
+      bitOffset: 6
+      bitWidth: 4
+      access: read-write
+    ef_ble2_dis:
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    ef_m1542_dis:
+      bitOffset: 11
+      bitWidth: 1
+      access: read-write
+    ef_sf_key_re_sel:
+      bitOffset: 12
+      bitWidth: 2
+      access: read-write
+    ef_sdu_dis:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    ef_btdm_dis:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    ef_wifi_dis:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    ef_0_key_enc_en:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    ef_cam_dis:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    ef_m154_dis:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    ef_cpu1_dis:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    ef_cpu_rst_dbg_dis:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    ef_se_dbg_dis:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    ef_efuse_dbg_dis:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    ef_dbg_jtag_1_dis:
+      bitOffset: 24
+      bitWidth: 2
+      access: read-write
+    ef_dbg_jtag_0_dis:
+      bitOffset: 26
+      bitWidth: 2
+      access: read-write
+    ef_dbg_mode:
+      bitOffset: 28
+      bitWidth: 4
+      access: read-write
+ef_dbg_pwd_low:
+  description: ef_dbg_pwd_low
+  addressOffset: 0x4
+  resetValue: 0x00000000
+  fields:
+    ef_dbg_pwd_low:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_dbg_pwd_high:
+  description: ef_dbg_pwd_high
+  addressOffset: 0x8
+  resetValue: 0x00000000
+  fields:
+    ef_dbg_pwd_high:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_dbg_pwd2_low:
+  description: ef_dbg_pwd2_low
+  addressOffset: 0xC
+  resetValue: 0x00000000
+  fields:
+    ef_dbg_pwd2_low:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_dbg_pwd2_high:
+  description: ef_dbg_pwd2_high
+  addressOffset: 0x10
+  resetValue: 0x00000000
+  fields:
+    ef_dbg_pwd2_high:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_wifi_mac_low:
+  description: ef_wifi_mac_low
+  addressOffset: 0x14
+  resetValue: 0x00000000
+  fields:
+    ef_wifi_mac_low:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_wifi_mac_high:
+  description: ef_wifi_mac_high
+  addressOffset: 0x18
+  resetValue: 0x00000000
+  fields:
+    ef_wifi_mac_high:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_0_w0:
+  description: ef_key_slot_0_w0
+  addressOffset: 0x1C
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_0_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_0_w1:
+  description: ef_key_slot_0_w1
+  addressOffset: 0x20
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_0_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_0_w2:
+  description: ef_key_slot_0_w2
+  addressOffset: 0x24
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_0_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_0_w3:
+  description: ef_key_slot_0_w3
+  addressOffset: 0x28
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_0_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_1_w0:
+  description: ef_key_slot_1_w0
+  addressOffset: 0x2C
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_1_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_1_w1:
+  description: ef_key_slot_1_w1
+  addressOffset: 0x30
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_1_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_1_w2:
+  description: ef_key_slot_1_w2
+  addressOffset: 0x34
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_1_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_1_w3:
+  description: ef_key_slot_1_w3
+  addressOffset: 0x38
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_1_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_2_w0:
+  description: ef_key_slot_2_w0
+  addressOffset: 0x3C
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_2_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_2_w1:
+  description: ef_key_slot_2_w1
+  addressOffset: 0x40
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_2_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_2_w2:
+  description: ef_key_slot_2_w2
+  addressOffset: 0x44
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_2_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_2_w3:
+  description: ef_key_slot_2_w3
+  addressOffset: 0x48
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_2_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_3_w0:
+  description: ef_key_slot_3_w0
+  addressOffset: 0x4C
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_3_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_3_w1:
+  description: ef_key_slot_3_w1
+  addressOffset: 0x50
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_3_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_3_w2:
+  description: ef_key_slot_3_w2
+  addressOffset: 0x54
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_3_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_3_w3:
+  description: ef_key_slot_3_w3
+  addressOffset: 0x58
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_3_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_sw_usage_0:
+  description: ef_sw_usage_0
+  addressOffset: 0x5C
+  resetValue: 0x00000000
+  fields:
+    ef_sw_usage_0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_sw_usage_1:
+  description: ef_sw_usage_1
+  addressOffset: 0x60
+  resetValue: 0x00000000
+  fields:
+    ef_sw_usage_1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_sw_usage_2:
+  description: ef_sw_usage_2
+  addressOffset: 0x64
+  resetValue: 0x00000000
+  fields:
+    ef_sw_usage_2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_sw_usage_3:
+  description: ef_sw_usage_3
+  addressOffset: 0x68
+  resetValue: 0x00000000
+  fields:
+    ef_sw_usage_3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_11_w0:
+  description: ef_key_slot_11_w0
+  addressOffset: 0x6C
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_11_w0:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_11_w1:
+  description: ef_key_slot_11_w1
+  addressOffset: 0x70
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_11_w1:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_11_w2:
+  description: ef_key_slot_11_w2
+  addressOffset: 0x74
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_11_w2:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_key_slot_11_w3:
+  description: ef_key_slot_11_w3
+  addressOffset: 0x78
+  resetValue: 0x00000000
+  fields:
+    ef_key_slot_11_w3:
+      bitOffset: 0
+      bitWidth: 32
+      access: read-write
+ef_data_0_lock:
+  description: ef_data_0_lock
+  addressOffset: 0x7C
+  resetValue: 0x00000000
+  fields:
+    ef_sec_lifecycle:
+      bitOffset: 0
+      bitWidth: 4
+      access: read-write
+    wr_lock_rsvd_0:
+      bitOffset: 4
+      bitWidth: 10
+      access: read-write
+    wr_lock_boot_mode:
+      bitOffset: 14
+      bitWidth: 1
+      access: read-write
+    wr_lock_dbg_pwd:
+      bitOffset: 15
+      bitWidth: 1
+      access: read-write
+    wr_lock_wifi_mac:
+      bitOffset: 16
+      bitWidth: 1
+      access: read-write
+    wr_lock_key_slot_0:
+      bitOffset: 17
+      bitWidth: 1
+      access: read-write
+    wr_lock_key_slot_1:
+      bitOffset: 18
+      bitWidth: 1
+      access: read-write
+    wr_lock_key_slot_2:
+      bitOffset: 19
+      bitWidth: 1
+      access: read-write
+    wr_lock_key_slot_3:
+      bitOffset: 20
+      bitWidth: 1
+      access: read-write
+    wr_lock_sw_usage_0:
+      bitOffset: 21
+      bitWidth: 1
+      access: read-write
+    wr_lock_sw_usage_1:
+      bitOffset: 22
+      bitWidth: 1
+      access: read-write
+    wr_lock_sw_usage_2:
+      bitOffset: 23
+      bitWidth: 1
+      access: read-write
+    wr_lock_sw_usage_3:
+      bitOffset: 24
+      bitWidth: 1
+      access: read-write
+    wr_lock_key_slot_11:
+      bitOffset: 25
+      bitWidth: 1
+      access: read-write
+    rd_lock_dbg_pwd:
+      bitOffset: 26
+      bitWidth: 1
+      access: read-write
+    rd_lock_key_slot_0:
+      bitOffset: 27
+      bitWidth: 1
+      access: read-write
+    rd_lock_key_slot_1:
+      bitOffset: 28
+      bitWidth: 1
+      access: read-write
+    rd_lock_key_slot_2:
+      bitOffset: 29
+      bitWidth: 1
+      access: read-write
+    rd_lock_key_slot_3:
+      bitOffset: 30
+      bitWidth: 1
+      access: read-write
+    rd_lock_key_slot_11:
+      bitOffset: 31
+      bitWidth: 1
+      access: read-write
