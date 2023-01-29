@@ -12,7 +12,9 @@
 0x2000005C B  REGISTER core_cfg19: core_cfg19
 0x2000005C C   FIELD 00w32 np_int_mask1 (rw): 
 0x20000060 B  REGISTER core_cfg20: core_cfg20
+0x20000060 C   FIELD 00w32 np_int_clr0 (wo): 
 0x20000064 B  REGISTER core_cfg21: core_cfg21
+0x20000064 C   FIELD 00w32 np_int_clr1 (wo): 
 0x20000068 B  REGISTER core_cfg22: core_cfg22
 0x20000068 C   FIELD 00w32 reg_e902_int_en0 (rw): 
 0x2000006C B  REGISTER core_cfg23: core_cfg23
@@ -32,6 +34,19 @@
 0x20000090 C   FIELD 16w08 reg_bclk_div (rw): 
 0x20000090 C   FIELD 24w08 reserved_24_31 (ro): 
 0x20000094 B  REGISTER sys_cfg1: sys_cfg1
+0x20000094 C   FIELD 00w01 reg_bclk_div_act_pulse (wo): 
+0x20000094 C   FIELD 01w01 reg_bclk_div_bypass (rw): 
+0x20000094 C   FIELD 02w01 sts_bclk_prot_done (ro): 
+0x20000094 C   FIELD 03w01 reserved_3 (ro): 
+0x20000094 C   FIELD 04w04 reg_bclk_sw_done_cnt (rw): 
+0x20000094 C   FIELD 08w08 reserved_8_15 (ro): 
+0x20000094 C   FIELD 16w01 reg_pico_clk_div_act_pulse (wo): 
+0x20000094 C   FIELD 17w01 reg_pico_clk_div_bypass (rw): 
+0x20000094 C   FIELD 18w01 sts_pico_clk_prot_done (ro): 
+0x20000094 C   FIELD 19w01 reserved_19 (ro): 
+0x20000094 C   FIELD 20w04 reg_pico_clk_sw_done_cnt (rw): 
+0x20000094 C   FIELD 24w03 fclk_sw_state (ro): 
+0x20000094 C   FIELD 27w05 reserved_27_31 (ro): 
 0x200000A0 B  REGISTER bus_cfg0: bus_cfg0
 0x200000A0 C   FIELD 00w16 rg_apb2_pck_force (rw): 
 0x200000A0 C   FIELD 16w16 reserved_16_31 (ro): 
@@ -1045,6 +1060,20 @@
 0x200008A4 C   FIELD 30w01 gauge_vcm_pu (rw): 
 0x200008A4 C   FIELD 31w01 gauge_bg_pu (rw): 
 0x200008B8 B  REGISTER gauge_rx_fifo_ctrl: gauge_rx_fifo_ctrl
+0x200008B8 C   FIELD 00w01 gauge_rx_fifo_flush (wo): 
+0x200008B8 C   FIELD 01w01 gauge_rxo_int_en (rw): 
+0x200008B8 C   FIELD 02w01 gauge_rxu_int_en (rw): 
+0x200008B8 C   FIELD 03w01 gauge_rxa_int_en (rw): 
+0x200008B8 C   FIELD 04w01 gauge_rx_drq_en (rw): 
+0x200008B8 C   FIELD 05w01 gauge_rx_data_res (rw): 
+0x200008B8 C   FIELD 06w02 reserved_6_7 (ro): 
+0x200008B8 C   FIELD 08w01 gauge_rx_ch_en (rw): 
+0x200008B8 C   FIELD 09w05 reserved_9_13 (ro): 
+0x200008B8 C   FIELD 14w02 gauge_rx_drq_cnt (rw): 
+0x200008B8 C   FIELD 16w03 gauge_rx_trg_level (rw): 
+0x200008B8 C   FIELD 19w05 reserved_19_23 (ro): 
+0x200008B8 C   FIELD 24w02 gauge_rx_data_mode (rw): 
+0x200008B8 C   FIELD 26w06 reserved_26_31 (ro): 
 0x200008BC B  REGISTER gauge_rx_fifo_status: gauge_rx_fifo_status
 0x200008BC C   FIELD 00w01 reserved_0 (ro): 
 0x200008BC C   FIELD 01w01 gauge_rxo_int (ro): 
@@ -1074,6 +1103,12 @@
 0x200008C4 C   FIELD 22w01 reg_gpio_0_int_mask (rw): 
 0x200008C4 C   FIELD 23w01 reserved_23 (ro): 
 0x200008C4 C   FIELD 24w01 reg_gpio_0_o (rw): 
+0x200008C4 C   FIELD 25w01 reg_gpio_0_set (wo): 
+0x200008C4 C   FIELD 26w01 reg_gpio_0_clr (wo): 
+0x200008C4 C   FIELD 27w01 reserved_27 (ro): 
+0x200008C4 C   FIELD 28w01 reg_gpio_0_i (ro): 
+0x200008C4 C   FIELD 29w01 reserved_29 (ro): 
+0x200008C4 C   FIELD 30w02 reg_gpio_0_mode (rw): 
 0x200008C8 B  REGISTER gpio_cfg1: gpio_cfg1
 0x200008C8 C   FIELD 00w01 reg_gpio_1_ie (rw): 
 0x200008C8 C   FIELD 01w01 reg_gpio_1_smt (rw): 
@@ -1090,6 +1125,12 @@
 0x200008C8 C   FIELD 22w01 reg_gpio_1_int_mask (rw): 
 0x200008C8 C   FIELD 23w01 reserved_23 (ro): 
 0x200008C8 C   FIELD 24w01 reg_gpio_1_o (rw): 
+0x200008C8 C   FIELD 25w01 reg_gpio_1_set (wo): 
+0x200008C8 C   FIELD 26w01 reg_gpio_1_clr (wo): 
+0x200008C8 C   FIELD 27w01 reserved_27 (ro): 
+0x200008C8 C   FIELD 28w01 reg_gpio_1_i (ro): 
+0x200008C8 C   FIELD 29w01 reserved_29 (ro): 
+0x200008C8 C   FIELD 30w02 reg_gpio_1_mode (rw): 
 0x200008CC B  REGISTER gpio_cfg2: gpio_cfg2
 0x200008CC C   FIELD 00w01 reg_gpio_2_ie (rw): 
 0x200008CC C   FIELD 01w01 reg_gpio_2_smt (rw): 
@@ -1106,6 +1147,12 @@
 0x200008CC C   FIELD 22w01 reg_gpio_2_int_mask (rw): 
 0x200008CC C   FIELD 23w01 reserved_23 (ro): 
 0x200008CC C   FIELD 24w01 reg_gpio_2_o (rw): 
+0x200008CC C   FIELD 25w01 reg_gpio_2_set (wo): 
+0x200008CC C   FIELD 26w01 reg_gpio_2_clr (wo): 
+0x200008CC C   FIELD 27w01 reserved_27 (ro): 
+0x200008CC C   FIELD 28w01 reg_gpio_2_i (ro): 
+0x200008CC C   FIELD 29w01 reserved_29 (ro): 
+0x200008CC C   FIELD 30w02 reg_gpio_2_mode (rw): 
 0x200008D0 B  REGISTER gpio_cfg3: gpio_cfg3
 0x200008D0 C   FIELD 00w01 reg_gpio_3_ie (rw): 
 0x200008D0 C   FIELD 01w01 reg_gpio_3_smt (rw): 
@@ -1122,6 +1169,12 @@
 0x200008D0 C   FIELD 22w01 reg_gpio_3_int_mask (rw): 
 0x200008D0 C   FIELD 23w01 reserved_23 (ro): 
 0x200008D0 C   FIELD 24w01 reg_gpio_3_o (rw): 
+0x200008D0 C   FIELD 25w01 reg_gpio_3_set (wo): 
+0x200008D0 C   FIELD 26w01 reg_gpio_3_clr (wo): 
+0x200008D0 C   FIELD 27w01 reserved_27 (ro): 
+0x200008D0 C   FIELD 28w01 reg_gpio_3_i (ro): 
+0x200008D0 C   FIELD 29w01 reserved_29 (ro): 
+0x200008D0 C   FIELD 30w02 reg_gpio_3_mode (rw): 
 0x200008D4 B  REGISTER gpio_cfg4: gpio_cfg4
 0x200008D4 C   FIELD 00w01 reg_gpio_4_ie (rw): 
 0x200008D4 C   FIELD 01w01 reg_gpio_4_smt (rw): 
@@ -1138,6 +1191,12 @@
 0x200008D4 C   FIELD 22w01 reg_gpio_4_int_mask (rw): 
 0x200008D4 C   FIELD 23w01 reserved_23 (ro): 
 0x200008D4 C   FIELD 24w01 reg_gpio_4_o (rw): 
+0x200008D4 C   FIELD 25w01 reg_gpio_4_set (wo): 
+0x200008D4 C   FIELD 26w01 reg_gpio_4_clr (wo): 
+0x200008D4 C   FIELD 27w01 reserved_27 (ro): 
+0x200008D4 C   FIELD 28w01 reg_gpio_4_i (ro): 
+0x200008D4 C   FIELD 29w01 reserved_29 (ro): 
+0x200008D4 C   FIELD 30w02 reg_gpio_4_mode (rw): 
 0x200008D8 B  REGISTER gpio_cfg5: gpio_cfg5
 0x200008D8 C   FIELD 00w01 reg_gpio_5_ie (rw): 
 0x200008D8 C   FIELD 01w01 reg_gpio_5_smt (rw): 
@@ -1154,6 +1213,12 @@
 0x200008D8 C   FIELD 22w01 reg_gpio_5_int_mask (rw): 
 0x200008D8 C   FIELD 23w01 reserved_23 (ro): 
 0x200008D8 C   FIELD 24w01 reg_gpio_5_o (rw): 
+0x200008D8 C   FIELD 25w01 reg_gpio_5_set (wo): 
+0x200008D8 C   FIELD 26w01 reg_gpio_5_clr (wo): 
+0x200008D8 C   FIELD 27w01 reserved_27 (ro): 
+0x200008D8 C   FIELD 28w01 reg_gpio_5_i (ro): 
+0x200008D8 C   FIELD 29w01 reserved_29 (ro): 
+0x200008D8 C   FIELD 30w02 reg_gpio_5_mode (rw): 
 0x200008DC B  REGISTER gpio_cfg6: gpio_cfg6
 0x200008DC C   FIELD 00w01 reg_gpio_6_ie (rw): 
 0x200008DC C   FIELD 01w01 reg_gpio_6_smt (rw): 
@@ -1170,6 +1235,12 @@
 0x200008DC C   FIELD 22w01 reg_gpio_6_int_mask (rw): 
 0x200008DC C   FIELD 23w01 reserved_23 (ro): 
 0x200008DC C   FIELD 24w01 reg_gpio_6_o (rw): 
+0x200008DC C   FIELD 25w01 reg_gpio_6_set (wo): 
+0x200008DC C   FIELD 26w01 reg_gpio_6_clr (wo): 
+0x200008DC C   FIELD 27w01 reserved_27 (ro): 
+0x200008DC C   FIELD 28w01 reg_gpio_6_i (ro): 
+0x200008DC C   FIELD 29w01 reserved_29 (ro): 
+0x200008DC C   FIELD 30w02 reg_gpio_6_mode (rw): 
 0x200008E0 B  REGISTER gpio_cfg7: gpio_cfg7
 0x200008E0 C   FIELD 00w01 reg_gpio_7_ie (rw): 
 0x200008E0 C   FIELD 01w01 reg_gpio_7_smt (rw): 
@@ -1186,6 +1257,12 @@
 0x200008E0 C   FIELD 22w01 reg_gpio_7_int_mask (rw): 
 0x200008E0 C   FIELD 23w01 reserved_23 (ro): 
 0x200008E0 C   FIELD 24w01 reg_gpio_7_o (rw): 
+0x200008E0 C   FIELD 25w01 reg_gpio_7_set (wo): 
+0x200008E0 C   FIELD 26w01 reg_gpio_7_clr (wo): 
+0x200008E0 C   FIELD 27w01 reserved_27 (ro): 
+0x200008E0 C   FIELD 28w01 reg_gpio_7_i (ro): 
+0x200008E0 C   FIELD 29w01 reserved_29 (ro): 
+0x200008E0 C   FIELD 30w02 reg_gpio_7_mode (rw): 
 0x200008E4 B  REGISTER gpio_cfg8: gpio_cfg8
 0x200008E4 C   FIELD 00w01 reg_gpio_8_ie (rw): 
 0x200008E4 C   FIELD 01w01 reg_gpio_8_smt (rw): 
@@ -1202,6 +1279,12 @@
 0x200008E4 C   FIELD 22w01 reg_gpio_8_int_mask (rw): 
 0x200008E4 C   FIELD 23w01 reserved_23 (ro): 
 0x200008E4 C   FIELD 24w01 reg_gpio_8_o (rw): 
+0x200008E4 C   FIELD 25w01 reg_gpio_8_set (wo): 
+0x200008E4 C   FIELD 26w01 reg_gpio_8_clr (wo): 
+0x200008E4 C   FIELD 27w01 reserved_27 (ro): 
+0x200008E4 C   FIELD 28w01 reg_gpio_8_i (ro): 
+0x200008E4 C   FIELD 29w01 reserved_29 (ro): 
+0x200008E4 C   FIELD 30w02 reg_gpio_8_mode (rw): 
 0x200008E8 B  REGISTER gpio_cfg9: gpio_cfg9
 0x200008E8 C   FIELD 00w01 reg_gpio_9_ie (rw): 
 0x200008E8 C   FIELD 01w01 reg_gpio_9_smt (rw): 
@@ -1218,6 +1301,12 @@
 0x200008E8 C   FIELD 22w01 reg_gpio_9_int_mask (rw): 
 0x200008E8 C   FIELD 23w01 reserved_23 (ro): 
 0x200008E8 C   FIELD 24w01 reg_gpio_9_o (rw): 
+0x200008E8 C   FIELD 25w01 reg_gpio_9_set (wo): 
+0x200008E8 C   FIELD 26w01 reg_gpio_9_clr (wo): 
+0x200008E8 C   FIELD 27w01 reserved_27 (ro): 
+0x200008E8 C   FIELD 28w01 reg_gpio_9_i (ro): 
+0x200008E8 C   FIELD 29w01 reserved_29 (ro): 
+0x200008E8 C   FIELD 30w02 reg_gpio_9_mode (rw): 
 0x200008EC B  REGISTER gpio_cfg10: gpio_cfg10
 0x200008EC C   FIELD 00w01 reg_gpio_10_ie (rw): 
 0x200008EC C   FIELD 01w01 reg_gpio_10_smt (rw): 
@@ -1234,6 +1323,12 @@
 0x200008EC C   FIELD 22w01 reg_gpio_10_int_mask (rw): 
 0x200008EC C   FIELD 23w01 reserved_23 (ro): 
 0x200008EC C   FIELD 24w01 reg_gpio_10_o (rw): 
+0x200008EC C   FIELD 25w01 reg_gpio_10_set (wo): 
+0x200008EC C   FIELD 26w01 reg_gpio_10_clr (wo): 
+0x200008EC C   FIELD 27w01 reserved_27 (ro): 
+0x200008EC C   FIELD 28w01 reg_gpio_10_i (ro): 
+0x200008EC C   FIELD 29w01 reserved_29 (ro): 
+0x200008EC C   FIELD 30w02 reg_gpio_10_mode (rw): 
 0x200008F0 B  REGISTER gpio_cfg11: gpio_cfg11
 0x200008F0 C   FIELD 00w01 reg_gpio_11_ie (rw): 
 0x200008F0 C   FIELD 01w01 reg_gpio_11_smt (rw): 
@@ -1250,6 +1345,12 @@
 0x200008F0 C   FIELD 22w01 reg_gpio_11_int_mask (rw): 
 0x200008F0 C   FIELD 23w01 reserved_23 (ro): 
 0x200008F0 C   FIELD 24w01 reg_gpio_11_o (rw): 
+0x200008F0 C   FIELD 25w01 reg_gpio_11_set (wo): 
+0x200008F0 C   FIELD 26w01 reg_gpio_11_clr (wo): 
+0x200008F0 C   FIELD 27w01 reserved_27 (ro): 
+0x200008F0 C   FIELD 28w01 reg_gpio_11_i (ro): 
+0x200008F0 C   FIELD 29w01 reserved_29 (ro): 
+0x200008F0 C   FIELD 30w02 reg_gpio_11_mode (rw): 
 0x200008F4 B  REGISTER gpio_cfg12: gpio_cfg12
 0x200008F4 C   FIELD 00w01 reg_gpio_12_ie (rw): 
 0x200008F4 C   FIELD 01w01 reg_gpio_12_smt (rw): 
@@ -1266,6 +1367,12 @@
 0x200008F4 C   FIELD 22w01 reg_gpio_12_int_mask (rw): 
 0x200008F4 C   FIELD 23w01 reserved_23 (ro): 
 0x200008F4 C   FIELD 24w01 reg_gpio_12_o (rw): 
+0x200008F4 C   FIELD 25w01 reg_gpio_12_set (wo): 
+0x200008F4 C   FIELD 26w01 reg_gpio_12_clr (wo): 
+0x200008F4 C   FIELD 27w01 reserved_27 (ro): 
+0x200008F4 C   FIELD 28w01 reg_gpio_12_i (ro): 
+0x200008F4 C   FIELD 29w01 reserved_29 (ro): 
+0x200008F4 C   FIELD 30w02 reg_gpio_12_mode (rw): 
 0x200008F8 B  REGISTER gpio_cfg13: gpio_cfg13
 0x200008F8 C   FIELD 00w01 reg_gpio_13_ie (rw): 
 0x200008F8 C   FIELD 01w01 reg_gpio_13_smt (rw): 
@@ -1282,6 +1389,12 @@
 0x200008F8 C   FIELD 22w01 reg_gpio_13_int_mask (rw): 
 0x200008F8 C   FIELD 23w01 reserved_23 (ro): 
 0x200008F8 C   FIELD 24w01 reg_gpio_13_o (rw): 
+0x200008F8 C   FIELD 25w01 reg_gpio_13_set (wo): 
+0x200008F8 C   FIELD 26w01 reg_gpio_13_clr (wo): 
+0x200008F8 C   FIELD 27w01 reserved_27 (ro): 
+0x200008F8 C   FIELD 28w01 reg_gpio_13_i (ro): 
+0x200008F8 C   FIELD 29w01 reserved_29 (ro): 
+0x200008F8 C   FIELD 30w02 reg_gpio_13_mode (rw): 
 0x200008FC B  REGISTER gpio_cfg14: gpio_cfg14
 0x200008FC C   FIELD 00w01 reg_gpio_14_ie (rw): 
 0x200008FC C   FIELD 01w01 reg_gpio_14_smt (rw): 
@@ -1298,6 +1411,12 @@
 0x200008FC C   FIELD 22w01 reg_gpio_14_int_mask (rw): 
 0x200008FC C   FIELD 23w01 reserved_23 (ro): 
 0x200008FC C   FIELD 24w01 reg_gpio_14_o (rw): 
+0x200008FC C   FIELD 25w01 reg_gpio_14_set (wo): 
+0x200008FC C   FIELD 26w01 reg_gpio_14_clr (wo): 
+0x200008FC C   FIELD 27w01 reserved_27 (ro): 
+0x200008FC C   FIELD 28w01 reg_gpio_14_i (ro): 
+0x200008FC C   FIELD 29w01 reserved_29 (ro): 
+0x200008FC C   FIELD 30w02 reg_gpio_14_mode (rw): 
 0x20000900 B  REGISTER gpio_cfg15: gpio_cfg15
 0x20000900 C   FIELD 00w01 reg_gpio_15_ie (rw): 
 0x20000900 C   FIELD 01w01 reg_gpio_15_smt (rw): 
@@ -1314,6 +1433,12 @@
 0x20000900 C   FIELD 22w01 reg_gpio_15_int_mask (rw): 
 0x20000900 C   FIELD 23w01 reserved_23 (ro): 
 0x20000900 C   FIELD 24w01 reg_gpio_15_o (rw): 
+0x20000900 C   FIELD 25w01 reg_gpio_15_set (wo): 
+0x20000900 C   FIELD 26w01 reg_gpio_15_clr (wo): 
+0x20000900 C   FIELD 27w01 reserved_27 (ro): 
+0x20000900 C   FIELD 28w01 reg_gpio_15_i (ro): 
+0x20000900 C   FIELD 29w01 reserved_29 (ro): 
+0x20000900 C   FIELD 30w02 reg_gpio_15_mode (rw): 
 0x20000904 B  REGISTER gpio_cfg16: gpio_cfg16
 0x20000904 C   FIELD 00w01 reg_gpio_16_ie (rw): 
 0x20000904 C   FIELD 01w01 reg_gpio_16_smt (rw): 
@@ -1330,6 +1455,12 @@
 0x20000904 C   FIELD 22w01 reg_gpio_16_int_mask (rw): 
 0x20000904 C   FIELD 23w01 reserved_23 (ro): 
 0x20000904 C   FIELD 24w01 reg_gpio_16_o (rw): 
+0x20000904 C   FIELD 25w01 reg_gpio_16_set (wo): 
+0x20000904 C   FIELD 26w01 reg_gpio_16_clr (wo): 
+0x20000904 C   FIELD 27w01 reserved_27 (ro): 
+0x20000904 C   FIELD 28w01 reg_gpio_16_i (ro): 
+0x20000904 C   FIELD 29w01 reserved_29 (ro): 
+0x20000904 C   FIELD 30w02 reg_gpio_16_mode (rw): 
 0x20000908 B  REGISTER gpio_cfg17: gpio_cfg17
 0x20000908 C   FIELD 00w01 reg_gpio_17_ie (rw): 
 0x20000908 C   FIELD 01w01 reg_gpio_17_smt (rw): 
@@ -1346,6 +1477,12 @@
 0x20000908 C   FIELD 22w01 reg_gpio_17_int_mask (rw): 
 0x20000908 C   FIELD 23w01 reserved_23 (ro): 
 0x20000908 C   FIELD 24w01 reg_gpio_17_o (rw): 
+0x20000908 C   FIELD 25w01 reg_gpio_17_set (wo): 
+0x20000908 C   FIELD 26w01 reg_gpio_17_clr (wo): 
+0x20000908 C   FIELD 27w01 reserved_27 (ro): 
+0x20000908 C   FIELD 28w01 reg_gpio_17_i (ro): 
+0x20000908 C   FIELD 29w01 reserved_29 (ro): 
+0x20000908 C   FIELD 30w02 reg_gpio_17_mode (rw): 
 0x2000090C B  REGISTER gpio_cfg18: gpio_cfg18
 0x2000090C C   FIELD 00w01 reg_gpio_18_ie (rw): 
 0x2000090C C   FIELD 01w01 reg_gpio_18_smt (rw): 
@@ -1362,6 +1499,12 @@
 0x2000090C C   FIELD 22w01 reg_gpio_18_int_mask (rw): 
 0x2000090C C   FIELD 23w01 reserved_23 (ro): 
 0x2000090C C   FIELD 24w01 reg_gpio_18_o (rw): 
+0x2000090C C   FIELD 25w01 reg_gpio_18_set (wo): 
+0x2000090C C   FIELD 26w01 reg_gpio_18_clr (wo): 
+0x2000090C C   FIELD 27w01 reserved_27 (ro): 
+0x2000090C C   FIELD 28w01 reg_gpio_18_i (ro): 
+0x2000090C C   FIELD 29w01 reserved_29 (ro): 
+0x2000090C C   FIELD 30w02 reg_gpio_18_mode (rw): 
 0x20000910 B  REGISTER gpio_cfg19: gpio_cfg19
 0x20000910 C   FIELD 00w01 reg_gpio_19_ie (rw): 
 0x20000910 C   FIELD 01w01 reg_gpio_19_smt (rw): 
@@ -1378,6 +1521,12 @@
 0x20000910 C   FIELD 22w01 reg_gpio_19_int_mask (rw): 
 0x20000910 C   FIELD 23w01 reserved_23 (ro): 
 0x20000910 C   FIELD 24w01 reg_gpio_19_o (rw): 
+0x20000910 C   FIELD 25w01 reg_gpio_19_set (wo): 
+0x20000910 C   FIELD 26w01 reg_gpio_19_clr (wo): 
+0x20000910 C   FIELD 27w01 reserved_27 (ro): 
+0x20000910 C   FIELD 28w01 reg_gpio_19_i (ro): 
+0x20000910 C   FIELD 29w01 reserved_29 (ro): 
+0x20000910 C   FIELD 30w02 reg_gpio_19_mode (rw): 
 0x20000914 B  REGISTER gpio_cfg20: gpio_cfg20
 0x20000914 C   FIELD 00w01 reg_gpio_20_ie (rw): 
 0x20000914 C   FIELD 01w01 reg_gpio_20_smt (rw): 
@@ -1394,6 +1543,12 @@
 0x20000914 C   FIELD 22w01 reg_gpio_20_int_mask (rw): 
 0x20000914 C   FIELD 23w01 reserved_23 (ro): 
 0x20000914 C   FIELD 24w01 reg_gpio_20_o (rw): 
+0x20000914 C   FIELD 25w01 reg_gpio_20_set (wo): 
+0x20000914 C   FIELD 26w01 reg_gpio_20_clr (wo): 
+0x20000914 C   FIELD 27w01 reserved_27 (ro): 
+0x20000914 C   FIELD 28w01 reg_gpio_20_i (ro): 
+0x20000914 C   FIELD 29w01 reserved_29 (ro): 
+0x20000914 C   FIELD 30w02 reg_gpio_20_mode (rw): 
 0x20000918 B  REGISTER gpio_cfg21: gpio_cfg21
 0x20000918 C   FIELD 00w01 reg_gpio_21_ie (rw): 
 0x20000918 C   FIELD 01w01 reg_gpio_21_smt (rw): 
@@ -1410,6 +1565,12 @@
 0x20000918 C   FIELD 22w01 reg_gpio_21_int_mask (rw): 
 0x20000918 C   FIELD 23w01 reserved_23 (ro): 
 0x20000918 C   FIELD 24w01 reg_gpio_21_o (rw): 
+0x20000918 C   FIELD 25w01 reg_gpio_21_set (wo): 
+0x20000918 C   FIELD 26w01 reg_gpio_21_clr (wo): 
+0x20000918 C   FIELD 27w01 reserved_27 (ro): 
+0x20000918 C   FIELD 28w01 reg_gpio_21_i (ro): 
+0x20000918 C   FIELD 29w01 reserved_29 (ro): 
+0x20000918 C   FIELD 30w02 reg_gpio_21_mode (rw): 
 0x2000091C B  REGISTER gpio_cfg22: gpio_cfg22
 0x2000091C C   FIELD 00w01 reg_gpio_22_ie (rw): 
 0x2000091C C   FIELD 01w01 reg_gpio_22_smt (rw): 
@@ -1426,6 +1587,12 @@
 0x2000091C C   FIELD 22w01 reg_gpio_22_int_mask (rw): 
 0x2000091C C   FIELD 23w01 reserved_23 (ro): 
 0x2000091C C   FIELD 24w01 reg_gpio_22_o (rw): 
+0x2000091C C   FIELD 25w01 reg_gpio_22_set (wo): 
+0x2000091C C   FIELD 26w01 reg_gpio_22_clr (wo): 
+0x2000091C C   FIELD 27w01 reserved_27 (ro): 
+0x2000091C C   FIELD 28w01 reg_gpio_22_i (ro): 
+0x2000091C C   FIELD 29w01 reserved_29 (ro): 
+0x2000091C C   FIELD 30w02 reg_gpio_22_mode (rw): 
 0x20000920 B  REGISTER gpio_cfg23: gpio_cfg23
 0x20000920 C   FIELD 00w01 reg_gpio_23_ie (rw): 
 0x20000920 C   FIELD 01w01 reg_gpio_23_smt (rw): 
@@ -1442,6 +1609,12 @@
 0x20000920 C   FIELD 22w01 reg_gpio_23_int_mask (rw): 
 0x20000920 C   FIELD 23w01 reserved_23 (ro): 
 0x20000920 C   FIELD 24w01 reg_gpio_23_o (rw): 
+0x20000920 C   FIELD 25w01 reg_gpio_23_set (wo): 
+0x20000920 C   FIELD 26w01 reg_gpio_23_clr (wo): 
+0x20000920 C   FIELD 27w01 reserved_27 (ro): 
+0x20000920 C   FIELD 28w01 reg_gpio_23_i (ro): 
+0x20000920 C   FIELD 29w01 reserved_29 (ro): 
+0x20000920 C   FIELD 30w02 reg_gpio_23_mode (rw): 
 0x20000924 B  REGISTER gpio_cfg24: gpio_cfg24
 0x20000924 C   FIELD 00w01 reg_gpio_24_ie (rw): 
 0x20000924 C   FIELD 01w01 reg_gpio_24_smt (rw): 
@@ -1458,6 +1631,12 @@
 0x20000924 C   FIELD 22w01 reg_gpio_24_int_mask (rw): 
 0x20000924 C   FIELD 23w01 reserved_23 (ro): 
 0x20000924 C   FIELD 24w01 reg_gpio_24_o (rw): 
+0x20000924 C   FIELD 25w01 reg_gpio_24_set (wo): 
+0x20000924 C   FIELD 26w01 reg_gpio_24_clr (wo): 
+0x20000924 C   FIELD 27w01 reserved_27 (ro): 
+0x20000924 C   FIELD 28w01 reg_gpio_24_i (ro): 
+0x20000924 C   FIELD 29w01 reserved_29 (ro): 
+0x20000924 C   FIELD 30w02 reg_gpio_24_mode (rw): 
 0x20000928 B  REGISTER gpio_cfg25: gpio_cfg25
 0x20000928 C   FIELD 00w01 reg_gpio_25_ie (rw): 
 0x20000928 C   FIELD 01w01 reg_gpio_25_smt (rw): 
@@ -1474,6 +1653,12 @@
 0x20000928 C   FIELD 22w01 reg_gpio_25_int_mask (rw): 
 0x20000928 C   FIELD 23w01 reserved_23 (ro): 
 0x20000928 C   FIELD 24w01 reg_gpio_25_o (rw): 
+0x20000928 C   FIELD 25w01 reg_gpio_25_set (wo): 
+0x20000928 C   FIELD 26w01 reg_gpio_25_clr (wo): 
+0x20000928 C   FIELD 27w01 reserved_27 (ro): 
+0x20000928 C   FIELD 28w01 reg_gpio_25_i (ro): 
+0x20000928 C   FIELD 29w01 reserved_29 (ro): 
+0x20000928 C   FIELD 30w02 reg_gpio_25_mode (rw): 
 0x2000092C B  REGISTER gpio_cfg26: gpio_cfg26
 0x2000092C C   FIELD 00w01 reg_gpio_26_ie (rw): 
 0x2000092C C   FIELD 01w01 reg_gpio_26_smt (rw): 
@@ -1490,6 +1675,12 @@
 0x2000092C C   FIELD 22w01 reg_gpio_26_int_mask (rw): 
 0x2000092C C   FIELD 23w01 reserved_23 (ro): 
 0x2000092C C   FIELD 24w01 reg_gpio_26_o (rw): 
+0x2000092C C   FIELD 25w01 reg_gpio_26_set (wo): 
+0x2000092C C   FIELD 26w01 reg_gpio_26_clr (wo): 
+0x2000092C C   FIELD 27w01 reserved_27 (ro): 
+0x2000092C C   FIELD 28w01 reg_gpio_26_i (ro): 
+0x2000092C C   FIELD 29w01 reserved_29 (ro): 
+0x2000092C C   FIELD 30w02 reg_gpio_26_mode (rw): 
 0x20000930 B  REGISTER gpio_cfg27: gpio_cfg27
 0x20000930 C   FIELD 00w01 reg_gpio_27_ie (rw): 
 0x20000930 C   FIELD 01w01 reg_gpio_27_smt (rw): 
@@ -1506,6 +1697,12 @@
 0x20000930 C   FIELD 22w01 reg_gpio_27_int_mask (rw): 
 0x20000930 C   FIELD 23w01 reserved_23 (ro): 
 0x20000930 C   FIELD 24w01 reg_gpio_27_o (rw): 
+0x20000930 C   FIELD 25w01 reg_gpio_27_set (wo): 
+0x20000930 C   FIELD 26w01 reg_gpio_27_clr (wo): 
+0x20000930 C   FIELD 27w01 reserved_27 (ro): 
+0x20000930 C   FIELD 28w01 reg_gpio_27_i (ro): 
+0x20000930 C   FIELD 29w01 reserved_29 (ro): 
+0x20000930 C   FIELD 30w02 reg_gpio_27_mode (rw): 
 0x20000934 B  REGISTER gpio_cfg28: gpio_cfg28
 0x20000934 C   FIELD 00w01 reg_gpio_28_ie (rw): 
 0x20000934 C   FIELD 01w01 reg_gpio_28_smt (rw): 
@@ -1522,6 +1719,12 @@
 0x20000934 C   FIELD 22w01 reg_gpio_28_int_mask (rw): 
 0x20000934 C   FIELD 23w01 reserved_23 (ro): 
 0x20000934 C   FIELD 24w01 reg_gpio_28_o (rw): 
+0x20000934 C   FIELD 25w01 reg_gpio_28_set (wo): 
+0x20000934 C   FIELD 26w01 reg_gpio_28_clr (wo): 
+0x20000934 C   FIELD 27w01 reserved_27 (ro): 
+0x20000934 C   FIELD 28w01 reg_gpio_28_i (ro): 
+0x20000934 C   FIELD 29w01 reserved_29 (ro): 
+0x20000934 C   FIELD 30w02 reg_gpio_28_mode (rw): 
 0x20000938 B  REGISTER gpio_cfg29: gpio_cfg29
 0x20000938 C   FIELD 00w01 reg_gpio_29_ie (rw): 
 0x20000938 C   FIELD 01w01 reg_gpio_29_smt (rw): 
@@ -1538,6 +1741,12 @@
 0x20000938 C   FIELD 22w01 reg_gpio_29_int_mask (rw): 
 0x20000938 C   FIELD 23w01 reserved_23 (ro): 
 0x20000938 C   FIELD 24w01 reg_gpio_29_o (rw): 
+0x20000938 C   FIELD 25w01 reg_gpio_29_set (wo): 
+0x20000938 C   FIELD 26w01 reg_gpio_29_clr (wo): 
+0x20000938 C   FIELD 27w01 reserved_27 (ro): 
+0x20000938 C   FIELD 28w01 reg_gpio_29_i (ro): 
+0x20000938 C   FIELD 29w01 reserved_29 (ro): 
+0x20000938 C   FIELD 30w02 reg_gpio_29_mode (rw): 
 0x2000093C B  REGISTER gpio_cfg30: gpio_cfg30
 0x2000093C C   FIELD 00w01 reg_gpio_30_ie (rw): 
 0x2000093C C   FIELD 01w01 reg_gpio_30_smt (rw): 
@@ -1554,6 +1763,12 @@
 0x2000093C C   FIELD 22w01 reg_gpio_30_int_mask (rw): 
 0x2000093C C   FIELD 23w01 reserved_23 (ro): 
 0x2000093C C   FIELD 24w01 reg_gpio_30_o (rw): 
+0x2000093C C   FIELD 25w01 reg_gpio_30_set (wo): 
+0x2000093C C   FIELD 26w01 reg_gpio_30_clr (wo): 
+0x2000093C C   FIELD 27w01 reserved_27 (ro): 
+0x2000093C C   FIELD 28w01 reg_gpio_30_i (ro): 
+0x2000093C C   FIELD 29w01 reserved_29 (ro): 
+0x2000093C C   FIELD 30w02 reg_gpio_30_mode (rw): 
 0x20000940 B  REGISTER gpio_cfg31: gpio_cfg31
 0x20000940 C   FIELD 00w01 reg_gpio_31_ie (rw): 
 0x20000940 C   FIELD 01w01 reg_gpio_31_smt (rw): 
@@ -1570,6 +1785,12 @@
 0x20000940 C   FIELD 22w01 reg_gpio_31_int_mask (rw): 
 0x20000940 C   FIELD 23w01 reserved_23 (ro): 
 0x20000940 C   FIELD 24w01 reg_gpio_31_o (rw): 
+0x20000940 C   FIELD 25w01 reg_gpio_31_set (wo): 
+0x20000940 C   FIELD 26w01 reg_gpio_31_clr (wo): 
+0x20000940 C   FIELD 27w01 reserved_27 (ro): 
+0x20000940 C   FIELD 28w01 reg_gpio_31_i (ro): 
+0x20000940 C   FIELD 29w01 reserved_29 (ro): 
+0x20000940 C   FIELD 30w02 reg_gpio_31_mode (rw): 
 0x20000944 B  REGISTER gpio_cfg32: gpio_cfg32
 0x20000944 C   FIELD 00w01 reg_gpio_32_ie (rw): 
 0x20000944 C   FIELD 01w01 reg_gpio_32_smt (rw): 
@@ -1586,6 +1807,12 @@
 0x20000944 C   FIELD 22w01 reg_gpio_32_int_mask (rw): 
 0x20000944 C   FIELD 23w01 reserved_23 (ro): 
 0x20000944 C   FIELD 24w01 reg_gpio_32_o (rw): 
+0x20000944 C   FIELD 25w01 reg_gpio_32_set (wo): 
+0x20000944 C   FIELD 26w01 reg_gpio_32_clr (wo): 
+0x20000944 C   FIELD 27w01 reserved_27 (ro): 
+0x20000944 C   FIELD 28w01 reg_gpio_32_i (ro): 
+0x20000944 C   FIELD 29w01 reserved_29 (ro): 
+0x20000944 C   FIELD 30w02 reg_gpio_32_mode (rw): 
 0x20000948 B  REGISTER gpio_cfg33: gpio_cfg33
 0x20000948 C   FIELD 00w01 reg_gpio_33_ie (rw): 
 0x20000948 C   FIELD 01w01 reg_gpio_33_smt (rw): 
@@ -1602,6 +1829,12 @@
 0x20000948 C   FIELD 22w01 reg_gpio_33_int_mask (rw): 
 0x20000948 C   FIELD 23w01 reserved_23 (ro): 
 0x20000948 C   FIELD 24w01 reg_gpio_33_o (rw): 
+0x20000948 C   FIELD 25w01 reg_gpio_33_set (wo): 
+0x20000948 C   FIELD 26w01 reg_gpio_33_clr (wo): 
+0x20000948 C   FIELD 27w01 reserved_27 (ro): 
+0x20000948 C   FIELD 28w01 reg_gpio_33_i (ro): 
+0x20000948 C   FIELD 29w01 reserved_29 (ro): 
+0x20000948 C   FIELD 30w02 reg_gpio_33_mode (rw): 
 0x2000094C B  REGISTER gpio_cfg34: gpio_cfg34
 0x2000094C C   FIELD 00w01 reg_gpio_34_ie (rw): 
 0x2000094C C   FIELD 01w01 reg_gpio_34_smt (rw): 
@@ -1618,6 +1851,12 @@
 0x2000094C C   FIELD 22w01 reg_gpio_34_int_mask (rw): 
 0x2000094C C   FIELD 23w01 reserved_23 (ro): 
 0x2000094C C   FIELD 24w01 reg_gpio_34_o (rw): 
+0x2000094C C   FIELD 25w01 reg_gpio_34_set (wo): 
+0x2000094C C   FIELD 26w01 reg_gpio_34_clr (wo): 
+0x2000094C C   FIELD 27w01 reserved_27 (ro): 
+0x2000094C C   FIELD 28w01 reg_gpio_34_i (ro): 
+0x2000094C C   FIELD 29w01 reserved_29 (ro): 
+0x2000094C C   FIELD 30w02 reg_gpio_34_mode (rw): 
 0x20000950 B  REGISTER gpio_cfg35: gpio_cfg35
 0x20000950 C   FIELD 00w01 reg_gpio_35_ie (rw): 
 0x20000950 C   FIELD 01w01 reg_gpio_35_smt (rw): 
@@ -1634,6 +1873,12 @@
 0x20000950 C   FIELD 22w01 reg_gpio_35_int_mask (rw): 
 0x20000950 C   FIELD 23w01 reserved_23 (ro): 
 0x20000950 C   FIELD 24w01 reg_gpio_35_o (rw): 
+0x20000950 C   FIELD 25w01 reg_gpio_35_set (wo): 
+0x20000950 C   FIELD 26w01 reg_gpio_35_clr (wo): 
+0x20000950 C   FIELD 27w01 reserved_27 (ro): 
+0x20000950 C   FIELD 28w01 reg_gpio_35_i (ro): 
+0x20000950 C   FIELD 29w01 reserved_29 (ro): 
+0x20000950 C   FIELD 30w02 reg_gpio_35_mode (rw): 
 0x20000954 B  REGISTER gpio_cfg36: gpio_cfg36
 0x20000954 C   FIELD 00w01 reg_gpio_36_ie (rw): 
 0x20000954 C   FIELD 01w01 reg_gpio_36_smt (rw): 
@@ -1650,6 +1895,12 @@
 0x20000954 C   FIELD 22w01 reg_gpio_36_int_mask (rw): 
 0x20000954 C   FIELD 23w01 reserved_23 (ro): 
 0x20000954 C   FIELD 24w01 reg_gpio_36_o (rw): 
+0x20000954 C   FIELD 25w01 reg_gpio_36_set (wo): 
+0x20000954 C   FIELD 26w01 reg_gpio_36_clr (wo): 
+0x20000954 C   FIELD 27w01 reserved_27 (ro): 
+0x20000954 C   FIELD 28w01 reg_gpio_36_i (ro): 
+0x20000954 C   FIELD 29w01 reserved_29 (ro): 
+0x20000954 C   FIELD 30w02 reg_gpio_36_mode (rw): 
 0x20000958 B  REGISTER gpio_cfg37: gpio_cfg37
 0x20000958 C   FIELD 00w01 reg_gpio_37_ie (rw): 
 0x20000958 C   FIELD 01w01 reg_gpio_37_smt (rw): 
@@ -1666,6 +1917,12 @@
 0x20000958 C   FIELD 22w01 reg_gpio_37_int_mask (rw): 
 0x20000958 C   FIELD 23w01 reserved_23 (ro): 
 0x20000958 C   FIELD 24w01 reg_gpio_37_o (rw): 
+0x20000958 C   FIELD 25w01 reg_gpio_37_set (wo): 
+0x20000958 C   FIELD 26w01 reg_gpio_37_clr (wo): 
+0x20000958 C   FIELD 27w01 reserved_27 (ro): 
+0x20000958 C   FIELD 28w01 reg_gpio_37_i (ro): 
+0x20000958 C   FIELD 29w01 reserved_29 (ro): 
+0x20000958 C   FIELD 30w02 reg_gpio_37_mode (rw): 
 0x2000095C B  REGISTER gpio_cfg38: gpio_cfg38
 0x2000095C C   FIELD 00w01 reg_gpio_38_ie (rw): 
 0x2000095C C   FIELD 01w01 reg_gpio_38_smt (rw): 
@@ -1682,6 +1939,12 @@
 0x2000095C C   FIELD 22w01 reg_gpio_38_int_mask (rw): 
 0x2000095C C   FIELD 23w01 reserved_23 (ro): 
 0x2000095C C   FIELD 24w01 reg_gpio_38_o (rw): 
+0x2000095C C   FIELD 25w01 reg_gpio_38_set (wo): 
+0x2000095C C   FIELD 26w01 reg_gpio_38_clr (wo): 
+0x2000095C C   FIELD 27w01 reserved_27 (ro): 
+0x2000095C C   FIELD 28w01 reg_gpio_38_i (ro): 
+0x2000095C C   FIELD 29w01 reserved_29 (ro): 
+0x2000095C C   FIELD 30w02 reg_gpio_38_mode (rw): 
 0x20000960 B  REGISTER gpio_cfg39: gpio_cfg39
 0x20000960 C   FIELD 00w01 reg_gpio_39_ie (rw): 
 0x20000960 C   FIELD 01w01 reg_gpio_39_smt (rw): 
@@ -1698,6 +1961,12 @@
 0x20000960 C   FIELD 22w01 reg_gpio_39_int_mask (rw): 
 0x20000960 C   FIELD 23w01 reserved_23 (ro): 
 0x20000960 C   FIELD 24w01 reg_gpio_39_o (rw): 
+0x20000960 C   FIELD 25w01 reg_gpio_39_set (wo): 
+0x20000960 C   FIELD 26w01 reg_gpio_39_clr (wo): 
+0x20000960 C   FIELD 27w01 reserved_27 (ro): 
+0x20000960 C   FIELD 28w01 reg_gpio_39_i (ro): 
+0x20000960 C   FIELD 29w01 reserved_29 (ro): 
+0x20000960 C   FIELD 30w02 reg_gpio_39_mode (rw): 
 0x20000964 B  REGISTER gpio_cfg40: gpio_cfg40
 0x20000964 C   FIELD 00w01 reg_gpio_40_ie (rw): 
 0x20000964 C   FIELD 01w01 reg_gpio_40_smt (rw): 
@@ -1714,6 +1983,12 @@
 0x20000964 C   FIELD 22w01 reg_gpio_40_int_mask (rw): 
 0x20000964 C   FIELD 23w01 reserved_23 (ro): 
 0x20000964 C   FIELD 24w01 reg_gpio_40_o (rw): 
+0x20000964 C   FIELD 25w01 reg_gpio_40_set (wo): 
+0x20000964 C   FIELD 26w01 reg_gpio_40_clr (wo): 
+0x20000964 C   FIELD 27w01 reserved_27 (ro): 
+0x20000964 C   FIELD 28w01 reg_gpio_40_i (ro): 
+0x20000964 C   FIELD 29w01 reserved_29 (ro): 
+0x20000964 C   FIELD 30w02 reg_gpio_40_mode (rw): 
 0x20000968 B  REGISTER gpio_cfg41: gpio_cfg41
 0x20000968 C   FIELD 00w01 reg_gpio_41_ie (rw): 
 0x20000968 C   FIELD 01w01 reg_gpio_41_smt (rw): 
@@ -1730,6 +2005,12 @@
 0x20000968 C   FIELD 22w01 reg_gpio_41_int_mask (rw): 
 0x20000968 C   FIELD 23w01 reserved_23 (ro): 
 0x20000968 C   FIELD 24w01 reg_gpio_41_o (rw): 
+0x20000968 C   FIELD 25w01 reg_gpio_41_set (wo): 
+0x20000968 C   FIELD 26w01 reg_gpio_41_clr (wo): 
+0x20000968 C   FIELD 27w01 reserved_27 (ro): 
+0x20000968 C   FIELD 28w01 reg_gpio_41_i (ro): 
+0x20000968 C   FIELD 29w01 reserved_29 (ro): 
+0x20000968 C   FIELD 30w02 reg_gpio_41_mode (rw): 
 0x2000096C B  REGISTER gpio_cfg42: gpio_cfg42
 0x2000096C C   FIELD 00w01 reg_gpio_42_ie (rw): 
 0x2000096C C   FIELD 01w01 reg_gpio_42_smt (rw): 
@@ -1746,6 +2027,12 @@
 0x2000096C C   FIELD 22w01 reg_gpio_42_int_mask (rw): 
 0x2000096C C   FIELD 23w01 reserved_23 (ro): 
 0x2000096C C   FIELD 24w01 reg_gpio_42_o (rw): 
+0x2000096C C   FIELD 25w01 reg_gpio_42_set (wo): 
+0x2000096C C   FIELD 26w01 reg_gpio_42_clr (wo): 
+0x2000096C C   FIELD 27w01 reserved_27 (ro): 
+0x2000096C C   FIELD 28w01 reg_gpio_42_i (ro): 
+0x2000096C C   FIELD 29w01 reserved_29 (ro): 
+0x2000096C C   FIELD 30w02 reg_gpio_42_mode (rw): 
 0x20000970 B  REGISTER gpio_cfg43: gpio_cfg43
 0x20000970 C   FIELD 00w01 reg_gpio_43_ie (rw): 
 0x20000970 C   FIELD 01w01 reg_gpio_43_smt (rw): 
@@ -1762,6 +2049,12 @@
 0x20000970 C   FIELD 22w01 reg_gpio_43_int_mask (rw): 
 0x20000970 C   FIELD 23w01 reserved_23 (ro): 
 0x20000970 C   FIELD 24w01 reg_gpio_43_o (rw): 
+0x20000970 C   FIELD 25w01 reg_gpio_43_set (wo): 
+0x20000970 C   FIELD 26w01 reg_gpio_43_clr (wo): 
+0x20000970 C   FIELD 27w01 reserved_27 (ro): 
+0x20000970 C   FIELD 28w01 reg_gpio_43_i (ro): 
+0x20000970 C   FIELD 29w01 reserved_29 (ro): 
+0x20000970 C   FIELD 30w02 reg_gpio_43_mode (rw): 
 0x20000974 B  REGISTER gpio_cfg44: gpio_cfg44
 0x20000974 C   FIELD 00w01 reg_gpio_44_ie (rw): 
 0x20000974 C   FIELD 01w01 reg_gpio_44_smt (rw): 
@@ -1778,6 +2071,12 @@
 0x20000974 C   FIELD 22w01 reg_gpio_44_int_mask (rw): 
 0x20000974 C   FIELD 23w01 reserved_23 (ro): 
 0x20000974 C   FIELD 24w01 reg_gpio_44_o (rw): 
+0x20000974 C   FIELD 25w01 reg_gpio_44_set (wo): 
+0x20000974 C   FIELD 26w01 reg_gpio_44_clr (wo): 
+0x20000974 C   FIELD 27w01 reserved_27 (ro): 
+0x20000974 C   FIELD 28w01 reg_gpio_44_i (ro): 
+0x20000974 C   FIELD 29w01 reserved_29 (ro): 
+0x20000974 C   FIELD 30w02 reg_gpio_44_mode (rw): 
 0x20000978 B  REGISTER gpio_cfg45: gpio_cfg45
 0x20000978 C   FIELD 00w01 reg_gpio_45_ie (rw): 
 0x20000978 C   FIELD 01w01 reg_gpio_45_smt (rw): 
@@ -1794,6 +2093,12 @@
 0x20000978 C   FIELD 22w01 reg_gpio_45_int_mask (rw): 
 0x20000978 C   FIELD 23w01 reserved_23 (ro): 
 0x20000978 C   FIELD 24w01 reg_gpio_45_o (rw): 
+0x20000978 C   FIELD 25w01 reg_gpio_45_set (wo): 
+0x20000978 C   FIELD 26w01 reg_gpio_45_clr (wo): 
+0x20000978 C   FIELD 27w01 reserved_27 (ro): 
+0x20000978 C   FIELD 28w01 reg_gpio_45_i (ro): 
+0x20000978 C   FIELD 29w01 reserved_29 (ro): 
+0x20000978 C   FIELD 30w02 reg_gpio_45_mode (rw): 
 0x2000097C B  REGISTER gpio_cfg46: gpio_cfg46
 0x2000097C C   FIELD 00w01 reg_gpio_46_ie (rw): 
 0x2000097C C   FIELD 01w01 reg_gpio_46_smt (rw): 
@@ -2019,9 +2324,103 @@
 0x20000AE8 C   FIELD 13w01 reg2_gpio_45_o (rw): 
 0x20000AE8 C   FIELD 14w18 reserved_14_31 (ro): 
 0x20000AEC B  REGISTER gpio_cfg138: gpio_cfg138
+0x20000AEC C   FIELD 00w01 reg2_gpio_0_set (wo): 
+0x20000AEC C   FIELD 01w01 reg2_gpio_1_set (wo): 
+0x20000AEC C   FIELD 02w01 reg2_gpio_2_set (wo): 
+0x20000AEC C   FIELD 03w01 reg2_gpio_3_set (wo): 
+0x20000AEC C   FIELD 04w01 reg2_gpio_4_set (wo): 
+0x20000AEC C   FIELD 05w01 reg2_gpio_5_set (wo): 
+0x20000AEC C   FIELD 06w01 reg2_gpio_6_set (wo): 
+0x20000AEC C   FIELD 07w01 reg2_gpio_7_set (wo): 
+0x20000AEC C   FIELD 08w01 reg2_gpio_8_set (wo): 
+0x20000AEC C   FIELD 09w01 reg2_gpio_9_set (wo): 
+0x20000AEC C   FIELD 10w01 reg2_gpio_10_set (wo): 
+0x20000AEC C   FIELD 11w01 reg2_gpio_11_set (wo): 
+0x20000AEC C   FIELD 12w01 reg2_gpio_12_set (wo): 
+0x20000AEC C   FIELD 13w01 reg2_gpio_13_set (wo): 
+0x20000AEC C   FIELD 14w01 reg2_gpio_14_set (wo): 
+0x20000AEC C   FIELD 15w01 reg2_gpio_15_set (wo): 
+0x20000AEC C   FIELD 16w01 reg2_gpio_16_set (wo): 
+0x20000AEC C   FIELD 17w01 reg2_gpio_17_set (wo): 
+0x20000AEC C   FIELD 18w01 reg2_gpio_18_set (wo): 
+0x20000AEC C   FIELD 19w01 reg2_gpio_19_set (wo): 
+0x20000AEC C   FIELD 20w01 reg2_gpio_20_set (wo): 
+0x20000AEC C   FIELD 21w01 reg2_gpio_21_set (wo): 
+0x20000AEC C   FIELD 22w01 reg2_gpio_22_set (wo): 
+0x20000AEC C   FIELD 23w01 reg2_gpio_23_set (wo): 
+0x20000AEC C   FIELD 24w01 reg2_gpio_24_set (wo): 
+0x20000AEC C   FIELD 25w01 reg2_gpio_25_set (wo): 
+0x20000AEC C   FIELD 26w01 reg2_gpio_26_set (wo): 
+0x20000AEC C   FIELD 27w01 reg2_gpio_27_set (wo): 
+0x20000AEC C   FIELD 28w01 reg2_gpio_28_set (wo): 
+0x20000AEC C   FIELD 29w01 reg2_gpio_29_set (wo): 
+0x20000AEC C   FIELD 30w01 reg2_gpio_30_set (wo): 
+0x20000AEC C   FIELD 31w01 reg2_gpio_31_set (wo): 
 0x20000AF0 B  REGISTER gpio_cfg139: gpio_cfg139
+0x20000AF0 C   FIELD 00w01 reg2_gpio_32_set (wo): 
+0x20000AF0 C   FIELD 01w01 reg2_gpio_33_set (wo): 
+0x20000AF0 C   FIELD 02w01 reg2_gpio_34_set (wo): 
+0x20000AF0 C   FIELD 03w01 reg2_gpio_35_set (wo): 
+0x20000AF0 C   FIELD 04w01 reg2_gpio_36_set (wo): 
+0x20000AF0 C   FIELD 05w01 reg2_gpio_37_set (wo): 
+0x20000AF0 C   FIELD 06w01 reg2_gpio_38_set (wo): 
+0x20000AF0 C   FIELD 07w01 reg2_gpio_39_set (wo): 
+0x20000AF0 C   FIELD 08w01 reg2_gpio_40_set (wo): 
+0x20000AF0 C   FIELD 09w01 reg2_gpio_41_set (wo): 
+0x20000AF0 C   FIELD 10w01 reg2_gpio_42_set (wo): 
+0x20000AF0 C   FIELD 11w01 reg2_gpio_43_set (wo): 
+0x20000AF0 C   FIELD 12w01 reg2_gpio_44_set (wo): 
+0x20000AF0 C   FIELD 13w01 reg2_gpio_45_set (wo): 
+0x20000AF0 C   FIELD 14w18 reserved_14_31 (ro): 
 0x20000AF4 B  REGISTER gpio_cfg140: gpio_cfg140
+0x20000AF4 C   FIELD 00w01 reg2_gpio_0_clr (wo): 
+0x20000AF4 C   FIELD 01w01 reg2_gpio_1_clr (wo): 
+0x20000AF4 C   FIELD 02w01 reg2_gpio_2_clr (wo): 
+0x20000AF4 C   FIELD 03w01 reg2_gpio_3_clr (wo): 
+0x20000AF4 C   FIELD 04w01 reg2_gpio_4_clr (wo): 
+0x20000AF4 C   FIELD 05w01 reg2_gpio_5_clr (wo): 
+0x20000AF4 C   FIELD 06w01 reg2_gpio_6_clr (wo): 
+0x20000AF4 C   FIELD 07w01 reg2_gpio_7_clr (wo): 
+0x20000AF4 C   FIELD 08w01 reg2_gpio_8_clr (wo): 
+0x20000AF4 C   FIELD 09w01 reg2_gpio_9_clr (wo): 
+0x20000AF4 C   FIELD 10w01 reg2_gpio_10_clr (wo): 
+0x20000AF4 C   FIELD 11w01 reg2_gpio_11_clr (wo): 
+0x20000AF4 C   FIELD 12w01 reg2_gpio_12_clr (wo): 
+0x20000AF4 C   FIELD 13w01 reg2_gpio_13_clr (wo): 
+0x20000AF4 C   FIELD 14w01 reg2_gpio_14_clr (wo): 
+0x20000AF4 C   FIELD 15w01 reg2_gpio_15_clr (wo): 
+0x20000AF4 C   FIELD 16w01 reg2_gpio_16_clr (wo): 
+0x20000AF4 C   FIELD 17w01 reg2_gpio_17_clr (wo): 
+0x20000AF4 C   FIELD 18w01 reg2_gpio_18_clr (wo): 
+0x20000AF4 C   FIELD 19w01 reg2_gpio_19_clr (wo): 
+0x20000AF4 C   FIELD 20w01 reg2_gpio_20_clr (wo): 
+0x20000AF4 C   FIELD 21w01 reg2_gpio_21_clr (wo): 
+0x20000AF4 C   FIELD 22w01 reg2_gpio_22_clr (wo): 
+0x20000AF4 C   FIELD 23w01 reg2_gpio_23_clr (wo): 
+0x20000AF4 C   FIELD 24w01 reg2_gpio_24_clr (wo): 
+0x20000AF4 C   FIELD 25w01 reg2_gpio_25_clr (wo): 
+0x20000AF4 C   FIELD 26w01 reg2_gpio_26_clr (wo): 
+0x20000AF4 C   FIELD 27w01 reg2_gpio_27_clr (wo): 
+0x20000AF4 C   FIELD 28w01 reg2_gpio_28_clr (wo): 
+0x20000AF4 C   FIELD 29w01 reg2_gpio_29_clr (wo): 
+0x20000AF4 C   FIELD 30w01 reg2_gpio_30_clr (wo): 
+0x20000AF4 C   FIELD 31w01 reg2_gpio_31_clr (wo): 
 0x20000AF8 B  REGISTER gpio_cfg141: gpio_cfg141
+0x20000AF8 C   FIELD 00w01 reg2_gpio_32_clr (wo): 
+0x20000AF8 C   FIELD 01w01 reg2_gpio_33_clr (wo): 
+0x20000AF8 C   FIELD 02w01 reg2_gpio_34_clr (wo): 
+0x20000AF8 C   FIELD 03w01 reg2_gpio_35_clr (wo): 
+0x20000AF8 C   FIELD 04w01 reg2_gpio_36_clr (wo): 
+0x20000AF8 C   FIELD 05w01 reg2_gpio_37_clr (wo): 
+0x20000AF8 C   FIELD 06w01 reg2_gpio_38_clr (wo): 
+0x20000AF8 C   FIELD 07w01 reg2_gpio_39_clr (wo): 
+0x20000AF8 C   FIELD 08w01 reg2_gpio_40_clr (wo): 
+0x20000AF8 C   FIELD 09w01 reg2_gpio_41_clr (wo): 
+0x20000AF8 C   FIELD 10w01 reg2_gpio_42_clr (wo): 
+0x20000AF8 C   FIELD 11w01 reg2_gpio_43_clr (wo): 
+0x20000AF8 C   FIELD 12w01 reg2_gpio_44_clr (wo): 
+0x20000AF8 C   FIELD 13w01 reg2_gpio_45_clr (wo): 
+0x20000AF8 C   FIELD 14w18 reserved_14_31 (ro): 
 0x20000AFC B  REGISTER gpio_cfg142: gpio_cfg142
 0x20000AFC C   FIELD 00w01 cr_gpio_tx_en (rw): 
 0x20000AFC C   FIELD 01w01 cr_invert_code0_high (rw): 
@@ -2033,15 +2432,72 @@
 0x20000B00 B  REGISTER gpio_cfg143: gpio_cfg143
 0x20000B00 C   FIELD 00w01 cr_gpio_dma_tx_en (rw): 
 0x20000B00 C   FIELD 01w01 cr_gpio_dma_out_sel_latch (rw): 
+0x20000B00 C   FIELD 02w01 gpio_tx_fifo_clr (wo): 
+0x20000B00 C   FIELD 03w01 gpio_tx_end_clr (wo): 
+0x20000B00 C   FIELD 04w01 gpio_tx_fifo_overflow (ro): 
+0x20000B00 C   FIELD 05w01 gpio_tx_fifo_underflow (ro): 
+0x20000B00 C   FIELD 06w01 reserved_6 (ro): 
+0x20000B00 C   FIELD 07w01 cr_gpio_dma_park_value (rw): 
+0x20000B00 C   FIELD 08w08 gpio_tx_fifo_cnt (ro): 
+0x20000B00 C   FIELD 16w07 cr_gpio_tx_fifo_th (rw): 
+0x20000B00 C   FIELD 23w01 cr_gpio_tx_end_mask (rw): 
+0x20000B00 C   FIELD 24w01 cr_gpio_tx_fifo_mask (rw): 
+0x20000B00 C   FIELD 25w01 cr_gpio_tx_fer_mask (rw): 
+0x20000B00 C   FIELD 26w01 r_gpio_tx_end_int (ro): 
+0x20000B00 C   FIELD 27w01 r_gpio_tx_fifo_int (ro): 
+0x20000B00 C   FIELD 28w01 r_gpio_tx_fer_int (ro): 
+0x20000B00 C   FIELD 29w01 cr_gpio_tx_end_en (rw): 
+0x20000B00 C   FIELD 30w01 cr_gpio_tx_fifo_en (rw): 
+0x20000B00 C   FIELD 31w01 cr_gpio_tx_fer_en (rw): 
+0x20000B04 B  REGISTER gpio_cfg144: gpio_cfg144
 0x20002000 A PERIPHERAL GPIP
-0x20002000 B  REGISTER gpadc_pir_train: gpadc_config
-0x20002000 C   FIELD 00w05 pir_extend (rw): 
-0x20002000 C   FIELD 05w03 reserved_5_7 (ro): 
-0x20002000 C   FIELD 08w05 pir_cnt_v (ro): 
-0x20002000 C   FIELD 13w03 reserved_13_15 (ro): 
-0x20002000 C   FIELD 16w01 pir_train (rw): 
-0x20002000 C   FIELD 17w01 pir_stop (ro): 
-0x20002000 C   FIELD 18w14 reserved_18_31 (ro): 
+0x20002000 B  REGISTER gpadc_config: gpadc_config
+0x20002000 C   FIELD 00w01 gpadc_dma_en (rw): 
+0x20002000 C   FIELD 01w01 gpadc_fifo_clr (wo): 
+0x20002000 C   FIELD 02w01 gpadc_fifo_ne (ro): 
+0x20002000 C   FIELD 03w01 gpadc_fifo_full (ro): 
+0x20002000 C   FIELD 04w01 gpadc_rdy (ro): 
+0x20002000 C   FIELD 05w01 gpadc_fifo_overrun (ro): 
+0x20002000 C   FIELD 06w01 gpadc_fifo_underrun (ro): 
+0x20002000 C   FIELD 07w01 reserved_7 (ro): 
+0x20002000 C   FIELD 08w01 gpadc_rdy_clr (rw): 
+0x20002000 C   FIELD 09w01 gpadc_fifo_overrun_clr (rw): 
+0x20002000 C   FIELD 10w01 gpadc_fifo_underrun_clr (rw): 
+0x20002000 C   FIELD 11w01 reserved_11 (ro): 
+0x20002000 C   FIELD 12w01 gpadc_rdy_mask (rw): 
+0x20002000 C   FIELD 13w01 gpadc_fifo_overrun_mask (rw): 
+0x20002000 C   FIELD 14w01 gpadc_fifo_underrun_mask (rw): 
+0x20002000 C   FIELD 15w01 reserved_15 (ro): 
+0x20002000 C   FIELD 16w06 gpadc_fifo_data_count (ro): 
+0x20002000 C   FIELD 22w02 gpadc_fifo_thl (rw): 
+0x20002000 C   FIELD 24w08 rsvd_31_24 (ro): 
+0x20002004 B  REGISTER gpadc_dma_rdata: gpadc_dma_rdata
+0x20002004 C   FIELD 00w26 gpadc_dma_rdata (ro): 
+0x20002004 C   FIELD 26w06 rsvd_31_26 (ro): 
+0x20002020 B  REGISTER gpadc_pir_train: gpadc_pir_train
+0x20002020 C   FIELD 00w05 pir_extend (rw): 
+0x20002020 C   FIELD 05w03 reserved_5_7 (ro): 
+0x20002020 C   FIELD 08w05 pir_cnt_v (ro): 
+0x20002020 C   FIELD 13w03 reserved_13_15 (ro): 
+0x20002020 C   FIELD 16w01 pir_train (rw): 
+0x20002020 C   FIELD 17w01 pir_stop (ro): 
+0x20002020 C   FIELD 18w14 reserved_18_31 (ro): 
+0x20002040 B  REGISTER gpdac_config: gpdac_config
+0x20002040 C   FIELD 00w01 gpdac_en (rw): 
+0x20002044 B  REGISTER gpdac_dma_config: gpdac_dma_config
+0x20002044 C   FIELD 00w01 gpdac_dma_tx_en (rw): 
+0x20002044 C   FIELD 01w01 gpdac_dma_inv_msb (rw): 
+0x20002044 C   FIELD 02w02 reserved_2_3 (ro): 
+0x20002044 C   FIELD 04w04 gpdac_dma_format (rw): 
+0x20002044 C   FIELD 08w24 reserved_8_31 (ro): 
+0x20002048 B  REGISTER gpdac_dma_wdata: gpdac_dma_wdata
+0x2000204C B  REGISTER gpdac_tx_fifo_status: gpdac_tx_fifo_status
+0x2000204C C   FIELD 00w01 tx_fifo_empty (ro): 
+0x2000204C C   FIELD 01w01 tx_fifo_full (ro): 
+0x2000204C C   FIELD 02w02 tx_cs (ro): 
+0x2000204C C   FIELD 04w04 TxFifoRdPtr (ro): 
+0x2000204C C   FIELD 08w02 TxFifoWrPtr (ro): 
+0x2000204C C   FIELD 10w22 reserved_10_31 (ro): 
 0x20005000 A PERIPHERAL TZC_SEC
 0x20005040 B  REGISTER tzc_rom_tzsrg_ctrl: tzc_rom_tzsrg_ctrl
 0x20005040 C   FIELD 00w02 tzc_rom_tzsrg_r0_id_en (rw): 
@@ -2691,6 +3147,19 @@
 0x20005F44 C   FIELD 02w02 tzc_sf_sec_tzsid_en (rw): 
 0x20005F44 C   FIELD 04w01 tzc_sf_tzsid_crmd (rw): 
 0x20005F44 C   FIELD 05w27 reserved_5_31 (ro): 
+0x20005F48 B  REGISTER tzc_se_ctrl_2: tzc_se_ctrl_2
+0x20005F48 C   FIELD 00w01 tzc_se_sha_tzsid_lock (rw): 
+0x20005F48 C   FIELD 01w01 tzc_se_aes_tzsid_lock (rw): 
+0x20005F48 C   FIELD 02w01 tzc_se_trng_tzsid_lock (rw): 
+0x20005F48 C   FIELD 03w01 tzc_se_pka_tzsid_lock (rw): 
+0x20005F48 C   FIELD 04w01 tzc_se_cdet_tzsid_lock (rw): 
+0x20005F48 C   FIELD 05w01 tzc_se_gmac_tzsid_lock (rw): 
+0x20005F48 C   FIELD 06w01 tzc_se_tzsid_crmd_lock (rw): 
+0x20005F48 C   FIELD 07w09 reserved_7_15 (ro): 
+0x20005F48 C   FIELD 16w01 tzc_sf_cr_tzsid_lock (rw): 
+0x20005F48 C   FIELD 17w01 tzc_sf_sec_tzsid_lock (rw): 
+0x20005F48 C   FIELD 18w01 tzc_sf_tzsid_crmd_lock (rw): 
+0x20005F48 C   FIELD 19w13 reserved_19_31 (ro): 
 0x20006000 A PERIPHERAL TZC_NSEC
 0x20006040 B  REGISTER tzc_rom_tzsrg_ctrl: tzc_rom_tzsrg_ctrl
 0x20006040 C   FIELD 00w02 tzc_rom_tzsrg_r0_id_en (ro): 
@@ -3340,6 +3809,19 @@
 0x20006F44 C   FIELD 02w02 tzc_sf_sec_tzsid_en (ro): 
 0x20006F44 C   FIELD 04w01 tzc_sf_tzsid_crmd (ro): 
 0x20006F44 C   FIELD 05w27 reserved_5_31 (ro): 
+0x20006F48 B  REGISTER tzc_se_ctrl_2: tzc_se_ctrl_2
+0x20006F48 C   FIELD 00w01 tzc_se_sha_tzsid_lock (ro): 
+0x20006F48 C   FIELD 01w01 tzc_se_aes_tzsid_lock (ro): 
+0x20006F48 C   FIELD 02w01 tzc_se_trng_tzsid_lock (ro): 
+0x20006F48 C   FIELD 03w01 tzc_se_pka_tzsid_lock (ro): 
+0x20006F48 C   FIELD 04w01 tzc_se_cdet_tzsid_lock (ro): 
+0x20006F48 C   FIELD 05w01 tzc_se_gmac_tzsid_lock (ro): 
+0x20006F48 C   FIELD 06w01 tzc_se_tzsid_crmd_lock (ro): 
+0x20006F48 C   FIELD 07w09 reserved_7_15 (ro): 
+0x20006F48 C   FIELD 16w01 tzc_sf_cr_tzsid_lock (ro): 
+0x20006F48 C   FIELD 17w01 tzc_sf_sec_tzsid_lock (ro): 
+0x20006F48 C   FIELD 18w01 tzc_sf_tzsid_crmd_lock (ro): 
+0x20006F48 C   FIELD 19w13 reserved_19_31 (ro): 
 0x20008000 A PERIPHERAL CCI
 0x20008000 B  REGISTER cci_cfg: cci_cfg
 0x20008000 C   FIELD 00w01 cci_en (rw): 
@@ -3575,6 +4057,18 @@
 0x200087F8 C   FIELD 17w03 reserved_17_19 (ro): 
 0x200087F8 C   FIELD 20w01 cpupll_ssc_start (rw): 
 0x200087F8 C   FIELD 21w11 reserved_21_31 (ro): 
+0x200087FC B  REGISTER cpu_pll_cfg11: cpu_pll_cfg11
+0x200087FC C   FIELD 00w16 cpupll_resv (rw): 
+0x200087FC C   FIELD 16w07 reserved_16_22 (ro): 
+0x200087FC C   FIELD 23w01 cpupll_dl_ctrl_15 (rw): 
+0x200087FC C   FIELD 24w01 cpupll_dl_ctrl_10 (rw): 
+0x200087FC C   FIELD 25w01 cpupll_dl_ctrl_6 (rw): 
+0x200087FC C   FIELD 26w01 cpupll_dl_ctrl_5 (rw): 
+0x200087FC C   FIELD 27w01 cpupll_dl_ctrl_4 (rw): 
+0x200087FC C   FIELD 28w01 cpupll_dl_ctrl_3 (rw): 
+0x200087FC C   FIELD 29w01 cpupll_dl_ctrl_2p5 (rw): 
+0x200087FC C   FIELD 30w01 cpupll_dl_ctrl_2 (rw): 
+0x200087FC C   FIELD 31w01 cpupll_dl_ctrl_1 (rw): 
 0x20009000 A PERIPHERAL MISC
 0x20009000 B  REGISTER mcu_bus_cfg0: mcu_bus_cfg0
 0x20009000 C   FIELD 00w01 reg_mcu_infra_timeout_en (rw): 
@@ -3630,7 +4124,53 @@
 0x20009120 C   FIELD 30w02 reserved_30_31 (ro): 
 0x20009208 B  REGISTER irom1_misr_dataout_0: irom1_misr_dataout_0
 0x20009208 C   FIELD 00w32 reserved_0_31 (ro): 
+0x2000920C B  REGISTER irom1_misr_dataout_1: irom1_misr_dataout_1
+0x2000920C C   FIELD 00w32 reserved_0_31 (ro): 
 0x2000A800 A PERIPHERAL IPC
+0x2000A800 B  REGISTER CPU1_IPC_ISWR: Interrupt Set Write Register
+0x2000A800 C   FIELD 00w16 CPU1_IPC_ISWR (wo): 
+0x2000A800 C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A804 B  REGISTER CPU1_IPC_IRSRR: Interrupt raw status Register
+0x2000A804 C   FIELD 00w16 CPU1_IPC_IRSRR (ro): 
+0x2000A804 C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A808 B  REGISTER CPU1_IPC_ICR: Interrupt Clear Register
+0x2000A808 C   FIELD 00w16 CPU1_IPC_ICR (wo): 
+0x2000A808 C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A80C B  REGISTER CPU1_IPC_IUSR: Interrupt Unmask Set Register
+0x2000A80C C   FIELD 00w16 CPU1_IPC_IUSR (ro): 
+0x2000A80C C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A810 B  REGISTER CPU1_IPC_IUCR: Interrupt Unmask Clear Register
+0x2000A810 C   FIELD 00w16 CPU1_IPC_IUCR (wo): 
+0x2000A810 C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A814 B  REGISTER CPU1_IPC_ILSLR: Interrupt Line Sel Low Register
+0x2000A814 C   FIELD 00w32 CPU1_IPC_ILSLR (rw): 
+0x2000A818 B  REGISTER CPU1_IPC_ILSHR: Interrupt Line Sel High Register
+0x2000A818 C   FIELD 00w32 CPU1_IPC_ILSHR (rw): 
+0x2000A81C B  REGISTER CPU1_IPC_ISR: Interrupt status Register
+0x2000A81C C   FIELD 00w16 CPU1_IPC_ISR (ro): 
+0x2000A81C C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A820 B  REGISTER CPU0_IPC_ISWR: Interrupt Set Write Register
+0x2000A820 C   FIELD 00w16 CPU0_IPC_ISWR (wo): 
+0x2000A820 C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A824 B  REGISTER CPU0_IPC_IRSRR: Interrupt raw status Register
+0x2000A824 C   FIELD 00w16 CPU0_IPC_IRSRR (ro): 
+0x2000A824 C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A828 B  REGISTER CPU0_IPC_ICR: Interrupt Clear Register
+0x2000A828 C   FIELD 00w16 CPU0_IPC_ICR (wo): 
+0x2000A828 C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A82C B  REGISTER CPU0_IPC_IUSR: Interrupt Unmask Set Register
+0x2000A82C C   FIELD 00w16 CPU0_IPC_IUSR (ro): 
+0x2000A82C C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A830 B  REGISTER CPU0_IPC_IUCR: Interrupt Unmask Clear Register
+0x2000A830 C   FIELD 00w16 CPU0_IPC_IUCR (ro): 
+0x2000A830 C   FIELD 16w16 Reserved_31_16 (ro): 
+0x2000A834 B  REGISTER CPU0_IPC_ILSLR: Interrupt Line Sel Low Register
+0x2000A834 C   FIELD 00w32 CPU0_IPC_ILSLR (rw): 
+0x2000A838 B  REGISTER CPU0_IPC_ILSHR: Interrupt Line Sel High Register
+0x2000A838 C   FIELD 00w32 CPU0_IPC_ILSHR (rw): 
+0x2000A83C B  REGISTER CPU0_IPC_ISR: Interrupt status Register
+0x2000A83C C   FIELD 00w16 CPU0_IPC_ISR (ro): 
+0x2000A83C C   FIELD 16w16 Reserved_31_16 (ro): 
 0x2000B000 A PERIPHERAL FLASH
 0x2000B000 B  REGISTER if_sahb_0: sf_if_sahb_0
 0x2000B000 B  REGISTER io_dly_0: if_io_dly_0
@@ -3807,13 +4347,16 @@
 0x2000B030 C   FIELD 30w01 sf_aes_region_en (rw): 
 0x2000B030 C   FIELD 30w02 sf_dqs_do_dly_sel (rw): 
 0x2000B030 C   FIELD 31w01 sf_aes_region_lock (rw): 
+0x2000B034 B  REGISTER sf_aes_end: sf_aes_end
 0x2000B034 B  REGISTER sf_if_io_dly_1: sf_if_io_dly_1
 0x2000B034 C   FIELD 00w02 sf_io_0_oe_dly_sel (rw): 
+0x2000B034 C   FIELD 00w19 sf_aes_region_end (rw): 
 0x2000B034 C   FIELD 02w06 reserved_2_7 (ro): 
 0x2000B034 C   FIELD 08w02 sf_io_0_di_dly_sel (rw): 
 0x2000B034 C   FIELD 10w06 reserved_10_15 (ro): 
 0x2000B034 C   FIELD 16w02 sf_io_0_do_dly_sel (rw): 
 0x2000B034 C   FIELD 18w14 reserved_18_31 (ro): 
+0x2000B034 C   FIELD 19w13 reserved_19_31 (ro): 
 0x2000B038 B  REGISTER sf_if_io_dly_2: sf_if_io_dly_2
 0x2000B038 C   FIELD 00w02 sf_io_1_oe_dly_sel (rw): 
 0x2000B038 C   FIELD 02w06 reserved_2_7 (ro): 
@@ -4176,7 +4719,120 @@
 0x2000B334 C   FIELD 00w19 sf_aes_r2_end (rw): 
 0x2000B334 C   FIELD 19w13 reserved_19_31 (ro): 
 0x2000E000 A PERIPHERAL PDS_BASE
-0x2000E000 B  REGISTER pds_stat: PDS_CTL
+0x2000E000 B  REGISTER PDS_CTL: PDS_CTL
+0x2000E000 C   FIELD 00w01 pds_start_ps (wo): 
+0x2000E000 C   FIELD 01w01 cr_sleep_forever (rw): 
+0x2000E000 C   FIELD 02w01 cr_xtal_force_off (rw): 
+0x2000E000 C   FIELD 03w01 cr_pds_wifi_save_state (rw): 
+0x2000E000 C   FIELD 04w01 cr_pds_pd_dcdc11 (rw): 
+0x2000E000 C   FIELD 05w01 cr_pds_pd_bg_sys (rw): 
+0x2000E000 C   FIELD 06w01 cr_pds_ctrl_gpio_ie_pu_pd (rw): 
+0x2000E000 C   FIELD 07w01 cr_pds_pd_dcdc18 (rw): 
+0x2000E000 C   FIELD 08w01 cr_pds_gate_clk (rw): 
+0x2000E000 C   FIELD 09w01 cr_pds_mem_stby (rw): 
+0x2000E000 C   FIELD 10w01 cr_pds_glb_reg_reset_protect (rw): 
+0x2000E000 C   FIELD 11w01 cr_pds_iso_en (rw): 
+0x2000E000 C   FIELD 12w01 cr_pds_wait_xtal_rdy (rw): 
+0x2000E000 C   FIELD 13w01 cr_pds_pwr_off (rw): 
+0x2000E000 C   FIELD 14w01 cr_pds_pd_xtal (rw): 
+0x2000E000 C   FIELD 15w01 cr_pds_ctrl_soc_enb (rw): 
+0x2000E000 C   FIELD 16w01 cr_pds_rst_soc (rw): 
+0x2000E000 C   FIELD 17w01 cr_pds_rc32m_off_dis (rw): 
+0x2000E000 C   FIELD 18w01 cr_pds_dcdc11_vsel_en (rw): 
+0x2000E000 C   FIELD 19w01 cr_pds_ctrl_usbpll_pd (rw): 
+0x2000E000 C   FIELD 20w01 cr_pds_ctrl_aupll_pd (rw): 
+0x2000E000 C   FIELD 21w01 cr_pds_ctrl_cpupll_pd (rw): 
+0x2000E000 C   FIELD 22w01 cr_pds_ctrl_wifipll_pd (rw): 
+0x2000E000 C   FIELD 23w05 cr_pds_dcdc11_vol (rw): 
+0x2000E000 C   FIELD 28w02 cr_pds_ctrl_rf (rw): 
+0x2000E000 C   FIELD 30w01 cr_pds_start_use_tbtt_sleep (rw): 
+0x2000E000 C   FIELD 31w01 cr_pds_gpio_iso_mode (rw): 
+0x2000E004 B  REGISTER PDS_TIME1: PDS_TIME1
+0x2000E004 C   FIELD 00w32 cr_sleep_duration (rw): 
+0x2000E00C B  REGISTER PDS_INT: PDS_INT
+0x2000E00C C   FIELD 00w01 ro_pds_wake_int (ro): 
+0x2000E00C C   FIELD 01w01 ro_pds_rf_done_int (ro): 
+0x2000E00C C   FIELD 02w01 ro_pds_wifi_tbtt_sleep_irq (ro): 
+0x2000E00C C   FIELD 03w01 ro_pds_wifi_tbtt_wakeup_irq (ro): 
+0x2000E00C C   FIELD 04w01 cr_pds_wake_int_mask (rw): 
+0x2000E00C C   FIELD 05w01 cr_pds_rf_done_int_mask (rw): 
+0x2000E00C C   FIELD 06w01 cr_pds_wifi_tbtt_sleep_irq_mask (rw): 
+0x2000E00C C   FIELD 07w01 cr_pds_wifi_tbtt_wakeup_irq_mask (rw): 
+0x2000E00C C   FIELD 08w01 cr_pds_int_clr (rw): 
+0x2000E00C C   FIELD 09w01 reserved_9 (ro): 
+0x2000E00C C   FIELD 10w11 cr_pds_wakeup_src_en (rw): 
+0x2000E00C C   FIELD 21w11 ro_pds_wakeup_event (ro): 
+0x2000E010 B  REGISTER PDS_CTL2: PDS_CTL2
+0x2000E010 C   FIELD 00w01 reserved_0 (ro): 
+0x2000E010 C   FIELD 01w01 cr_pds_force_mm_pwr_off (rw): 
+0x2000E010 C   FIELD 02w01 reserved_2 (ro): 
+0x2000E010 C   FIELD 03w01 cr_pds_force_usb_pwr_off (rw): 
+0x2000E010 C   FIELD 04w01 reserved_4 (ro): 
+0x2000E010 C   FIELD 05w01 cr_pds_force_mm_iso_en (rw): 
+0x2000E010 C   FIELD 06w01 reserved_6 (ro): 
+0x2000E010 C   FIELD 07w01 cr_pds_force_usb_iso_en (rw): 
+0x2000E010 C   FIELD 08w01 cr_pds_force_np_pds_rst (rw): 
+0x2000E010 C   FIELD 09w01 cr_pds_force_mm_pds_rst (rw): 
+0x2000E010 C   FIELD 10w01 cr_pds_force_wb_pds_rst (rw): 
+0x2000E010 C   FIELD 11w01 cr_pds_force_usb_pds_rst (rw): 
+0x2000E010 C   FIELD 12w01 cr_pds_force_np_mem_stby (rw): 
+0x2000E010 C   FIELD 13w01 cr_pds_force_mm_mem_stby (rw): 
+0x2000E010 C   FIELD 14w01 cr_pds_force_wb_mem_stby (rw): 
+0x2000E010 C   FIELD 15w01 cr_pds_force_usb_mem_stby (rw): 
+0x2000E010 C   FIELD 16w01 cr_pds_force_np_gate_clk (rw): 
+0x2000E010 C   FIELD 17w01 cr_pds_force_mm_gate_clk (rw): 
+0x2000E010 C   FIELD 18w01 cr_pds_force_wb_gate_clk (rw): 
+0x2000E010 C   FIELD 19w01 cr_pds_force_usb_gate_clk (rw): 
+0x2000E010 C   FIELD 20w12 reserved_20_31 (ro): 
+0x2000E014 B  REGISTER PDS_CTL3: PDS_CTL3
+0x2000E014 C   FIELD 00w01 reserved_0 (ro): 
+0x2000E014 C   FIELD 01w01 cr_pds_force_misc_pwr_off (rw): 
+0x2000E014 C   FIELD 02w02 reserved_2_3 (ro): 
+0x2000E014 C   FIELD 04w01 cr_pds_force_misc_iso_en (rw): 
+0x2000E014 C   FIELD 05w02 reserved_5_6 (ro): 
+0x2000E014 C   FIELD 07w01 cr_pds_force_misc_pds_rst (rw): 
+0x2000E014 C   FIELD 08w02 reserved_8_9 (ro): 
+0x2000E014 C   FIELD 10w01 cr_pds_force_misc_mem_stby (rw): 
+0x2000E014 C   FIELD 11w02 reserved_11_12 (ro): 
+0x2000E014 C   FIELD 13w01 cr_pds_force_misc_gate_clk (rw): 
+0x2000E014 C   FIELD 14w12 reserved_14_25 (ro): 
+0x2000E014 C   FIELD 26w01 cr_pds_mm_iso_en (rw): 
+0x2000E014 C   FIELD 27w02 reserved_27_28 (ro): 
+0x2000E014 C   FIELD 29w01 cr_pds_usb_iso_en (rw): 
+0x2000E014 C   FIELD 30w01 cr_pds_misc_iso_en (rw): 
+0x2000E014 C   FIELD 31w01 reserved_31 (ro): 
+0x2000E018 B  REGISTER PDS_CTL4: PDS_CTL4
+0x2000E018 C   FIELD 00w01 reserved_0 (ro): 
+0x2000E018 C   FIELD 01w01 cr_pds_np_reset (rw): 
+0x2000E018 C   FIELD 02w01 cr_pds_np_mem_stby (rw): 
+0x2000E018 C   FIELD 03w01 cr_pds_np_gate_clk (rw): 
+0x2000E018 C   FIELD 04w04 reserved_4_7 (ro): 
+0x2000E018 C   FIELD 08w01 cr_pds_mm_pwr_off (rw): 
+0x2000E018 C   FIELD 09w01 cr_pds_mm_reset (rw): 
+0x2000E018 C   FIELD 10w01 cr_pds_mm_mem_stby (rw): 
+0x2000E018 C   FIELD 11w01 cr_pds_mm_gate_clk (rw): 
+0x2000E018 C   FIELD 12w01 reserved_12 (ro): 
+0x2000E018 C   FIELD 13w01 cr_pds_wb_reset (rw): 
+0x2000E018 C   FIELD 14w01 cr_pds_wb_mem_stby (rw): 
+0x2000E018 C   FIELD 15w01 cr_pds_wb_gate_clk (rw): 
+0x2000E018 C   FIELD 16w04 reserved_16_19 (ro): 
+0x2000E018 C   FIELD 20w01 cr_pds_usb_pwr_off (rw): 
+0x2000E018 C   FIELD 21w01 cr_pds_usb_reset (rw): 
+0x2000E018 C   FIELD 22w01 cr_pds_usb_mem_stby (rw): 
+0x2000E018 C   FIELD 23w01 cr_pds_usb_gate_clk (rw): 
+0x2000E018 C   FIELD 24w01 cr_pds_misc_pwr_off (rw): 
+0x2000E018 C   FIELD 25w01 cr_pds_misc_reset (rw): 
+0x2000E018 C   FIELD 26w01 cr_pds_misc_mem_stby (rw): 
+0x2000E018 C   FIELD 27w01 cr_pds_misc_gate_clk (rw): 
+0x2000E018 C   FIELD 28w04 reserved_28_31 (ro): 
+0x2000E01C B  REGISTER pds_stat: pds_stat
+0x2000E01C C   FIELD 00w05 ro_pds_state (ro): 
+0x2000E01C C   FIELD 05w03 reserved_5_7 (ro): 
+0x2000E01C C   FIELD 08w05 ro_pds_rf_state (ro): 
+0x2000E01C C   FIELD 13w11 reserved_13_23 (ro): 
+0x2000E01C C   FIELD 24w03 pds_reset_event (ro): 
+0x2000E01C C   FIELD 27w04 reserved_27_30 (ro): 
+0x2000E01C C   FIELD 31w01 pds_clr_reset_event (wo): 
 0x2000E020 B  REGISTER pds_ram1: pds_ram1
 0x2000E020 C   FIELD 00w04 cr_ocram_slp (rw): 
 0x2000E020 C   FIELD 04w04 cr_ocram_ret (rw): 
@@ -4192,7 +4848,7 @@
 0x2000E020 C   FIELD 29w01 reserved_29 (ro): 
 0x2000E020 C   FIELD 30w01 cr_pds_ctrl_ram_clk2 (rw): 
 0x2000E020 C   FIELD 31w01 cr_pds_ctrl_ram_clk (rw): 
-0x2000E024 B  REGISTER pds_gpio_i_set: PDS_CTL5
+0x2000E024 B  REGISTER PDS_CTL5: PDS_CTL5
 0x2000E024 C   FIELD 00w01 cr_np_wfi_mask (rw): 
 0x2000E024 C   FIELD 01w01 reserved_1 (ro): 
 0x2000E024 C   FIELD 02w01 cr_mm_wfi_mask (rw): 
@@ -4204,6 +4860,15 @@
 0x2000E024 C   FIELD 10w06 reserved_10_15 (ro): 
 0x2000E024 C   FIELD 16w03 cr_pds_gpio_keep_en (rw): 
 0x2000E024 C   FIELD 19w13 reserved_19_31 (ro): 
+0x2000E028 B  REGISTER PDS_RAM2: PDS_RAM2
+0x2000E028 C   FIELD 00w10 cr_wram_slp (rw): 
+0x2000E028 C   FIELD 10w10 cr_wram_ret (rw): 
+0x2000E028 C   FIELD 20w12 reserved_20_31 (ro): 
+0x2000E030 B  REGISTER pds_gpio_i_set: pds_gpio_i_set
+0x2000E030 C   FIELD 00w03 cr_pds_gpio_ie_set (rw): 
+0x2000E030 C   FIELD 03w03 cr_pds_gpio_pd_set (rw): 
+0x2000E030 C   FIELD 06w03 cr_pds_gpio_pu_set (rw): 
+0x2000E030 C   FIELD 09w23 reserved_9_31 (ro): 
 0x2000E034 B  REGISTER pds_gpio_pd_set: pds_gpio_pd_set
 0x2000E034 C   FIELD 00w32 cr_pds_gpio_set_int_mask (rw): 
 0x2000E040 B  REGISTER pds_gpio_int: pds_gpio_int
@@ -4354,20 +5019,168 @@
 0x2000EA08 C   FIELD 15w03 reserved_15_17 (ro): 
 0x2000EA08 C   FIELD 18w01 ten_touch (rw): 
 0x2000EA08 C   FIELD 19w13 reserved_19_31 (ro): 
-0x2000EA0C B  REGISTER touch_data_hystersis: Touch_sleep_time
+0x2000EA0C B  REGISTER Touch_sleep_time: Touch_sleep_time
 0x2000EA0C C   FIELD 00w23 touch_sleep_cycle (rw): 
 0x2000EA0C C   FIELD 23w09 reserved_23_31 (ro): 
-0x2000EA14 B  REGISTER touch_rsvd: Channel_force_data_0
+0x2000EA10 B  REGISTER touch_data_hystersis: touch_data_hystersis
+0x2000EA10 C   FIELD 00w09 touch_data_hys (rw): 
+0x2000EA10 C   FIELD 09w23 reserved_9_31 (ro): 
+0x2000EA14 B  REGISTER Channel_force_data_0: Channel_force_data_0
 0x2000EA14 C   FIELD 00w16 touch_force_data_ch0 (rw): 
 0x2000EA14 C   FIELD 16w16 touch_force_data_ch1 (rw): 
+0x2000EA18 B  REGISTER Channel_force_data_1: Channel_force_data_1
+0x2000EA18 C   FIELD 00w16 touch_force_data_ch2 (rw): 
+0x2000EA18 C   FIELD 16w16 touch_force_data_ch3 (rw): 
+0x2000EA1C B  REGISTER Channel_force_data_2: Channel_force_data_2
+0x2000EA1C C   FIELD 00w16 touch_force_data_ch4 (rw): 
+0x2000EA1C C   FIELD 16w16 touch_force_data_ch5 (rw): 
+0x2000EA20 B  REGISTER Channel_force_data_3: Channel_force_data_3
+0x2000EA20 C   FIELD 00w16 touch_force_data_ch6 (rw): 
+0x2000EA20 C   FIELD 16w16 touch_force_data_ch7 (rw): 
+0x2000EA24 B  REGISTER Channel_force_data_4: Channel_force_data_4
+0x2000EA24 C   FIELD 00w16 touch_force_data_ch8 (rw): 
+0x2000EA24 C   FIELD 16w16 touch_force_data_ch9 (rw): 
+0x2000EA28 B  REGISTER Channel_force_data_5: Channel_force_data_5
+0x2000EA28 C   FIELD 00w16 touch_force_data_ch10 (rw): 
+0x2000EA28 C   FIELD 16w16 touch_force_data_ch11 (rw): 
+0x2000EA2C B  REGISTER Channel_vth_data_0: Channel_vth_data_0
+0x2000EA2C C   FIELD 00w08 touch_vth_data_ch0 (rw): 
+0x2000EA2C C   FIELD 08w08 touch_vth_data_ch1 (rw): 
+0x2000EA2C C   FIELD 16w08 touch_vth_data_ch2 (rw): 
+0x2000EA2C C   FIELD 24w08 touch_vth_data_ch3 (rw): 
+0x2000EA30 B  REGISTER Channel_vth_data_1: Channel_vth_data_1
+0x2000EA30 C   FIELD 00w08 touch_vth_data_ch4 (rw): 
+0x2000EA30 C   FIELD 08w08 touch_vth_data_ch5 (rw): 
+0x2000EA30 C   FIELD 16w08 touch_vth_data_ch6 (rw): 
+0x2000EA30 C   FIELD 24w08 touch_vth_data_ch7 (rw): 
+0x2000EA34 B  REGISTER Channel_vth_data_2: Channel_vth_data_2
+0x2000EA34 C   FIELD 00w08 touch_vth_data_ch8 (rw): 
+0x2000EA34 C   FIELD 08w08 touch_vth_data_ch9 (rw): 
+0x2000EA34 C   FIELD 16w08 touch_vth_data_ch10 (rw): 
+0x2000EA34 C   FIELD 24w08 touch_vth_data_ch11 (rw): 
+0x2000EA38 B  REGISTER Channel_raw_data_0: Channel_raw_data_0
+0x2000EA38 C   FIELD 00w16 touch_raw_data_ch0 (ro): 
+0x2000EA38 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA3C B  REGISTER Channel_raw_data_1: Channel_raw_data_1
+0x2000EA3C C   FIELD 00w16 touch_raw_data_ch1 (ro): 
+0x2000EA3C C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA40 B  REGISTER Channel_raw_data_2: Channel_raw_data_2
+0x2000EA40 C   FIELD 00w16 touch_raw_data_ch2 (ro): 
+0x2000EA40 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA44 B  REGISTER Channel_raw_data_3: Channel_raw_data_3
+0x2000EA44 C   FIELD 00w16 touch_raw_data_ch3 (ro): 
+0x2000EA44 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA48 B  REGISTER Channel_raw_data_4: Channel_raw_data_4
+0x2000EA48 C   FIELD 00w16 touch_raw_data_ch4 (ro): 
+0x2000EA48 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA4C B  REGISTER Channel_raw_data_5: Channel_raw_data_5
+0x2000EA4C C   FIELD 00w16 touch_raw_data_ch5 (ro): 
+0x2000EA4C C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA50 B  REGISTER Channel_raw_data_6: Channel_raw_data_6
+0x2000EA50 C   FIELD 00w16 touch_raw_data_ch6 (ro): 
+0x2000EA50 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA54 B  REGISTER Channel_raw_data_7: Channel_raw_data_7
+0x2000EA54 C   FIELD 00w16 touch_raw_data_ch7 (ro): 
+0x2000EA54 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA58 B  REGISTER Channel_raw_data_8: Channel_raw_data_8
+0x2000EA58 C   FIELD 00w16 touch_raw_data_ch8 (ro): 
+0x2000EA58 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA5C B  REGISTER Channel_raw_data_9: Channel_raw_data_9
+0x2000EA5C C   FIELD 00w16 touch_raw_data_ch9 (ro): 
+0x2000EA5C C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA60 B  REGISTER Channel_raw_data_10: Channel_raw_data_10
+0x2000EA60 C   FIELD 00w16 touch_raw_data_ch10 (ro): 
+0x2000EA60 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA64 B  REGISTER Channel_raw_data_11: Channel_raw_data_11
+0x2000EA64 C   FIELD 00w16 touch_raw_data_ch11 (ro): 
+0x2000EA64 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA68 B  REGISTER Channel_LTA_data_0: Channel_LTA_data_0
+0x2000EA68 C   FIELD 00w16 touch_lta_data_ch0 (ro): 
+0x2000EA68 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA6C B  REGISTER Channel_LTA_data_1: Channel_LTA_data_1
+0x2000EA6C C   FIELD 00w16 touch_lta_data_ch1 (ro): 
+0x2000EA6C C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA70 B  REGISTER Channel_LTA_data_2: Channel_LTA_data_2
+0x2000EA70 C   FIELD 00w16 touch_lta_data_ch2 (ro): 
+0x2000EA70 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA74 B  REGISTER Channel_LTA_data_3: Channel_LTA_data_3
+0x2000EA74 C   FIELD 00w16 touch_lta_data_ch3 (ro): 
+0x2000EA74 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA78 B  REGISTER Channel_LTA_data_4: Channel_LTA_data_4
+0x2000EA78 C   FIELD 00w16 touch_lta_data_ch4 (ro): 
+0x2000EA78 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA7C B  REGISTER Channel_LTA_data_5: Channel_LTA_data_5
+0x2000EA7C C   FIELD 00w16 touch_lta_data_ch5 (ro): 
+0x2000EA7C C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA80 B  REGISTER Channel_LTA_data_6: Channel_LTA_data_6
+0x2000EA80 C   FIELD 00w16 touch_lta_data_ch6 (ro): 
+0x2000EA80 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA84 B  REGISTER Channel_LTA_data_7: Channel_LTA_data_7
+0x2000EA84 C   FIELD 00w16 touch_lta_data_ch7 (ro): 
+0x2000EA84 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA88 B  REGISTER Channel_LTA_data_8: Channel_LTA_data_8
+0x2000EA88 C   FIELD 00w16 touch_lta_data_ch8 (ro): 
+0x2000EA88 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA8C B  REGISTER Channel_LTA_data_9: Channel_LTA_data_9
+0x2000EA8C C   FIELD 00w16 touch_lta_data_ch9 (ro): 
+0x2000EA8C C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA90 B  REGISTER Channel_LTA_data_10: Channel_LTA_data_10
+0x2000EA90 C   FIELD 00w16 touch_lta_data_ch10 (ro): 
+0x2000EA90 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA94 B  REGISTER Channel_LTA_data_11: Channel_LTA_data_11
+0x2000EA94 C   FIELD 00w16 touch_lta_data_ch11 (ro): 
+0x2000EA94 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA98 B  REGISTER Channel_FLT_data_0: Channel_FLT_data_0
+0x2000EA98 C   FIELD 00w16 touch_flt_data_ch0 (ro): 
+0x2000EA98 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EA9C B  REGISTER Channel_FLT_data_1: Channel_FLT_data_1
+0x2000EA9C C   FIELD 00w16 touch_flt_data_ch1 (ro): 
+0x2000EA9C C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAA0 B  REGISTER Channel_FLT_data_2: Channel_FLT_data_2
+0x2000EAA0 C   FIELD 00w16 touch_flt_data_ch2 (ro): 
+0x2000EAA0 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAA4 B  REGISTER Channel_FLT_data_3: Channel_FLT_data_3
+0x2000EAA4 C   FIELD 00w16 touch_flt_data_ch3 (ro): 
+0x2000EAA4 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAA8 B  REGISTER Channel_FLT_data_4: Channel_FLT_data_4
+0x2000EAA8 C   FIELD 00w16 touch_flt_data_ch4 (ro): 
+0x2000EAA8 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAAC B  REGISTER Channel_FLT_data_5: Channel_FLT_data_5
+0x2000EAAC C   FIELD 00w16 touch_flt_data_ch5 (ro): 
+0x2000EAAC C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAB0 B  REGISTER Channel_FLT_data_6: Channel_FLT_data_6
+0x2000EAB0 C   FIELD 00w16 touch_flt_data_ch6 (ro): 
+0x2000EAB0 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAB4 B  REGISTER Channel_FLT_data_7: Channel_FLT_data_7
+0x2000EAB4 C   FIELD 00w16 touch_flt_data_ch7 (ro): 
+0x2000EAB4 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAB8 B  REGISTER Channel_FLT_data_8: Channel_FLT_data_8
+0x2000EAB8 C   FIELD 00w16 touch_flt_data_ch8 (ro): 
+0x2000EAB8 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EABC B  REGISTER Channel_FLT_data_9: Channel_FLT_data_9
+0x2000EABC C   FIELD 00w16 touch_flt_data_ch9 (ro): 
+0x2000EABC C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAC0 B  REGISTER Channel_FLT_data_10: Channel_FLT_data_10
+0x2000EAC0 C   FIELD 00w16 touch_flt_data_ch10 (ro): 
+0x2000EAC0 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAC4 B  REGISTER Channel_FLT_data_11: Channel_FLT_data_11
+0x2000EAC4 C   FIELD 00w16 touch_flt_data_ch11 (ro): 
+0x2000EAC4 C   FIELD 16w16 reserved_16_31 (ro): 
+0x2000EAC8 B  REGISTER touch_rsvd: touch_rsvd
+0x2000EAC8 C   FIELD 00w08 touch_reserved (rw): 
+0x2000EAC8 C   FIELD 08w24 reserved_8_31 (ro): 
 0x2000EACC B  REGISTER touch_int_setting: touch_int_setting
 0x2000EACC C   FIELD 00w12 touch_int_clr (rw): 
 0x2000EACC C   FIELD 12w04 reserved_12_15 (ro): 
 0x2000EACC C   FIELD 16w12 touch_int_mask (rw): 
 0x2000EACC C   FIELD 28w03 reserved_28_30 (ro): 
 0x2000EACC C   FIELD 31w01 touch_int_en (rw): 
+0x2000EAD0 B  REGISTER touch_int_status: touch_int_status
+0x2000EAD0 C   FIELD 00w12 touch_int_status (ro): 
+0x2000EAD0 C   FIELD 12w01 touch_end_flag (ro): 
+0x2000EAD0 C   FIELD 13w19 reserved_13_31 (ro): 
 0x2000F000 A PERIPHERAL HBN
-0x2000F000 B  REGISTER rc32k_ctrl0: HBN_CTL
+0x2000F000 B  REGISTER HBN_CTL: HBN_CTL
 0x2000F000 C   FIELD 00w04 rtc_ctl (rw): 
 0x2000F000 C   FIELD 04w01 rtc_dly_option (rw): 
 0x2000F000 C   FIELD 05w01 pu_ldo18io_aon (rw): 
@@ -4387,6 +5200,109 @@
 0x2000F000 C   FIELD 26w01 sram_slp_option (rw): 
 0x2000F000 C   FIELD 27w01 sram_slp (ro): 
 0x2000F000 C   FIELD 28w04 hbn_state (ro): 
+0x2000F004 B  REGISTER HBN_TIME_L: HBN_TIME_L
+0x2000F004 C   FIELD 00w32 hbn_time_l (rw): 
+0x2000F008 B  REGISTER HBN_TIME_H: HBN_TIME_H
+0x2000F008 C   FIELD 00w08 hbn_time_h (rw): 
+0x2000F008 C   FIELD 08w24 reserved_8_31 (ro): 
+0x2000F00C B  REGISTER RTC_TIME_L: RTC_TIME_L
+0x2000F00C C   FIELD 00w32 rtc_time_latch_l (ro): 
+0x2000F010 B  REGISTER RTC_TIME_H: RTC_TIME_H
+0x2000F010 C   FIELD 00w08 rtc_time_latch_h (ro): 
+0x2000F010 C   FIELD 08w23 reserved_8_30 (ro): 
+0x2000F010 C   FIELD 31w01 rtc_time_latch (wo): 
+0x2000F014 B  REGISTER HBN_IRQ_MODE: HBN_IRQ_MODE
+0x2000F014 C   FIELD 00w04 hbn_pin_wakeup_mode (rw): 
+0x2000F014 C   FIELD 04w09 hbn_pin_wakeup_mask (rw): 
+0x2000F014 C   FIELD 13w03 reserved_13_15 (ro): 
+0x2000F014 C   FIELD 16w01 reg_en_hw_pu_pd (rw): 
+0x2000F014 C   FIELD 17w01 reserved_17 (ro): 
+0x2000F014 C   FIELD 18w01 irq_bor_en (rw): 
+0x2000F014 C   FIELD 19w01 reserved_19 (ro): 
+0x2000F014 C   FIELD 20w02 irq_acomp0_en (rw): 
+0x2000F014 C   FIELD 22w02 irq_acomp1_en (rw): 
+0x2000F014 C   FIELD 24w03 pin_wakeup_sel (rw): 
+0x2000F014 C   FIELD 27w01 pin_wakeup_en (rw): 
+0x2000F014 C   FIELD 28w04 reserved_28_31 (ro): 
+0x2000F018 B  REGISTER HBN_IRQ_STAT: HBN_IRQ_STAT
+0x2000F018 C   FIELD 00w32 irq_stat (ro): 
+0x2000F01C B  REGISTER HBN_IRQ_CLR: HBN_IRQ_CLR
+0x2000F01C C   FIELD 00w32 irq_clr (wo): 
+0x2000F020 B  REGISTER HBN_PIR_CFG: HBN_PIR_CFG
+0x2000F020 C   FIELD 00w02 pir_hpf_sel (rw): 
+0x2000F020 C   FIELD 02w01 pir_lpf_sel (rw): 
+0x2000F020 C   FIELD 03w01 reserved_3 (ro): 
+0x2000F020 C   FIELD 04w02 pir_dis (rw): 
+0x2000F020 C   FIELD 06w01 reserved_6 (ro): 
+0x2000F020 C   FIELD 07w01 pir_en (rw): 
+0x2000F020 C   FIELD 08w01 gpadc_cs (rw): 
+0x2000F020 C   FIELD 09w23 reserved_9_31 (ro): 
+0x2000F024 B  REGISTER HBN_PIR_VTH: HBN_PIR_VTH
+0x2000F024 C   FIELD 00w14 pir_vth (rw): 
+0x2000F024 C   FIELD 14w18 reserved_14_31 (ro): 
+0x2000F028 B  REGISTER HBN_PIR_INTERVAL: HBN_PIR_INTERVAL
+0x2000F028 C   FIELD 00w12 pir_interval (rw): 
+0x2000F028 C   FIELD 12w20 reserved_12_31 (ro): 
+0x2000F02C B  REGISTER HBN_BOR_CFG: HBN_BOR_CFG
+0x2000F02C C   FIELD 00w01 bod_sel (rw): 
+0x2000F02C C   FIELD 01w03 bod_vth (rw): 
+0x2000F02C C   FIELD 04w01 pu_bod (rw): 
+0x2000F02C C   FIELD 05w01 r_bod_out (ro): 
+0x2000F02C C   FIELD 06w26 reserved_6_31 (ro): 
+0x2000F030 B  REGISTER HBN_GLB: HBN_GLB
+0x2000F030 C   FIELD 00w02 hbn_root_clk_sel (rw): 
+0x2000F030 C   FIELD 02w01 hbn_uart_clk_sel (rw): 
+0x2000F030 C   FIELD 03w02 hbn_f32k_sel (rw): 
+0x2000F030 C   FIELD 05w02 reserved_5_6 (ro): 
+0x2000F030 C   FIELD 07w06 hbn_reset_event (ro): 
+0x2000F030 C   FIELD 13w01 hbn_clr_reset_event (rw): 
+0x2000F030 C   FIELD 14w01 reserved_14 (ro): 
+0x2000F030 C   FIELD 15w01 hbn_uart_clk_sel2 (rw): 
+0x2000F030 C   FIELD 16w04 sw_ldo11soc_vout_sel_aon (rw): 
+0x2000F030 C   FIELD 20w04 reserved_20_23 (ro): 
+0x2000F030 C   FIELD 24w04 sw_ldo11_rt_vout_sel (rw): 
+0x2000F030 C   FIELD 28w04 sw_ldo11_aon_vout_sel (rw): 
+0x2000F034 B  REGISTER HBN_SRAM: HBN_SRAM
+0x2000F034 C   FIELD 00w06 reserved_0_5 (ro): 
+0x2000F034 C   FIELD 06w01 retram_ret (rw): 
+0x2000F034 C   FIELD 07w01 retram_slp (rw): 
+0x2000F034 C   FIELD 08w24 reserved_8_31 (ro): 
+0x2000F038 B  REGISTER HBN_PAD_CTRL_0: HBN_PAD_CTRL_0
+0x2000F038 C   FIELD 00w09 reg_aon_pad_ie_smt (rw): 
+0x2000F038 C   FIELD 09w01 reserved_9 (ro): 
+0x2000F038 C   FIELD 10w09 reg_aon_led_sel (rw): 
+0x2000F038 C   FIELD 19w01 reserved_19 (ro): 
+0x2000F038 C   FIELD 20w09 reg_en_aon_ctrl_gpio (rw): 
+0x2000F038 C   FIELD 29w02 reserved_29_30 (ro): 
+0x2000F038 C   FIELD 31w01 reg_aon_gpio_iso_mode (rw): 
+0x2000F03C B  REGISTER HBN_PAD_CTRL_1: HBN_PAD_CTRL_1
+0x2000F03C C   FIELD 00w09 reg_aon_pad_oe (rw): 
+0x2000F03C C   FIELD 09w01 reserved_9 (ro): 
+0x2000F03C C   FIELD 10w09 reg_aon_pad_pd (rw): 
+0x2000F03C C   FIELD 19w01 reserved_19 (ro): 
+0x2000F03C C   FIELD 20w09 reg_aon_pad_pu (rw): 
+0x2000F03C C   FIELD 29w03 reserved_29_31 (ro): 
+0x2000F100 B  REGISTER HBN_RSV0: HBN_RSV0
+0x2000F100 C   FIELD 00w32 HBN_RSV0 (rw): 
+0x2000F104 B  REGISTER HBN_RSV1: HBN_RSV1
+0x2000F104 C   FIELD 00w32 HBN_RSV1 (rw): 
+0x2000F108 B  REGISTER HBN_RSV2: HBN_RSV2
+0x2000F108 C   FIELD 00w32 HBN_RSV2 (rw): 
+0x2000F10C B  REGISTER HBN_RSV3: HBN_RSV3
+0x2000F10C C   FIELD 00w32 HBN_RSV3 (rw): 
+0x2000F200 B  REGISTER rc32k_ctrl0: rc32k_ctrl0
+0x2000F200 C   FIELD 00w01 rc32k_cal_done (ro): 
+0x2000F200 C   FIELD 01w01 rc32k_rdy (ro): 
+0x2000F200 C   FIELD 02w01 rc32k_cal_inprogress (ro): 
+0x2000F200 C   FIELD 03w02 rc32k_cal_div (rw): 
+0x2000F200 C   FIELD 05w01 rc32k_cal_precharge (ro): 
+0x2000F200 C   FIELD 06w10 rc32k_dig_code_fr_cal (ro): 
+0x2000F200 C   FIELD 16w02 rc32k_vref_dly (rw): 
+0x2000F200 C   FIELD 18w01 rc32k_allow_cal (rw): 
+0x2000F200 C   FIELD 19w01 rc32k_ext_code_en (rw): 
+0x2000F200 C   FIELD 20w01 rc32k_cal_en (rw): 
+0x2000F200 C   FIELD 21w01 pu_rc32k (rw): 
+0x2000F200 C   FIELD 22w10 rc32k_code_fr_ext (rw): 
 0x2000F204 B  REGISTER xtal32k: xtal32k
 0x2000F204 C   FIELD 00w02 reserved_0_1 (ro): 
 0x2000F204 C   FIELD 02w01 xtal32k_ext_sel (rw): 
@@ -4409,6 +5325,10 @@
 0x2000F208 C   FIELD 00w16 rtc_rst_wait_cnt_rtc (rw): 
 0x2000F208 C   FIELD 16w03 rtc_rst_refdiv_rtc (rw): 
 0x2000F208 C   FIELD 19w13 rtc_rst_ctrl_misc (rw): 
+0x2000F20C B  REGISTER rtc_rst_ctrl2: rtc_rst_ctrl2
+0x2000F20C C   FIELD 00w08 rtc_resv (rw): 
+0x2000F20C C   FIELD 08w01 reg_en_hw_pu_rc32k (rw): 
+0x2000F20C C   FIELD 09w23 reserved_9_31 (ro): 
 0x2000F800 A PERIPHERAL AON
 0x20010000 B  REGISTER aon: aon
 0x20010000 C   FIELD 00w08 aon_resv (rw): 
@@ -4778,101 +5698,471 @@
 0x20010138 C   FIELD 16w16 reserved_16_31 (ro): 
 0x2001013C B  REGISTER hbncore_resv0: hbncore_resv0
 0x2001013C C   FIELD 00w32 hbncore_resv0_data (rw): 
+0x20010140 B  REGISTER hbncore_resv1: hbncore_resv1
+0x20010140 C   FIELD 00w32 hbncore_resv1_data (rw): 
 0x20052000 A PERIPHERAL PSRAM
-0x20052000 B  REGISTER phy_cfg_00: psram_configure
+0x20052000 B  REGISTER UHS_basic: UHS_basic
+0x20052000 B  REGISTER psram_configure: psram_configure
 0x20052000 C   FIELD 00w01 reg_init_en (rw): 
+0x20052000 C   FIELD 00w03 reg_vendor_sel (rw): 
 0x20052000 C   FIELD 01w01 reg_af_en (rw): 
 0x20052000 C   FIELD 02w01 reg_config_req (rw): 
 0x20052000 C   FIELD 03w01 reg_config_gnt (ro): 
+0x20052000 C   FIELD 03w01 reserved_3 (ro): 
+0x20052000 C   FIELD 04w03 reg_ap_mr (rw): 
 0x20052000 C   FIELD 04w04 reserved_4_7 (ro): 
+0x20052000 C   FIELD 07w01 reserved_7 (ro): 
+0x20052000 C   FIELD 08w03 reg_wb_reg_sel (rw): 
 0x20052000 C   FIELD 08w08 reg_mode_reg (rw): 
+0x20052000 C   FIELD 11w01 reserved_11 (ro): 
+0x20052000 C   FIELD 12w01 reg_config_w_pusle (wo): 
+0x20052000 C   FIELD 13w01 reg_config_r_pusle (wo): 
+0x20052000 C   FIELD 14w01 sts_config_w_done (ro): 
+0x20052000 C   FIELD 15w01 sts_config_r_done (ro): 
+0x20052000 C   FIELD 16w01 reg_config_req (rw): 
 0x20052000 C   FIELD 16w08 reg_addrMB_msk (rw): 
+0x20052000 C   FIELD 17w01 reg_config_gnt (ro): 
+0x20052000 C   FIELD 18w01 reg_x16_mode (rw): 
+0x20052000 C   FIELD 19w01 reg_wb_hyper3 (rw): 
+0x20052000 C   FIELD 20w03 reg_pck_s_div (rw): 
+0x20052000 C   FIELD 23w01 reg_clkn_free (rw): 
+0x20052000 C   FIELD 24w04 reserved_24_27 (ro): 
 0x20052000 C   FIELD 24w04 reserved_24_27 (ro): 
 0x20052000 C   FIELD 28w04 reg_linear_bnd_b (rw): 
+0x20052000 C   FIELD 28w04 reg_linear_bnd_b (rw): 
+0x20052004 B  REGISTER UHS_cmd: UHS_cmd
+0x20052004 B  REGISTER psram_manual_control: psram_manual_control
+0x20052004 C   FIELD 00w01 reg_glbr_pulse (wo): 
+0x20052004 C   FIELD 00w07 reg_wc_sw (rw): 
+0x20052004 C   FIELD 01w01 reg_srfi_pulse (wo): 
+0x20052004 C   FIELD 02w01 reg_srfo_pulse (wo): 
+0x20052004 C   FIELD 03w01 reg_regw_pulse (wo): 
+0x20052004 C   FIELD 04w01 reg_regr_pulse (wo): 
+0x20052004 C   FIELD 05w03 reserved_5_7 (ro): 
+0x20052004 C   FIELD 07w01 reserved_7 (ro): 
+0x20052004 C   FIELD 08w01 reg_wc_sw_en (rw): 
+0x20052004 C   FIELD 08w01 sts_glbr_done (ro): 
+0x20052004 C   FIELD 09w01 reg_state_hold_tick (rw): 
+0x20052004 C   FIELD 09w01 sts_srfi_done (ro): 
+0x20052004 C   FIELD 10w01 reg_dqs_latch_inv (rw): 
+0x20052004 C   FIELD 10w01 sts_srfo_done (ro): 
+0x20052004 C   FIELD 11w01 reg_wb_bl2_mask (rw): 
+0x20052004 C   FIELD 11w01 sts_regw_done (ro): 
+0x20052004 C   FIELD 12w01 reg_force_ceb_low (rw): 
+0x20052004 C   FIELD 12w01 sts_regr_done (ro): 
+0x20052004 C   FIELD 13w01 reg_force_ceb_high (rw): 
+0x20052004 C   FIELD 13w01 sts_init_done (ro): 
+0x20052004 C   FIELD 14w01 reg_psram_resetb (rw): 
+0x20052004 C   FIELD 14w10 reserved_14_23 (ro): 
+0x20052004 C   FIELD 15w01 reg_ck_edge_nali (rw): 
+0x20052004 C   FIELD 16w16 sts_config_read (ro): 
+0x20052004 C   FIELD 24w08 sts_config_read (ro): 
+0x20052008 B  REGISTER UHS_fifo_thre: UHS_fifo_thre
+0x20052008 B  REGISTER fifo_thres_control: fifo_thres_control
+0x20052008 C   FIELD 00w16 reg_mask_w_fifo_cnt (rw): 
+0x20052008 C   FIELD 00w16 reg_mask_w_fifo_cnt (rw): 
+0x20052008 C   FIELD 16w16 reg_mask_r_fifo_rem (rw): 
+0x20052008 C   FIELD 16w16 reg_mask_r_fifo_rem (rw): 
+0x2005200C B  REGISTER UHS_manual: UHS_manual
+0x2005200C B  REGISTER psram_manual_control2: psram_manual_control2
+0x2005200C C   FIELD 00w01 reg_force_ceb_low (rw): 
+0x2005200C C   FIELD 00w07 reg_hold_cycle_sw (rw): 
+0x2005200C C   FIELD 01w01 reg_force_ceb_high (rw): 
+0x2005200C C   FIELD 02w01 reg_psram_resetb (rw): 
+0x2005200C C   FIELD 03w01 reg_x16_mode (rw): 
+0x2005200C C   FIELD 04w01 reg_wrap2incr_en (rw): 
+0x2005200C C   FIELD 05w11 reserved_5_15 (ro): 
+0x2005200C C   FIELD 07w01 reg_hc_sw_en (rw): 
+0x2005200C C   FIELD 08w07 reg_dqs_rel_val (rw): 
+0x2005200C C   FIELD 15w01 reserved_15 (ro): 
+0x2005200C C   FIELD 16w03 reg_pck_s_div (rw): 
+0x2005200C C   FIELD 16w04 reg_pwrap_sw_sht_b (rw): 
+0x2005200C C   FIELD 19w05 reserved_19_23 (ro): 
+0x2005200C C   FIELD 20w03 reserved_20_22 (ro): 
+0x2005200C C   FIELD 23w01 reg_pwrap_sw_en (rw): 
+0x2005200C C   FIELD 24w08 reg_addr_mask (rw): 
+0x2005200C C   FIELD 24w08 reg_pck_t_div (rw): 
+0x20052010 B  REGISTER UHS_auto_fresh_1: UHS_auto_fresh_1
+0x20052010 B  REGISTER winbond_psram_configure: winbond_psram_configure
+0x20052010 C   FIELD 00w04 reg_wb_latency (rw): 
+0x20052010 C   FIELD 00w28 reg_win_cycle (rw): 
+0x20052010 C   FIELD 04w03 reg_wb_drive_st (rw): 
+0x20052010 C   FIELD 07w01 reg_wb_hybrid_en (rw): 
+0x20052010 C   FIELD 08w03 reg_wb_burst_length (rw): 
+0x20052010 C   FIELD 11w01 reserved_11 (ro): 
+0x20052010 C   FIELD 12w01 reg_wb_fix_latency (rw): 
+0x20052010 C   FIELD 13w01 reg_wb_dpd_dis (rw): 
+0x20052010 C   FIELD 14w02 reserved_14_15 (ro): 
+0x20052010 C   FIELD 16w05 reg_wb_pasr (rw): 
+0x20052010 C   FIELD 21w03 reserved_21_23 (ro): 
+0x20052010 C   FIELD 24w01 reg_wb_hybrid_slp (rw): 
+0x20052010 C   FIELD 25w01 reg_wb_linear_dis (rw): 
+0x20052010 C   FIELD 26w03 reserved_26_28 (ro): 
+0x20052010 C   FIELD 28w04 reserved_28_31 (ro): 
+0x20052010 C   FIELD 29w01 reg_wb_ipd (rw): 
+0x20052010 C   FIELD 30w01 reg_wb_mclk_type (rw): 
+0x20052010 C   FIELD 31w01 reg_wb_sw_rst (rw): 
+0x20052014 B  REGISTER UHS_auto_fresh_2: UHS_auto_fresh_2
+0x20052014 B  REGISTER winbond_psram_status: winbond_psram_status
+0x20052014 C   FIELD 00w04 sts_wb_latency (ro): 
+0x20052014 C   FIELD 00w16 reg_refi_cycle (rw): 
+0x20052014 C   FIELD 04w03 sts_wb_drive_st (ro): 
+0x20052014 C   FIELD 07w01 sts_wb_hybrid_en (ro): 
+0x20052014 C   FIELD 08w03 sts_wb_burst_length (ro): 
+0x20052014 C   FIELD 11w01 reserved_11 (ro): 
+0x20052014 C   FIELD 12w01 sts_wb_fix_latency (ro): 
+0x20052014 C   FIELD 13w01 sts_wb_dpd_dis (ro): 
+0x20052014 C   FIELD 14w02 reserved_14_15 (ro): 
+0x20052014 C   FIELD 16w05 sts_wb_pasr (ro): 
+0x20052014 C   FIELD 16w13 reg_win_ref_cnt (rw): 
+0x20052014 C   FIELD 21w03 reserved_21_23 (ro): 
+0x20052014 C   FIELD 24w01 sts_wb_hybrid_slp (ro): 
+0x20052014 C   FIELD 25w05 reserved_25_29 (ro): 
+0x20052014 C   FIELD 29w03 reserved_29_31 (ro): 
+0x20052014 C   FIELD 30w01 sts_wb_mclk_type (ro): 
+0x20052014 C   FIELD 31w01 reserved_31 (ro): 
+0x20052018 B  REGISTER UHS_auto_fresh_3: UHS_auto_fresh_3
+0x20052018 B  REGISTER winbond_psram_configure2: winbond_psram_configure2
+0x20052018 C   FIELD 00w04 reg_wb_zq_code (rw): 
+0x20052018 C   FIELD 00w12 reg_auto_ref_thre (rw): 
+0x20052018 C   FIELD 04w28 reserved_4_31 (ro): 
+0x20052018 C   FIELD 12w04 reserved_12_15 (ro): 
+0x20052018 C   FIELD 16w12 auto_refresh_level (ro): 
+0x20052018 C   FIELD 28w04 reserved_28_31 (ro): 
+0x2005201C B  REGISTER UHS_auto_fresh_4: UHS_auto_fresh_4
+0x2005201C C   FIELD 00w07 reg_bust_cycle (rw): 
+0x2005201C C   FIELD 07w25 reserved_7_31 (ro): 
+0x20052020 B  REGISTER UHS_psram_configure: UHS_psram_configure
+0x20052020 B  REGISTER apmemory_psram_configure: apmemory_psram_configure
+0x20052020 C   FIELD 00w02 reg_ap_burst_length (rw): 
+0x20052020 C   FIELD 00w03 reg_uhs_latency (rw): 
+0x20052020 C   FIELD 02w02 reserved_2_3 (ro): 
+0x20052020 C   FIELD 03w01 reserved_3 (ro): 
+0x20052020 C   FIELD 04w01 reg_ap_burst_type (rw): 
+0x20052020 C   FIELD 04w04 reg_uhs_drive_st (rw): 
+0x20052020 C   FIELD 05w01 reg_ap_rbx (rw): 
+0x20052020 C   FIELD 06w01 reg_ap_dpd (rw): 
+0x20052020 C   FIELD 07w01 reg_ap_sleep (rw): 
+0x20052020 C   FIELD 08w01 reg_uhs_bl_16 (rw): 
+0x20052020 C   FIELD 08w03 reg_ap_pasr (rw): 
+0x20052020 C   FIELD 09w01 reg_uhs_bl_32 (rw): 
+0x20052020 C   FIELD 10w01 reg_uhs_bl_64 (rw): 
+0x20052020 C   FIELD 11w01 reserved_11 (ro): 
+0x20052020 C   FIELD 11w21 reserved_11_31 (ro): 
+0x20052020 C   FIELD 12w03 reg_ap_w_latency_code (rw): 
+0x20052020 C   FIELD 15w01 reserved_15 (ro): 
+0x20052020 C   FIELD 16w02 reg_ap_drive_st (rw): 
+0x20052020 C   FIELD 18w02 reg_ap_rf (rw): 
+0x20052020 C   FIELD 20w03 reg_ap_r_latency_code (rw): 
+0x20052020 C   FIELD 23w01 reserved_23 (ro): 
+0x20052020 C   FIELD 24w01 reg_ap_r_latency_type (rw): 
+0x20052020 C   FIELD 25w01 reg_ap_linear_dis (rw): 
+0x20052020 C   FIELD 26w02 reserved_26_27 (ro): 
+0x20052020 C   FIELD 28w01 reg_glb_reset_pulse (wo): 
+0x20052020 C   FIELD 29w03 reserved_29_31 (ro): 
+0x20052024 B  REGISTER UHS_psram_status: UHS_psram_status
+0x20052024 B  REGISTER apmemory_psram_status: apmemory_psram_status
+0x20052024 C   FIELD 00w02 sts_ap_burst_length (ro): 
+0x20052024 C   FIELD 00w03 sts_uhs_latency (ro): 
+0x20052024 C   FIELD 02w02 reserved_2_3 (ro): 
+0x20052024 C   FIELD 03w01 reserved_3 (ro): 
+0x20052024 C   FIELD 04w01 sts_ap_burst_type (ro): 
+0x20052024 C   FIELD 04w04 sts_uhs_drive_st (ro): 
+0x20052024 C   FIELD 05w01 sts_ap_rbx (ro): 
+0x20052024 C   FIELD 06w01 sts_ap_x16_mode (ro): 
+0x20052024 C   FIELD 07w01 reserved_7 (ro): 
+0x20052024 C   FIELD 08w01 sts_uhs_bl_16 (ro): 
+0x20052024 C   FIELD 08w03 sts_ap_pasr (ro): 
+0x20052024 C   FIELD 09w01 sts_uhs_bl_32 (ro): 
+0x20052024 C   FIELD 10w01 sts_uhs_bl_64 (ro): 
+0x20052024 C   FIELD 11w01 reserved_11 (ro): 
+0x20052024 C   FIELD 11w21 reserved_11_31 (ro): 
+0x20052024 C   FIELD 12w03 sts_ap_w_latency_code (ro): 
+0x20052024 C   FIELD 15w01 reserved_15 (ro): 
+0x20052024 C   FIELD 16w02 sts_ap_drive_st (ro): 
+0x20052024 C   FIELD 18w02 sts_ap_rf (ro): 
+0x20052024 C   FIELD 20w03 sts_ap_r_latency_code (ro): 
+0x20052024 C   FIELD 23w01 reserved_23 (ro): 
+0x20052024 C   FIELD 24w01 sts_ap_r_latency_type (ro): 
+0x20052024 C   FIELD 25w07 reserved_25_31 (ro): 
+0x20052030 B  REGISTER UHS_timing_ctrl: UHS_timing_ctrl
+0x20052030 B  REGISTER psram_manual_control3: psram_manual_control3
+0x20052030 C   FIELD 00w07 reg_adq_rel_val (rw): 
+0x20052030 C   FIELD 00w08 reg_trc_cycle (rw): 
+0x20052030 C   FIELD 07w01 reserved_7 (ro): 
+0x20052030 C   FIELD 08w01 reg_wrap2incr_en (rw): 
+0x20052030 C   FIELD 08w08 reg_tcphr_cycle (rw): 
+0x20052030 C   FIELD 09w23 reserved_9_31 (ro): 
+0x20052030 C   FIELD 16w08 reg_tcphw_cycle (rw): 
+0x20052030 C   FIELD 24w08 reg_trfc_cycle (rw): 
+0x20052034 B  REGISTER UHS_rsvd_reg: UHS_rsvd_reg
+0x20052034 C   FIELD 00w01 reg_mr0_7 (rw): 
+0x20052034 C   FIELD 01w03 reg_mr2_2_0 (rw): 
+0x20052034 C   FIELD 04w02 reg_mr2_7_6 (rw): 
+0x20052034 C   FIELD 06w26 reserved_6_31 (ro): 
+0x20052080 B  REGISTER psram_intf_delay_ctrl0: psram_intf_delay_ctrl0
+0x20052080 C   FIELD 00w08 reg_delay_sel_o_dqs_oen0 (rw): 
+0x20052080 C   FIELD 08w08 reg_delay_sel_o_ceb (rw): 
+0x20052080 C   FIELD 16w08 reg_delay_sel_o_clk_n (rw): 
+0x20052080 C   FIELD 24w08 reg_delay_sel_o_clk (rw): 
+0x20052084 B  REGISTER psram_intf_delay_ctrl1: psram_intf_delay_ctrl1
+0x20052084 C   FIELD 00w08 reg_delay_sel_o_adq1 (rw): 
+0x20052084 C   FIELD 08w08 reg_delay_sel_o_adq0 (rw): 
+0x20052084 C   FIELD 16w08 reg_delay_sel_o_adq_oen0 (rw): 
+0x20052084 C   FIELD 24w08 reg_delay_sel_o_dqs0 (rw): 
+0x20052088 B  REGISTER psram_intf_delay_ctrl2: psram_intf_delay_ctrl2
+0x20052088 C   FIELD 00w08 reg_delay_sel_o_adq5 (rw): 
+0x20052088 C   FIELD 08w08 reg_delay_sel_o_adq4 (rw): 
+0x20052088 C   FIELD 16w08 reg_delay_sel_o_adq3 (rw): 
+0x20052088 C   FIELD 24w08 reg_delay_sel_o_adq2 (rw): 
+0x2005208C B  REGISTER psram_intf_delay_ctrl3: psram_intf_delay_ctrl3
+0x2005208C C   FIELD 00w08 reg_delay_sel_i_adq1 (rw): 
+0x2005208C C   FIELD 08w08 reg_delay_sel_i_adq0 (rw): 
+0x2005208C C   FIELD 16w08 reg_delay_sel_o_adq7 (rw): 
+0x2005208C C   FIELD 24w08 reg_delay_sel_o_adq6 (rw): 
+0x20052090 B  REGISTER psram_intf_delay_ctrl4: psram_intf_delay_ctrl4
+0x20052090 C   FIELD 00w08 reg_delay_sel_i_adq5 (rw): 
+0x20052090 C   FIELD 08w08 reg_delay_sel_i_adq4 (rw): 
+0x20052090 C   FIELD 16w08 reg_delay_sel_i_adq3 (rw): 
+0x20052090 C   FIELD 24w08 reg_delay_sel_i_adq2 (rw): 
+0x20052094 B  REGISTER psram_intf_delay_ctrl5: psram_intf_delay_ctrl5
+0x20052094 C   FIELD 00w16 reg_delay_sel_i_dqs0 (rw): 
+0x20052094 C   FIELD 16w08 reg_delay_sel_i_adq7 (rw): 
+0x20052094 C   FIELD 24w08 reg_delay_sel_i_adq6 (rw): 
+0x20052098 B  REGISTER psram_intf_delay_ctrl6: psram_intf_delay_ctrl6
+0x20052098 C   FIELD 00w08 reg_delay_sel_o_adq9 (rw): 
+0x20052098 C   FIELD 08w08 reg_delay_sel_o_adq8 (rw): 
+0x20052098 C   FIELD 16w08 reg_delay_sel_o_adq_oen1 (rw): 
+0x20052098 C   FIELD 24w08 reg_delay_sel_o_dqs1 (rw): 
+0x2005209C B  REGISTER psram_intf_delay_ctrl7: psram_intf_delay_ctrl7
+0x2005209C C   FIELD 00w08 reg_delay_sel_o_adq13 (rw): 
+0x2005209C C   FIELD 08w08 reg_delay_sel_o_adq12 (rw): 
+0x2005209C C   FIELD 16w08 reg_delay_sel_o_adq11 (rw): 
+0x2005209C C   FIELD 24w08 reg_delay_sel_o_adq10 (rw): 
+0x200520A0 B  REGISTER psram_intf_delay_ctrl8: psram_intf_delay_ctrl8
+0x200520A0 C   FIELD 00w08 reg_delay_sel_i_adq9 (rw): 
+0x200520A0 C   FIELD 08w08 reg_delay_sel_i_adq8 (rw): 
+0x200520A0 C   FIELD 16w08 reg_delay_sel_o_adq15 (rw): 
+0x200520A0 C   FIELD 24w08 reg_delay_sel_o_adq14 (rw): 
+0x200520A4 B  REGISTER psram_intf_delay_ctrl9: psram_intf_delay_ctrl9
+0x200520A4 C   FIELD 00w08 reg_delay_sel_i_adq13 (rw): 
+0x200520A4 C   FIELD 08w08 reg_delay_sel_i_adq12 (rw): 
+0x200520A4 C   FIELD 16w08 reg_delay_sel_i_adq11 (rw): 
+0x200520A4 C   FIELD 24w08 reg_delay_sel_i_adq10 (rw): 
+0x200520A8 B  REGISTER psram_intf_delay_ctrlA: psram_intf_delay_ctrlA
+0x200520A8 C   FIELD 00w16 reg_delay_sel_i_dqs1 (rw): 
+0x200520A8 C   FIELD 16w08 reg_delay_sel_i_adq15 (rw): 
+0x200520A8 C   FIELD 24w08 reg_delay_sel_i_adq14 (rw): 
+0x200520AC B  REGISTER psram_intf_delay_ctrlB: psram_intf_delay_ctrlB
+0x200520AC C   FIELD 00w08 reg_delay_sel_o_dqs_mask (rw): 
+0x200520AC C   FIELD 08w08 reg_delay_sel_o_dqs_oen1 (rw): 
+0x200520AC C   FIELD 16w16 reserved_16_31 (ro): 
+0x200520C0 B  REGISTER UHS_dbg_sel: UHS_dbg_sel
+0x200520C0 B  REGISTER psram_dbg_sel: psram_dbg_sel
+0x200520C0 C   FIELD 00w01 reg_psram_dbg_en (rw): 
+0x200520C0 C   FIELD 00w01 reg_psram_dbg_en (rw): 
+0x200520C0 C   FIELD 01w03 reserved_1_3 (ro): 
+0x200520C0 C   FIELD 01w03 reserved_1_3 (ro): 
+0x200520C0 C   FIELD 04w04 reg_psram_dbg_sel (rw): 
+0x200520C0 C   FIELD 04w04 reg_psram_dbg_sel (rw): 
+0x200520C0 C   FIELD 08w24 reserved_8_31 (ro): 
+0x200520C0 C   FIELD 08w24 reserved_8_31 (ro): 
+0x200520F0 B  REGISTER UHS_dummy_reg: UHS_dummy_reg
+0x200520F0 B  REGISTER psram_dummy_reg: psram_dummy_reg
+0x200520F0 C   FIELD 00w32 reg_psram_dummy_reg (rw): 
+0x200520F0 C   FIELD 00w32 reg_psram_dummy_reg (rw): 
+0x200520F4 B  REGISTER psram_timeout_reg: psram_timeout_reg
+0x200520F4 C   FIELD 00w01 reg_timeout_en (rw): 
+0x200520F4 C   FIELD 01w01 reg_timeout_clr (rw): 
+0x200520F4 C   FIELD 02w01 sts_timeout (ro): 
+0x200520F4 C   FIELD 03w13 reserved_3_15 (ro): 
+0x200520F4 C   FIELD 16w12 reg_timeout_cnt (rw): 
+0x200520F4 C   FIELD 28w04 reserved_28_31 (ro): 
+0x20052100 B  REGISTER phy_cfg_00: phy_cfg_00
+0x20052100 B  REGISTER psram_rough_delay_ctrl0: psram_rough_delay_ctrl0
+0x20052100 C   FIELD 00w01 dqs_rdy (ro): 
+0x20052100 C   FIELD 00w08 reg_rough_sel_o_dqs_oen0 (rw): 
+0x20052100 C   FIELD 01w07 reserved_1_7 (ro): 
+0x20052100 C   FIELD 08w02 ck_sr (rw): 
+0x20052100 C   FIELD 08w08 reg_rough_sel_o_ceb (rw): 
+0x20052100 C   FIELD 10w05 reserved_10_14 (ro): 
+0x20052100 C   FIELD 15w01 clk0_polarity (rw): 
+0x20052100 C   FIELD 16w04 ck_dly_drv (rw): 
+0x20052100 C   FIELD 16w08 reg_rough_sel_o_clk_n (rw): 
+0x20052100 C   FIELD 20w02 cen_sr (rw): 
+0x20052100 C   FIELD 22w06 reserved_22_27 (ro): 
+0x20052100 C   FIELD 24w08 reg_rough_sel_o_clk (rw): 
+0x20052100 C   FIELD 28w04 cen_dly_drv (rw): 
 0x20052104 B  REGISTER phy_cfg_04: phy_cfg_04
+0x20052104 B  REGISTER psram_rough_delay_ctrl1: psram_rough_delay_ctrl1
 0x20052104 C   FIELD 00w04 reserved_0_3 (ro): 
+0x20052104 C   FIELD 00w08 reg_rough_sel_o_adq1 (rw): 
 0x20052104 C   FIELD 04w02 dm1_sr (rw): 
 0x20052104 C   FIELD 06w06 reserved_6_11 (ro): 
+0x20052104 C   FIELD 08w08 reg_rough_sel_o_adq0 (rw): 
 0x20052104 C   FIELD 12w04 dm1_dly_drv (rw): 
 0x20052104 C   FIELD 16w04 reserved_16_19 (ro): 
+0x20052104 C   FIELD 16w08 reg_rough_sel_o_adq_oen0 (rw): 
 0x20052104 C   FIELD 20w02 dm0_sr (rw): 
 0x20052104 C   FIELD 22w06 reserved_22_27 (ro): 
+0x20052104 C   FIELD 24w08 reg_rough_sel_o_dqs0 (rw): 
 0x20052104 C   FIELD 28w04 dm0_dly_drv (rw): 
 0x20052108 B  REGISTER phy_cfg_08: phy_cfg_08
+0x20052108 B  REGISTER psram_rough_delay_ctrl2: psram_rough_delay_ctrl2
 0x20052108 C   FIELD 00w02 dq1_sr (rw): 
+0x20052108 C   FIELD 00w08 reg_rough_sel_o_adq5 (rw): 
 0x20052108 C   FIELD 02w06 reserved_2_7 (ro): 
 0x20052108 C   FIELD 08w04 dq1_dly_rx (rw): 
+0x20052108 C   FIELD 08w08 reg_rough_sel_o_adq4 (rw): 
 0x20052108 C   FIELD 12w04 dq1_dly_drv (rw): 
 0x20052108 C   FIELD 16w02 dq0_sr (rw): 
+0x20052108 C   FIELD 16w08 reg_rough_sel_o_adq3 (rw): 
 0x20052108 C   FIELD 18w06 reserved_18_23 (ro): 
 0x20052108 C   FIELD 24w04 dq0_dly_rx (rw): 
+0x20052108 C   FIELD 24w08 reg_rough_sel_o_adq2 (rw): 
 0x20052108 C   FIELD 28w04 dq0_dly_drv (rw): 
-0x2005210C B  REGISTER phy_cfg_10: phy_cfg_0C
+0x2005210C B  REGISTER phy_cfg_0C: phy_cfg_0C
+0x2005210C B  REGISTER psram_rough_delay_ctrl3: psram_rough_delay_ctrl3
 0x2005210C C   FIELD 00w02 dq3_sr (rw): 
+0x2005210C C   FIELD 00w08 reg_rough_sel_i_adq1 (rw): 
 0x2005210C C   FIELD 02w06 reserved_2_7 (ro): 
 0x2005210C C   FIELD 08w04 dq3_dly_rx (rw): 
+0x2005210C C   FIELD 08w08 reg_rough_sel_i_adq0 (rw): 
 0x2005210C C   FIELD 12w04 dq3_dly_drv (rw): 
 0x2005210C C   FIELD 16w02 dq2_sr (rw): 
+0x2005210C C   FIELD 16w08 reg_rough_sel_o_adq7 (rw): 
 0x2005210C C   FIELD 18w06 reserved_18_23 (ro): 
 0x2005210C C   FIELD 24w04 dq2_dly_rx (rw): 
+0x2005210C C   FIELD 24w08 reg_rough_sel_o_adq6 (rw): 
 0x2005210C C   FIELD 28w04 dq2_dly_drv (rw): 
+0x20052110 B  REGISTER phy_cfg_10: phy_cfg_10
+0x20052110 B  REGISTER psram_rough_delay_ctrl4: psram_rough_delay_ctrl4
+0x20052110 C   FIELD 00w02 dq5_sr (rw): 
+0x20052110 C   FIELD 00w08 reg_rough_sel_i_adq5 (rw): 
+0x20052110 C   FIELD 02w06 reserved_2_7 (ro): 
+0x20052110 C   FIELD 08w04 dq5_dly_rx (rw): 
+0x20052110 C   FIELD 08w08 reg_rough_sel_i_adq4 (rw): 
+0x20052110 C   FIELD 12w04 dq5_dly_drv (rw): 
+0x20052110 C   FIELD 16w02 dq4_sr (rw): 
+0x20052110 C   FIELD 16w08 reg_rough_sel_i_adq3 (rw): 
+0x20052110 C   FIELD 18w06 reserved_18_23 (ro): 
+0x20052110 C   FIELD 24w04 dq4_dly_rx (rw): 
+0x20052110 C   FIELD 24w08 reg_rough_sel_i_adq2 (rw): 
+0x20052110 C   FIELD 28w04 dq4_dly_drv (rw): 
 0x20052114 B  REGISTER phy_cfg_14: phy_cfg_14
+0x20052114 B  REGISTER psram_rough_delay_ctrl5: psram_rough_delay_ctrl5
 0x20052114 C   FIELD 00w02 dq7_sr (rw): 
+0x20052114 C   FIELD 00w16 reg_rough_sel_i_dqs0 (rw): 
 0x20052114 C   FIELD 02w06 reserved_2_7 (ro): 
 0x20052114 C   FIELD 08w04 dq7_dly_rx (rw): 
 0x20052114 C   FIELD 12w04 dq7_dly_drv (rw): 
 0x20052114 C   FIELD 16w02 dq6_sr (rw): 
+0x20052114 C   FIELD 16w08 reg_rough_sel_i_adq7 (rw): 
 0x20052114 C   FIELD 18w06 reserved_18_23 (ro): 
 0x20052114 C   FIELD 24w04 dq6_dly_rx (rw): 
+0x20052114 C   FIELD 24w08 reg_rough_sel_i_adq6 (rw): 
 0x20052114 C   FIELD 28w04 dq6_dly_drv (rw): 
 0x20052118 B  REGISTER phy_cfg_18: phy_cfg_18
+0x20052118 B  REGISTER psram_rough_delay_ctrl6: psram_rough_delay_ctrl6
 0x20052118 C   FIELD 00w02 dq9_sr (rw): 
+0x20052118 C   FIELD 00w08 reg_rough_sel_o_adq9 (rw): 
 0x20052118 C   FIELD 02w06 reserved_2_7 (ro): 
 0x20052118 C   FIELD 08w04 dq9_dly_rx (rw): 
+0x20052118 C   FIELD 08w08 reg_rough_sel_o_adq8 (rw): 
 0x20052118 C   FIELD 12w04 dq9_dly_drv (rw): 
 0x20052118 C   FIELD 16w02 dq8_sr (rw): 
+0x20052118 C   FIELD 16w08 reg_rough_sel_o_adq_oen1 (rw): 
 0x20052118 C   FIELD 18w06 reserved_18_23 (ro): 
 0x20052118 C   FIELD 24w04 dq8_dly_rx (rw): 
+0x20052118 C   FIELD 24w08 reg_rough_sel_o_dqs1 (rw): 
 0x20052118 C   FIELD 28w04 dq8_dly_drv (rw): 
-0x2005211C B  REGISTER phy_cfg_20: phy_cfg_1C
+0x2005211C B  REGISTER phy_cfg_1C: phy_cfg_1C
+0x2005211C B  REGISTER psram_rough_delay_ctrl7: psram_rough_delay_ctrl7
 0x2005211C C   FIELD 00w02 dq11_sr (rw): 
+0x2005211C C   FIELD 00w08 reg_rough_sel_o_adq13 (rw): 
 0x2005211C C   FIELD 02w06 reserved_2_7 (ro): 
 0x2005211C C   FIELD 08w04 dq11_dly_rx (rw): 
+0x2005211C C   FIELD 08w08 reg_rough_sel_o_adq12 (rw): 
 0x2005211C C   FIELD 12w04 dq11_dly_drv (rw): 
 0x2005211C C   FIELD 16w02 dq10_sr (rw): 
+0x2005211C C   FIELD 16w08 reg_rough_sel_o_adq11 (rw): 
 0x2005211C C   FIELD 18w06 reserved_18_23 (ro): 
 0x2005211C C   FIELD 24w04 dq10_dly_rx (rw): 
+0x2005211C C   FIELD 24w08 reg_rough_sel_o_adq10 (rw): 
 0x2005211C C   FIELD 28w04 dq10_dly_drv (rw): 
+0x20052120 B  REGISTER phy_cfg_20: phy_cfg_20
+0x20052120 B  REGISTER psram_rough_delay_ctrl8: psram_rough_delay_ctrl8
+0x20052120 C   FIELD 00w02 dq13_sr (rw): 
+0x20052120 C   FIELD 00w08 reg_rough_sel_i_adq9 (rw): 
+0x20052120 C   FIELD 02w06 reserved_2_7 (ro): 
+0x20052120 C   FIELD 08w04 dq13_dly_rx (rw): 
+0x20052120 C   FIELD 08w08 reg_rough_sel_i_adq8 (rw): 
+0x20052120 C   FIELD 12w04 dq13_dly_drv (rw): 
+0x20052120 C   FIELD 16w02 dq12_sr (rw): 
+0x20052120 C   FIELD 16w08 reg_rough_sel_o_adq15 (rw): 
+0x20052120 C   FIELD 18w06 reserved_18_23 (ro): 
+0x20052120 C   FIELD 24w04 dq12_dly_rx (rw): 
+0x20052120 C   FIELD 24w08 reg_rough_sel_o_adq14 (rw): 
+0x20052120 C   FIELD 28w04 dq12_dly_drv (rw): 
 0x20052124 B  REGISTER phy_cfg_24: phy_cfg_24
+0x20052124 B  REGISTER psram_rough_delay_ctrl9: psram_rough_delay_ctrl9
 0x20052124 C   FIELD 00w02 dq15_sr (rw): 
+0x20052124 C   FIELD 00w08 reg_rough_sel_i_adq13 (rw): 
 0x20052124 C   FIELD 02w06 reserved_2_7 (ro): 
 0x20052124 C   FIELD 08w04 dq15_dly_rx (rw): 
+0x20052124 C   FIELD 08w08 reg_rough_sel_i_adq12 (rw): 
 0x20052124 C   FIELD 12w04 dq15_dly_drv (rw): 
 0x20052124 C   FIELD 16w02 dq14_sr (rw): 
+0x20052124 C   FIELD 16w08 reg_rough_sel_i_adq11 (rw): 
 0x20052124 C   FIELD 18w06 reserved_18_23 (ro): 
 0x20052124 C   FIELD 24w04 dq14_dly_rx (rw): 
+0x20052124 C   FIELD 24w08 reg_rough_sel_i_adq10 (rw): 
 0x20052124 C   FIELD 28w04 dq14_dly_drv (rw): 
 0x20052128 B  REGISTER phy_cfg_28: phy_cfg_28
+0x20052128 B  REGISTER psram_rough_delay_ctrlA: psram_rough_delay_ctrlA
 0x20052128 C   FIELD 00w08 reserved_0_7 (ro): 
+0x20052128 C   FIELD 00w16 reg_rough_sel_i_dqs1 (rw): 
 0x20052128 C   FIELD 08w04 dqs0n_dly_rx (rw): 
 0x20052128 C   FIELD 12w02 dqs0_sr (rw): 
 0x20052128 C   FIELD 14w02 dqs0_sel (rw): 
 0x20052128 C   FIELD 16w04 reserved_16_19 (ro): 
+0x20052128 C   FIELD 16w08 reg_rough_sel_i_adq15 (rw): 
 0x20052128 C   FIELD 20w04 dqs0_dly_rx (rw): 
 0x20052128 C   FIELD 24w04 dqs0_dly_drv (rw): 
+0x20052128 C   FIELD 24w08 reg_rough_sel_i_adq14 (rw): 
 0x20052128 C   FIELD 28w04 dqs0_diff_dly_rx (rw): 
-0x2005212C B  REGISTER phy_cfg_30: phy_cfg_2C
+0x2005212C B  REGISTER phy_cfg_2C: phy_cfg_2C
+0x2005212C B  REGISTER psram_rough_delay_ctrlB: psram_rough_delay_ctrlB
 0x2005212C C   FIELD 00w01 ipp5un_lpddr (rw): 
+0x2005212C C   FIELD 00w08 reg_rough_sel_o_dqs_mask (rw): 
 0x2005212C C   FIELD 01w01 en_rx_fe (rw): 
 0x2005212C C   FIELD 02w01 en_bias (rw): 
 0x2005212C C   FIELD 03w05 reserved_3_7 (ro): 
 0x2005212C C   FIELD 08w04 dqs1n_dly_rx (rw): 
+0x2005212C C   FIELD 08w08 reg_rough_sel_o_dqs_oen1 (rw): 
 0x2005212C C   FIELD 12w02 dqs1_sr (rw): 
 0x2005212C C   FIELD 14w02 dqs1_sel (rw): 
 0x2005212C C   FIELD 16w04 reserved_16_19 (ro): 
+0x2005212C C   FIELD 16w16 reserved_16_31 (ro): 
 0x2005212C C   FIELD 20w04 dqs1_dly_rx (rw): 
 0x2005212C C   FIELD 24w04 dqs1_dly_drv (rw): 
 0x2005212C C   FIELD 28w04 dqs1_diff_dly_rx (rw): 
+0x20052130 B  REGISTER phy_cfg_30: phy_cfg_30
+0x20052130 C   FIELD 00w03 phy_wl_dq_dig (rw): 
+0x20052130 C   FIELD 03w01 reserved_3 (ro): 
+0x20052130 C   FIELD 04w03 phy_wl_dq_ana (rw): 
+0x20052130 C   FIELD 07w01 reserved_7 (ro): 
+0x20052130 C   FIELD 08w03 phy_wl_dig (rw): 
+0x20052130 C   FIELD 11w01 reserved_11 (ro): 
+0x20052130 C   FIELD 12w03 phy_wl_ana (rw): 
+0x20052130 C   FIELD 15w01 reserved_15 (ro): 
+0x20052130 C   FIELD 16w04 phy_rl_dig (rw): 
+0x20052130 C   FIELD 20w03 phy_rl_ana (rw): 
+0x20052130 C   FIELD 23w01 reserved_23 (ro): 
+0x20052130 C   FIELD 24w02 oe_timer (rw): 
+0x20052130 C   FIELD 26w01 vref_mode (rw): 
+0x20052130 C   FIELD 27w01 oe_ctrl_hw (rw): 
+0x20052130 C   FIELD 28w04 odt_sel (rw): 
 0x20052134 B  REGISTER phy_cfg_34: phy_cfg_34
 0x20052134 C   FIELD 00w08 reg_timer_dqs_start (rw): 
 0x20052134 C   FIELD 08w08 reg_timer_dqs_array_stop (rw): 
@@ -4883,11 +6173,24 @@
 0x20052138 C   FIELD 08w08 reg_timer_reg_write (rw): 
 0x20052138 C   FIELD 16w08 reg_timer_reg_read (rw): 
 0x20052138 C   FIELD 24w08 reg_timer_dqs_stop (rw): 
-0x2005213C B  REGISTER phy_cfg_40: phy_cfg_3C
+0x2005213C B  REGISTER phy_cfg_3C: phy_cfg_3C
 0x2005213C C   FIELD 00w08 reg_timer_self_refresh1_in (rw): 
 0x2005213C C   FIELD 08w08 reg_timer_self_refresh1_exit (rw): 
 0x2005213C C   FIELD 16w14 reg_timer_global_rst (rw): 
 0x2005213C C   FIELD 30w02 reserved_30_31 (ro): 
+0x20052140 B  REGISTER phy_cfg_40: phy_cfg_40
+0x20052140 C   FIELD 00w04 vref_sel (rw): 
+0x20052140 C   FIELD 04w04 vref_dq_sel (rw): 
+0x20052140 C   FIELD 08w08 reg_uhs_dmy0 (rw): 
+0x20052140 C   FIELD 16w08 reg_uhs_dmy1 (rw): 
+0x20052140 C   FIELD 24w01 reg_uhs_phy_ten (rw): 
+0x20052140 C   FIELD 25w01 soc_en_aon (rw): 
+0x20052140 C   FIELD 26w01 ten_uhs_phy (rw): 
+0x20052140 C   FIELD 27w01 ten_uhs_phy_dig (rw): 
+0x20052140 C   FIELD 28w01 reserved_28 (ro): 
+0x20052140 C   FIELD 29w01 tx_clktree_gate_hw (rw): 
+0x20052140 C   FIELD 30w01 uhs_dc_tp_out_en (rw): 
+0x20052140 C   FIELD 31w01 uhs_phy_dqs_diff (rw): 
 0x20052144 B  REGISTER phy_cfg_44: phy_cfg_44
 0x20052144 C   FIELD 00w08 reg_timer_array_read_busy (rw): 
 0x20052144 C   FIELD 08w08 reg_timer_array_write_busy (rw): 
@@ -4907,6 +6210,26 @@
 0x20052148 C   FIELD 19w01 force_fsm (rw): 
 0x20052148 C   FIELD 20w04 en_rx_fe_dly (rw): 
 0x20052148 C   FIELD 24w08 reserved_24_31 (ro): 
+0x2005214C B  REGISTER phy_cfg_4C: phy_cfg_4C
+0x2005214C C   FIELD 00w16 tout_uhs_phy_dig (ro): 
+0x2005214C C   FIELD 16w04 odt_sel_dly (rw): 
+0x2005214C C   FIELD 20w01 odt_sel_hw (rw): 
+0x2005214C C   FIELD 21w11 reserved_21_31 (ro): 
+0x20052150 B  REGISTER phy_cfg_50: phy_cfg_50
+0x20052150 C   FIELD 00w03 dq_oe_up_p_reg (rw): 
+0x20052150 C   FIELD 03w01 reserved_3 (ro): 
+0x20052150 C   FIELD 04w03 dq_oe_up_n_reg (rw): 
+0x20052150 C   FIELD 07w01 reserved_7 (ro): 
+0x20052150 C   FIELD 08w03 dq_oe_mid_p_reg (rw): 
+0x20052150 C   FIELD 11w01 reserved_11 (ro): 
+0x20052150 C   FIELD 12w03 dq_oe_mid_n_reg (rw): 
+0x20052150 C   FIELD 15w01 reserved_15 (ro): 
+0x20052150 C   FIELD 16w03 dq_oe_dn_p_reg (rw): 
+0x20052150 C   FIELD 19w01 reserved_19 (ro): 
+0x20052150 C   FIELD 20w03 dq_oe_dn_n_reg (rw): 
+0x20052150 C   FIELD 23w01 reserved_23 (ro): 
+0x20052150 C   FIELD 24w03 phy_wl_cen_ana (rw): 
+0x20052150 C   FIELD 27w05 reserved_27_31 (ro): 
 0x20056000 A PERIPHERAL EF_DATA
 0x20056000 B  REGISTER ef_cfg_0: ef_cfg_0
 0x20056000 C   FIELD 00w02 ef_sf_aes_mode (rw): 
@@ -5073,6 +6396,25 @@
 0x200560F4 C   FIELD 00w32 ef_dat_1_rsvd_1 (rw): 
 0x200560F8 B  REGISTER ef_dat_1_rsvd_2: ef_dat_1_rsvd_2
 0x200560F8 C   FIELD 00w32 ef_dat_1_rsvd_2 (rw): 
+0x200560FC B  REGISTER ef_data_1_lock: ef_data_1_lock
+0x200560FC C   FIELD 00w15 wr_lock_rsvd_1 (rw): 
+0x200560FC C   FIELD 15w01 wr_lock_key_slot_4 (rw): 
+0x200560FC C   FIELD 16w01 wr_lock_key_slot_5 (rw): 
+0x200560FC C   FIELD 17w01 wr_lock_key_slot_6 (rw): 
+0x200560FC C   FIELD 18w01 wr_lock_key_slot_7 (rw): 
+0x200560FC C   FIELD 19w01 wr_lock_key_slot_8 (rw): 
+0x200560FC C   FIELD 20w01 wr_lock_key_slot_9 (rw): 
+0x200560FC C   FIELD 21w01 wr_lock_key_slot_10 (rw): 
+0x200560FC C   FIELD 22w01 wr_lock_dat_1_rsvd_0 (rw): 
+0x200560FC C   FIELD 23w01 wr_lock_dat_1_rsvd_1 (rw): 
+0x200560FC C   FIELD 24w01 wr_lock_dat_1_rsvd_2 (rw): 
+0x200560FC C   FIELD 25w01 rd_lock_key_slot_4 (rw): 
+0x200560FC C   FIELD 26w01 rd_lock_key_slot_5 (rw): 
+0x200560FC C   FIELD 27w01 rd_lock_key_slot_6 (rw): 
+0x200560FC C   FIELD 28w01 rd_lock_key_slot_7 (rw): 
+0x200560FC C   FIELD 29w01 rd_lock_key_slot_8 (rw): 
+0x200560FC C   FIELD 30w01 rd_lock_key_slot_9 (rw): 
+0x200560FC C   FIELD 31w01 rd_lock_key_slot_10 (rw): 
 0x20056800 B  REGISTER ef_if_ctrl_0: ef_if_ctrl_0
 0x20056800 C   FIELD 00w01 ef_if_0_autoload_p1_done (ro): 
 0x20056800 C   FIELD 01w01 ef_if_0_autoload_done (ro): 
@@ -5211,6 +6553,451 @@
 0x20056A10 B  REGISTER ef_crc_ctrl_4: ef_crc_ctrl_4
 0x20056A14 B  REGISTER ef_crc_ctrl_5: ef_crc_ctrl_5
 0x20060000 A PERIPHERAL SDH
+0x20060000 B  REGISTER SD_SYS_ADDR_LOW: System Address Low Register
+0x20060000 C   FIELD 00w16 DMA_ADDR_L (rw): 
+0x20060002 B  REGISTER SD_SYS_ADDR_HIGH: System Address High Register
+0x20060002 C   FIELD 00w16 DMA_ADDR_H (rw): 
+0x20060004 B  REGISTER SD_BLOCK_SIZE: Block Size Register
+0x20060004 C   FIELD 00w12 BLOCK_SIZE (rw): 
+0x20060004 C   FIELD 12w03 HOST_DMA_BDRY (rw): 
+0x20060004 C   FIELD 15w01 Reserved_15 (ro): 
+0x20060006 B  REGISTER SD_BLOCK_COUNT: Block Count Register
+0x20060006 C   FIELD 00w16 BLOCK_COUNT (rw): 
+0x20060008 B  REGISTER SD_ARG_LOW: Argument Low Register
+0x20060008 C   FIELD 00w16 ARG_L (rw): 
+0x2006000A B  REGISTER SD_ARG_HIGH: Argument High Register
+0x2006000A C   FIELD 00w16 ARG_H (rw): 
+0x2006000C B  REGISTER SD_TRANSFER_MODE: Transfer Mode Register
+0x2006000C C   FIELD 00w01 DMA_EN (rw): 
+0x2006000C C   FIELD 01w01 BLK_CNT_EN (rw): 
+0x2006000C C   FIELD 02w02 AUTO_CMD_EN (rw): 
+0x2006000C C   FIELD 04w01 TO_HOST_DIR (rw): 
+0x2006000C C   FIELD 05w01 MULTI_BLK_SEL (rw): 
+0x2006000C C   FIELD 06w10 Reserved_15_6 (ro): 
+0x2006000E B  REGISTER SD_CMD: Command Register
+0x2006000E C   FIELD 00w02 RESP_TYPE (rw): 
+0x2006000E C   FIELD 02w01 Reserved_2 (ro): 
+0x2006000E C   FIELD 03w01 CMD_CRC_CHK_EN (rw): 
+0x2006000E C   FIELD 04w01 CMD_INDEX_CHK_EN (rw): 
+0x2006000E C   FIELD 05w01 DATA_PRESENT (rw): 
+0x2006000E C   FIELD 06w02 CMD_TYPE (rw): 
+0x2006000E C   FIELD 08w06 CMD_INDEX (rw): 
+0x2006000E C   FIELD 14w02 Reserved_15_14 (ro): 
+0x20060010 B  REGISTER SD_RESP_0: Response Register 0
+0x20060010 C   FIELD 00w16 RESP0 (ro): 
+0x20060012 B  REGISTER SD_RESP_1: Response Register 1
+0x20060012 C   FIELD 00w16 RESP1 (ro): 
+0x20060014 B  REGISTER SD_RESP_2: Response Register 2
+0x20060014 C   FIELD 00w16 RESP2 (ro): 
+0x20060016 B  REGISTER SD_RESP_3: Response Register 3
+0x20060016 C   FIELD 00w16 RESP3 (ro): 
+0x20060018 B  REGISTER SD_RESP_4: Response Register 4
+0x20060018 C   FIELD 00w16 RESP4 (ro): 
+0x2006001A B  REGISTER SD_RESP_5: Response Register 5
+0x2006001A C   FIELD 00w16 RESP5 (ro): 
+0x2006001C B  REGISTER SD_RESP_6: Response Register 6
+0x2006001C C   FIELD 00w16 RESP6 (ro): 
+0x2006001E B  REGISTER SD_RESP_7: Response Register 7
+0x2006001E C   FIELD 00w16 RESP7 (ro): 
+0x20060020 B  REGISTER SD_BUFFER_DATA_PORT_0: Buffer Data Port 0 Register
+0x20060020 C   FIELD 00w16 CPU_DATA0 (rw): 
+0x20060022 B  REGISTER SD_BUFFER_DATA_PORT_1: Buffer Data Port 1 Register
+0x20060022 C   FIELD 00w16 CPU_DATA1 (rw): 
+0x20060024 B  REGISTER SD_PRESENT_STATE_1: Present State Register 1
+0x20060024 C   FIELD 00w01 CMD_INHIBIT_CMD (ro): 
+0x20060024 C   FIELD 01w01 CMD_INHIBIT_DAT (ro): 
+0x20060024 C   FIELD 02w01 _DAT_ACTIVE (ro): 
+0x20060024 C   FIELD 03w01 RETUNING_REQ (ro): 
+0x20060024 C   FIELD 04w04 Reserved_7_4 (ro): 
+0x20060024 C   FIELD 08w01 TX_ACTIVE (ro): 
+0x20060024 C   FIELD 09w01 RX_ACTIVE (ro): 
+0x20060024 C   FIELD 10w01 BUFFER_WR_EN (ro): 
+0x20060024 C   FIELD 11w01 BUFFER_RD_EN (ro): 
+0x20060024 C   FIELD 12w04 Reserved_15_12 (ro): 
+0x20060026 B  REGISTER SD_PRESENT_STATE_2: Present State Register 2
+0x20060026 C   FIELD 00w01 CARD_INSERTED (ro): 
+0x20060026 C   FIELD 01w01 CARD_STABLE (ro): 
+0x20060026 C   FIELD 02w01 CARD_DET (ro): 
+0x20060026 C   FIELD 03w01 WRITE_PROT (ro): 
+0x20060026 C   FIELD 04w04 DAT_LEVEL (ro): 
+0x20060026 C   FIELD 08w01 CMD_LEVEL (ro): 
+0x20060026 C   FIELD 09w07 Reserved_15_9 (ro): 
+0x20060028 B  REGISTER SD_HOST_CTRL: Host Control Register
+0x20060028 C   FIELD 00w01 LED_CTRL (rw): 
+0x20060028 C   FIELD 01w01 DATA_WIDTH (rw): 
+0x20060028 C   FIELD 02w01 HI_SPEED_EN (rw): 
+0x20060028 C   FIELD 03w02 DMA_SEL (rw): 
+0x20060028 C   FIELD 05w01 EX_DATA_WIDTH (rw): 
+0x20060028 C   FIELD 06w01 CARD_DET_L (rw): 
+0x20060028 C   FIELD 07w01 CARD_DET_S (rw): 
+0x20060028 C   FIELD 08w01 SD_BUS_POWER (rw): 
+0x20060028 C   FIELD 09w03 SD_BUS_VLT (rw): 
+0x20060028 C   FIELD 12w04 Reserved_15_12 (ro): 
+0x2006002A B  REGISTER SD_BLOCK_GAP_CTRL: Block Gap Control Register
+0x2006002A C   FIELD 00w01 STOP_AT_BLOCK_GAP_REQ (rw): 
+0x2006002A C   FIELD 01w01 CONT_REQ (rw): 
+0x2006002A C   FIELD 02w01 RD_WAIT_CTL (rw): 
+0x2006002A C   FIELD 03w01 INT_BLK_GAP (rw): 
+0x2006002A C   FIELD 04w04 Reserved_7_4 (ro): 
+0x2006002A C   FIELD 08w01 W_CARD_INT (rw): 
+0x2006002A C   FIELD 09w01 W_INSERTION (rw): 
+0x2006002A C   FIELD 10w01 W_REMOVAL (rw): 
+0x2006002A C   FIELD 11w05 Reserved_15_11 (ro): 
+0x2006002C B  REGISTER SD_CLOCK_CTRL: Clock Control Register
+0x2006002C C   FIELD 00w01 INT_CLK_EN (rw): 
+0x2006002C C   FIELD 01w01 INT_CLK_STABLE (ro): 
+0x2006002C C   FIELD 02w01 SD_CLK_EN (rw): 
+0x2006002C C   FIELD 03w02 Reserved_4_3 (ro): 
+0x2006002C C   FIELD 05w01 CLK_GEN_SEL (rw): 
+0x2006002C C   FIELD 06w02 SD_FREQ_SEL_HI (rw): 
+0x2006002C C   FIELD 08w08 SD_FREQ_SEL_LO (rw): 
+0x2006002E B  REGISTER SD_TIMEOUT_CTRL_SW_RESET: Timeout Control/Software Reset Register
+0x2006002E C   FIELD 00w04 TIMEOUT_VALUE (rw): 
+0x2006002E C   FIELD 04w04 Reserved_7_4 (ro): 
+0x2006002E C   FIELD 08w01 SW_RST_ALL (rw): 
+0x2006002E C   FIELD 09w01 SW_RST_CMD (rw): 
+0x2006002E C   FIELD 10w01 SW_RST_DAT (rw): 
+0x2006002E C   FIELD 11w05 Reserved_15_11 (ro): 
+0x20060030 B  REGISTER SD_NORMAL_INT_STATUS: Normal Interrupt Status Register
+0x20060030 C   FIELD 00w01 CMD_COMPLETE (rw): 
+0x20060030 C   FIELD 01w01 XFER_COMPLETE (rw): 
+0x20060030 C   FIELD 02w01 BLOCK_GAP_EVT (rw): 
+0x20060030 C   FIELD 03w01 DMA_INT (rw): 
+0x20060030 C   FIELD 04w01 TX_RDY (rw): 
+0x20060030 C   FIELD 05w01 RX_RDY (rw): 
+0x20060030 C   FIELD 06w01 CARD_INS_INT (rw): 
+0x20060030 C   FIELD 07w01 CARD_REM_INT (rw): 
+0x20060030 C   FIELD 08w01 CARD_INT (ro): 
+0x20060030 C   FIELD 09w01 INT_A (rw): 
+0x20060030 C   FIELD 10w01 INT_B (rw): 
+0x20060030 C   FIELD 11w01 INT_C (rw): 
+0x20060030 C   FIELD 12w01 RETUNING_INT (rw): 
+0x20060030 C   FIELD 13w02 Reserved_14_13 (ro): 
+0x20060030 C   FIELD 15w01 ERR_INT (ro): 
+0x20060032 B  REGISTER SD_ERROR_INT_STATUS: Error Interrupt Status Register
+0x20060032 C   FIELD 00w01 CMD_TIMEOUT_ERR (rw): 
+0x20060032 C   FIELD 01w01 CMD_CRC_ERR (rw): 
+0x20060032 C   FIELD 02w01 CMD_END_BIT_ERR (rw): 
+0x20060032 C   FIELD 03w01 CMD_INDEX_ERR (rw): 
+0x20060032 C   FIELD 04w01 DATA_TIMEOUT_ERR (rw): 
+0x20060032 C   FIELD 05w01 RD_DATA_CRC_ERR (rw): 
+0x20060032 C   FIELD 06w01 RD_DATA_END_BIT_ERR (rw): 
+0x20060032 C   FIELD 07w01 CUR_LIMIT_ERR (rw): 
+0x20060032 C   FIELD 08w01 AUTO_CMD12_ERR (rw): 
+0x20060032 C   FIELD 09w01 ADMA_ERR (rw): 
+0x20060032 C   FIELD 10w01 TUNE_ERR (rw): 
+0x20060032 C   FIELD 11w01 Reserved_11 (ro): 
+0x20060032 C   FIELD 12w01 SPI_ERR (rw): 
+0x20060032 C   FIELD 13w01 AXI_RESP_ERR (rw): 
+0x20060032 C   FIELD 14w01 CPL_TIMEOUT_ERR (rw): 
+0x20060032 C   FIELD 15w01 CRC_STATUS_ERR (rw): 
+0x20060034 B  REGISTER SD_NORMAL_INT_STATUS_EN: Normal Interrupt Status Enable Register
+0x20060034 C   FIELD 00w01 CMD_COMPLETE_EN (rw): 
+0x20060034 C   FIELD 01w01 XFER_COMPLETE_EN (rw): 
+0x20060034 C   FIELD 02w01 BLOCK_GAP_EVT_EN (rw): 
+0x20060034 C   FIELD 03w01 DMA_INT_EN (rw): 
+0x20060034 C   FIELD 04w01 TX_RDY_EN (rw): 
+0x20060034 C   FIELD 05w01 RD_RDY_EN (rw): 
+0x20060034 C   FIELD 06w01 CARD_INS_EN (rw): 
+0x20060034 C   FIELD 07w01 CARD_REM_EN (rw): 
+0x20060034 C   FIELD 08w01 CARD_INT_EN (rw): 
+0x20060034 C   FIELD 09w01 INT_A_INT_EN (rw): 
+0x20060034 C   FIELD 10w01 INT_B_INT_EN (rw): 
+0x20060034 C   FIELD 11w01 INT_C_INT_EN (rw): 
+0x20060034 C   FIELD 12w01 RETUNE_INT_EN (rw): 
+0x20060034 C   FIELD 13w03 Reserved_15_13 (ro): 
+0x20060036 B  REGISTER SD_ERROR_INT_STATUS_EN: Error Interrupt Status Enable Register
+0x20060036 C   FIELD 00w01 CMD_TIMEOUT_ERR_EN (rw): 
+0x20060036 C   FIELD 01w01 CMD_CRC_ERR_EN (rw): 
+0x20060036 C   FIELD 02w01 CMD_END_BIT_ERR_EN (rw): 
+0x20060036 C   FIELD 03w01 CMD_INDEX_ERR_EN (rw): 
+0x20060036 C   FIELD 04w01 DATA_TIMEOUT_ERR_EN (rw): 
+0x20060036 C   FIELD 05w01 RD_DATA_CRC_ERR_EN (rw): 
+0x20060036 C   FIELD 06w01 RD_DATA_END_BIT_ERR_EN (rw): 
+0x20060036 C   FIELD 07w01 CUR_LIM_ERR_EN (rw): 
+0x20060036 C   FIELD 08w01 AUTO_CMD12_ERR_EN (rw): 
+0x20060036 C   FIELD 09w01 ADMA_ERR_EN (rw): 
+0x20060036 C   FIELD 10w01 TUNING_ERR_EN (rw): 
+0x20060036 C   FIELD 11w01 Reserved_11 (ro): 
+0x20060036 C   FIELD 12w01 SPI_ERR_EN (rw): 
+0x20060036 C   FIELD 13w01 AXI_RESP_ERR_EN (rw): 
+0x20060036 C   FIELD 14w01 CPL_TIMEOUT_ERR_EN (rw): 
+0x20060036 C   FIELD 15w01 CRC_STATUS_ERR_EN (rw): 
+0x20060038 B  REGISTER SD_NORMAL_INT_STATUS_INT_EN: Normal Interrupt Status Interrupt Enable Register
+0x20060038 C   FIELD 00w01 CMD_COMPLETE_INT_EN (rw): 
+0x20060038 C   FIELD 01w01 XFER_COMPLETE_INT_EN (rw): 
+0x20060038 C   FIELD 02w01 BLOCK_GAP_EVT_INT_EN (rw): 
+0x20060038 C   FIELD 03w01 DMA_INT_INT_EN (rw): 
+0x20060038 C   FIELD 04w01 TX_RDY_INT_EN (rw): 
+0x20060038 C   FIELD 05w01 RX_RDY_INT_EN (rw): 
+0x20060038 C   FIELD 06w01 CARD_INS_INT_EN (rw): 
+0x20060038 C   FIELD 07w01 CARD_REM_INT_EN (rw): 
+0x20060038 C   FIELD 08w01 CARD_INT_INT_EN (rw): 
+0x20060038 C   FIELD 09w01 INT_A_INT_INT_EN (rw): 
+0x20060038 C   FIELD 10w01 INT_B_INT_INT_EN (rw): 
+0x20060038 C   FIELD 11w01 INT_C_INT_INT_EN (rw): 
+0x20060038 C   FIELD 12w01 RETUNE_INT_INT_EN (rw): 
+0x20060038 C   FIELD 13w03 Reserved_15_13 (ro): 
+0x2006003A B  REGISTER SD_ERROR_INT_STATUS_INT_EN: Error Interrupt Status Interrupt Enable Register
+0x2006003A C   FIELD 00w01 CMD_TIMEOUT_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 01w01 CMD_CRC_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 02w01 CMD_END_BIT_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 03w01 CMD_INDEX_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 04w01 DATA_TIMEOUT_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 05w01 RD_DATA_CRC_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 06w01 RD_DATA_END_BIT_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 07w01 CUR_LIM_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 08w01 AUTO_CMD12_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 09w01 ADMA_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 10w01 TUNE_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 11w01 Reserved_11 (ro): 
+0x2006003A C   FIELD 12w01 SPI_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 13w01 AXI_RESP_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 14w01 CPL_TIMEOUT_ERR_INT_EN (rw): 
+0x2006003A C   FIELD 15w01 CRC_STATUS_ERR_INT_EN (rw): 
+0x2006003C B  REGISTER SD_AUTO_CMD12_ERROR_STATUS: Auto CMD12 Error Status Register
+0x2006003C C   FIELD 00w01 AUTO_CMD12_NOT_EXE (rw): 
+0x2006003C C   FIELD 01w01 AUTO_CMD_TIMEOUT_ERR (rw): 
+0x2006003C C   FIELD 02w01 AUTO_CMD_CRC_ERR (rw): 
+0x2006003C C   FIELD 03w01 AUTO_CMD_END_BIT_ERR (rw): 
+0x2006003C C   FIELD 04w01 AUTO_CMD_INDEX_ERR (rw): 
+0x2006003C C   FIELD 05w02 Reserved_6_5 (ro): 
+0x2006003C C   FIELD 07w01 CMD_NOT_ISSUED (ro): 
+0x2006003C C   FIELD 08w08 Reserved_15_8 (ro): 
+0x2006003E B  REGISTER HOST_CTRL_2: Host Control 2 Register
+0x2006003E C   FIELD 00w03 UHS_MODE_SEL (rw): 
+0x2006003E C   FIELD 03w01 SDH_V18_EN (rw): 
+0x2006003E C   FIELD 04w02 DRV_STRENGTH_SEL (rw): 
+0x2006003E C   FIELD 06w01 EXE_TUNING (rw): 
+0x2006003E C   FIELD 07w01 SAMPLING_CLK_SEL (rw): 
+0x2006003E C   FIELD 08w06 Reserved_13_8 (ro): 
+0x2006003E C   FIELD 14w01 ASYNC_INT_EN (rw): 
+0x2006003E C   FIELD 15w01 PRE_VAL_EN (rw): 
+0x20060040 B  REGISTER SD_CAPABILITIES_1: Capabilities Register 1
+0x20060040 C   FIELD 00w06 TIMEOUT_FREQ (ro): 
+0x20060040 C   FIELD 06w01 Reserved_6 (ro): 
+0x20060040 C   FIELD 07w01 TIMEOUT_UNIT (ro): 
+0x20060040 C   FIELD 08w08 BASE_FREQ (ro): 
+0x20060042 B  REGISTER SD_CAPABILITIES_2: Capabilities Register 2
+0x20060042 C   FIELD 00w02 MAX_BLK_LEN (ro): 
+0x20060042 C   FIELD 02w01 EX_DATA_WIDTH_SUPPORT (ro): 
+0x20060042 C   FIELD 03w01 ADMA2_SUPPORT (ro): 
+0x20060042 C   FIELD 04w01 ADMA1_SUPPORT (ro): 
+0x20060042 C   FIELD 05w01 HI_SPEED_SUPPORT (ro): 
+0x20060042 C   FIELD 06w01 SDMA_SUPPORT (ro): 
+0x20060042 C   FIELD 07w01 SUS_RES_SUPPORT (ro): 
+0x20060042 C   FIELD 08w01 VLG_33_SUPPORT (ro): 
+0x20060042 C   FIELD 09w01 VLG_30_SUPPORT (ro): 
+0x20060042 C   FIELD 10w01 VLG_18_SUPPORT (ro): 
+0x20060042 C   FIELD 11w01 Reserved_11 (ro): 
+0x20060042 C   FIELD 12w01 SYS_BUS_64_SUPPORT (ro): 
+0x20060042 C   FIELD 13w01 ASYNC_INT_SUPPORT (ro): 
+0x20060042 C   FIELD 14w02 CFG_SLOT_TYPE (rw): 
+0x20060044 B  REGISTER SD_CAPABILITIES_3: Capabilities Register 3
+0x20060044 C   FIELD 00w01 SDR50_SUPPORT (ro): 
+0x20060044 C   FIELD 01w01 SDR104_SUPPORT (ro): 
+0x20060044 C   FIELD 02w01 DDR50_SUPPORT (ro): 
+0x20060044 C   FIELD 03w01 Reserved_3 (ro): 
+0x20060044 C   FIELD 04w01 DRV_TYPE_A (ro): 
+0x20060044 C   FIELD 05w01 DRV_TYPE_C (ro): 
+0x20060044 C   FIELD 06w01 DRV_TYPE_D (ro): 
+0x20060044 C   FIELD 07w01 Reserved_7 (ro): 
+0x20060044 C   FIELD 08w04 TMR_RETUNE (ro): 
+0x20060044 C   FIELD 12w01 Reserved_12 (ro): 
+0x20060044 C   FIELD 13w01 SDR50_TUNE (ro): 
+0x20060044 C   FIELD 14w02 RETUNE_MODES (ro): 
+0x20060046 B  REGISTER SD_CAPABILITIES_4: Capabilities Register 4
+0x20060046 C   FIELD 00w08 clk_multiplier (ro): 
+0x20060046 C   FIELD 08w08 Reserved_15_8 (ro): 
+0x20060048 B  REGISTER SD_MAX_CURRENT_1: Maximum Current Register 1
+0x20060048 C   FIELD 00w08 MAX_CUR_33 (ro): 
+0x20060048 C   FIELD 08w08 MAX_CUR_30 (ro): 
+0x2006004A B  REGISTER SD_MAX_CURRENT_2: Maximum Current Register 2
+0x2006004A C   FIELD 00w08 MAX_CUR_18 (ro): 
+0x2006004A C   FIELD 08w08 Reserved_15_8 (ro): 
+0x2006004C B  REGISTER SD_MAX_CURRENT_3: Maximum Current Register 3
+0x2006004C C   FIELD 00w16 Reserved_15_0 (ro): 
+0x2006004E B  REGISTER SD_MAX_CURRENT_4: Maximum Current Register 4
+0x2006004E C   FIELD 00w16 Reserved_15_0 (ro): 
+0x20060050 B  REGISTER SD_FORCE_EVENT_AUTO_CMD12_ERROR: Force Event Auto cmd12 Error Register
+0x20060050 C   FIELD 00w01 F_ACMD12_NEXE_ERR (wo): 
+0x20060050 C   FIELD 01w01 F_ACMD_TO_ERR (wo): 
+0x20060050 C   FIELD 02w01 F_ACMD_CRC_ERR (wo): 
+0x20060050 C   FIELD 03w01 F__ACMD_EBIT_ERR (wo): 
+0x20060050 C   FIELD 04w01 F_ACMD_INDEX_ERR (wo): 
+0x20060050 C   FIELD 05w02 Reserved_6_5 (ro): 
+0x20060050 C   FIELD 07w01 F_ACMD12_ISSUE_ERR (wo): 
+0x20060050 C   FIELD 08w08 Reserved_15_8 (ro): 
+0x20060052 B  REGISTER SD_FORCE_EVENT_FOR_ERROR_STATUS: Force Event for Error Status Register
+0x20060052 C   FIELD 00w01 F_CMD_TO_ERR (wo): 
+0x20060052 C   FIELD 01w01 F_CMD_CRC_ERR (wo): 
+0x20060052 C   FIELD 02w01 F_CMD_END_BIT_ERR (wo): 
+0x20060052 C   FIELD 03w01 F_CMD_INDEX_ERR (wo): 
+0x20060052 C   FIELD 04w01 F_DAT_TO_ERR (wo): 
+0x20060052 C   FIELD 05w01 F_DAT_CRC_ERR (wo): 
+0x20060052 C   FIELD 06w01 F_DAT_END_BIT_ERR (wo): 
+0x20060052 C   FIELD 07w01 F_CURRENT_ERR (wo): 
+0x20060052 C   FIELD 08w01 F_ACMD12_ERR (wo): 
+0x20060052 C   FIELD 09w01 F_ADMA_ERR (wo): 
+0x20060052 C   FIELD 10w02 Reserved_11_10 (ro): 
+0x20060052 C   FIELD 12w01 F_SPI_ERR (wo): 
+0x20060052 C   FIELD 13w01 F_AXI_RESP_ERR (wo): 
+0x20060052 C   FIELD 14w01 F_CPL_TIMEOUT_ERR (wo): 
+0x20060052 C   FIELD 15w01 F_CRC_STATUS_ERR (wo): 
+0x20060054 B  REGISTER SD_ADMA_ERROR_STATUS: ADMA Error Status Register
+0x20060054 C   FIELD 00w02 ADMA_STATE (rw): 
+0x20060054 C   FIELD 02w01 ADMA_LEN_ERR (rw): 
+0x20060054 C   FIELD 03w13 Reserved_15_3 (ro): 
+0x20060058 B  REGISTER SD_ADMA_SYS_ADDR_1: ADMA System Address Register 1
+0x20060058 C   FIELD 00w16 ADMA_SYS_ADDR (rw): 
+0x2006005A B  REGISTER SD_ADMA_SYS_ADDR_2: ADMA System Address Register 2
+0x2006005A C   FIELD 00w16 ADMA_SYS_ADDR (rw): 
+0x2006005C B  REGISTER SD_ADMA_SYS_ADDR_3: ADMA System Address Register 3
+0x2006005C C   FIELD 00w16 ADMA_SYS_ADDR (rw): 
+0x2006005E B  REGISTER SD_ADMA_SYS_ADDR_4: ADMA System Address Register 4
+0x2006005E C   FIELD 00w16 ADMA_SYS_ADDR (rw): 
+0x20060060 B  REGISTER PRESET_VALUE_FOR_INIT: Preset Value Register for Initialization
+0x20060060 C   FIELD 00w10 SDCLK_FREQ_SEL_VAL (ro): 
+0x20060060 C   FIELD 10w01 CLKGEN_SEL_VAL (ro): 
+0x20060060 C   FIELD 11w03 Reserved_13_11 (ro): 
+0x20060060 C   FIELD 14w02 DRV_STRENGTH_VAL (ro): 
+0x20060062 B  REGISTER PRESET_VALUE_FOR_DS: Preset Value Register for Default Speed
+0x20060062 C   FIELD 00w10 SDCLK_FREQ_SEL_VAL (ro): 
+0x20060062 C   FIELD 10w01 CLKGEN_SEL_VAL (ro): 
+0x20060062 C   FIELD 11w03 Reserved_13_11 (ro): 
+0x20060062 C   FIELD 14w02 DRV_STRENGTH_VAL (ro): 
+0x20060064 B  REGISTER PRESET_VALUE_FOR_HS: Preset Value Register for High Speed
+0x20060064 C   FIELD 00w10 SDCLK_FREQ_SEL_VAL (ro): 
+0x20060064 C   FIELD 10w01 CLKGEN_SEL_VAL (ro): 
+0x20060064 C   FIELD 11w03 Reserved_13_11 (ro): 
+0x20060064 C   FIELD 14w02 DRV_STRENGTH_VAL (ro): 
+0x20060066 B  REGISTER PRESET_VALUE_FOR_SDR12: Preset Value Register for SDR12
+0x20060066 C   FIELD 00w10 SDCLK_FREQ_SEL_VAL (ro): 
+0x20060066 C   FIELD 10w01 CLKGEN_SEL_VAL (ro): 
+0x20060066 C   FIELD 11w03 Reserved_13_11 (ro): 
+0x20060066 C   FIELD 14w02 DRV_STRENGTH_VAL (ro): 
+0x20060068 B  REGISTER PRESET_VALUE_FOR_SDR25: Preset Value Register for SDR25
+0x20060068 C   FIELD 00w10 SDCLK_FREQ_SEL_VAL (ro): 
+0x20060068 C   FIELD 10w01 CLKGEN_SEL_VAL (ro): 
+0x20060068 C   FIELD 11w03 Reserved_13_11 (ro): 
+0x20060068 C   FIELD 14w02 DRV_STRENGTH_VAL (ro): 
+0x2006006A B  REGISTER PRESET_VALUE_FOR_SDR50: Preset Value Register for SDR50
+0x2006006A C   FIELD 00w10 SDCLK_FREQ_SEL_VAL (ro): 
+0x2006006A C   FIELD 10w01 CLKGEN_SEL_VAL (ro): 
+0x2006006A C   FIELD 11w03 Reserved_13_11 (ro): 
+0x2006006A C   FIELD 14w02 DRV_STRENGTH_VAL (ro): 
+0x2006006C B  REGISTER PRESET_VALUE_FOR_SDR104: Preset Value Register for SDR104
+0x2006006C C   FIELD 00w10 SDCLK_FREQ_SEL_VAL (ro): 
+0x2006006C C   FIELD 10w01 CLKGEN_SEL_VAL (ro): 
+0x2006006C C   FIELD 11w03 Reserved_13_11 (ro): 
+0x2006006C C   FIELD 14w02 DRV_STRENGTH_VAL (ro): 
+0x2006006E B  REGISTER PRESET_VALUE_FOR_DDR50: Preset Value Register for DDR50
+0x2006006E C   FIELD 00w10 SDCLK_FREQ_SEL_VAL (ro): 
+0x2006006E C   FIELD 10w01 CLKGEN_SEL_VAL (ro): 
+0x2006006E C   FIELD 11w03 Reserved_13_11 (ro): 
+0x2006006E C   FIELD 14w02 DRV_STRENGTH_VAL (ro): 
+0x200600E0 B  REGISTER SHARED_BUS_CTRL: Shared Bus Control Register
+0x200600E0 C   FIELD 00w03 NUM_CLK_PINS (ro): 
+0x200600E0 C   FIELD 03w01 Reserved_3 (ro): 
+0x200600E0 C   FIELD 04w02 NUM_INT_PINS (ro): 
+0x200600E0 C   FIELD 06w02 Reserved_7_6 (ro): 
+0x200600E0 C   FIELD 08w07 BUS_WIDTH_PRESET (ro): 
+0x200600E0 C   FIELD 15w01 Reserved_15 (ro): 
+0x200600E0 C   FIELD 16w03 CLK_PIN_SEL (rw): 
+0x200600E0 C   FIELD 19w01 Reserved_19 (ro): 
+0x200600E0 C   FIELD 20w03 INT_PIN_SEL (rw): 
+0x200600E0 C   FIELD 23w01 Reserved_23 (ro): 
+0x200600E0 C   FIELD 24w07 BEND_PWR_CTRL (rw): 
+0x200600E0 C   FIELD 31w01 Reserved_31 (ro): 
+0x200600FC B  REGISTER SD_SLOT_INT_STATUS: Slot Interrupt Status Register
+0x200600FC C   FIELD 00w01 SLOT_INT0 (ro): 
+0x200600FC C   FIELD 01w01 SLOT_INT1 (ro): 
+0x200600FC C   FIELD 02w14 Reserved_15_2 (ro): 
+0x200600FE B  REGISTER SD_HOST_CTRL_VER: Host Control Version Register
+0x200600FE C   FIELD 00w08 SD_VER (ro): 
+0x200600FE C   FIELD 08w08 VENDOR_VER (ro): 
+0x20060100 B  REGISTER SD_CFG_FIFO_PARAM: SD Extra Parameters Register
+0x20060100 C   FIELD 00w01 Reserved_0 (ro): 
+0x20060100 C   FIELD 01w02 Reserved_2_1 (ro): 
+0x20060100 C   FIELD 03w01 BOOT_ACK (rw): 
+0x20060100 C   FIELD 04w01 SQU_EMPTY_CHK (rw): 
+0x20060100 C   FIELD 05w01 SQU_FULL_CHK (rw): 
+0x20060100 C   FIELD 06w01 GEN_PAD_CLK_ON (rw): 
+0x20060100 C   FIELD 07w17 Reserved_23_7 (ro): 
+0x20060100 C   FIELD 24w08 GEN_PAD_CLK_CNT (rw): 
+0x20060104 B  REGISTER SD_FIFO_PARAM: FIFO Parameters Register
+0x20060104 C   FIELD 00w02 RTC (rw): 
+0x20060104 C   FIELD 02w02 WTC (rw): 
+0x20060104 C   FIELD 04w01 FIFO_CLK (rw): 
+0x20060104 C   FIELD 05w01 FIFO_CS (rw): 
+0x20060104 C   FIELD 06w01 PDWN (rw): 
+0x20060104 C   FIELD 07w01 use_dat3 (rw): 
+0x20060104 C   FIELD 08w01 CLK_GATE_CTL (rw): 
+0x20060104 C   FIELD 09w01 CLK_GATE_ON (rw): 
+0x20060104 C   FIELD 10w01 Reserved_10 (ro): 
+0x20060104 C   FIELD 11w01 OVRRD_CLK_OEN (rw): 
+0x20060104 C   FIELD 12w01 FORCE_CLK_ON (rw): 
+0x20060104 C   FIELD 13w01 PDFVSSM (rw): 
+0x20060104 C   FIELD 14w01 PDLVMC (rw): 
+0x20060104 C   FIELD 15w01 Reserved_15 (ro): 
+0x20060104 C   FIELD 16w04 PRE_GATE_CLK_CNT (rw): 
+0x20060104 C   FIELD 20w12 Reserved_31_20 (ro): 
+0x20060108 B  REGISTER SD_SPI_MODE: SPI Mode Register
+0x20060108 C   FIELD 00w01 SPI_EN (rw): 
+0x20060108 C   FIELD 01w07 Reserved_7_1 (ro): 
+0x20060108 C   FIELD 08w05 SPI_ERR_TOKEN (rw): 
+0x20060108 C   FIELD 13w03 Reserved_15_13 (ro): 
+0x2006010A B  REGISTER SD_CLOCK_AND_BURST_SIZE_SETUP: Clock and Burst Size Setup Register
+0x2006010A C   FIELD 00w02 BRST_SIZE (rw): 
+0x2006010A C   FIELD 02w02 DMA_SIZE (rw): 
+0x2006010A C   FIELD 04w01 priority (rw): 
+0x2006010A C   FIELD 05w01 AXI_NON_POST_WR (rw): 
+0x2006010A C   FIELD 06w01 RD_ENDIAN (rw): 
+0x2006010A C   FIELD 07w01 WR_ENDIAN (rw): 
+0x2006010A C   FIELD 08w06 Reserved_13_8 (ro): 
+0x2006010A C   FIELD 14w01 RD_OSTDG (rw): 
+0x2006010A C   FIELD 15w01 WR_OSTDG (rw): 
+0x2006010C B  REGISTER SD_CE_ATA_1: CE-ATA Register 1
+0x2006010C C   FIELD 00w14 CPL_TIMEOUT (rw): 
+0x2006010C C   FIELD 14w02 Reserved_15_14 (ro): 
+0x2006010E B  REGISTER SD_CE_ATA_2: CE-ATA Register 2
+0x2006010E C   FIELD 00w01 MISC_INT_INT_EN (rw): 
+0x2006010E C   FIELD 01w01 MISC_INT_EN (rw): 
+0x2006010E C   FIELD 02w01 MISC_INT (rw): 
+0x2006010E C   FIELD 03w01 Reserved_3 (ro): 
+0x2006010E C   FIELD 04w01 CPL_COMPLETE_INT_EN (rw): 
+0x2006010E C   FIELD 05w01 CPL_COMPLETE_EN (rw): 
+0x2006010E C   FIELD 06w01 CPL_COMPLETE (rw): 
+0x2006010E C   FIELD 07w04 Reserved_10_7 (ro): 
+0x2006010E C   FIELD 11w01 MMC_RESETN (rw): 
+0x2006010E C   FIELD 12w01 MMC_CARD (rw): 
+0x2006010E C   FIELD 13w01 CEATA_CARD (rw): 
+0x2006010E C   FIELD 14w01 SND_CPL (rw): 
+0x2006010E C   FIELD 15w01 CHK_CPL (rw): 
+0x20060110 B  REGISTER SD_PAD_IO_SETUP: PAD I/O Setup Register
+0x20060110 C   FIELD 00w01 ASYNC_IO_EN (rw): 
+0x20060110 C   FIELD 01w01 INAND_SEL (rw): 
+0x20060110 C   FIELD 02w14 Reserved_15_2 (ro): 
+0x20060110 C   FIELD 16w08 ECO_REG (rw): 
+0x20060110 C   FIELD 24w08 Reserved_31_24 (ro): 
+0x20060114 B  REGISTER RX_CFG_REG: RX Configuration Register
+0x20060114 C   FIELD 00w02 SDCLK_SEL0 (rw): 
+0x20060114 C   FIELD 02w02 SDCLK_SEL1 (rw): 
+0x20060114 C   FIELD 04w04 Reserved_7_4 (ro): 
+0x20060114 C   FIELD 08w10 SDCLK_DELAY (rw): 
+0x20060114 C   FIELD 18w10 TUNING_DLY_INC (rw): 
+0x20060114 C   FIELD 28w04 Reserved_31_28 (ro): 
+0x20060118 B  REGISTER TX_CFG_REG: TX Configuration Register
+0x20060118 C   FIELD 00w10 TX_HOLD_DELAY0 (rw): 
+0x20060118 C   FIELD 10w06 Reserved_15_10 (ro): 
+0x20060118 C   FIELD 16w10 TX_HOLD_DELAY1 (rw): 
+0x20060118 C   FIELD 26w04 Reserved_29_26 (ro): 
+0x20060118 C   FIELD 30w01 TX_INT_CLK_SEL (rw): 
+0x20060118 C   FIELD 31w01 TX_MUX_SEL (rw): 
+0x2006011C B  REGISTER TUNING_CFG_REG: TUNING CONFIG Register
+0x2006011C C   FIELD 00w08 TUNING_TT_CNT (rw): 
+0x2006011C C   FIELD 08w06 TUNING_WD_CNT (rw): 
+0x2006011C C   FIELD 14w10 TUNING_CLK_DLY (ro): 
 0x30020000 A PERIPHERAL CODEC
 0x30020000 B  REGISTER codec_bus_ctrl: codec_bus_ctrl
 0x30020000 C   FIELD 00w16 rg_pclk_force_on (rw): 
@@ -5236,10 +7023,23 @@
 0x30020008 C   FIELD 06w02 reg_x_wthre_vdo2pa (rw): 
 0x30020008 C   FIELD 08w02 reg_x_wthre_vdo2sysram (rw): 
 0x30020008 C   FIELD 10w22 reserved_10_31 (ro): 
-0x30020010 B  REGISTER blai_lmtr_rd: codec_bus_dec_err
-0x30020010 C   FIELD 00w16 reg_blai_rcmd_cnt (rw): 
-0x30020010 C   FIELD 16w15 reserved_16_30 (ro): 
-0x30020010 C   FIELD 31w01 reg_blai_rcmd_mode (rw): 
+0x30020010 B  REGISTER codec_bus_dec_err: codec_bus_dec_err
+0x30020010 C   FIELD 00w01 reg_dec_err_clr (rw): 
+0x30020010 C   FIELD 01w01 reg_dec_err_latch_last (rw): 
+0x30020010 C   FIELD 02w06 reserved_2_7 (ro): 
+0x30020010 C   FIELD 08w01 codec_hs_dec_err_lat (ro): 
+0x30020010 C   FIELD 09w01 codec_hs_dec_err_write (ro): 
+0x30020010 C   FIELD 10w02 reserved_10_11 (ro): 
+0x30020010 C   FIELD 12w02 codec_hs_dec_err_src (ro): 
+0x30020010 C   FIELD 14w02 reserved_14_15 (ro): 
+0x30020010 C   FIELD 16w01 codec_hs_dec_err_id (ro): 
+0x30020010 C   FIELD 17w15 reserved_17_31 (ro): 
+0x30020014 B  REGISTER codec_bus_dec_err_addr: codec_bus_dec_err_addr
+0x30020014 C   FIELD 00w32 codec_hs_dec_err_addr (ro): 
+0x30020020 B  REGISTER blai_lmtr_rd: blai_lmtr_rd
+0x30020020 C   FIELD 00w16 reg_blai_rcmd_cnt (rw): 
+0x30020020 C   FIELD 16w15 reserved_16_30 (ro): 
+0x30020020 C   FIELD 31w01 reg_blai_rcmd_mode (rw): 
 0x30020024 B  REGISTER blai_lmtr_wr: blai_lmtr_wr
 0x30020024 C   FIELD 00w16 reg_blai_wcmd_cnt (rw): 
 0x30020024 C   FIELD 16w15 reserved_16_30 (ro): 
@@ -5247,3 +7047,5 @@
 0x30020028 B  REGISTER id_selection: id_selection
 0x30020028 C   FIELD 00w01 rg_jenc_id_sel (rw): 
 0x30020028 C   FIELD 01w31 reserved_1_31 (ro): 
+0x300200FC B  REGISTER CODEC_MISC_Dummy: CODEC_MISC_Dummy
+0x300200FC C   FIELD 00w32 dummy_reg (rw): 
