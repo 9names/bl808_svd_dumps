@@ -1,5 +1,4 @@
 mm_clk_ctrl_cpu:
-  description: mm_clk_ctrl_cpu
   addressOffset: 0x0
   resetValue: 0x0510000F
   fields:
@@ -84,7 +83,6 @@ mm_clk_ctrl_cpu:
       bitWidth: 1
       access: read-only
 mm_clk_cpu:
-  description: mm_clk_cpu
   addressOffset: 0x4
   resetValue: 0x00000100
   fields:
@@ -121,7 +119,6 @@ mm_clk_cpu:
       bitWidth: 8
       access: read-write
 dp_clk:
-  description: dp_clk
   addressOffset: 0x8
   resetValue: 0x00010000
   fields:
@@ -150,7 +147,6 @@ dp_clk:
       bitWidth: 8
       access: read-only
 codec_clk:
-  description: codec_clk
   addressOffset: 0xC
   resetValue: 0x00000100
   fields:
@@ -179,7 +175,6 @@ codec_clk:
       bitWidth: 17
       access: read-only
 mm_clk_ctrl_peri:
-  description: mm_clk_ctrl_peri
   addressOffset: 0x10
   resetValue: 0x00810300
   fields:
@@ -220,7 +215,6 @@ mm_clk_ctrl_peri:
       bitWidth: 8
       access: read-write
 mm_clk_ctrl_peri3:
-  description: mm_clk_ctrl_peri3
   addressOffset: 0x18
   resetValue: 0x00010300
   fields:
@@ -253,7 +247,6 @@ mm_clk_ctrl_peri3:
       bitWidth: 12
       access: read-only
 mm_sw_sys_reset:
-  description: mm_sw_sys_reset
   addressOffset: 0x40
   resetValue: 0x00000100
   fields:
@@ -282,7 +275,6 @@ mm_sw_sys_reset:
       bitWidth: 23
       access: read-only
 sw_reset_mm_peri:
-  description: sw_reset_mm_peri
   addressOffset: 0x44
   resetValue: 0x00000000
   fields:
@@ -346,7 +338,7 @@ sw_reset_mm_peri:
       bitOffset: 14
       bitWidth: 1
       access: read-write
-    swrst_pUHS:
+    swrst_puhs:
       bitOffset: 15
       bitWidth: 1
       access: read-write
@@ -355,7 +347,6 @@ sw_reset_mm_peri:
       bitWidth: 16
       access: read-only
 sw_reset_sub:
-  description: sw_reset_sub
   addressOffset: 0x48
   resetValue: 0x00000000
   fields:
@@ -379,19 +370,19 @@ sw_reset_sub:
       bitOffset: 4
       bitWidth: 1
       access: read-write
-    swrst_dvp2busA:
+    swrst_dvp2busa:
       bitOffset: 5
       bitWidth: 1
       access: read-write
-    swrst_dvp2busB:
+    swrst_dvp2busb:
       bitOffset: 6
       bitWidth: 1
       access: read-write
-    swrst_dvp2busC:
+    swrst_dvp2busc:
       bitOffset: 7
       bitWidth: 1
       access: read-write
-    swrst_dvp2busD:
+    swrst_dvp2busd:
       bitOffset: 8
       bitWidth: 1
       access: read-write
@@ -407,19 +398,19 @@ sw_reset_sub:
       bitOffset: 16
       bitWidth: 1
       access: read-write
-    swrst_dvp2busE:
+    swrst_dvp2buse:
       bitOffset: 17
       bitWidth: 1
       access: read-write
-    swrst_dvp2busF:
+    swrst_dvp2busf:
       bitOffset: 18
       bitWidth: 1
       access: read-write
-    swrst_dvp2busG:
+    swrst_dvp2busg:
       bitOffset: 19
       bitWidth: 1
       access: read-write
-    swrst_dvp2busH:
+    swrst_dvp2bush:
       bitOffset: 20
       bitWidth: 1
       access: read-write
@@ -428,7 +419,6 @@ sw_reset_sub:
       bitWidth: 11
       access: read-only
 sw_reset_codec_sub:
-  description: sw_reset_codec_sub
   addressOffset: 0x4C
   resetValue: 0x00000000
   fields:
@@ -465,7 +455,6 @@ sw_reset_codec_sub:
       bitWidth: 15
       access: read-only
 image_sensor_ctrl:
-  description: image_sensor_ctrl
   addressOffset: 0x50
   resetValue: 0x00000001
   fields:
@@ -478,7 +467,6 @@ image_sensor_ctrl:
       bitWidth: 31
       access: read-only
 tz_mm_clkrst:
-  description: tz_mm_clkrst
   addressOffset: 0x60
   resetValue: 0x00000000
   fields:

@@ -1,5 +1,4 @@
 soc_info0:
-  description: soc_info0
   addressOffset: 0x0
   resetValue: 0x60000000
   fields:
@@ -16,7 +15,6 @@ soc_info0:
       bitWidth: 4
       access: read-only
 core_cfg16:
-  description: core_cfg16
   addressOffset: 0x50
   resetValue: 0x00000000
   fields:
@@ -25,7 +23,6 @@ core_cfg16:
       bitWidth: 32
       access: read-only
 core_cfg17:
-  description: core_cfg17
   addressOffset: 0x54
   resetValue: 0x00000000
   fields:
@@ -34,7 +31,6 @@ core_cfg17:
       bitWidth: 32
       access: read-only
 core_cfg18:
-  description: core_cfg18
   addressOffset: 0x58
   resetValue: 0x00000000
   fields:
@@ -43,7 +39,6 @@ core_cfg18:
       bitWidth: 32
       access: read-write
 core_cfg19:
-  description: core_cfg19
   addressOffset: 0x5C
   resetValue: 0x00000000
   fields:
@@ -52,7 +47,6 @@ core_cfg19:
       bitWidth: 32
       access: read-write
 core_cfg20:
-  description: core_cfg20
   addressOffset: 0x60
   resetValue: 0x00000000
   fields:
@@ -61,7 +55,6 @@ core_cfg20:
       bitWidth: 32
       access: write-only
 core_cfg21:
-  description: core_cfg21
   addressOffset: 0x64
   resetValue: 0x00000000
   fields:
@@ -70,7 +63,6 @@ core_cfg21:
       bitWidth: 32
       access: write-only
 core_cfg22:
-  description: core_cfg22
   addressOffset: 0x68
   resetValue: 0xFFFFFFFF
   fields:
@@ -79,7 +71,6 @@ core_cfg22:
       bitWidth: 32
       access: read-write
 core_cfg23:
-  description: core_cfg23
   addressOffset: 0x6C
   resetValue: 0xFFFFFFFF
   fields:
@@ -88,7 +79,6 @@ core_cfg23:
       bitWidth: 32
       access: read-write
 core_cfg24:
-  description: core_cfg24
   addressOffset: 0x70
   resetValue: 0x00000000
   fields:
@@ -97,7 +87,6 @@ core_cfg24:
       bitWidth: 32
       access: read-only
 core_cfg25:
-  description: core_cfg25
   addressOffset: 0x74
   resetValue: 0x00000000
   fields:
@@ -106,7 +95,6 @@ core_cfg25:
       bitWidth: 32
       access: read-only
 sys_cfg0:
-  description: sys_cfg0
   addressOffset: 0x90
   resetValue: 0x0000000F
   fields:
@@ -147,7 +135,6 @@ sys_cfg0:
       bitWidth: 8
       access: read-only
 sys_cfg1:
-  description: sys_cfg1
   addressOffset: 0x94
   resetValue: 0x00540054
   fields:
@@ -204,7 +191,6 @@ sys_cfg1:
       bitWidth: 5
       access: read-only
 bus_cfg0:
-  description: bus_cfg0
   addressOffset: 0xA0
   resetValue: 0x0000FFFF
   fields:
@@ -217,7 +203,6 @@ bus_cfg0:
       bitWidth: 16
       access: read-only
 emi_cfg0:
-  description: emi_cfg0
   addressOffset: 0xE0
   resetValue: 0x00000200
   fields:
@@ -250,7 +235,6 @@ emi_cfg0:
       bitWidth: 8
       access: read-only
 rtc_cfg0:
-  description: rtc_cfg0
   addressOffset: 0xF0
   resetValue: 0x00080010
   fields:
@@ -275,7 +259,6 @@ rtc_cfg0:
       bitWidth: 12
       access: read-only
 adc_cfg0:
-  description: adc_cfg0
   addressOffset: 0x110
   resetValue: 0x00000102
   fields:
@@ -300,7 +283,6 @@ adc_cfg0:
       bitWidth: 23
       access: read-only
 dac_cfg0:
-  description: dac_cfg0
   addressOffset: 0x120
   resetValue: 0x0F000003
   fields:
@@ -337,7 +319,6 @@ dac_cfg0:
       bitWidth: 8
       access: read-write
 dac_cfg1:
-  description: dac_cfg1
   addressOffset: 0x124
   resetValue: 0x000C0000
   fields:
@@ -366,7 +347,6 @@ dac_cfg1:
       bitWidth: 9
       access: read-only
 dac_cfg2:
-  description: dac_cfg2
   addressOffset: 0x128
   resetValue: 0x000C0000
   fields:
@@ -395,7 +375,6 @@ dac_cfg2:
       bitWidth: 9
       access: read-only
 dac_cfg3:
-  description: dac_cfg3
   addressOffset: 0x12C
   resetValue: 0x00000000
   fields:
@@ -416,7 +395,6 @@ dac_cfg3:
       bitWidth: 6
       access: read-only
 dma_cfg0:
-  description: dma_cfg0
   addressOffset: 0x130
   resetValue: 0xFF000000
   fields:
@@ -429,7 +407,6 @@ dma_cfg0:
       bitWidth: 8
       access: read-write
 dma_cfg1:
-  description: dma_cfg1
   addressOffset: 0x134
   resetValue: 0xFF000000
   fields:
@@ -442,7 +419,6 @@ dma_cfg1:
       bitWidth: 8
       access: read-write
 dma_cfg2:
-  description: dma_cfg2
   addressOffset: 0x138
   resetValue: 0x00000000
   fields:
@@ -451,7 +427,6 @@ dma_cfg2:
       bitWidth: 32
       access: read-write
 ir_cfg0:
-  description: ir_cfg0
   addressOffset: 0x140
   resetValue: 0x008F0000
   fields:
@@ -476,7 +451,6 @@ ir_cfg0:
       bitWidth: 8
       access: read-only
 ir_cfg1:
-  description: ir_cfg1
   addressOffset: 0x144
   resetValue: 0x00000080
   fields:
@@ -513,7 +487,6 @@ ir_cfg1:
       bitWidth: 1
       access: read-write
 uart_cfg0:
-  description: uart_cfg0
   addressOffset: 0x150
   resetValue: 0x00000017
   fields:
@@ -558,7 +531,6 @@ uart_cfg0:
       bitWidth: 7
       access: read-only
 uart_cfg1:
-  description: uart_cfg1
   addressOffset: 0x154
   resetValue: 0x76543210
   fields:
@@ -595,7 +567,6 @@ uart_cfg1:
       bitWidth: 4
       access: read-write
 uart_cfg2:
-  description: uart_cfg2
   addressOffset: 0x158
   resetValue: 0x0000BA98
   fields:
@@ -620,7 +591,6 @@ uart_cfg2:
       bitWidth: 16
       access: read-only
 sf_cfg0:
-  description: sf_cfg0
   addressOffset: 0x170
   resetValue: 0x00002B00
   fields:
@@ -649,7 +619,6 @@ sf_cfg0:
       bitWidth: 16
       access: read-only
 i2c_cfg0:
-  description: i2c_cfg0
   addressOffset: 0x180
   resetValue: 0x01FF0000
   fields:
@@ -674,7 +643,6 @@ i2c_cfg0:
       bitWidth: 6
       access: read-only
 i2s_cfg0:
-  description: i2s_cfg0
   addressOffset: 0x190
   resetValue: 0x00000081
   fields:
@@ -699,7 +667,6 @@ i2s_cfg0:
       bitWidth: 23
       access: read-only
 spi_cfg0:
-  description: spi_cfg0
   addressOffset: 0x1B0
   resetValue: 0x00000103
   fields:
@@ -732,7 +699,6 @@ spi_cfg0:
       bitWidth: 12
       access: read-only
 qdec_cfg0:
-  description: qdec_cfg0
   addressOffset: 0x1C0
   resetValue: 0x00000000
   fields:
@@ -741,7 +707,6 @@ qdec_cfg0:
       bitWidth: 32
       access: read-only
 pwm_cfg0:
-  description: pwm_cfg0
   addressOffset: 0x1D0
   resetValue: 0x00000000
   fields:
@@ -758,7 +723,6 @@ pwm_cfg0:
       bitWidth: 30
       access: read-only
 pdm_cfg0:
-  description: pdm_cfg0
   addressOffset: 0x1E0
   resetValue: 0x00000000
   fields:
@@ -771,7 +735,6 @@ pdm_cfg0:
       bitWidth: 31
       access: read-only
 dig_clk_cfg0:
-  description: dig_clk_cfg0
   addressOffset: 0x250
   resetValue: 0x033E13E8
   fields:
@@ -828,7 +791,6 @@ dig_clk_cfg0:
       bitWidth: 1
       access: read-write
 dig_clk_cfg1:
-  description: dig_clk_cfg1
   addressOffset: 0x254
   resetValue: 0x00000000
   fields:
@@ -861,7 +823,6 @@ dig_clk_cfg1:
       bitWidth: 20
       access: read-only
 dig_clk_cfg2:
-  description: dig_clk_cfg2
   addressOffset: 0x258
   resetValue: 0x00000F00
   fields:
@@ -910,7 +871,6 @@ dig_clk_cfg2:
       bitWidth: 16
       access: read-only
 dig_clk_cfg3:
-  description: dig_clk_cfg3
   addressOffset: 0x25C
   resetValue: 0x00000000
   fields:
@@ -927,7 +887,6 @@ dig_clk_cfg3:
       bitWidth: 30
       access: read-only
 rf_cfg0:
-  description: rf_cfg0
   addressOffset: 0x260
   resetValue: 0x00000200
   fields:
@@ -944,7 +903,6 @@ rf_cfg0:
       bitWidth: 22
       access: read-only
 dbg_cfg0:
-  description: dbg_cfg0
   addressOffset: 0x2E0
   resetValue: 0x00000000
   fields:
@@ -957,7 +915,6 @@ dbg_cfg0:
       bitWidth: 2
       access: read-write
 dbg_cfg1:
-  description: dbg_cfg1
   addressOffset: 0x2E4
   resetValue: 0x00000000
   fields:
@@ -970,7 +927,6 @@ dbg_cfg1:
       bitWidth: 2
       access: read-write
 dbg_cfg2:
-  description: dbg_cfg2
   addressOffset: 0x2E8
   resetValue: 0x00000000
   fields:
@@ -983,7 +939,6 @@ dbg_cfg2:
       bitWidth: 2
       access: read-write
 dbg_cfg3:
-  description: dbg_cfg3
   addressOffset: 0x2EC
   resetValue: 0x00000000
   fields:
@@ -996,7 +951,6 @@ dbg_cfg3:
       bitWidth: 2
       access: read-write
 dbg_cfg4:
-  description: dbg_cfg4
   addressOffset: 0x2F0
   resetValue: 0x00000000
   fields:
@@ -1009,7 +963,6 @@ dbg_cfg4:
       bitWidth: 31
       access: read-only
 mbist_cfg0:
-  description: mbist_cfg0
   addressOffset: 0x300
   resetValue: 0x00000000
   fields:
@@ -1022,7 +975,6 @@ mbist_cfg0:
       bitWidth: 31
       access: read-only
 bmx_cfg0:
-  description: bmx_cfg0
   addressOffset: 0x320
   resetValue: 0x00000000
   fields:
@@ -1063,7 +1015,6 @@ bmx_cfg0:
       bitWidth: 8
       access: read-write
 bmx_cfg1:
-  description: bmx_cfg1
   addressOffset: 0x324
   resetValue: 0x00000000
   fields:
@@ -1115,7 +1066,7 @@ bmx_cfg1:
       bitOffset: 24
       bitWidth: 1
       access: read-write
-    reg_bmx_qos_emacA:
+    reg_bmx_qos_emaca:
       bitOffset: 25
       bitWidth: 1
       access: read-write
@@ -1132,7 +1083,6 @@ bmx_cfg1:
       bitWidth: 4
       access: read-write
 bmx_cfg2:
-  description: bmx_cfg2
   addressOffset: 0x328
   resetValue: 0x00013FFF
   fields:
@@ -1153,7 +1103,6 @@ bmx_cfg2:
       bitWidth: 15
       access: read-only
 bmx_cfg3:
-  description: bmx_cfg3
   addressOffset: 0x32C
   resetValue: 0x00000000
   fields:
@@ -1206,7 +1155,6 @@ bmx_cfg3:
       bitWidth: 6
       access: read-only
 bmx_cfg4:
-  description: bmx_cfg4
   addressOffset: 0x330
   resetValue: 0x00000000
   fields:
@@ -1231,7 +1179,6 @@ bmx_cfg4:
       bitWidth: 8
       access: read-only
 bmx_cfg5:
-  description: bmx_cfg5
   addressOffset: 0x334
   resetValue: 0x00000000
   fields:
@@ -1240,7 +1187,6 @@ bmx_cfg5:
       bitWidth: 32
       access: read-only
 bmx_cfg6:
-  description: bmx_cfg6
   addressOffset: 0x338
   resetValue: 0x00000000
   fields:
@@ -1249,7 +1195,6 @@ bmx_cfg6:
       bitWidth: 32
       access: read-only
 audio_cfg0:
-  description: audio_cfg0
   addressOffset: 0x340
   resetValue: 0x80838383
   fields:
@@ -1298,7 +1243,6 @@ audio_cfg0:
       bitWidth: 1
       access: read-write
 audio_cfg1:
-  description: audio_cfg1
   addressOffset: 0x344
   resetValue: 0x00000460
   fields:
@@ -1315,7 +1259,6 @@ audio_cfg1:
       bitWidth: 21
       access: read-only
 eth_cfg0:
-  description: eth_cfg0
   addressOffset: 0x390
   resetValue: 0x000004C0
   fields:
@@ -1348,7 +1291,6 @@ eth_cfg0:
       bitWidth: 21
       access: read-only
 cam_cfg0:
-  description: cam_cfg0
   addressOffset: 0x420
   resetValue: 0x00000000
   fields:
@@ -1369,7 +1311,6 @@ cam_cfg0:
       bitWidth: 2
       access: read-write
 sdh_cfg0:
-  description: sdh_cfg0
   addressOffset: 0x430
   resetValue: 0x00002000
   fields:
@@ -1394,7 +1335,6 @@ sdh_cfg0:
       bitWidth: 18
       access: read-only
 tzc_cfg0:
-  description: tzc_cfg0
   addressOffset: 0x490
   resetValue: 0x00000000
   fields:
@@ -1467,7 +1407,6 @@ tzc_cfg0:
       bitWidth: 1
       access: read-only
 glb_parm_cfg0:
-  description: glb_parm_cfg0
   addressOffset: 0x510
   resetValue: 0x00000B00
   fields:
@@ -1576,7 +1515,6 @@ glb_parm_cfg0:
       bitWidth: 2
       access: read-write
 debug_cfg0:
-  description: debug_cfg0
   addressOffset: 0x520
   resetValue: 0x00000000
   fields:
@@ -1585,7 +1523,6 @@ debug_cfg0:
       bitWidth: 32
       access: read-only
 debug_cfg1:
-  description: debug_cfg1
   addressOffset: 0x524
   resetValue: 0x00000000
   fields:
@@ -1602,7 +1539,6 @@ debug_cfg1:
       bitWidth: 11
       access: read-only
 reset_sts0:
-  description: reset_sts0
   addressOffset: 0x530
   resetValue: 0x00000000
   fields:
@@ -1837,7 +1773,6 @@ swrst_cfg1:
       bitWidth: 1
       access: read-write
 swrst_cfg2:
-  description: swrst_cfg2
   addressOffset: 0x548
   resetValue: 0x00000090
   fields:
@@ -2226,7 +2161,6 @@ cgen_cfg2:
       bitWidth: 4
       access: read-only
 cgen_cfg3:
-  description: cgen_cfg3
   addressOffset: 0x58C
   resetValue: 0x0001FFFF
   fields:
@@ -2303,7 +2237,6 @@ cgen_cfg3:
       bitWidth: 15
       access: read-only
 hw_rsv0:
-  description: hw_rsv0
   addressOffset: 0x5C0
   resetValue: 0x00000000
   fields:
@@ -2312,7 +2245,6 @@ hw_rsv0:
       bitWidth: 32
       access: read-only
 hw_rsv1:
-  description: hw_rsv1
   addressOffset: 0x5C4
   resetValue: 0x00000000
   fields:
@@ -2321,7 +2253,6 @@ hw_rsv1:
       bitWidth: 32
       access: read-only
 hw_rsv2:
-  description: hw_rsv2
   addressOffset: 0x5C8
   resetValue: 0x00000000
   fields:
@@ -2330,7 +2261,6 @@ hw_rsv2:
       bitWidth: 32
       access: read-only
 hw_rsv3:
-  description: hw_rsv3
   addressOffset: 0x5CC
   resetValue: 0xFFFFFFFF
   fields:
@@ -2466,7 +2396,6 @@ sram_cfg2:
       bitWidth: 17
       access: read-only
 sram_cfg3:
-  description: sram_cfg3
   addressOffset: 0x60C
   resetValue: 0x00000003
   fields:
@@ -2524,7 +2453,6 @@ sram_cfg4:
       bitWidth: 4
       access: read-only
 psram_cfg0:
-  description: psram_cfg0
   addressOffset: 0x620
   resetValue: 0x08000000
   fields:
@@ -2532,20 +2460,19 @@ psram_cfg0:
       bitOffset: 0
       bitWidth: 27
       access: read-only
-    reg_psramB_clk_en:
+    reg_psramb_clk_en:
       bitOffset: 27
       bitWidth: 1
       access: read-write
-    reg_psramB_clk_sel:
+    reg_psramb_clk_sel:
       bitOffset: 28
       bitWidth: 2
       access: read-write
-    reg_psramB_clk_div:
+    reg_psramb_clk_div:
       bitOffset: 30
       bitWidth: 2
       access: read-write
 ldo28cis:
-  description: ldo28cis
   addressOffset: 0x6C0
   resetValue: 0x083AB351
   fields:
@@ -2610,7 +2537,6 @@ ldo28cis:
       bitWidth: 4
       access: read-only
 ldo18io:
-  description: ldo18io
   addressOffset: 0x6C4
   resetValue: 0x00000000
   fields:
@@ -2619,7 +2545,6 @@ ldo18io:
       bitWidth: 32
       access: read-only
 ldo15cis:
-  description: ldo15cis
   addressOffset: 0x6C8
   resetValue: 0x088AB321
   fields:
@@ -2684,7 +2609,6 @@ ldo15cis:
       bitWidth: 4
       access: read-only
 ldo18flash:
-  description: ldo18flash
   addressOffset: 0x6CC
   resetValue: 0x073BB330
   fields:
@@ -2749,7 +2673,6 @@ ldo18flash:
       bitWidth: 4
       access: read-only
 ldo12uhs:
-  description: ldo12uhs
   addressOffset: 0x6D0
   resetValue: 0x083AB320
   fields:
@@ -2814,7 +2737,6 @@ ldo12uhs:
       bitWidth: 4
       access: read-only
 proc_mon:
-  description: proc_mon
   addressOffset: 0x6F0
   resetValue: 0x00000400
   fields:
@@ -2863,7 +2785,6 @@ proc_mon:
       bitWidth: 3
       access: read-only
 dll_cfg0:
-  description: dll_cfg0
   addressOffset: 0x700
   resetValue: 0x00000000
   fields:
@@ -2872,7 +2793,6 @@ dll_cfg0:
       bitWidth: 32
       access: read-only
 mipi_pll_cfg0:
-  description: mipi_pll_cfg0
   addressOffset: 0x790
   resetValue: 0x00000125
   fields:
@@ -2917,7 +2837,6 @@ mipi_pll_cfg0:
       bitWidth: 21
       access: read-only
 mipi_pll_cfg1:
-  description: mipi_pll_cfg1
   addressOffset: 0x794
   resetValue: 0x01100232
   fields:
@@ -2962,7 +2881,6 @@ mipi_pll_cfg1:
       bitWidth: 6
       access: read-only
 mipi_pll_cfg2:
-  description: mipi_pll_cfg2
   addressOffset: 0x798
   resetValue: 0x00001E31
   fields:
@@ -3007,7 +2925,6 @@ mipi_pll_cfg2:
       bitWidth: 19
       access: read-only
 mipi_pll_cfg3:
-  description: mipi_pll_cfg3
   addressOffset: 0x79C
   resetValue: 0x0011A011
   fields:
@@ -3060,7 +2977,6 @@ mipi_pll_cfg3:
       bitWidth: 11
       access: read-only
 mipi_pll_cfg4:
-  description: mipi_pll_cfg4
   addressOffset: 0x7A0
   resetValue: 0x00008311
   fields:
@@ -3109,7 +3025,6 @@ mipi_pll_cfg4:
       bitWidth: 15
       access: read-only
 mipi_pll_cfg5:
-  description: mipi_pll_cfg5
   addressOffset: 0x7A4
   resetValue: 0x00000415
   fields:
@@ -3142,7 +3057,6 @@ mipi_pll_cfg5:
       bitWidth: 21
       access: read-only
 mipi_pll_cfg6:
-  description: mipi_pll_cfg6
   addressOffset: 0x7A8
   resetValue: 0x00025800
   fields:
@@ -3163,7 +3077,6 @@ mipi_pll_cfg6:
       bitWidth: 7
       access: read-only
 mipi_pll_cfg7:
-  description: mipi_pll_cfg7
   addressOffset: 0x7AC
   resetValue: 0x00000001
   fields:
@@ -3180,7 +3093,6 @@ mipi_pll_cfg7:
       bitWidth: 29
       access: read-only
 mipi_pll_cfg8:
-  description: mipi_pll_cfg8
   addressOffset: 0x7B0
   resetValue: 0x00000400
   fields:
@@ -3233,7 +3145,6 @@ mipi_pll_cfg8:
       bitWidth: 21
       access: read-only
 mipi_pll_cfg9:
-  description: mipi_pll_cfg9
   addressOffset: 0x7B4
   resetValue: 0x00015640
   fields:
@@ -3266,7 +3177,6 @@ mipi_pll_cfg9:
       bitWidth: 15
       access: read-only
 uhs_pll_cfg0:
-  description: uhs_pll_cfg0
   addressOffset: 0x7D0
   resetValue: 0x00000125
   fields:
@@ -3311,7 +3221,6 @@ uhs_pll_cfg0:
       bitWidth: 21
       access: read-only
 uhs_pll_cfg1:
-  description: uhs_pll_cfg1
   addressOffset: 0x7D4
   resetValue: 0x01100254
   fields:
@@ -3356,7 +3265,6 @@ uhs_pll_cfg1:
       bitWidth: 6
       access: read-only
 uhs_pll_cfg2:
-  description: uhs_pll_cfg2
   addressOffset: 0x7D8
   resetValue: 0x00001E31
   fields:
@@ -3401,7 +3309,6 @@ uhs_pll_cfg2:
       bitWidth: 19
       access: read-only
 uhs_pll_cfg3:
-  description: uhs_pll_cfg3
   addressOffset: 0x7DC
   resetValue: 0x0011A011
   fields:
@@ -3454,7 +3361,6 @@ uhs_pll_cfg3:
       bitWidth: 11
       access: read-only
 uhs_pll_cfg4:
-  description: uhs_pll_cfg4
   addressOffset: 0x7E0
   resetValue: 0x00008311
   fields:
@@ -3503,7 +3409,6 @@ uhs_pll_cfg4:
       bitWidth: 15
       access: read-only
 uhs_pll_cfg5:
-  description: uhs_pll_cfg5
   addressOffset: 0x7E4
   resetValue: 0x0000041F
   fields:
@@ -3536,7 +3441,6 @@ uhs_pll_cfg5:
       bitWidth: 21
       access: read-only
 uhs_pll_cfg6:
-  description: uhs_pll_cfg6
   addressOffset: 0x7E8
   resetValue: 0x00034800
   fields:
@@ -3557,7 +3461,6 @@ uhs_pll_cfg6:
       bitWidth: 7
       access: read-only
 uhs_pll_cfg7:
-  description: uhs_pll_cfg7
   addressOffset: 0x7EC
   resetValue: 0x00000001
   fields:
@@ -3574,7 +3477,6 @@ uhs_pll_cfg7:
       bitWidth: 29
       access: read-only
 uhs_pll_cfg8:
-  description: uhs_pll_cfg8
   addressOffset: 0x7F0
   resetValue: 0x00000400
   fields:
@@ -3627,7 +3529,6 @@ uhs_pll_cfg8:
       bitWidth: 21
       access: read-only
 uhs_pll_cfg9:
-  description: uhs_pll_cfg9
   addressOffset: 0x7F4
   resetValue: 0x00015640
   fields:
@@ -3660,7 +3561,6 @@ uhs_pll_cfg9:
       bitWidth: 15
       access: read-only
 wifi_pll_cfg0:
-  description: wifi_pll_cfg0
   addressOffset: 0x810
   resetValue: 0x000009EF
   fields:
@@ -3717,7 +3617,6 @@ wifi_pll_cfg0:
       bitWidth: 20
       access: read-only
 wifi_pll_cfg1:
-  description: wifi_pll_cfg1
   addressOffset: 0x814
   resetValue: 0x01110216
   fields:
@@ -3762,7 +3661,6 @@ wifi_pll_cfg1:
       bitWidth: 6
       access: read-only
 wifi_pll_cfg2:
-  description: wifi_pll_cfg2
   addressOffset: 0x818
   resetValue: 0x00000621
   fields:
@@ -3799,7 +3697,6 @@ wifi_pll_cfg2:
       bitWidth: 21
       access: read-only
 wifi_pll_cfg3:
-  description: wifi_pll_cfg3
   addressOffset: 0x81C
   resetValue: 0x00036120
   fields:
@@ -3844,7 +3741,6 @@ wifi_pll_cfg3:
       bitWidth: 13
       access: read-only
 wifi_pll_cfg4:
-  description: wifi_pll_cfg4
   addressOffset: 0x820
   resetValue: 0x00000111
   fields:
@@ -3873,7 +3769,6 @@ wifi_pll_cfg4:
       bitWidth: 23
       access: read-only
 wifi_pll_cfg5:
-  description: wifi_pll_cfg5
   addressOffset: 0x824
   resetValue: 0x00001105
   fields:
@@ -3910,7 +3805,6 @@ wifi_pll_cfg5:
       bitWidth: 19
       access: read-only
 wifi_pll_cfg6:
-  description: wifi_pll_cfg6
   addressOffset: 0x828
   resetValue: 0x01800000
   fields:
@@ -3939,7 +3833,6 @@ wifi_pll_cfg6:
       bitWidth: 1
       access: read-write
 wifi_pll_cfg7:
-  description: wifi_pll_cfg7
   addressOffset: 0x82C
   resetValue: 0x00000032
   fields:
@@ -3984,7 +3877,6 @@ wifi_pll_cfg7:
       bitWidth: 14
       access: read-only
 wifi_pll_cfg8:
-  description: wifi_pll_cfg8
   addressOffset: 0x830
   resetValue: 0x000011FF
   fields:
@@ -4049,7 +3941,6 @@ wifi_pll_cfg8:
       bitWidth: 1
       access: read-write
 wifi_pll_cfg9:
-  description: wifi_pll_cfg9
   addressOffset: 0x834
   resetValue: 0x00001000
   fields:
@@ -4110,7 +4001,6 @@ wifi_pll_cfg9:
       bitWidth: 19
       access: read-only
 wifi_pll_cfg10:
-  description: wifi_pll_cfg10
   addressOffset: 0x838
   resetValue: 0x11300434
   fields:
@@ -4191,7 +4081,6 @@ wifi_pll_cfg10:
       bitWidth: 2
       access: read-only
 wifi_pll_cfg11:
-  description: wifi_pll_cfg11
   addressOffset: 0x83C
   resetValue: 0x00028000
   fields:
@@ -4204,7 +4093,6 @@ wifi_pll_cfg11:
       bitWidth: 13
       access: read-only
 wifi_pll_cfg12:
-  description: wifi_pll_cfg12
   addressOffset: 0x840
   resetValue: 0x000000F0
   fields:
@@ -4217,7 +4105,6 @@ wifi_pll_cfg12:
       bitWidth: 23
       access: read-only
 wifi_pll_cfg13:
-  description: wifi_pll_cfg13
   addressOffset: 0x844
   resetValue: 0x00000000
   fields:
@@ -4274,7 +4161,6 @@ wifi_pll_cfg13:
       bitWidth: 1
       access: read-write
 gauge:
-  description: gauge
   addressOffset: 0x8A4
   resetValue: 0x080029A8
   fields:
@@ -4363,7 +4249,6 @@ gauge:
       bitWidth: 1
       access: read-write
 gauge_rx_fifo_ctrl:
-  description: gauge_rx_fifo_ctrl
   addressOffset: 0x8B8
   resetValue: 0x03010000
   fields:
@@ -4424,7 +4309,6 @@ gauge_rx_fifo_ctrl:
       bitWidth: 6
       access: read-only
 gauge_rx_fifo_status:
-  description: gauge_rx_fifo_status
   addressOffset: 0x8BC
   resetValue: 0x00000000
   fields:
@@ -4469,7 +4353,6 @@ gauge_rx_fifo_status:
       bitWidth: 7
       access: read-only
 gauge_rx_fifo_data:
-  description: gauge_rx_fifo_data
   addressOffset: 0x8C0
   resetValue: 0x00000000
   fields:
@@ -4478,7 +4361,6 @@ gauge_rx_fifo_data:
       bitWidth: 32
       access: read-only
 gpio_cfg0:
-  description: gpio_cfg0
   addressOffset: 0x8C4
   resetValue: 0x00400B02
   fields:
@@ -4567,7 +4449,6 @@ gpio_cfg0:
       bitWidth: 2
       access: read-write
 gpio_cfg1:
-  description: gpio_cfg1
   addressOffset: 0x8C8
   resetValue: 0x00400B02
   fields:
@@ -4656,7 +4537,6 @@ gpio_cfg1:
       bitWidth: 2
       access: read-write
 gpio_cfg2:
-  description: gpio_cfg2
   addressOffset: 0x8CC
   resetValue: 0x00400B02
   fields:
@@ -4745,7 +4625,6 @@ gpio_cfg2:
       bitWidth: 2
       access: read-write
 gpio_cfg3:
-  description: gpio_cfg3
   addressOffset: 0x8D0
   resetValue: 0x00400F03
   fields:
@@ -4834,7 +4713,6 @@ gpio_cfg3:
       bitWidth: 2
       access: read-write
 gpio_cfg4:
-  description: gpio_cfg4
   addressOffset: 0x8D4
   resetValue: 0x00400F03
   fields:
@@ -4923,7 +4801,6 @@ gpio_cfg4:
       bitWidth: 2
       access: read-write
 gpio_cfg5:
-  description: gpio_cfg5
   addressOffset: 0x8D8
   resetValue: 0x00400F03
   fields:
@@ -5012,7 +4889,6 @@ gpio_cfg5:
       bitWidth: 2
       access: read-write
 gpio_cfg6:
-  description: gpio_cfg6
   addressOffset: 0x8DC
   resetValue: 0x00400B02
   fields:
@@ -5101,7 +4977,6 @@ gpio_cfg6:
       bitWidth: 2
       access: read-write
 gpio_cfg7:
-  description: gpio_cfg7
   addressOffset: 0x8E0
   resetValue: 0x00400B02
   fields:
@@ -5190,7 +5065,6 @@ gpio_cfg7:
       bitWidth: 2
       access: read-write
 gpio_cfg8:
-  description: gpio_cfg8
   addressOffset: 0x8E4
   resetValue: 0x00400B02
   fields:
@@ -5279,7 +5153,6 @@ gpio_cfg8:
       bitWidth: 2
       access: read-write
 gpio_cfg9:
-  description: gpio_cfg9
   addressOffset: 0x8E8
   resetValue: 0x00400B02
   fields:
@@ -5368,7 +5241,6 @@ gpio_cfg9:
       bitWidth: 2
       access: read-write
 gpio_cfg10:
-  description: gpio_cfg10
   addressOffset: 0x8EC
   resetValue: 0x00400B02
   fields:
@@ -5457,7 +5329,6 @@ gpio_cfg10:
       bitWidth: 2
       access: read-write
 gpio_cfg11:
-  description: gpio_cfg11
   addressOffset: 0x8F0
   resetValue: 0x00400B02
   fields:
@@ -5546,7 +5417,6 @@ gpio_cfg11:
       bitWidth: 2
       access: read-write
 gpio_cfg12:
-  description: gpio_cfg12
   addressOffset: 0x8F4
   resetValue: 0x00400B02
   fields:
@@ -5635,7 +5505,6 @@ gpio_cfg12:
       bitWidth: 2
       access: read-write
 gpio_cfg13:
-  description: gpio_cfg13
   addressOffset: 0x8F8
   resetValue: 0x00400B02
   fields:
@@ -5724,7 +5593,6 @@ gpio_cfg13:
       bitWidth: 2
       access: read-write
 gpio_cfg14:
-  description: gpio_cfg14
   addressOffset: 0x8FC
   resetValue: 0x00400B02
   fields:
@@ -5813,7 +5681,6 @@ gpio_cfg14:
       bitWidth: 2
       access: read-write
 gpio_cfg15:
-  description: gpio_cfg15
   addressOffset: 0x900
   resetValue: 0x00400B02
   fields:
@@ -5902,7 +5769,6 @@ gpio_cfg15:
       bitWidth: 2
       access: read-write
 gpio_cfg16:
-  description: gpio_cfg16
   addressOffset: 0x904
   resetValue: 0x00400B02
   fields:
@@ -5991,7 +5857,6 @@ gpio_cfg16:
       bitWidth: 2
       access: read-write
 gpio_cfg17:
-  description: gpio_cfg17
   addressOffset: 0x908
   resetValue: 0x00400B02
   fields:
@@ -6080,7 +5945,6 @@ gpio_cfg17:
       bitWidth: 2
       access: read-write
 gpio_cfg18:
-  description: gpio_cfg18
   addressOffset: 0x90C
   resetValue: 0x00400B02
   fields:
@@ -6169,7 +6033,6 @@ gpio_cfg18:
       bitWidth: 2
       access: read-write
 gpio_cfg19:
-  description: gpio_cfg19
   addressOffset: 0x910
   resetValue: 0x00400B02
   fields:
@@ -6258,7 +6121,6 @@ gpio_cfg19:
       bitWidth: 2
       access: read-write
 gpio_cfg20:
-  description: gpio_cfg20
   addressOffset: 0x914
   resetValue: 0x00400B02
   fields:
@@ -6347,7 +6209,6 @@ gpio_cfg20:
       bitWidth: 2
       access: read-write
 gpio_cfg21:
-  description: gpio_cfg21
   addressOffset: 0x918
   resetValue: 0x00400B02
   fields:
@@ -6436,7 +6297,6 @@ gpio_cfg21:
       bitWidth: 2
       access: read-write
 gpio_cfg22:
-  description: gpio_cfg22
   addressOffset: 0x91C
   resetValue: 0x00400B02
   fields:
@@ -6525,7 +6385,6 @@ gpio_cfg22:
       bitWidth: 2
       access: read-write
 gpio_cfg23:
-  description: gpio_cfg23
   addressOffset: 0x920
   resetValue: 0x00400B02
   fields:
@@ -6614,7 +6473,6 @@ gpio_cfg23:
       bitWidth: 2
       access: read-write
 gpio_cfg24:
-  description: gpio_cfg24
   addressOffset: 0x924
   resetValue: 0x00400B02
   fields:
@@ -6703,7 +6561,6 @@ gpio_cfg24:
       bitWidth: 2
       access: read-write
 gpio_cfg25:
-  description: gpio_cfg25
   addressOffset: 0x928
   resetValue: 0x00400B02
   fields:
@@ -6792,7 +6649,6 @@ gpio_cfg25:
       bitWidth: 2
       access: read-write
 gpio_cfg26:
-  description: gpio_cfg26
   addressOffset: 0x92C
   resetValue: 0x00400B02
   fields:
@@ -6881,7 +6737,6 @@ gpio_cfg26:
       bitWidth: 2
       access: read-write
 gpio_cfg27:
-  description: gpio_cfg27
   addressOffset: 0x930
   resetValue: 0x00400B02
   fields:
@@ -6970,7 +6825,6 @@ gpio_cfg27:
       bitWidth: 2
       access: read-write
 gpio_cfg28:
-  description: gpio_cfg28
   addressOffset: 0x934
   resetValue: 0x00400B02
   fields:
@@ -7059,7 +6913,6 @@ gpio_cfg28:
       bitWidth: 2
       access: read-write
 gpio_cfg29:
-  description: gpio_cfg29
   addressOffset: 0x938
   resetValue: 0x00400B02
   fields:
@@ -7148,7 +7001,6 @@ gpio_cfg29:
       bitWidth: 2
       access: read-write
 gpio_cfg30:
-  description: gpio_cfg30
   addressOffset: 0x93C
   resetValue: 0x00400B02
   fields:
@@ -7237,7 +7089,6 @@ gpio_cfg30:
       bitWidth: 2
       access: read-write
 gpio_cfg31:
-  description: gpio_cfg31
   addressOffset: 0x940
   resetValue: 0x00400B02
   fields:
@@ -7326,7 +7177,6 @@ gpio_cfg31:
       bitWidth: 2
       access: read-write
 gpio_cfg32:
-  description: gpio_cfg32
   addressOffset: 0x944
   resetValue: 0x00400B02
   fields:
@@ -7415,7 +7265,6 @@ gpio_cfg32:
       bitWidth: 2
       access: read-write
 gpio_cfg33:
-  description: gpio_cfg33
   addressOffset: 0x948
   resetValue: 0x00400B02
   fields:
@@ -7504,7 +7353,6 @@ gpio_cfg33:
       bitWidth: 2
       access: read-write
 gpio_cfg34:
-  description: gpio_cfg34
   addressOffset: 0x94C
   resetValue: 0x00400B02
   fields:
@@ -7593,7 +7441,6 @@ gpio_cfg34:
       bitWidth: 2
       access: read-write
 gpio_cfg35:
-  description: gpio_cfg35
   addressOffset: 0x950
   resetValue: 0x00400B02
   fields:
@@ -7682,7 +7529,6 @@ gpio_cfg35:
       bitWidth: 2
       access: read-write
 gpio_cfg36:
-  description: gpio_cfg36
   addressOffset: 0x954
   resetValue: 0x00400B02
   fields:
@@ -7771,7 +7617,6 @@ gpio_cfg36:
       bitWidth: 2
       access: read-write
 gpio_cfg37:
-  description: gpio_cfg37
   addressOffset: 0x958
   resetValue: 0x00400B02
   fields:
@@ -7860,7 +7705,6 @@ gpio_cfg37:
       bitWidth: 2
       access: read-write
 gpio_cfg38:
-  description: gpio_cfg38
   addressOffset: 0x95C
   resetValue: 0x00400B02
   fields:
@@ -7949,7 +7793,6 @@ gpio_cfg38:
       bitWidth: 2
       access: read-write
 gpio_cfg39:
-  description: gpio_cfg39
   addressOffset: 0x960
   resetValue: 0x00400B02
   fields:
@@ -8038,7 +7881,6 @@ gpio_cfg39:
       bitWidth: 2
       access: read-write
 gpio_cfg40:
-  description: gpio_cfg40
   addressOffset: 0x964
   resetValue: 0x00400B02
   fields:
@@ -8127,7 +7969,6 @@ gpio_cfg40:
       bitWidth: 2
       access: read-write
 gpio_cfg41:
-  description: gpio_cfg41
   addressOffset: 0x968
   resetValue: 0x00400B02
   fields:
@@ -8216,7 +8057,6 @@ gpio_cfg41:
       bitWidth: 2
       access: read-write
 gpio_cfg42:
-  description: gpio_cfg42
   addressOffset: 0x96C
   resetValue: 0x00400B02
   fields:
@@ -8305,7 +8145,6 @@ gpio_cfg42:
       bitWidth: 2
       access: read-write
 gpio_cfg43:
-  description: gpio_cfg43
   addressOffset: 0x970
   resetValue: 0x00400B02
   fields:
@@ -8394,7 +8233,6 @@ gpio_cfg43:
       bitWidth: 2
       access: read-write
 gpio_cfg44:
-  description: gpio_cfg44
   addressOffset: 0x974
   resetValue: 0x00400B02
   fields:
@@ -8483,7 +8321,6 @@ gpio_cfg44:
       bitWidth: 2
       access: read-write
 gpio_cfg45:
-  description: gpio_cfg45
   addressOffset: 0x978
   resetValue: 0x00400B02
   fields:
@@ -8572,7 +8409,6 @@ gpio_cfg45:
       bitWidth: 2
       access: read-write
 gpio_cfg46:
-  description: gpio_cfg46
   addressOffset: 0x97C
   resetValue: 0x00000002
   fields:
@@ -8601,7 +8437,6 @@ gpio_cfg46:
       bitWidth: 26
       access: read-only
 gpio_cfg47:
-  description: gpio_cfg47
   addressOffset: 0x980
   resetValue: 0x00000002
   fields:
@@ -8630,7 +8465,6 @@ gpio_cfg47:
       bitWidth: 26
       access: read-only
 gpio_cfg48:
-  description: gpio_cfg48
   addressOffset: 0x984
   resetValue: 0x00000002
   fields:
@@ -8659,7 +8493,6 @@ gpio_cfg48:
       bitWidth: 26
       access: read-only
 gpio_cfg49:
-  description: gpio_cfg49
   addressOffset: 0x988
   resetValue: 0x00000002
   fields:
@@ -8688,7 +8521,6 @@ gpio_cfg49:
       bitWidth: 26
       access: read-only
 gpio_cfg50:
-  description: gpio_cfg50
   addressOffset: 0x98C
   resetValue: 0x00000002
   fields:
@@ -8717,7 +8549,6 @@ gpio_cfg50:
       bitWidth: 26
       access: read-only
 gpio_cfg51:
-  description: gpio_cfg51
   addressOffset: 0x990
   resetValue: 0x00000002
   fields:
@@ -8746,7 +8577,6 @@ gpio_cfg51:
       bitWidth: 26
       access: read-only
 gpio_cfg52:
-  description: gpio_cfg52
   addressOffset: 0x994
   resetValue: 0x00000002
   fields:
@@ -8775,7 +8605,6 @@ gpio_cfg52:
       bitWidth: 26
       access: read-only
 gpio_cfg53:
-  description: gpio_cfg53
   addressOffset: 0x998
   resetValue: 0x00000002
   fields:
@@ -8804,7 +8633,6 @@ gpio_cfg53:
       bitWidth: 26
       access: read-only
 gpio_cfg54:
-  description: gpio_cfg54
   addressOffset: 0x99C
   resetValue: 0x00000002
   fields:
@@ -8833,7 +8661,6 @@ gpio_cfg54:
       bitWidth: 26
       access: read-only
 gpio_cfg55:
-  description: gpio_cfg55
   addressOffset: 0x9A0
   resetValue: 0x00000002
   fields:
@@ -8862,7 +8689,6 @@ gpio_cfg55:
       bitWidth: 26
       access: read-only
 gpio_cfg56:
-  description: gpio_cfg56
   addressOffset: 0x9A4
   resetValue: 0x00000002
   fields:
@@ -8891,7 +8717,6 @@ gpio_cfg56:
       bitWidth: 26
       access: read-only
 gpio_cfg57:
-  description: gpio_cfg57
   addressOffset: 0x9A8
   resetValue: 0x00000002
   fields:
@@ -8920,7 +8745,6 @@ gpio_cfg57:
       bitWidth: 26
       access: read-only
 gpio_cfg58:
-  description: gpio_cfg58
   addressOffset: 0x9AC
   resetValue: 0x00000002
   fields:
@@ -8949,7 +8773,6 @@ gpio_cfg58:
       bitWidth: 26
       access: read-only
 gpio_cfg59:
-  description: gpio_cfg59
   addressOffset: 0x9B0
   resetValue: 0x00000002
   fields:
@@ -8978,7 +8801,6 @@ gpio_cfg59:
       bitWidth: 26
       access: read-only
 gpio_cfg60:
-  description: gpio_cfg60
   addressOffset: 0x9B4
   resetValue: 0x00000002
   fields:
@@ -9007,7 +8829,6 @@ gpio_cfg60:
       bitWidth: 26
       access: read-only
 gpio_cfg61:
-  description: gpio_cfg61
   addressOffset: 0x9B8
   resetValue: 0x00000002
   fields:
@@ -9036,7 +8857,6 @@ gpio_cfg61:
       bitWidth: 26
       access: read-only
 gpio_cfg62:
-  description: gpio_cfg62
   addressOffset: 0x9BC
   resetValue: 0x00000002
   fields:
@@ -9065,7 +8885,6 @@ gpio_cfg62:
       bitWidth: 26
       access: read-only
 gpio_cfg63:
-  description: gpio_cfg63
   addressOffset: 0x9C0
   resetValue: 0x00000002
   fields:
@@ -9094,7 +8913,6 @@ gpio_cfg63:
       bitWidth: 26
       access: read-only
 gpio_cfg128:
-  description: gpio_cfg128
   addressOffset: 0xAC4
   resetValue: 0x00000000
   fields:
@@ -9227,7 +9045,6 @@ gpio_cfg128:
       bitWidth: 1
       access: read-only
 gpio_cfg129:
-  description: gpio_cfg129
   addressOffset: 0xAC8
   resetValue: 0x00000000
   fields:
@@ -9292,7 +9109,6 @@ gpio_cfg129:
       bitWidth: 18
       access: read-only
 gpio_cfg136:
-  description: gpio_cfg136
   addressOffset: 0xAE4
   resetValue: 0x00000000
   fields:
@@ -9425,7 +9241,6 @@ gpio_cfg136:
       bitWidth: 1
       access: read-write
 gpio_cfg137:
-  description: gpio_cfg137
   addressOffset: 0xAE8
   resetValue: 0x00000000
   fields:
@@ -9490,7 +9305,6 @@ gpio_cfg137:
       bitWidth: 18
       access: read-only
 gpio_cfg138:
-  description: gpio_cfg138
   addressOffset: 0xAEC
   resetValue: 0x00000000
   fields:
@@ -9623,7 +9437,6 @@ gpio_cfg138:
       bitWidth: 1
       access: write-only
 gpio_cfg139:
-  description: gpio_cfg139
   addressOffset: 0xAF0
   resetValue: 0x00000000
   fields:
@@ -9688,7 +9501,6 @@ gpio_cfg139:
       bitWidth: 18
       access: read-only
 gpio_cfg140:
-  description: gpio_cfg140
   addressOffset: 0xAF4
   resetValue: 0x00000000
   fields:
@@ -9821,7 +9633,6 @@ gpio_cfg140:
       bitWidth: 1
       access: write-only
 gpio_cfg141:
-  description: gpio_cfg141
   addressOffset: 0xAF8
   resetValue: 0x00000000
   fields:
@@ -9886,7 +9697,6 @@ gpio_cfg141:
       bitWidth: 18
       access: read-only
 gpio_cfg142:
-  description: gpio_cfg142
   addressOffset: 0xAFC
   resetValue: 0xC8C8C800
   fields:
@@ -9919,7 +9729,6 @@ gpio_cfg142:
       bitWidth: 8
       access: read-write
 gpio_cfg143:
-  description: gpio_cfg143
   addressOffset: 0xB00
   resetValue: 0xE3808000
   fields:
@@ -10000,7 +9809,6 @@ gpio_cfg143:
       bitWidth: 1
       access: read-write
 gpio_cfg144:
-  description: gpio_cfg144
   addressOffset: 0xB04
   resetValue: 0x00000000
   fields:

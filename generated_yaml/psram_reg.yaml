@@ -1,5 +1,4 @@
 psram_configure:
-  description: psram_configure
   addressOffset: 0x0
   resetValue: 0xA080C002
   fields:
@@ -76,7 +75,6 @@ psram_configure:
       bitWidth: 4
       access: read-write
 psram_manual_control:
-  description: psram_manual_control
   addressOffset: 0x4
   resetValue: 0x00004800
   fields:
@@ -125,7 +123,6 @@ psram_manual_control:
       bitWidth: 16
       access: read-only
 fifo_thres_control:
-  description: fifo_thres_control
   addressOffset: 0x8
   resetValue: 0x00000000
   fields:
@@ -138,7 +135,6 @@ fifo_thres_control:
       bitWidth: 16
       access: read-write
 psram_manual_control2:
-  description: psram_manual_control2
   addressOffset: 0xC
   resetValue: 0x1F082008
   fields:
@@ -175,7 +171,6 @@ psram_manual_control2:
       bitWidth: 8
       access: read-write
 winbond_psram_configure:
-  description: winbond_psram_configure
   addressOffset: 0x10
   resetValue: 0x40003782
   fields:
@@ -244,7 +239,6 @@ winbond_psram_configure:
       bitWidth: 1
       access: read-write
 winbond_psram_status:
-  description: winbond_psram_status
   addressOffset: 0x14
   resetValue: 0x40003382
   fields:
@@ -305,7 +299,6 @@ winbond_psram_status:
       bitWidth: 1
       access: read-only
 winbond_psram_configure2:
-  description: winbond_psram_configure2
   addressOffset: 0x18
   resetValue: 0x00000000
   fields:
@@ -318,7 +311,6 @@ winbond_psram_configure2:
       bitWidth: 28
       access: read-only
 apmemory_psram_configure:
-  description: apmemory_psram_configure
   addressOffset: 0x20
   resetValue: 0x00212011
   fields:
@@ -399,7 +391,6 @@ apmemory_psram_configure:
       bitWidth: 3
       access: read-only
 apmemory_psram_status:
-  description: apmemory_psram_status
   addressOffset: 0x24
   resetValue: 0x00212011
   fields:
@@ -468,7 +459,6 @@ apmemory_psram_status:
       bitWidth: 7
       access: read-only
 psram_manual_control3:
-  description: psram_manual_control3
   addressOffset: 0x30
   resetValue: 0x00000120
   fields:
@@ -489,7 +479,6 @@ psram_manual_control3:
       bitWidth: 23
       access: read-only
 psram_intf_delay_ctrl0:
-  description: psram_intf_delay_ctrl0
   addressOffset: 0x80
   resetValue: 0x00000000
   fields:
@@ -510,7 +499,6 @@ psram_intf_delay_ctrl0:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl1:
-  description: psram_intf_delay_ctrl1
   addressOffset: 0x84
   resetValue: 0x00000000
   fields:
@@ -531,7 +519,6 @@ psram_intf_delay_ctrl1:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl2:
-  description: psram_intf_delay_ctrl2
   addressOffset: 0x88
   resetValue: 0x00000000
   fields:
@@ -552,7 +539,6 @@ psram_intf_delay_ctrl2:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl3:
-  description: psram_intf_delay_ctrl3
   addressOffset: 0x8C
   resetValue: 0x00000000
   fields:
@@ -573,7 +559,6 @@ psram_intf_delay_ctrl3:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl4:
-  description: psram_intf_delay_ctrl4
   addressOffset: 0x90
   resetValue: 0x00000000
   fields:
@@ -594,7 +579,6 @@ psram_intf_delay_ctrl4:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl5:
-  description: psram_intf_delay_ctrl5
   addressOffset: 0x94
   resetValue: 0x00000000
   fields:
@@ -611,7 +595,6 @@ psram_intf_delay_ctrl5:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl6:
-  description: psram_intf_delay_ctrl6
   addressOffset: 0x98
   resetValue: 0x00000000
   fields:
@@ -632,7 +615,6 @@ psram_intf_delay_ctrl6:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl7:
-  description: psram_intf_delay_ctrl7
   addressOffset: 0x9C
   resetValue: 0x00000000
   fields:
@@ -653,7 +635,6 @@ psram_intf_delay_ctrl7:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl8:
-  description: psram_intf_delay_ctrl8
   addressOffset: 0xA0
   resetValue: 0x00000000
   fields:
@@ -674,7 +655,6 @@ psram_intf_delay_ctrl8:
       bitWidth: 8
       access: read-write
 psram_intf_delay_ctrl9:
-  description: psram_intf_delay_ctrl9
   addressOffset: 0xA4
   resetValue: 0x00000000
   fields:
@@ -694,8 +674,7 @@ psram_intf_delay_ctrl9:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-psram_intf_delay_ctrlA:
-  description: psram_intf_delay_ctrlA
+psram_intf_delay_ctrla:
   addressOffset: 0xA8
   resetValue: 0x00000000
   fields:
@@ -711,8 +690,7 @@ psram_intf_delay_ctrlA:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-psram_intf_delay_ctrlB:
-  description: psram_intf_delay_ctrlB
+psram_intf_delay_ctrlb:
   addressOffset: 0xAC
   resetValue: 0x00000000
   fields:
@@ -729,7 +707,6 @@ psram_intf_delay_ctrlB:
       bitWidth: 16
       access: read-only
 psram_dbg_sel:
-  description: psram_dbg_sel
   addressOffset: 0xC0
   resetValue: 0x00000000
   fields:
@@ -750,7 +727,6 @@ psram_dbg_sel:
       bitWidth: 24
       access: read-only
 psram_dummy_reg:
-  description: psram_dummy_reg
   addressOffset: 0xF0
   resetValue: 0xFFFF0000
   fields:
@@ -759,7 +735,6 @@ psram_dummy_reg:
       bitWidth: 32
       access: read-write
 psram_timeout_reg:
-  description: psram_timeout_reg
   addressOffset: 0xF4
   resetValue: 0x01000000
   fields:
@@ -788,7 +763,6 @@ psram_timeout_reg:
       bitWidth: 4
       access: read-only
 psram_rough_delay_ctrl0:
-  description: psram_rough_delay_ctrl0
   addressOffset: 0x100
   resetValue: 0x00000000
   fields:
@@ -809,7 +783,6 @@ psram_rough_delay_ctrl0:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl1:
-  description: psram_rough_delay_ctrl1
   addressOffset: 0x104
   resetValue: 0x00000000
   fields:
@@ -830,7 +803,6 @@ psram_rough_delay_ctrl1:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl2:
-  description: psram_rough_delay_ctrl2
   addressOffset: 0x108
   resetValue: 0x00000000
   fields:
@@ -851,7 +823,6 @@ psram_rough_delay_ctrl2:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl3:
-  description: psram_rough_delay_ctrl3
   addressOffset: 0x10C
   resetValue: 0x00000000
   fields:
@@ -872,7 +843,6 @@ psram_rough_delay_ctrl3:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl4:
-  description: psram_rough_delay_ctrl4
   addressOffset: 0x110
   resetValue: 0x00000000
   fields:
@@ -893,7 +863,6 @@ psram_rough_delay_ctrl4:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl5:
-  description: psram_rough_delay_ctrl5
   addressOffset: 0x114
   resetValue: 0x00000000
   fields:
@@ -910,7 +879,6 @@ psram_rough_delay_ctrl5:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl6:
-  description: psram_rough_delay_ctrl6
   addressOffset: 0x118
   resetValue: 0x00000000
   fields:
@@ -931,7 +899,6 @@ psram_rough_delay_ctrl6:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl7:
-  description: psram_rough_delay_ctrl7
   addressOffset: 0x11C
   resetValue: 0x00000000
   fields:
@@ -952,7 +919,6 @@ psram_rough_delay_ctrl7:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl8:
-  description: psram_rough_delay_ctrl8
   addressOffset: 0x120
   resetValue: 0x00000000
   fields:
@@ -973,7 +939,6 @@ psram_rough_delay_ctrl8:
       bitWidth: 8
       access: read-write
 psram_rough_delay_ctrl9:
-  description: psram_rough_delay_ctrl9
   addressOffset: 0x124
   resetValue: 0x00000000
   fields:
@@ -993,8 +958,7 @@ psram_rough_delay_ctrl9:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-psram_rough_delay_ctrlA:
-  description: psram_rough_delay_ctrlA
+psram_rough_delay_ctrla:
   addressOffset: 0x128
   resetValue: 0x00000000
   fields:
@@ -1010,8 +974,7 @@ psram_rough_delay_ctrlA:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-psram_rough_delay_ctrlB:
-  description: psram_rough_delay_ctrlB
+psram_rough_delay_ctrlb:
   addressOffset: 0x12C
   resetValue: 0x00000000
   fields:

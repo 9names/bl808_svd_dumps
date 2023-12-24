@@ -1,0 +1,112 @@
+glb:
+  address: 0x20000000
+mix:
+  address: 0x20001000
+gpip:
+  address: 0x20002000
+phy:
+  address: 0x20002800
+sec_dbg:
+  address: 0x20003000
+sec_eng:
+  address: 0x20004000
+tz1:
+  address: 0x20005000
+tzc_sec:
+  address: 0x20005000
+tz2:
+  address: 0x20006000
+tzc_nsec:
+  address: 0x20006000
+efuse:
+  address: 0x20056000
+ef_data:
+  address: 0x20056000
+ef_ctrl:
+  address: 0x20056000
+cci:
+  address: 0x20008000
+mcu_misc:
+  address: 0x20009000
+l1c:
+  address: 0x20009000
+emi_misc:
+  address: 0x20050000
+psram_ctrl:
+  address: 0x20052000
+usb:
+  address: 0x20072000
+audio:
+  address: 0x20055000
+sdh:
+  address: 0x20060000
+emac:
+  address: 0x20070000
+dma1:
+  address: 0x20071000
+mm_misc:
+  address: 0x30000000
+dma2:
+  address: 0x30001000
+uart3:
+  address: 0x30002000
+i2c2:
+  address: 0x30003000
+i2c3:
+  address: 0x30004000
+ipc2:
+  address: 0x30005000
+dma2d:
+  address: 0x30006000
+clkrst_ctrl:
+  address: 0x30007000
+mm_glb:
+  address: 0x30007000
+spi1:
+  address: 0x30008000
+timer1:
+  address: 0x30009000
+sub_misc:
+  address: 0x30010000
+sub:
+  address: 0x30011000
+dvp0:
+  address: 0x30012000
+dvp1:
+  address: 0x30012100
+dvp2:
+  address: 0x30012200
+dvp3:
+  address: 0x30012300
+dvp4:
+  address: 0x30012400
+dvp5:
+  address: 0x30012500
+dvp6:
+  address: 0x30012600
+dvp7:
+  address: 0x30012700
+dvp_tsrc0:
+  address: 0x30012800
+dvp_tsrc1:
+  address: 0x30012900
+osd_a:
+  address: 0x30013000
+osd_b:
+  address: 0x30014000
+osd_dp:
+  address: 0x30015000
+codec_misc:
+  address: 0x30020000
+mjpeg:
+  address: 0x30021000
+video:
+  address: 0x30022000
+mjpeg_dec:
+  address: 0x30023000
+bl_cnn:
+  address: 0x30024000
+hbn_ram:
+  address: 0x20010000
+rf:
+  address: 0x20001000

@@ -1,5 +1,4 @@
-CPU0_Boot:
-  description: CPU0_Boot
+cpu0_boot:
   addressOffset: 0x0
   resetValue: 0x3EFF0000
   fields:
@@ -7,8 +6,7 @@ CPU0_Boot:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-CPU_cfg:
-  description: CPU_cfg
+cpu_cfg:
   addressOffset: 0x8
   resetValue: 0x0000001C
   fields:
@@ -32,8 +30,7 @@ CPU_cfg:
       bitOffset: 30
       bitWidth: 2
       access: read-only
-CPU_sts1:
-  description: CPU_sts1
+cpu_sts1:
   addressOffset: 0xC
   resetValue: 0x00000000
   fields:
@@ -77,8 +74,7 @@ CPU_sts1:
       bitOffset: 30
       bitWidth: 2
       access: read-only
-CPU_sts2:
-  description: CPU_sts2
+cpu_sts2:
   addressOffset: 0x10
   resetValue: 0x00000000
   fields:
@@ -86,8 +82,7 @@ CPU_sts2:
       bitOffset: 0
       bitWidth: 32
       access: read-only
-CPU_RTC:
-  description: CPU_RTC
+cpu_rtc:
   addressOffset: 0x18
   resetValue: 0x0000000A
   fields:
@@ -108,7 +103,6 @@ CPU_RTC:
       bitWidth: 1
       access: read-write
 tzc_mmsys_misc:
-  description: tzc_mmsys_misc
   addressOffset: 0x1C
   resetValue: 0x00000000
   fields:
@@ -129,7 +123,6 @@ tzc_mmsys_misc:
       bitWidth: 29
       access: read-only
 peri_apb_ctrl:
-  description: peri_apb_ctrl
   addressOffset: 0x20
   resetValue: 0x00000000
   fields:
@@ -166,7 +159,6 @@ peri_apb_ctrl:
       bitWidth: 16
       access: read-write
 mm_infra_qos_ctrl:
-  description: mm_infra_qos_ctrl
   addressOffset: 0x2C
   resetValue: 0x00000000
   fields:
@@ -194,7 +186,7 @@ mm_infra_qos_ctrl:
       bitOffset: 18
       bitWidth: 2
       access: read-write
-    reg_x_wthre_mmhw2pA:
+    reg_x_wthre_mmhw2pa:
       bitOffset: 20
       bitWidth: 2
       access: read-write
@@ -202,7 +194,7 @@ mm_infra_qos_ctrl:
       bitOffset: 22
       bitWidth: 2
       access: read-write
-    reg_x_wthre_pUHS:
+    reg_x_wthre_puhs:
       bitOffset: 24
       bitWidth: 2
       access: read-write
@@ -211,7 +203,6 @@ mm_infra_qos_ctrl:
       bitWidth: 6
       access: read-only
 dma_clk_ctrl:
-  description: dma_clk_ctrl
   addressOffset: 0x40
   resetValue: 0x000000FF
   fields:
@@ -224,7 +215,6 @@ dma_clk_ctrl:
       bitWidth: 24
       access: read-only
 vram_ctrl:
-  description: vram_ctrl
   addressOffset: 0x50
   resetValue: 0x00000000
   fields:
@@ -285,7 +275,6 @@ vram_ctrl:
       bitWidth: 16
       access: read-only
 sram_parm:
-  description: sram_parm
   addressOffset: 0x60
   resetValue: 0x0C0C0C0C
   fields:
@@ -353,8 +342,7 @@ sram_parm:
       bitOffset: 30
       bitWidth: 2
       access: read-only
-MM_INT_STA0:
-  description: MM_INT_STA0
+mm_int_sta0:
   addressOffset: 0xA0
   resetValue: 0x00000000
   fields:
@@ -362,8 +350,7 @@ MM_INT_STA0:
       bitOffset: 0
       bitWidth: 32
       access: read-only
-MM_INT_MASK0:
-  description: MM_INT_MASK0
+mm_int_mask0:
   addressOffset: 0xA4
   resetValue: 0x00000000
   fields:
@@ -371,8 +358,7 @@ MM_INT_MASK0:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-MM_INT_CLR_0:
-  description: MM_INT_CLR_0
+mm_int_clr_0:
   addressOffset: 0xA8
   resetValue: 0x00000000
   fields:
@@ -380,8 +366,7 @@ MM_INT_CLR_0:
       bitOffset: 0
       bitWidth: 32
       access: write-only
-MM_INT_STA1:
-  description: MM_INT_STA1
+mm_int_sta1:
   addressOffset: 0xAC
   resetValue: 0x00000000
   fields:
@@ -389,8 +374,7 @@ MM_INT_STA1:
       bitOffset: 0
       bitWidth: 32
       access: read-only
-MM_INT_MASK1:
-  description: MM_INT_MASK1
+mm_int_mask1:
   addressOffset: 0xB0
   resetValue: 0x00000000
   fields:
@@ -398,8 +382,7 @@ MM_INT_MASK1:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-MM_INT_CLR_1:
-  description: MM_INT_CLR_1
+mm_int_clr_1:
   addressOffset: 0xB4
   resetValue: 0x00000000
   fields:
@@ -408,7 +391,6 @@ MM_INT_CLR_1:
       bitWidth: 32
       access: write-only
 mmsys_debug_sel:
-  description: mmsys_debug_sel
   addressOffset: 0xF0
   resetValue: 0x00000000
   fields:
@@ -421,19 +403,18 @@ mmsys_debug_sel:
       bitWidth: 28
       access: read-only
 mmsys_misc_dummy:
-  description: mmsys_misc_dummy
   addressOffset: 0xFC
   resetValue: 0xFFF00000
   fields:
-    PIR_ctrl_o:
+    pir_ctrl_o:
       bitOffset: 0
       bitWidth: 1
       access: read-write
-    Light_sensor_ctrl_o:
+    light_sensor_ctrl_o:
       bitOffset: 1
       bitWidth: 1
       access: read-write
-    IR_cut_ctrl_o:
+    ir_cut_ctrl_o:
       bitOffset: 2
       bitWidth: 1
       access: read-write
@@ -445,8 +426,7 @@ mmsys_misc_dummy:
       bitOffset: 4
       bitWidth: 28
       access: read-write
-DDR_debug:
-  description: DDR_debug
+ddr_debug:
   addressOffset: 0x100
   resetValue: 0x00000000
   fields:
@@ -459,7 +439,6 @@ DDR_debug:
       bitWidth: 31
       access: read-only
 mm_berr_cfg0:
-  description: mm_berr_cfg0
   addressOffset: 0x140
   resetValue: 0x1F010707
   fields:
@@ -496,7 +475,6 @@ mm_berr_cfg0:
       bitWidth: 3
       access: read-only
 mm_berr_cfg1:
-  description: mm_berr_cfg1
   addressOffset: 0x144
   resetValue: 0x00000000
   fields:
@@ -581,7 +559,6 @@ mm_berr_cfg1:
       bitWidth: 4
       access: read-only
 mm_berr_cfg2:
-  description: mm_berr_cfg2
   addressOffset: 0x148
   resetValue: 0x00000000
   fields:
@@ -618,7 +595,6 @@ mm_berr_cfg2:
       bitWidth: 7
       access: read-only
 mm_berr_cfg3:
-  description: mm_berr_cfg3
   addressOffset: 0x14C
   resetValue: 0x00000000
   fields:
@@ -655,7 +631,6 @@ mm_berr_cfg3:
       bitWidth: 2
       access: read-only
 mm_berr_cfg4:
-  description: mm_berr_cfg4
   addressOffset: 0x150
   resetValue: 0x00000000
   fields:
@@ -664,7 +639,6 @@ mm_berr_cfg4:
       bitWidth: 32
       access: read-only
 mm_berr_cfg5:
-  description: mm_berr_cfg5
   addressOffset: 0x154
   resetValue: 0x00000000
   fields:
@@ -673,7 +647,6 @@ mm_berr_cfg5:
       bitWidth: 32
       access: read-only
 mm_berr_cfg6:
-  description: mm_berr_cfg6
   addressOffset: 0x158
   resetValue: 0x00000000
   fields:
@@ -682,7 +655,6 @@ mm_berr_cfg6:
       bitWidth: 32
       access: read-only
 mm_berr_cfg7:
-  description: mm_berr_cfg7
   addressOffset: 0x15C
   resetValue: 0x00000000
   fields:

@@ -1,5 +1,4 @@
 ef_cfg_0:
-  description: ef_cfg_0
   addressOffset: 0x0
   resetValue: 0x00000000
   fields:
@@ -88,7 +87,6 @@ ef_cfg_0:
       bitWidth: 4
       access: read-write
 ef_dbg_pwd_low:
-  description: ef_dbg_pwd_low
   addressOffset: 0x4
   resetValue: 0x00000000
   fields:
@@ -97,7 +95,6 @@ ef_dbg_pwd_low:
       bitWidth: 32
       access: read-write
 ef_dbg_pwd_high:
-  description: ef_dbg_pwd_high
   addressOffset: 0x8
   resetValue: 0x00000000
   fields:
@@ -106,7 +103,6 @@ ef_dbg_pwd_high:
       bitWidth: 32
       access: read-write
 ef_dbg_pwd2_low:
-  description: ef_dbg_pwd2_low
   addressOffset: 0xC
   resetValue: 0x00000000
   fields:
@@ -115,7 +111,6 @@ ef_dbg_pwd2_low:
       bitWidth: 32
       access: read-write
 ef_dbg_pwd2_high:
-  description: ef_dbg_pwd2_high
   addressOffset: 0x10
   resetValue: 0x00000000
   fields:
@@ -124,7 +119,6 @@ ef_dbg_pwd2_high:
       bitWidth: 32
       access: read-write
 ef_wifi_mac_low:
-  description: ef_wifi_mac_low
   addressOffset: 0x14
   resetValue: 0x00000000
   fields:
@@ -133,7 +127,6 @@ ef_wifi_mac_low:
       bitWidth: 32
       access: read-write
 ef_wifi_mac_high:
-  description: ef_wifi_mac_high
   addressOffset: 0x18
   resetValue: 0x00000000
   fields:
@@ -142,7 +135,6 @@ ef_wifi_mac_high:
       bitWidth: 32
       access: read-write
 ef_key_slot_0_w0:
-  description: ef_key_slot_0_w0
   addressOffset: 0x1C
   resetValue: 0x00000000
   fields:
@@ -151,7 +143,6 @@ ef_key_slot_0_w0:
       bitWidth: 32
       access: read-write
 ef_key_slot_0_w1:
-  description: ef_key_slot_0_w1
   addressOffset: 0x20
   resetValue: 0x00000000
   fields:
@@ -160,7 +151,6 @@ ef_key_slot_0_w1:
       bitWidth: 32
       access: read-write
 ef_key_slot_0_w2:
-  description: ef_key_slot_0_w2
   addressOffset: 0x24
   resetValue: 0x00000000
   fields:
@@ -169,7 +159,6 @@ ef_key_slot_0_w2:
       bitWidth: 32
       access: read-write
 ef_key_slot_0_w3:
-  description: ef_key_slot_0_w3
   addressOffset: 0x28
   resetValue: 0x00000000
   fields:
@@ -178,7 +167,6 @@ ef_key_slot_0_w3:
       bitWidth: 32
       access: read-write
 ef_key_slot_1_w0:
-  description: ef_key_slot_1_w0
   addressOffset: 0x2C
   resetValue: 0x00000000
   fields:
@@ -187,7 +175,6 @@ ef_key_slot_1_w0:
       bitWidth: 32
       access: read-write
 ef_key_slot_1_w1:
-  description: ef_key_slot_1_w1
   addressOffset: 0x30
   resetValue: 0x00000000
   fields:
@@ -196,7 +183,6 @@ ef_key_slot_1_w1:
       bitWidth: 32
       access: read-write
 ef_key_slot_1_w2:
-  description: ef_key_slot_1_w2
   addressOffset: 0x34
   resetValue: 0x00000000
   fields:
@@ -205,7 +191,6 @@ ef_key_slot_1_w2:
       bitWidth: 32
       access: read-write
 ef_key_slot_1_w3:
-  description: ef_key_slot_1_w3
   addressOffset: 0x38
   resetValue: 0x00000000
   fields:
@@ -214,7 +199,6 @@ ef_key_slot_1_w3:
       bitWidth: 32
       access: read-write
 ef_key_slot_2_w0:
-  description: ef_key_slot_2_w0
   addressOffset: 0x3C
   resetValue: 0x00000000
   fields:
@@ -223,7 +207,6 @@ ef_key_slot_2_w0:
       bitWidth: 32
       access: read-write
 ef_key_slot_2_w1:
-  description: ef_key_slot_2_w1
   addressOffset: 0x40
   resetValue: 0x00000000
   fields:
@@ -232,7 +215,6 @@ ef_key_slot_2_w1:
       bitWidth: 32
       access: read-write
 ef_key_slot_2_w2:
-  description: ef_key_slot_2_w2
   addressOffset: 0x44
   resetValue: 0x00000000
   fields:
@@ -241,7 +223,6 @@ ef_key_slot_2_w2:
       bitWidth: 32
       access: read-write
 ef_key_slot_2_w3:
-  description: ef_key_slot_2_w3
   addressOffset: 0x48
   resetValue: 0x00000000
   fields:
@@ -250,7 +231,6 @@ ef_key_slot_2_w3:
       bitWidth: 32
       access: read-write
 ef_key_slot_3_w0:
-  description: ef_key_slot_3_w0
   addressOffset: 0x4C
   resetValue: 0x00000000
   fields:
@@ -259,7 +239,6 @@ ef_key_slot_3_w0:
       bitWidth: 32
       access: read-write
 ef_key_slot_3_w1:
-  description: ef_key_slot_3_w1
   addressOffset: 0x50
   resetValue: 0x00000000
   fields:
@@ -268,7 +247,6 @@ ef_key_slot_3_w1:
       bitWidth: 32
       access: read-write
 ef_key_slot_3_w2:
-  description: ef_key_slot_3_w2
   addressOffset: 0x54
   resetValue: 0x00000000
   fields:
@@ -277,7 +255,6 @@ ef_key_slot_3_w2:
       bitWidth: 32
       access: read-write
 ef_key_slot_3_w3:
-  description: ef_key_slot_3_w3
   addressOffset: 0x58
   resetValue: 0x00000000
   fields:
@@ -286,7 +263,6 @@ ef_key_slot_3_w3:
       bitWidth: 32
       access: read-write
 ef_sw_usage_0:
-  description: ef_sw_usage_0
   addressOffset: 0x5C
   resetValue: 0x00000000
   fields:
@@ -295,7 +271,6 @@ ef_sw_usage_0:
       bitWidth: 32
       access: read-write
 ef_sw_usage_1:
-  description: ef_sw_usage_1
   addressOffset: 0x60
   resetValue: 0x00000000
   fields:
@@ -304,7 +279,6 @@ ef_sw_usage_1:
       bitWidth: 32
       access: read-write
 ef_sw_usage_2:
-  description: ef_sw_usage_2
   addressOffset: 0x64
   resetValue: 0x00000000
   fields:
@@ -313,7 +287,6 @@ ef_sw_usage_2:
       bitWidth: 32
       access: read-write
 ef_sw_usage_3:
-  description: ef_sw_usage_3
   addressOffset: 0x68
   resetValue: 0x00000000
   fields:
@@ -322,7 +295,6 @@ ef_sw_usage_3:
       bitWidth: 32
       access: read-write
 ef_key_slot_11_w0:
-  description: ef_key_slot_11_w0
   addressOffset: 0x6C
   resetValue: 0x00000000
   fields:
@@ -331,7 +303,6 @@ ef_key_slot_11_w0:
       bitWidth: 32
       access: read-write
 ef_key_slot_11_w1:
-  description: ef_key_slot_11_w1
   addressOffset: 0x70
   resetValue: 0x00000000
   fields:
@@ -340,7 +311,6 @@ ef_key_slot_11_w1:
       bitWidth: 32
       access: read-write
 ef_key_slot_11_w2:
-  description: ef_key_slot_11_w2
   addressOffset: 0x74
   resetValue: 0x00000000
   fields:
@@ -349,7 +319,6 @@ ef_key_slot_11_w2:
       bitWidth: 32
       access: read-write
 ef_key_slot_11_w3:
-  description: ef_key_slot_11_w3
   addressOffset: 0x78
   resetValue: 0x00000000
   fields:
@@ -358,7 +327,6 @@ ef_key_slot_11_w3:
       bitWidth: 32
       access: read-write
 ef_data_0_lock:
-  description: ef_data_0_lock
   addressOffset: 0x7C
   resetValue: 0x00000000
   fields:

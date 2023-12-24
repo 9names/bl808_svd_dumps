@@ -1,5 +1,4 @@
 mcu_bus_cfg0:
-  description: mcu_bus_cfg0
   addressOffset: 0x0
   resetValue: 0x00000000
   fields:
@@ -24,7 +23,6 @@ mcu_bus_cfg0:
       bitWidth: 15
       access: read-only
 mcu_bus_cfg1:
-  description: mcu_bus_cfg1
   addressOffset: 0x4
   resetValue: 0x00000000
   fields:
@@ -65,7 +63,6 @@ mcu_bus_cfg1:
       bitWidth: 15
       access: read-only
 mcu_e907_rtc:
-  description: mcu_e907_rtc
   addressOffset: 0x14
   resetValue: 0x8000000A
   fields:
@@ -86,7 +83,6 @@ mcu_e907_rtc:
       bitWidth: 1
       access: read-write
 mcu_cfg1:
-  description: mcu_cfg1
   addressOffset: 0x100
   resetValue: 0x00000030
   fields:
@@ -122,7 +118,7 @@ mcu_cfg1:
       bitOffset: 12
       bitWidth: 4
       access: read-only
-    MCU1_WFI_FORCE:
+    mcu1_wfi_force:
       bitOffset: 16
       bitWidth: 1
       access: read-write
@@ -143,7 +139,6 @@ mcu_cfg1:
       bitWidth: 2
       access: read-only
 mcu1_log1:
-  description: mcu1_log1
   addressOffset: 0x110
   resetValue: 0x00000000
   fields:
@@ -152,7 +147,6 @@ mcu1_log1:
       bitWidth: 32
       access: read-only
 mcu1_log2:
-  description: mcu1_log2
   addressOffset: 0x114
   resetValue: 0x00000000
   fields:
@@ -161,7 +155,6 @@ mcu1_log2:
       bitWidth: 32
       access: read-only
 mcu1_log3:
-  description: mcu1_log3
   addressOffset: 0x118
   resetValue: 0x00000000
   fields:
@@ -170,7 +163,6 @@ mcu1_log3:
       bitWidth: 32
       access: read-only
 mcu1_log4:
-  description: mcu1_log4
   addressOffset: 0x11C
   resetValue: 0x00000000
   fields:
@@ -183,7 +175,6 @@ mcu1_log4:
       bitWidth: 31
       access: read-only
 mcu1_log5:
-  description: mcu1_log5
   addressOffset: 0x120
   resetValue: 0x00000000
   fields:
@@ -216,7 +207,6 @@ mcu1_log5:
       bitWidth: 2
       access: read-only
 irom1_misr_dataout_0:
-  description: irom1_misr_dataout_0
   addressOffset: 0x208
   resetValue: 0x00000000
   fields:
@@ -225,7 +215,6 @@ irom1_misr_dataout_0:
       bitWidth: 32
       access: read-only
 irom1_misr_dataout_1:
-  description: irom1_misr_dataout_1
   addressOffset: 0x20C
   resetValue: 0x00000000
   fields:

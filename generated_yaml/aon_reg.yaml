@@ -1,5 +1,4 @@
 aon:
-  description: aon
   addressOffset: 0x800
   resetValue: 0x0040000F
   fields:
@@ -36,7 +35,6 @@ aon:
       bitWidth: 9
       access: read-only
 aon_common:
-  description: aon_common
   addressOffset: 0x804
   resetValue: 0x00000000
   fields:
@@ -125,7 +123,6 @@ aon_common:
       bitWidth: 10
       access: read-only
 aon_misc:
-  description: aon_misc
   addressOffset: 0x808
   resetValue: 0x00000003
   fields:
@@ -142,7 +139,6 @@ aon_misc:
       bitWidth: 30
       access: read-only
 bg_sys_top:
-  description: bg_sys_top
   addressOffset: 0x810
   resetValue: 0x00000003
   fields:
@@ -159,7 +155,6 @@ bg_sys_top:
       bitWidth: 30
       access: read-only
 dcdc_top_0:
-  description: dcdc_top_0
   addressOffset: 0x814
   resetValue: 0x14474420
   fields:
@@ -212,7 +207,6 @@ dcdc_top_0:
       bitWidth: 2
       access: read-only
 dcdc_top_1:
-  description: dcdc_top_1
   addressOffset: 0x818
   resetValue: 0x18808400
   fields:
@@ -273,7 +267,6 @@ dcdc_top_1:
       bitWidth: 1
       access: read-only
 ldo11soc_and_dctest:
-  description: ldo11soc_and_dctest
   addressOffset: 0x81C
   resetValue: 0x46F44180
   fields:
@@ -395,7 +388,6 @@ dcdc18_top_0:
       bitWidth: 2
       access: read-only
 dcdc18_top_1:
-  description: dcdc18_top_1
   addressOffset: 0x824
   resetValue: 0x28808400
   fields:
@@ -456,7 +448,6 @@ dcdc18_top_1:
       bitWidth: 1
       access: read-only
 dcdc18_top_2:
-  description: dcdc18_top_2
   addressOffset: 0x828
   resetValue: 0x46744180
   fields:
@@ -525,7 +516,6 @@ dcdc18_top_2:
       bitWidth: 1
       access: read-only
 psw_irrcv:
-  description: psw_irrcv
   addressOffset: 0x82C
   resetValue: 0x1A000000
   fields:
@@ -562,7 +552,6 @@ psw_irrcv:
       bitWidth: 2
       access: read-only
 rf_top_aon:
-  description: rf_top_aon
   addressOffset: 0x880
   resetValue: 0x00020137
   fields:
@@ -643,7 +632,6 @@ rf_top_aon:
       bitWidth: 3
       access: read-only
 xtal_cfg:
-  description: xtal_cfg
   addressOffset: 0x884
   resetValue: 0xB410F0E1
   fields:
@@ -696,7 +684,6 @@ xtal_cfg:
       bitWidth: 2
       access: read-write
 xtal_cfg2:
-  description: xtal_cfg2
   addressOffset: 0x888
   resetValue: 0x400000D0
   fields:
@@ -745,7 +732,6 @@ xtal_cfg2:
       bitWidth: 2
       access: read-write
 xtal_cfg3:
-  description: xtal_cfg3
   addressOffset: 0x88C
   resetValue: 0x40120000
   fields:
@@ -786,7 +772,6 @@ xtal_cfg3:
       bitWidth: 2
       access: read-write
 tsen:
-  description: tsen
   addressOffset: 0x890
   resetValue: 0x78FF08FF
   fields:
@@ -815,7 +800,6 @@ tsen:
       bitWidth: 2
       access: read-write
 ldo18io:
-  description: ldo18io
   addressOffset: 0x8C4
   resetValue: 0x075BB338
   fields:
@@ -880,7 +864,6 @@ ldo18io:
       bitWidth: 4
       access: read-only
 acomp0_ctrl:
-  description: acomp0_ctrl
   addressOffset: 0x900
   resetValue: 0x00000000
   fields:
@@ -925,7 +908,6 @@ acomp0_ctrl:
       bitWidth: 5
       access: read-only
 acomp1_ctrl:
-  description: acomp1_ctrl
   addressOffset: 0x904
   resetValue: 0x00000000
   fields:
@@ -970,7 +952,6 @@ acomp1_ctrl:
       bitWidth: 5
       access: read-only
 acomp_ctrl:
-  description: acomp_ctrl
   addressOffset: 0x908
   resetValue: 0x00000003
   fields:
@@ -1031,7 +1012,6 @@ acomp_ctrl:
       bitWidth: 2
       access: read-write
 gpadc_reg_cmd:
-  description: gpadc_reg_cmd
   addressOffset: 0x90C
   resetValue: 0x00000F78
   fields:
@@ -1112,7 +1092,6 @@ gpadc_reg_cmd:
       bitWidth: 1
       access: read-write
 gpadc_reg_config1:
-  description: gpadc_reg_config1
   addressOffset: 0x910
   resetValue: 0x000C0002
   fields:
@@ -1189,7 +1168,6 @@ gpadc_reg_config1:
       bitWidth: 1
       access: read-only
 gpadc_reg_config2:
-  description: gpadc_reg_config2
   addressOffset: 0x914
   resetValue: 0x00019100
   fields:
@@ -1398,7 +1376,6 @@ gpadc_reg_scn_neg2:
       bitWidth: 2
       access: read-only
 gpadc_reg_status:
-  description: gpadc_reg_status
   addressOffset: 0x928
   resetValue: 0x00000000
   fields:
@@ -1415,7 +1392,6 @@ gpadc_reg_status:
       bitWidth: 16
       access: read-write
 gpadc_reg_isr:
-  description: gpadc_reg_isr
   addressOffset: 0x92C
   resetValue: 0x00000000
   fields:
@@ -1456,7 +1432,6 @@ gpadc_reg_isr:
       bitWidth: 22
       access: read-only
 gpadc_reg_result:
-  description: gpadc_reg_result
   addressOffset: 0x930
   resetValue: 0x01EF0000
   fields:
@@ -1469,7 +1444,6 @@ gpadc_reg_result:
       bitWidth: 6
       access: read-only
 gpadc_reg_raw_result:
-  description: gpadc_reg_raw_result
   addressOffset: 0x934
   resetValue: 0x00000000
   fields:
@@ -1482,7 +1456,6 @@ gpadc_reg_raw_result:
       bitWidth: 20
       access: read-only
 gpadc_reg_define:
-  description: gpadc_reg_define
   addressOffset: 0x938
   resetValue: 0x00000000
   fields:
@@ -1495,7 +1468,6 @@ gpadc_reg_define:
       bitWidth: 16
       access: read-only
 hbncore_resv0:
-  description: hbncore_resv0
   addressOffset: 0x93C
   resetValue: 0x00000000
   fields:
@@ -1504,7 +1476,6 @@ hbncore_resv0:
       bitWidth: 32
       access: read-write
 hbncore_resv1:
-  description: hbncore_resv1
   addressOffset: 0x940
   resetValue: 0xFFFFFFFF
   fields:

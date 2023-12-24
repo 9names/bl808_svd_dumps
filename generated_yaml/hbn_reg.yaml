@@ -1,5 +1,4 @@
-HBN_CTL:
-  description: HBN_CTL
+hbn_ctl:
   addressOffset: 0x0
   resetValue: 0x01D50020
   fields:
@@ -79,8 +78,7 @@ HBN_CTL:
       bitOffset: 28
       bitWidth: 4
       access: read-only
-HBN_TIME_L:
-  description: HBN_TIME_L
+hbn_time_l:
   addressOffset: 0x4
   resetValue: 0x00000000
   fields:
@@ -88,8 +86,7 @@ HBN_TIME_L:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-HBN_TIME_H:
-  description: HBN_TIME_H
+hbn_time_h:
   addressOffset: 0x8
   resetValue: 0x00000000
   fields:
@@ -101,8 +98,7 @@ HBN_TIME_H:
       bitOffset: 8
       bitWidth: 24
       access: read-only
-RTC_TIME_L:
-  description: RTC_TIME_L
+rtc_time_l:
   addressOffset: 0xC
   resetValue: 0x00000000
   fields:
@@ -110,8 +106,7 @@ RTC_TIME_L:
       bitOffset: 0
       bitWidth: 32
       access: read-only
-RTC_TIME_H:
-  description: RTC_TIME_H
+rtc_time_h:
   addressOffset: 0x10
   resetValue: 0x00000000
   fields:
@@ -127,8 +122,7 @@ RTC_TIME_H:
       bitOffset: 31
       bitWidth: 1
       access: write-only
-HBN_IRQ_MODE:
-  description: HBN_IRQ_MODE
+hbn_irq_mode:
   addressOffset: 0x14
   resetValue: 0x03010005
   fields:
@@ -180,8 +174,7 @@ HBN_IRQ_MODE:
       bitOffset: 28
       bitWidth: 4
       access: read-only
-HBN_IRQ_STAT:
-  description: HBN_IRQ_STAT
+hbn_irq_stat:
   addressOffset: 0x18
   resetValue: 0x00000000
   fields:
@@ -189,8 +182,7 @@ HBN_IRQ_STAT:
       bitOffset: 0
       bitWidth: 32
       access: read-only
-HBN_IRQ_CLR:
-  description: HBN_IRQ_CLR
+hbn_irq_clr:
   addressOffset: 0x1C
   resetValue: 0x00000000
   fields:
@@ -198,8 +190,7 @@ HBN_IRQ_CLR:
       bitOffset: 0
       bitWidth: 32
       access: write-only
-HBN_PIR_CFG:
-  description: HBN_PIR_CFG
+hbn_pir_cfg:
   addressOffset: 0x20
   resetValue: 0x00000000
   fields:
@@ -235,8 +226,7 @@ HBN_PIR_CFG:
       bitOffset: 9
       bitWidth: 23
       access: read-only
-HBN_PIR_VTH:
-  description: HBN_PIR_VTH
+hbn_pir_vth:
   addressOffset: 0x24
   resetValue: 0x000003FF
   fields:
@@ -248,8 +238,7 @@ HBN_PIR_VTH:
       bitOffset: 14
       bitWidth: 18
       access: read-only
-HBN_PIR_INTERVAL:
-  description: HBN_PIR_INTERVAL
+hbn_pir_interval:
   addressOffset: 0x28
   resetValue: 0x00000A3D
   fields:
@@ -261,8 +250,7 @@ HBN_PIR_INTERVAL:
       bitOffset: 12
       bitWidth: 20
       access: read-only
-HBN_BOR_CFG:
-  description: HBN_BOR_CFG
+hbn_bor_cfg:
   addressOffset: 0x2C
   resetValue: 0x0000000A
   fields:
@@ -286,8 +274,7 @@ HBN_BOR_CFG:
       bitOffset: 6
       bitWidth: 26
       access: read-only
-HBN_GLB:
-  description: HBN_GLB
+hbn_glb:
   addressOffset: 0x30
   resetValue: 0xAA0A0000
   fields:
@@ -339,8 +326,7 @@ HBN_GLB:
       bitOffset: 28
       bitWidth: 4
       access: read-write
-HBN_SRAM:
-  description: HBN_SRAM
+hbn_sram:
   addressOffset: 0x34
   resetValue: 0x00000000
   fields:
@@ -360,8 +346,7 @@ HBN_SRAM:
       bitOffset: 8
       bitWidth: 24
       access: read-only
-HBN_PAD_CTRL_0:
-  description: HBN_PAD_CTRL_0
+hbn_pad_ctrl_0:
   addressOffset: 0x38
   resetValue: 0x18000000
   fields:
@@ -393,8 +378,7 @@ HBN_PAD_CTRL_0:
       bitOffset: 31
       bitWidth: 1
       access: read-write
-HBN_PAD_CTRL_1:
-  description: HBN_PAD_CTRL_1
+hbn_pad_ctrl_1:
   addressOffset: 0x3C
   resetValue: 0x00000000
   fields:
@@ -422,44 +406,39 @@ HBN_PAD_CTRL_1:
       bitOffset: 29
       bitWidth: 3
       access: read-only
-HBN_RSV0:
-  description: HBN_RSV0
+hbn_rsv0:
   addressOffset: 0x100
   resetValue: 0x00000000
   fields:
-    HBN_RSV0:
+    hbn_rsv0:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-HBN_RSV1:
-  description: HBN_RSV1
+hbn_rsv1:
   addressOffset: 0x104
   resetValue: 0xFFFFFFFF
   fields:
-    HBN_RSV1:
+    hbn_rsv1:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-HBN_RSV2:
-  description: HBN_RSV2
+hbn_rsv2:
   addressOffset: 0x108
   resetValue: 0x00000000
   fields:
-    HBN_RSV2:
+    hbn_rsv2:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-HBN_RSV3:
-  description: HBN_RSV3
+hbn_rsv3:
   addressOffset: 0x10C
   resetValue: 0xFFFFFFFF
   fields:
-    HBN_RSV3:
+    hbn_rsv3:
       bitOffset: 0
       bitWidth: 32
       access: read-write
 rc32k_ctrl0:
-  description: rc32k_ctrl0
   addressOffset: 0x200
   resetValue: 0x4B28801B
   fields:
@@ -512,7 +491,6 @@ rc32k_ctrl0:
       bitWidth: 10
       access: read-write
 xtal32k:
-  description: xtal32k
   addressOffset: 0x204
   resetValue: 0x00150228
   fields:
@@ -585,7 +563,6 @@ xtal32k:
       bitWidth: 7
       access: read-only
 rtc_rst_ctrl:
-  description: rtc_rst_ctrl
   addressOffset: 0x208
   resetValue: 0x50943C00
   fields:
@@ -602,7 +579,6 @@ rtc_rst_ctrl:
       bitWidth: 13
       access: read-write
 rtc_rst_ctrl2:
-  description: rtc_rst_ctrl2
   addressOffset: 0x20C
   resetValue: 0x00000000
   fields:

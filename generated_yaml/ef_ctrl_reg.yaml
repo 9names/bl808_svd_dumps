@@ -1,5 +1,4 @@
 ef_if_ctrl_0:
-  description: ef_if_ctrl_0
   addressOffset: 0x800
   resetValue: 0x00240003
   fields:
@@ -76,7 +75,6 @@ ef_if_ctrl_0:
       bitWidth: 8
       access: read-write
 ef_if_cyc_0:
-  description: ef_if_cyc_0
   addressOffset: 0x804
   resetValue: 0x16000040
   fields:
@@ -101,7 +99,6 @@ ef_if_cyc_0:
       bitWidth: 8
       access: read-write
 ef_if_cyc_1:
-  description: ef_if_cyc_1
   addressOffset: 0x808
   resetValue: 0x00206609
   fields:
@@ -126,7 +123,6 @@ ef_if_cyc_1:
       bitWidth: 6
       access: read-write
 ef_if_0_manual:
-  description: ef_if_0_manual
   addressOffset: 0x80C
   resetValue: 0x0000E400
   fields:
@@ -167,7 +163,6 @@ ef_if_0_manual:
       bitWidth: 8
       access: read-write
 ef_if_0_status:
-  description: ef_if_0_status
   addressOffset: 0x810
   resetValue: 0x0000E400
   fields:
@@ -176,7 +171,6 @@ ef_if_0_status:
       bitWidth: 32
       access: read-only
 ef_if_cfg_0:
-  description: ef_if_cfg_0
   addressOffset: 0x814
   resetValue: 0x00000000
   fields:
@@ -265,7 +259,6 @@ ef_if_cfg_0:
       bitWidth: 4
       access: read-only
 ef_sw_cfg_0:
-  description: ef_sw_cfg_0
   addressOffset: 0x818
   resetValue: 0x00000000
   fields:
@@ -354,7 +347,6 @@ ef_sw_cfg_0:
       bitWidth: 4
       access: read-write
 ef_reserved:
-  description: ef_reserved
   addressOffset: 0x81C
   resetValue: 0x0000FFFF
   fields:
@@ -363,7 +355,6 @@ ef_reserved:
       bitWidth: 32
       access: read-write
 ef_if_sw_usage_0:
-  description: ef_if_sw_usage_0
   addressOffset: 0x820
   resetValue: 0x00000000
   fields:
@@ -372,7 +363,6 @@ ef_if_sw_usage_0:
       bitWidth: 32
       access: read-only
 ef_if_sw_usage_1:
-  description: ef_if_sw_usage_1
   addressOffset: 0x824
   resetValue: 0x00000000
   fields:
@@ -381,7 +371,6 @@ ef_if_sw_usage_1:
       bitWidth: 32
       access: read-only
 ef_if_ctrl_1:
-  description: ef_if_ctrl_1
   addressOffset: 0x900
   resetValue: 0x00200000
   fields:
@@ -430,7 +419,6 @@ ef_if_ctrl_1:
       bitWidth: 9
       access: read-only
 ef_if_1_manual:
-  description: ef_if_1_manual
   addressOffset: 0x904
   resetValue: 0x00000000
   fields:
@@ -447,7 +435,6 @@ ef_if_1_manual:
       bitWidth: 8
       access: read-only
 ef_if_1_status:
-  description: ef_if_1_status
   addressOffset: 0x908
   resetValue: 0x0000E400
   fields:
@@ -456,7 +443,6 @@ ef_if_1_status:
       bitWidth: 32
       access: read-only
 ef_if_ctrl_2:
-  description: ef_if_ctrl_2
   addressOffset: 0x910
   resetValue: 0x00000000
   fields:
@@ -465,7 +451,6 @@ ef_if_ctrl_2:
       bitWidth: 32
       access: read-only
 ef_if_2_manual:
-  description: ef_if_2_manual
   addressOffset: 0x914
   resetValue: 0x00000000
   fields:
@@ -474,7 +459,6 @@ ef_if_2_manual:
       bitWidth: 32
       access: read-only
 ef_if_2_status:
-  description: ef_if_2_status
   addressOffset: 0x918
   resetValue: 0x00000000
   fields:
@@ -483,7 +467,6 @@ ef_if_2_status:
       bitWidth: 32
       access: read-only
 ef_crc_ctrl_0:
-  description: ef_crc_ctrl_0
   addressOffset: 0xA00
   resetValue: 0x00FF0224
   fields:
@@ -544,27 +527,22 @@ ef_crc_ctrl_0:
       bitWidth: 16
       access: read-write
 ef_crc_ctrl_1:
-  description: ef_crc_ctrl_1
   addressOffset: 0xA04
   resetValue: 0x00000000
   fields:
 ef_crc_ctrl_2:
-  description: ef_crc_ctrl_2
   addressOffset: 0xA08
   resetValue: 0x00000000
   fields:
 ef_crc_ctrl_3:
-  description: ef_crc_ctrl_3
   addressOffset: 0xA0C
   resetValue: 0x00000000
   fields:
 ef_crc_ctrl_4:
-  description: ef_crc_ctrl_4
   addressOffset: 0xA10
   resetValue: 0x00000000
   fields:
 ef_crc_ctrl_5:
-  description: ef_crc_ctrl_5
   addressOffset: 0xA14
   resetValue: 0x00000000
   fields:

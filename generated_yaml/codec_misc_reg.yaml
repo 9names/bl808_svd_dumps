@@ -1,5 +1,4 @@
 codec_bus_ctrl:
-  description: codec_bus_ctrl
   addressOffset: 0x00
   resetValue: 0x0000FFFF
   fields:
@@ -12,7 +11,6 @@ codec_bus_ctrl:
       bitWidth: 16
       access: read-only
 codec_qos_ctrl:
-  description: codec_qos_ctrl
   addressOffset: 0x04
   resetValue: 0x00000000
   fields:
@@ -69,7 +67,6 @@ codec_qos_ctrl:
       bitWidth: 20
       access: read-only
 codec_bus_thre:
-  description: codec_bus_thre
   addressOffset: 0x08
   resetValue: 0x00000000
   fields:
@@ -98,7 +95,6 @@ codec_bus_thre:
       bitWidth: 22
       access: read-only
 codec_bus_dec_err:
-  description: codec_bus_dec_err
   addressOffset: 0x10
   resetValue: 0x00000000
   fields:
@@ -143,7 +139,6 @@ codec_bus_dec_err:
       bitWidth: 15
       access: read-only
 codec_bus_dec_err_addr:
-  description: codec_bus_dec_err_addr
   addressOffset: 0x14
   resetValue: 0x00000000
   fields:
@@ -152,7 +147,6 @@ codec_bus_dec_err_addr:
       bitWidth: 32
       access: read-only
 blai_lmtr_rd:
-  description: blai_lmtr_rd
   addressOffset: 0x20
   resetValue: 0x00000000
   fields:
@@ -169,7 +163,6 @@ blai_lmtr_rd:
       bitWidth: 1
       access: read-write
 blai_lmtr_wr:
-  description: blai_lmtr_wr
   addressOffset: 0x24
   resetValue: 0x00000000
   fields:
@@ -186,7 +179,6 @@ blai_lmtr_wr:
       bitWidth: 1
       access: read-write
 id_selection:
-  description: id_selection
   addressOffset: 0x28
   resetValue: 0x00000000
   fields:
@@ -198,8 +190,7 @@ id_selection:
       bitOffset: 1
       bitWidth: 31
       access: read-only
-CODEC_MISC_Dummy:
-  description: CODEC_MISC_Dummy
+codec_misc_dummy:
   addressOffset: 0xFC
   resetValue: 0xFFFF0000
   fields:

@@ -1,192 +1,192 @@
-CPU1_IPC_ISWR:
+cpu1_ipc_iswr:
   description: Interrupt Set Write Register
   addressOffset: 0x0
   resetValue: 0x00000000
   fields:
-    CPU1_IPC_ISWR:
+    cpu1_ipc_iswr:
       bitOffset: 0
       bitWidth: 16
       access: write-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU1_IPC_IRSRR:
+cpu1_ipc_irsrr:
   description: Interrupt raw status Register
   addressOffset: 0x4
   resetValue: 0x00000000
   fields:
-    CPU1_IPC_IRSRR:
+    cpu1_ipc_irsrr:
       bitOffset: 0
       bitWidth: 16
       access: read-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU1_IPC_ICR:
+cpu1_ipc_icr:
   description: Interrupt Clear Register
   addressOffset: 0x8
   resetValue: 0x00000000
   fields:
-    CPU1_IPC_ICR:
+    cpu1_ipc_icr:
       bitOffset: 0
       bitWidth: 16
       access: write-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU1_IPC_IUSR:
+cpu1_ipc_iusr:
   description: Interrupt Unmask Set Register
   addressOffset: 0xc
   resetValue: 0x00000000
   fields:
-    CPU1_IPC_IUSR:
+    cpu1_ipc_iusr:
       bitOffset: 0
       bitWidth: 16
       access: read-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU1_IPC_IUCR:
+cpu1_ipc_iucr:
   description: Interrupt Unmask Clear Register
   addressOffset: 0x10
   resetValue: 0x00000000
   fields:
-    CPU1_IPC_IUCR:
+    cpu1_ipc_iucr:
       bitOffset: 0
       bitWidth: 16
       access: write-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU1_IPC_ILSLR:
+cpu1_ipc_ilslr:
   description: Interrupt Line Sel Low Register
   addressOffset: 0x14
   resetValue: 0x00000000
   fields:
-    CPU1_IPC_ILSLR:
+    cpu1_ipc_ilslr:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-CPU1_IPC_ILSHR:
+cpu1_ipc_ilshr:
   description: Interrupt Line Sel High Register
   addressOffset: 0x18
   resetValue: 0x00000000
   fields:
-    CPU1_IPC_ILSHR:
+    cpu1_ipc_ilshr:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-CPU1_IPC_ISR:
+cpu1_ipc_isr:
   description: Interrupt status Register
   addressOffset: 0x1C
   resetValue: 0x00000000
   fields:
-    CPU1_IPC_ISR:
+    cpu1_ipc_isr:
       bitOffset: 0
       bitWidth: 16
       access: read-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU0_IPC_ISWR:
+cpu0_ipc_iswr:
   description: Interrupt Set Write Register
   addressOffset: 0x20
   resetValue: 0x00000000
   fields:
-    CPU0_IPC_ISWR:
+    cpu0_ipc_iswr:
       bitOffset: 0
       bitWidth: 16
       access: write-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU0_IPC_IRSRR:
+cpu0_ipc_irsrr:
   description: Interrupt raw status Register
   addressOffset: 0x24
   resetValue: 0x00000000
   fields:
-    CPU0_IPC_IRSRR:
+    cpu0_ipc_irsrr:
       bitOffset: 0
       bitWidth: 16
       access: read-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU0_IPC_ICR:
+cpu0_ipc_icr:
   description: Interrupt Clear Register
   addressOffset: 0x28
   resetValue: 0x00000000
   fields:
-    CPU0_IPC_ICR:
+    cpu0_ipc_icr:
       bitOffset: 0
       bitWidth: 16
       access: write-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU0_IPC_IUSR:
+cpu0_ipc_iusr:
   description: Interrupt Unmask Set Register
   addressOffset: 0x2c
   resetValue: 0x00000000
   fields:
-    CPU0_IPC_IUSR:
+    cpu0_ipc_iusr:
       bitOffset: 0
       bitWidth: 16
       access: read-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU0_IPC_IUCR:
+cpu0_ipc_iucr:
   description: Interrupt Unmask Clear Register
   addressOffset: 0x30
   resetValue: 0x00000000
   fields:
-    CPU0_IPC_IUCR:
+    cpu0_ipc_iucr:
       bitOffset: 0
       bitWidth: 16
       access: read-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-CPU0_IPC_ILSLR:
+cpu0_ipc_ilslr:
   description: Interrupt Line Sel Low Register
   addressOffset: 0x34
   resetValue: 0x00000000
   fields:
-    CPU0_IPC_ILSLR:
+    cpu0_ipc_ilslr:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-CPU0_IPC_ILSHR:
+cpu0_ipc_ilshr:
   description: Interrupt Line Sel High Register
   addressOffset: 0x38
   resetValue: 0x00000000
   fields:
-    CPU0_IPC_ILSHR:
+    cpu0_ipc_ilshr:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-CPU0_IPC_ISR:
+cpu0_ipc_isr:
   description: Interrupt status Register
   addressOffset: 0x3C
   resetValue: 0x00000000
   fields:
-    CPU0_IPC_ISR:
+    cpu0_ipc_isr:
       bitOffset: 0
       bitWidth: 16
       access: read-only
-    Reserved_31_16:
+    reserved_31_16:
       bitOffset: 16
       bitWidth: 16
       access: read-only

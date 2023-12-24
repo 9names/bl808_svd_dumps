@@ -1,5 +1,4 @@
 tzc_rom_tzsrg_ctrl:
-  description: tzc_rom_tzsrg_ctrl
   addressOffset: 0x40
   resetValue: 0x0000003F
   fields:
@@ -56,7 +55,6 @@ tzc_rom_tzsrg_ctrl:
       bitWidth: 4
       access: read-write
 tzc_rom_tzsrg_adr_mask:
-  description: tzc_rom_tzsrg_adr_mask
   addressOffset: 0x44
   resetValue: 0x00000000
   fields:
@@ -77,7 +75,6 @@ tzc_rom_tzsrg_adr_mask:
       bitWidth: 15
       access: read-only
 tzc_rom_tzsrg_r0:
-  description: tzc_rom_tzsrg_r0
   addressOffset: 0x48
   resetValue: 0x000003FF
   fields:
@@ -98,7 +95,6 @@ tzc_rom_tzsrg_r0:
       bitWidth: 6
       access: read-only
 tzc_rom_tzsrg_r1:
-  description: tzc_rom_tzsrg_r1
   addressOffset: 0x4C
   resetValue: 0x000003FF
   fields:
@@ -119,7 +115,6 @@ tzc_rom_tzsrg_r1:
       bitWidth: 6
       access: read-only
 tzc_rom_tzsrg_r2:
-  description: tzc_rom_tzsrg_r2
   addressOffset: 0x50
   resetValue: 0x000003FF
   fields:
@@ -140,7 +135,6 @@ tzc_rom_tzsrg_r2:
       bitWidth: 6
       access: read-only
 tzc_rom_tzsrg_r3:
-  description: tzc_rom_tzsrg_r3
   addressOffset: 0x54
   resetValue: 0x00000000
   fields:
@@ -149,7 +143,6 @@ tzc_rom_tzsrg_r3:
       bitWidth: 32
       access: read-only
 tzc_bmx_tzmid:
-  description: tzc_bmx_tzmid
   addressOffset: 0x100
   resetValue: 0x07FF0000
   fields:
@@ -177,7 +170,7 @@ tzc_bmx_tzmid:
       bitOffset: 5
       bitWidth: 1
       access: read-write
-    tzc_emacA_tzmid:
+    tzc_emaca_tzmid:
       bitOffset: 6
       bitWidth: 1
       access: read-write
@@ -225,7 +218,7 @@ tzc_bmx_tzmid:
       bitOffset: 21
       bitWidth: 1
       access: read-write
-    tzc_emacA_tzmid_sel:
+    tzc_emaca_tzmid_sel:
       bitOffset: 22
       bitWidth: 1
       access: read-write
@@ -250,7 +243,6 @@ tzc_bmx_tzmid:
       bitWidth: 5
       access: read-only
 tzc_bmx_tzmid_lock:
-  description: tzc_bmx_tzmid_lock
   addressOffset: 0x104
   resetValue: 0x00000000
   fields:
@@ -278,7 +270,7 @@ tzc_bmx_tzmid_lock:
       bitOffset: 5
       bitWidth: 1
       access: read-write
-    tzc_emacA_tzmid_lock:
+    tzc_emaca_tzmid_lock:
       bitOffset: 6
       bitWidth: 1
       access: read-write
@@ -303,7 +295,6 @@ tzc_bmx_tzmid_lock:
       bitWidth: 21
       access: read-only
 tzc_bmx_s0:
-  description: tzc_bmx_s0
   addressOffset: 0x108
   resetValue: 0x00000FFF
   fields:
@@ -364,7 +355,6 @@ tzc_bmx_s0:
       bitWidth: 10
       access: read-only
 tzc_bmx_s1:
-  description: tzc_bmx_s1
   addressOffset: 0x10C
   resetValue: 0xFFFFFFFF
   fields:
@@ -433,7 +423,6 @@ tzc_bmx_s1:
       bitWidth: 2
       access: read-write
 tzc_bmx_s2:
-  description: tzc_bmx_s2
   addressOffset: 0x110
   resetValue: 0xFFFFFFFF
   fields:
@@ -502,7 +491,6 @@ tzc_bmx_s2:
       bitWidth: 2
       access: read-write
 tzc_bmx_s_lock:
-  description: tzc_bmx_s_lock
   addressOffset: 0x114
   resetValue: 0x00000000
   fields:
@@ -635,7 +623,6 @@ tzc_bmx_s_lock:
       bitWidth: 1
       access: read-write
 tzc_ocram_tzsrg_ctrl:
-  description: tzc_ocram_tzsrg_ctrl
   addressOffset: 0x140
   resetValue: 0x0000FFFF
   fields:
@@ -692,7 +679,6 @@ tzc_ocram_tzsrg_ctrl:
       bitWidth: 8
       access: read-only
 tzc_ocram_tzsrg_adr_mask:
-  description: tzc_ocram_tzsrg_adr_mask
   addressOffset: 0x144
   resetValue: 0x00000000
   fields:
@@ -713,7 +699,6 @@ tzc_ocram_tzsrg_adr_mask:
       bitWidth: 15
       access: read-only
 tzc_ocram_tzsrg_r0:
-  description: tzc_ocram_tzsrg_r0
   addressOffset: 0x148
   resetValue: 0x000003FF
   fields:
@@ -734,7 +719,6 @@ tzc_ocram_tzsrg_r0:
       bitWidth: 6
       access: read-only
 tzc_ocram_tzsrg_r1:
-  description: tzc_ocram_tzsrg_r1
   addressOffset: 0x14C
   resetValue: 0x000003FF
   fields:
@@ -755,7 +739,6 @@ tzc_ocram_tzsrg_r1:
       bitWidth: 6
       access: read-only
 tzc_ocram_tzsrg_r2:
-  description: tzc_ocram_tzsrg_r2
   addressOffset: 0x150
   resetValue: 0x000003FF
   fields:
@@ -776,7 +759,6 @@ tzc_ocram_tzsrg_r2:
       bitWidth: 6
       access: read-only
 tzc_ocram_tzsrg_r3:
-  description: tzc_ocram_tzsrg_r3
   addressOffset: 0x154
   resetValue: 0x00000000
   fields:
@@ -785,7 +767,6 @@ tzc_ocram_tzsrg_r3:
       bitWidth: 32
       access: read-only
 tzc_wram_tzsrg_ctrl:
-  description: tzc_wram_tzsrg_ctrl
   addressOffset: 0x180
   resetValue: 0x0000FFFF
   fields:
@@ -842,7 +823,6 @@ tzc_wram_tzsrg_ctrl:
       bitWidth: 8
       access: read-only
 tzc_wram_tzsrg_adr_mask:
-  description: tzc_wram_tzsrg_adr_mask
   addressOffset: 0x184
   resetValue: 0x00000000
   fields:
@@ -863,7 +843,6 @@ tzc_wram_tzsrg_adr_mask:
       bitWidth: 15
       access: read-only
 tzc_wram_tzsrg_r0:
-  description: tzc_wram_tzsrg_r0
   addressOffset: 0x188
   resetValue: 0x000003FF
   fields:
@@ -884,7 +863,6 @@ tzc_wram_tzsrg_r0:
       bitWidth: 6
       access: read-only
 tzc_wram_tzsrg_r1:
-  description: tzc_wram_tzsrg_r1
   addressOffset: 0x18C
   resetValue: 0x000003FF
   fields:
@@ -905,7 +883,6 @@ tzc_wram_tzsrg_r1:
       bitWidth: 6
       access: read-only
 tzc_wram_tzsrg_r2:
-  description: tzc_wram_tzsrg_r2
   addressOffset: 0x190
   resetValue: 0x000003FF
   fields:
@@ -926,7 +903,6 @@ tzc_wram_tzsrg_r2:
       bitWidth: 6
       access: read-only
 tzc_wram_tzsrg_r3:
-  description: tzc_wram_tzsrg_r3
   addressOffset: 0x194
   resetValue: 0x00000000
   fields:
@@ -935,7 +911,6 @@ tzc_wram_tzsrg_r3:
       bitWidth: 32
       access: read-only
 tzc_wifi_dbg:
-  description: tzc_wifi_dbg
   addressOffset: 0x198
   resetValue: 0x00000001
   fields:
@@ -948,7 +923,6 @@ tzc_wifi_dbg:
       bitWidth: 31
       access: read-only
 tzc_pdm_ctrl:
-  description: tzc_pdm_ctrl
   addressOffset: 0x240
   resetValue: 0x00000000
   fields:
@@ -957,7 +931,6 @@ tzc_pdm_ctrl:
       bitWidth: 32
       access: read-only
 tzc_uart_ctrl:
-  description: tzc_uart_ctrl
   addressOffset: 0x244
   resetValue: 0x00000000
   fields:
@@ -966,7 +939,6 @@ tzc_uart_ctrl:
       bitWidth: 32
       access: read-only
 tzc_i2c_ctrl:
-  description: tzc_i2c_ctrl
   addressOffset: 0x248
   resetValue: 0x00000000
   fields:
@@ -975,7 +947,6 @@ tzc_i2c_ctrl:
       bitWidth: 32
       access: read-only
 tzc_timer_ctrl:
-  description: tzc_timer_ctrl
   addressOffset: 0x24C
   resetValue: 0x00000000
   fields:
@@ -984,7 +955,6 @@ tzc_timer_ctrl:
       bitWidth: 32
       access: read-only
 tzc_i2s_ctrl:
-  description: tzc_i2s_ctrl
   addressOffset: 0x250
   resetValue: 0x00000000
   fields:
@@ -993,7 +963,6 @@ tzc_i2s_ctrl:
       bitWidth: 32
       access: read-only
 tzc_sf_tzsrg_ctrl:
-  description: tzc_sf_tzsrg_ctrl
   addressOffset: 0x280
   resetValue: 0x000FFFFF
   fields:
@@ -1062,7 +1031,6 @@ tzc_sf_tzsrg_ctrl:
       bitWidth: 2
       access: read-only
 tzc_sf_tzsrg_adr_mask:
-  description: tzc_sf_tzsrg_adr_mask
   addressOffset: 0x284
   resetValue: 0x00000000
   fields:
@@ -1079,7 +1047,6 @@ tzc_sf_tzsrg_adr_mask:
       bitWidth: 1
       access: read-write
 tzc_sf_tzsrg_r0:
-  description: tzc_sf_tzsrg_r0
   addressOffset: 0x288
   resetValue: 0x0000FFFF
   fields:
@@ -1092,7 +1059,6 @@ tzc_sf_tzsrg_r0:
       bitWidth: 16
       access: read-write
 tzc_sf_tzsrg_r1:
-  description: tzc_sf_tzsrg_r1
   addressOffset: 0x28C
   resetValue: 0x0000FFFF
   fields:
@@ -1105,7 +1071,6 @@ tzc_sf_tzsrg_r1:
       bitWidth: 16
       access: read-write
 tzc_sf_tzsrg_r2:
-  description: tzc_sf_tzsrg_r2
   addressOffset: 0x290
   resetValue: 0x0000FFFF
   fields:
@@ -1118,7 +1083,6 @@ tzc_sf_tzsrg_r2:
       bitWidth: 16
       access: read-write
 tzc_sf_tzsrg_r3:
-  description: tzc_sf_tzsrg_r3
   addressOffset: 0x294
   resetValue: 0x0000FFFF
   fields:
@@ -1131,7 +1095,6 @@ tzc_sf_tzsrg_r3:
       bitWidth: 16
       access: read-write
 tzc_sf_tzsrg_msb:
-  description: tzc_sf_tzsrg_msb
   addressOffset: 0x298
   resetValue: 0x00000000
   fields:
@@ -1200,7 +1163,6 @@ tzc_sf_tzsrg_msb:
       bitWidth: 1
       access: read-only
 tzc_mm_bmx_tzmid:
-  description: tzc_mm_bmx_tzmid
   addressOffset: 0x300
   resetValue: 0x003F0000
   fields:
@@ -1261,7 +1223,6 @@ tzc_mm_bmx_tzmid:
       bitWidth: 10
       access: read-only
 tzc_mm_bmx_tzmid_lock:
-  description: tzc_mm_bmx_tzmid_lock
   addressOffset: 0x304
   resetValue: 0x00000000
   fields:
@@ -1294,7 +1255,6 @@ tzc_mm_bmx_tzmid_lock:
       bitWidth: 26
       access: read-only
 tzc_mm_bmx_s0:
-  description: tzc_mm_bmx_s0
   addressOffset: 0x308
   resetValue: 0xFFFFFFFF
   fields:
@@ -1363,7 +1323,6 @@ tzc_mm_bmx_s0:
       bitWidth: 2
       access: read-write
 tzc_mm_bmx_s1:
-  description: tzc_mm_bmx_s1
   addressOffset: 0x30C
   resetValue: 0xFFFFFFFF
   fields:
@@ -1432,7 +1391,6 @@ tzc_mm_bmx_s1:
       bitWidth: 2
       access: read-write
 tzc_mm_bmx_s2:
-  description: tzc_mm_bmx_s2
   addressOffset: 0x310
   resetValue: 0xFFFFFFFF
   fields:
@@ -1501,7 +1459,6 @@ tzc_mm_bmx_s2:
       bitWidth: 2
       access: read-write
 tzc_mm_bmx_s_lock0:
-  description: tzc_mm_bmx_s_lock0
   addressOffset: 0x314
   resetValue: 0x00000000
   fields:
@@ -1574,7 +1531,6 @@ tzc_mm_bmx_s_lock0:
       bitWidth: 16
       access: read-only
 tzc_mm_bmx_s_lock1:
-  description: tzc_mm_bmx_s_lock1
   addressOffset: 0x318
   resetValue: 0x00000000
   fields:
@@ -1707,7 +1663,6 @@ tzc_mm_bmx_s_lock1:
       bitWidth: 1
       access: read-write
 tzc_l2sram_tzsrg_ctrl:
-  description: tzc_l2sram_tzsrg_ctrl
   addressOffset: 0x340
   resetValue: 0x0000003F
   fields:
@@ -1760,7 +1715,6 @@ tzc_l2sram_tzsrg_ctrl:
       bitWidth: 5
       access: read-only
 tzc_l2sram_tzsrg_adr_mask:
-  description: tzc_l2sram_tzsrg_adr_mask
   addressOffset: 0x344
   resetValue: 0x00000000
   fields:
@@ -1781,7 +1735,6 @@ tzc_l2sram_tzsrg_adr_mask:
       bitWidth: 15
       access: read-only
 tzc_l2sram_tzsrg_r0:
-  description: tzc_l2sram_tzsrg_r0
   addressOffset: 0x348
   resetValue: 0x000003FF
   fields:
@@ -1802,7 +1755,6 @@ tzc_l2sram_tzsrg_r0:
       bitWidth: 6
       access: read-only
 tzc_l2sram_tzsrg_r1:
-  description: tzc_l2sram_tzsrg_r1
   addressOffset: 0x34C
   resetValue: 0x000003FF
   fields:
@@ -1823,7 +1775,6 @@ tzc_l2sram_tzsrg_r1:
       bitWidth: 6
       access: read-only
 tzc_l2sram_tzsrg_r2:
-  description: tzc_l2sram_tzsrg_r2
   addressOffset: 0x350
   resetValue: 0x000003FF
   fields:
@@ -1844,7 +1795,6 @@ tzc_l2sram_tzsrg_r2:
       bitWidth: 6
       access: read-only
 tzc_l2sram_tzsrg_r3:
-  description: tzc_l2sram_tzsrg_r3
   addressOffset: 0x354
   resetValue: 0x00000000
   fields:
@@ -1853,7 +1803,6 @@ tzc_l2sram_tzsrg_r3:
       bitWidth: 32
       access: read-only
 tzc_vram_tzsrg_ctrl:
-  description: tzc_vram_tzsrg_ctrl
   addressOffset: 0x360
   resetValue: 0x0000003F
   fields:
@@ -1906,7 +1855,6 @@ tzc_vram_tzsrg_ctrl:
       bitWidth: 5
       access: read-only
 tzc_vram_tzsrg_adr_mask:
-  description: tzc_vram_tzsrg_adr_mask
   addressOffset: 0x364
   resetValue: 0x00000000
   fields:
@@ -1927,7 +1875,6 @@ tzc_vram_tzsrg_adr_mask:
       bitWidth: 15
       access: read-only
 tzc_vram_tzsrg_r0:
-  description: tzc_vram_tzsrg_r0
   addressOffset: 0x368
   resetValue: 0x000003FF
   fields:
@@ -1948,7 +1895,6 @@ tzc_vram_tzsrg_r0:
       bitWidth: 6
       access: read-only
 tzc_vram_tzsrg_r1:
-  description: tzc_vram_tzsrg_r1
   addressOffset: 0x36C
   resetValue: 0x000003FF
   fields:
@@ -1969,7 +1915,6 @@ tzc_vram_tzsrg_r1:
       bitWidth: 6
       access: read-only
 tzc_vram_tzsrg_r2:
-  description: tzc_vram_tzsrg_r2
   addressOffset: 0x370
   resetValue: 0x000003FF
   fields:
@@ -1990,7 +1935,6 @@ tzc_vram_tzsrg_r2:
       bitWidth: 6
       access: read-only
 tzc_vram_tzsrg_r3:
-  description: tzc_vram_tzsrg_r3
   addressOffset: 0x374
   resetValue: 0x00000000
   fields:
@@ -1999,7 +1943,6 @@ tzc_vram_tzsrg_r3:
       bitWidth: 32
       access: read-only
 tzc_psrama_tzsrg_ctrl:
-  description: tzc_psrama_tzsrg_ctrl
   addressOffset: 0x380
   resetValue: 0x0000003F
   fields:
@@ -2052,7 +1995,6 @@ tzc_psrama_tzsrg_ctrl:
       bitWidth: 5
       access: read-only
 tzc_psrama_tzsrg_adr_mask:
-  description: tzc_psrama_tzsrg_adr_mask
   addressOffset: 0x384
   resetValue: 0x00000000
   fields:
@@ -2069,7 +2011,6 @@ tzc_psrama_tzsrg_adr_mask:
       bitWidth: 15
       access: read-only
 tzc_psrama_tzsrg_r0:
-  description: tzc_psrama_tzsrg_r0
   addressOffset: 0x388
   resetValue: 0x0000FFFF
   fields:
@@ -2082,7 +2023,6 @@ tzc_psrama_tzsrg_r0:
       bitWidth: 16
       access: read-write
 tzc_psrama_tzsrg_r1:
-  description: tzc_psrama_tzsrg_r1
   addressOffset: 0x38C
   resetValue: 0x0000FFFF
   fields:
@@ -2095,7 +2035,6 @@ tzc_psrama_tzsrg_r1:
       bitWidth: 16
       access: read-write
 tzc_psrama_tzsrg_r2:
-  description: tzc_psrama_tzsrg_r2
   addressOffset: 0x390
   resetValue: 0x0000FFFF
   fields:
@@ -2108,7 +2047,6 @@ tzc_psrama_tzsrg_r2:
       bitWidth: 16
       access: read-write
 tzc_psrama_tzsrg_r3:
-  description: tzc_psrama_tzsrg_r3
   addressOffset: 0x394
   resetValue: 0x00000000
   fields:
@@ -2117,7 +2055,6 @@ tzc_psrama_tzsrg_r3:
       bitWidth: 32
       access: read-only
 tzc_psramb_tzsrg_ctrl:
-  description: tzc_psramb_tzsrg_ctrl
   addressOffset: 0x3a0
   resetValue: 0x0000003F
   fields:
@@ -2170,7 +2107,6 @@ tzc_psramb_tzsrg_ctrl:
       bitWidth: 5
       access: read-only
 tzc_psramb_tzsrg_adr_mask:
-  description: tzc_psramb_tzsrg_adr_mask
   addressOffset: 0x3A4
   resetValue: 0x00000000
   fields:
@@ -2187,7 +2123,6 @@ tzc_psramb_tzsrg_adr_mask:
       bitWidth: 15
       access: read-only
 tzc_psramb_tzsrg_r0:
-  description: tzc_psramb_tzsrg_r0
   addressOffset: 0x3A8
   resetValue: 0x0000FFFF
   fields:
@@ -2200,7 +2135,6 @@ tzc_psramb_tzsrg_r0:
       bitWidth: 16
       access: read-write
 tzc_psramb_tzsrg_r1:
-  description: tzc_psramb_tzsrg_r1
   addressOffset: 0x3AC
   resetValue: 0x0000FFFF
   fields:
@@ -2213,7 +2147,6 @@ tzc_psramb_tzsrg_r1:
       bitWidth: 16
       access: read-write
 tzc_psramb_tzsrg_r2:
-  description: tzc_psramb_tzsrg_r2
   addressOffset: 0x3B0
   resetValue: 0x0000FFFF
   fields:
@@ -2226,7 +2159,6 @@ tzc_psramb_tzsrg_r2:
       bitWidth: 16
       access: read-write
 tzc_psramb_tzsrg_r3:
-  description: tzc_psramb_tzsrg_r3
   addressOffset: 0x3B4
   resetValue: 0x00000000
   fields:
@@ -2235,7 +2167,6 @@ tzc_psramb_tzsrg_r3:
       bitWidth: 32
       access: read-only
 tzc_xram_tzsrg_ctrl:
-  description: tzc_xram_tzsrg_ctrl
   addressOffset: 0x3c0
   resetValue: 0x0000003F
   fields:
@@ -2288,7 +2219,6 @@ tzc_xram_tzsrg_ctrl:
       bitWidth: 5
       access: read-only
 tzc_xram_tzsrg_adr_mask:
-  description: tzc_xram_tzsrg_adr_mask
   addressOffset: 0x3C4
   resetValue: 0x00000000
   fields:
@@ -2309,7 +2239,6 @@ tzc_xram_tzsrg_adr_mask:
       bitWidth: 15
       access: read-only
 tzc_xram_tzsrg_r0:
-  description: tzc_xram_tzsrg_r0
   addressOffset: 0x3C8
   resetValue: 0x000003FF
   fields:
@@ -2330,7 +2259,6 @@ tzc_xram_tzsrg_r0:
       bitWidth: 6
       access: read-only
 tzc_xram_tzsrg_r1:
-  description: tzc_xram_tzsrg_r1
   addressOffset: 0x3CC
   resetValue: 0x000003FF
   fields:
@@ -2351,7 +2279,6 @@ tzc_xram_tzsrg_r1:
       bitWidth: 6
       access: read-only
 tzc_xram_tzsrg_r2:
-  description: tzc_xram_tzsrg_r2
   addressOffset: 0x3D0
   resetValue: 0x000003FF
   fields:
@@ -2372,7 +2299,6 @@ tzc_xram_tzsrg_r2:
       bitWidth: 6
       access: read-only
 tzc_xram_tzsrg_r3:
-  description: tzc_xram_tzsrg_r3
   addressOffset: 0x3D4
   resetValue: 0x00000000
   fields:
@@ -2381,7 +2307,6 @@ tzc_xram_tzsrg_r3:
       bitWidth: 32
       access: read-only
 tzc_glb_ctrl_0:
-  description: tzc_glb_ctrl_0
   addressOffset: 0xF00
   resetValue: 0x03FFFFFF
   fields:
@@ -2442,7 +2367,6 @@ tzc_glb_ctrl_0:
       bitWidth: 6
       access: read-only
 tzc_glb_ctrl_1:
-  description: tzc_glb_ctrl_1
   addressOffset: 0xF04
   resetValue: 0x00000000
   fields:
@@ -2451,7 +2375,6 @@ tzc_glb_ctrl_1:
       bitWidth: 32
       access: read-only
 tzc_glb_ctrl_2:
-  description: tzc_glb_ctrl_2
   addressOffset: 0xF08
   resetValue: 0x00000000
   fields:
@@ -2512,7 +2435,6 @@ tzc_glb_ctrl_2:
       bitWidth: 19
       access: read-only
 tzc_mm_ctrl_0:
-  description: tzc_mm_ctrl_0
   addressOffset: 0xF20
   resetValue: 0x00303CFF
   fields:
@@ -2557,7 +2479,6 @@ tzc_mm_ctrl_0:
       bitWidth: 10
       access: read-only
 tzc_mm_ctrl_1:
-  description: tzc_mm_ctrl_1
   addressOffset: 0xF24
   resetValue: 0x00000000
   fields:
@@ -2566,7 +2487,6 @@ tzc_mm_ctrl_1:
       bitWidth: 32
       access: read-only
 tzc_mm_ctrl_2:
-  description: tzc_mm_ctrl_2
   addressOffset: 0xF28
   resetValue: 0x00000000
   fields:
@@ -2611,7 +2531,6 @@ tzc_mm_ctrl_2:
       bitWidth: 21
       access: read-only
 tzc_se_ctrl_0:
-  description: tzc_se_ctrl_0
   addressOffset: 0xF40
   resetValue: 0x00050FFF
   fields:
@@ -2652,7 +2571,6 @@ tzc_se_ctrl_0:
       bitWidth: 16
       access: read-write
 tzc_se_ctrl_1:
-  description: tzc_se_ctrl_1
   addressOffset: 0xF44
   resetValue: 0x0000000F
   fields:
@@ -2673,7 +2591,6 @@ tzc_se_ctrl_1:
       bitWidth: 27
       access: read-only
 tzc_se_ctrl_2:
-  description: tzc_se_ctrl_2
   addressOffset: 0xF48
   resetValue: 0x00000000
   fields:

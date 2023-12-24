@@ -1,5 +1,4 @@
 sf_ctrl_0:
-  description: sf_ctrl_0
   addressOffset: 0x0
   resetValue: 0x1AF2001C
   fields:
@@ -72,7 +71,6 @@ sf_ctrl_0:
       bitWidth: 8
       access: read-write
 sf_ctrl_1:
-  description: sf_ctrl_1
   addressOffset: 0x4
   resetValue: 0xF3600000
   fields:
@@ -141,7 +139,6 @@ sf_ctrl_1:
       bitWidth: 1
       access: read-write
 sf_if_sahb_0:
-  description: sf_if_sahb_0
   addressOffset: 0x8
   resetValue: 0x0D0403FC
   fields:
@@ -198,7 +195,6 @@ sf_if_sahb_0:
       bitWidth: 1
       access: read-write
 sf_if_sahb_1:
-  description: sf_if_sahb_1
   addressOffset: 0xC
   resetValue: 0x03000000
   fields:
@@ -207,7 +203,6 @@ sf_if_sahb_1:
       bitWidth: 32
       access: read-write
 sf_if_sahb_2:
-  description: sf_if_sahb_2
   addressOffset: 0x10
   resetValue: 0x00000000
   fields:
@@ -216,7 +211,6 @@ sf_if_sahb_2:
       bitWidth: 32
       access: read-write
 sf_if_iahb_0:
-  description: sf_if_iahb_0
   addressOffset: 0x14
   resetValue: 0x0D040000
   fields:
@@ -265,7 +259,6 @@ sf_if_iahb_0:
       bitWidth: 1
       access: read-write
 sf_if_iahb_1:
-  description: sf_if_iahb_1
   addressOffset: 0x18
   resetValue: 0x03000000
   fields:
@@ -274,7 +267,6 @@ sf_if_iahb_1:
       bitWidth: 32
       access: read-write
 sf_if_iahb_2:
-  description: sf_if_iahb_2
   addressOffset: 0x1C
   resetValue: 0x00000000
   fields:
@@ -283,7 +275,6 @@ sf_if_iahb_2:
       bitWidth: 32
       access: read-write
 sf_if_status_0:
-  description: sf_if_status_0
   addressOffset: 0x20
   resetValue: 0x00000000
   fields:
@@ -292,7 +283,6 @@ sf_if_status_0:
       bitWidth: 32
       access: read-only
 sf_if_status_1:
-  description: sf_if_status_1
   addressOffset: 0x24
   resetValue: 0x20000000
   fields:
@@ -301,7 +291,6 @@ sf_if_status_1:
       bitWidth: 32
       access: read-only
 sf_aes:
-  description: sf_aes
   addressOffset: 0x28
   resetValue: 0x00000040
   fields:
@@ -326,7 +315,6 @@ sf_aes:
       bitWidth: 27
       access: read-only
 sf_ahb2sif_status:
-  description: sf_ahb2sif_status
   addressOffset: 0x2C
   resetValue: 0x01010003
   fields:
@@ -335,7 +323,6 @@ sf_ahb2sif_status:
       bitWidth: 32
       access: read-only
 sf_if_io_dly_0:
-  description: sf_if_io_dly_0
   addressOffset: 0x30
   resetValue: 0x00000000
   fields:
@@ -372,7 +359,6 @@ sf_if_io_dly_0:
       bitWidth: 2
       access: read-write
 sf_if_io_dly_1:
-  description: sf_if_io_dly_1
   addressOffset: 0x34
   resetValue: 0x00000000
   fields:
@@ -401,7 +387,6 @@ sf_if_io_dly_1:
       bitWidth: 14
       access: read-only
 sf_if_io_dly_2:
-  description: sf_if_io_dly_2
   addressOffset: 0x38
   resetValue: 0x00000000
   fields:
@@ -430,7 +415,6 @@ sf_if_io_dly_2:
       bitWidth: 14
       access: read-only
 sf_if_io_dly_3:
-  description: sf_if_io_dly_3
   addressOffset: 0x3C
   resetValue: 0x00000000
   fields:
@@ -459,7 +443,6 @@ sf_if_io_dly_3:
       bitWidth: 14
       access: read-only
 sf_if_io_dly_4:
-  description: sf_if_io_dly_4
   addressOffset: 0x40
   resetValue: 0x00000000
   fields:
@@ -488,7 +471,6 @@ sf_if_io_dly_4:
       bitWidth: 14
       access: read-only
 sf_reserved:
-  description: sf_reserved
   addressOffset: 0x44
   resetValue: 0x0000FFFF
   fields:
@@ -497,7 +479,6 @@ sf_reserved:
       bitWidth: 32
       access: read-write
 sf2_if_io_dly_0:
-  description: sf2_if_io_dly_0
   addressOffset: 0x48
   resetValue: 0x00000000
   fields:
@@ -534,7 +515,6 @@ sf2_if_io_dly_0:
       bitWidth: 2
       access: read-write
 sf2_if_io_dly_1:
-  description: sf2_if_io_dly_1
   addressOffset: 0x4C
   resetValue: 0x00000000
   fields:
@@ -563,7 +543,6 @@ sf2_if_io_dly_1:
       bitWidth: 14
       access: read-only
 sf2_if_io_dly_2:
-  description: sf2_if_io_dly_2
   addressOffset: 0x50
   resetValue: 0x00000000
   fields:
@@ -592,7 +571,6 @@ sf2_if_io_dly_2:
       bitWidth: 14
       access: read-only
 sf2_if_io_dly_3:
-  description: sf2_if_io_dly_3
   addressOffset: 0x54
   resetValue: 0x00000000
   fields:
@@ -621,7 +599,6 @@ sf2_if_io_dly_3:
       bitWidth: 14
       access: read-only
 sf2_if_io_dly_4:
-  description: sf2_if_io_dly_4
   addressOffset: 0x58
   resetValue: 0x00000000
   fields:
@@ -650,7 +627,6 @@ sf2_if_io_dly_4:
       bitWidth: 14
       access: read-only
 sf3_if_io_dly_0:
-  description: sf3_if_io_dly_0
   addressOffset: 0x5C
   resetValue: 0x00000000
   fields:
@@ -687,7 +663,6 @@ sf3_if_io_dly_0:
       bitWidth: 2
       access: read-write
 sf3_if_io_dly_1:
-  description: sf3_if_io_dly_1
   addressOffset: 0x60
   resetValue: 0x00000000
   fields:
@@ -716,7 +691,6 @@ sf3_if_io_dly_1:
       bitWidth: 14
       access: read-only
 sf3_if_io_dly_2:
-  description: sf3_if_io_dly_2
   addressOffset: 0x64
   resetValue: 0x00000000
   fields:
@@ -745,7 +719,6 @@ sf3_if_io_dly_2:
       bitWidth: 14
       access: read-only
 sf3_if_io_dly_3:
-  description: sf3_if_io_dly_3
   addressOffset: 0x68
   resetValue: 0x00000000
   fields:
@@ -774,7 +747,6 @@ sf3_if_io_dly_3:
       bitWidth: 14
       access: read-only
 sf3_if_io_dly_4:
-  description: sf3_if_io_dly_4
   addressOffset: 0x6C
   resetValue: 0x00000000
   fields:
@@ -803,7 +775,6 @@ sf3_if_io_dly_4:
       bitWidth: 14
       access: read-only
 sf_ctrl_2:
-  description: sf_ctrl_2
   addressOffset: 0x70
   resetValue: 0x00000000
   fields:
@@ -864,7 +835,6 @@ sf_ctrl_2:
       bitWidth: 1
       access: read-write
 sf_ctrl_3:
-  description: sf_ctrl_3
   addressOffset: 0x74
   resetValue: 0x2010C156
   fields:
@@ -921,7 +891,6 @@ sf_ctrl_3:
       bitWidth: 3
       access: read-write
 sf_if_iahb_3:
-  description: sf_if_iahb_3
   addressOffset: 0x78
   resetValue: 0x8D840000
   fields:
@@ -970,7 +939,6 @@ sf_if_iahb_3:
       bitWidth: 1
       access: read-write
 sf_if_iahb_4:
-  description: sf_if_iahb_4
   addressOffset: 0x7C
   resetValue: 0x38000000
   fields:
@@ -979,7 +947,6 @@ sf_if_iahb_4:
       bitWidth: 32
       access: read-write
 sf_if_iahb_5:
-  description: sf_if_iahb_5
   addressOffset: 0x80
   resetValue: 0x00000000
   fields:
@@ -988,7 +955,6 @@ sf_if_iahb_5:
       bitWidth: 32
       access: read-write
 sf_if_iahb_6:
-  description: sf_if_iahb_6
   addressOffset: 0x84
   resetValue: 0x88000000
   fields:
@@ -1025,12 +991,10 @@ sf_if_iahb_6:
       bitWidth: 1
       access: read-write
 sf_if_iahb_7:
-  description: sf_if_iahb_7
   addressOffset: 0x88
   resetValue: 0x00000000
   fields:
 sf_if_iahb_8:
-  description: sf_if_iahb_8
   addressOffset: 0x8C
   resetValue: 0x00000000
   fields:
@@ -1039,7 +1003,6 @@ sf_if_iahb_8:
       bitWidth: 32
       access: read-write
 sf_if_iahb_9:
-  description: sf_if_iahb_9
   addressOffset: 0x90
   resetValue: 0x8F042000
   fields:
@@ -1088,12 +1051,10 @@ sf_if_iahb_9:
       bitWidth: 1
       access: read-write
 sf_if_iahb_10:
-  description: sf_if_iahb_10
   addressOffset: 0x94
   resetValue: 0x00000000
   fields:
 sf_if_iahb_11:
-  description: sf_if_iahb_11
   addressOffset: 0x98
   resetValue: 0x00000000
   fields:
@@ -1102,7 +1063,6 @@ sf_if_iahb_11:
       bitWidth: 32
       access: read-write
 sf_if_iahb_12:
-  description: sf_if_iahb_12
   addressOffset: 0x9C
   resetValue: 0x00000030
   fields:
@@ -1147,7 +1107,6 @@ sf_if_iahb_12:
       bitWidth: 19
       access: read-only
 sf_id0_offset:
-  description: sf_id0_offset
   addressOffset: 0xA0
   resetValue: 0x00000000
   fields:
@@ -1160,7 +1119,6 @@ sf_id0_offset:
       bitWidth: 4
       access: read-only
 sf_id1_offset:
-  description: sf_id1_offset
   addressOffset: 0xA4
   resetValue: 0x00000000
   fields:
@@ -1173,7 +1131,6 @@ sf_id1_offset:
       bitWidth: 4
       access: read-only
 sf_bk2_id0_offset:
-  description: sf_bk2_id0_offset
   addressOffset: 0xA8
   resetValue: 0x00000000
   fields:
@@ -1186,7 +1143,6 @@ sf_bk2_id0_offset:
       bitWidth: 4
       access: read-only
 sf_bk2_id1_offset:
-  description: sf_bk2_id1_offset
   addressOffset: 0xAC
   resetValue: 0x00000000
   fields:
@@ -1199,7 +1155,6 @@ sf_bk2_id1_offset:
       bitWidth: 4
       access: read-only
 sf_dbg:
-  description: sf_dbg
   addressOffset: 0xB0
   resetValue: 0x00000001
   fields:
@@ -1216,7 +1171,6 @@ sf_dbg:
       bitWidth: 26
       access: read-only
 sf_if2_ctrl_0:
-  description: sf_if2_ctrl_0
   addressOffset: 0xC0
   resetValue: 0x00020004
   fields:
@@ -1293,7 +1247,6 @@ sf_if2_ctrl_0:
       bitWidth: 1
       access: read-write
 sf_if2_ctrl_1:
-  description: sf_if2_ctrl_1
   addressOffset: 0xC4
   resetValue: 0x23600000
   fields:
@@ -1354,7 +1307,6 @@ sf_if2_ctrl_1:
       bitWidth: 2
       access: read-only
 sf_if2_sahb_0:
-  description: sf_if2_sahb_0
   addressOffset: 0xC8
   resetValue: 0x0D0403FC
   fields:
@@ -1411,7 +1363,6 @@ sf_if2_sahb_0:
       bitWidth: 1
       access: read-write
 sf_if2_sahb_1:
-  description: sf_if2_sahb_1
   addressOffset: 0xCC
   resetValue: 0x03000000
   fields:
@@ -1420,7 +1371,6 @@ sf_if2_sahb_1:
       bitWidth: 32
       access: read-write
 sf_if2_sahb_2:
-  description: sf_if2_sahb_2
   addressOffset: 0xD0
   resetValue: 0x00000000
   fields:
@@ -1429,7 +1379,6 @@ sf_if2_sahb_2:
       bitWidth: 32
       access: read-write
 sf_ctrl_prot_en_rd:
-  description: sf_ctrl_prot_en_rd
   addressOffset: 0x100
   resetValue: 0x00000006
   fields:
@@ -1466,7 +1415,6 @@ sf_ctrl_prot_en_rd:
       bitWidth: 1
       access: read-only
 sf_ctrl_prot_en:
-  description: sf_ctrl_prot_en
   addressOffset: 0x104
   resetValue: 0x00000006
   fields:
@@ -1487,7 +1435,6 @@ sf_ctrl_prot_en:
       bitWidth: 29
       access: read-only
 sf_aes_key_r0_0:
-  description: sf_aes_key_r0_0
   addressOffset: 0x200
   resetValue: 0x00000000
   fields:
@@ -1496,7 +1443,6 @@ sf_aes_key_r0_0:
       bitWidth: 32
       access: read-write
 sf_aes_key_r0_1:
-  description: sf_aes_key_r0_1
   addressOffset: 0x204
   resetValue: 0x00000000
   fields:
@@ -1505,7 +1451,6 @@ sf_aes_key_r0_1:
       bitWidth: 32
       access: read-write
 sf_aes_key_r0_2:
-  description: sf_aes_key_r0_2
   addressOffset: 0x208
   resetValue: 0x00000000
   fields:
@@ -1514,7 +1459,6 @@ sf_aes_key_r0_2:
       bitWidth: 32
       access: read-write
 sf_aes_key_r0_3:
-  description: sf_aes_key_r0_3
   addressOffset: 0x20C
   resetValue: 0x00000000
   fields:
@@ -1523,7 +1467,6 @@ sf_aes_key_r0_3:
       bitWidth: 32
       access: read-write
 sf_aes_key_r0_4:
-  description: sf_aes_key_r0_4
   addressOffset: 0x210
   resetValue: 0x00000000
   fields:
@@ -1532,7 +1475,6 @@ sf_aes_key_r0_4:
       bitWidth: 32
       access: read-write
 sf_aes_key_r0_5:
-  description: sf_aes_key_r0_5
   addressOffset: 0x214
   resetValue: 0x00000000
   fields:
@@ -1541,7 +1483,6 @@ sf_aes_key_r0_5:
       bitWidth: 32
       access: read-write
 sf_aes_key_r0_6:
-  description: sf_aes_key_r0_6
   addressOffset: 0x218
   resetValue: 0x00000000
   fields:
@@ -1550,7 +1491,6 @@ sf_aes_key_r0_6:
       bitWidth: 32
       access: read-write
 sf_aes_key_r0_7:
-  description: sf_aes_key_r0_7
   addressOffset: 0x21C
   resetValue: 0x00000000
   fields:
@@ -1559,7 +1499,6 @@ sf_aes_key_r0_7:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r0_w0:
-  description: sf_aes_iv_r0_w0
   addressOffset: 0x220
   resetValue: 0x00000000
   fields:
@@ -1568,7 +1507,6 @@ sf_aes_iv_r0_w0:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r0_w1:
-  description: sf_aes_iv_r0_w1
   addressOffset: 0x224
   resetValue: 0x00000000
   fields:
@@ -1577,7 +1515,6 @@ sf_aes_iv_r0_w1:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r0_w2:
-  description: sf_aes_iv_r0_w2
   addressOffset: 0x228
   resetValue: 0x00000000
   fields:
@@ -1586,7 +1523,6 @@ sf_aes_iv_r0_w2:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r0_w3:
-  description: sf_aes_iv_r0_w3
   addressOffset: 0x22C
   resetValue: 0x00000000
   fields:
@@ -1595,7 +1531,6 @@ sf_aes_iv_r0_w3:
       bitWidth: 32
       access: read-write
 sf_aes_r0_start:
-  description: sf_aes_r0_start
   addressOffset: 0x230
   resetValue: 0x00000000
   fields:
@@ -1620,7 +1555,6 @@ sf_aes_r0_start:
       bitWidth: 1
       access: read-write
 sf_aes_r0_end:
-  description: sf_aes_r0_end
   addressOffset: 0x234
   resetValue: 0x00003FFF
   fields:
@@ -1633,7 +1567,6 @@ sf_aes_r0_end:
       bitWidth: 13
       access: read-only
 sf_aes_key_r1_0:
-  description: sf_aes_key_r1_0
   addressOffset: 0x280
   resetValue: 0x00000000
   fields:
@@ -1642,7 +1575,6 @@ sf_aes_key_r1_0:
       bitWidth: 32
       access: read-write
 sf_aes_key_r1_1:
-  description: sf_aes_key_r1_1
   addressOffset: 0x284
   resetValue: 0x00000000
   fields:
@@ -1651,7 +1583,6 @@ sf_aes_key_r1_1:
       bitWidth: 32
       access: read-write
 sf_aes_key_r1_2:
-  description: sf_aes_key_r1_2
   addressOffset: 0x288
   resetValue: 0x00000000
   fields:
@@ -1660,7 +1591,6 @@ sf_aes_key_r1_2:
       bitWidth: 32
       access: read-write
 sf_aes_key_r1_3:
-  description: sf_aes_key_r1_3
   addressOffset: 0x28C
   resetValue: 0x00000000
   fields:
@@ -1669,7 +1599,6 @@ sf_aes_key_r1_3:
       bitWidth: 32
       access: read-write
 sf_aes_key_r1_4:
-  description: sf_aes_key_r1_4
   addressOffset: 0x290
   resetValue: 0x00000000
   fields:
@@ -1678,7 +1607,6 @@ sf_aes_key_r1_4:
       bitWidth: 32
       access: read-write
 sf_aes_key_r1_5:
-  description: sf_aes_key_r1_5
   addressOffset: 0x294
   resetValue: 0x00000000
   fields:
@@ -1687,7 +1615,6 @@ sf_aes_key_r1_5:
       bitWidth: 32
       access: read-write
 sf_aes_key_r1_6:
-  description: sf_aes_key_r1_6
   addressOffset: 0x298
   resetValue: 0x00000000
   fields:
@@ -1696,7 +1623,6 @@ sf_aes_key_r1_6:
       bitWidth: 32
       access: read-write
 sf_aes_key_r1_7:
-  description: sf_aes_key_r1_7
   addressOffset: 0x29C
   resetValue: 0x00000000
   fields:
@@ -1705,7 +1631,6 @@ sf_aes_key_r1_7:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r1_w0:
-  description: sf_aes_iv_r1_w0
   addressOffset: 0x2A0
   resetValue: 0x00000000
   fields:
@@ -1714,7 +1639,6 @@ sf_aes_iv_r1_w0:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r1_w1:
-  description: sf_aes_iv_r1_w1
   addressOffset: 0x2A4
   resetValue: 0x00000000
   fields:
@@ -1723,7 +1647,6 @@ sf_aes_iv_r1_w1:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r1_w2:
-  description: sf_aes_iv_r1_w2
   addressOffset: 0x2A8
   resetValue: 0x00000000
   fields:
@@ -1732,7 +1655,6 @@ sf_aes_iv_r1_w2:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r1_w3:
-  description: sf_aes_iv_r1_w3
   addressOffset: 0x2AC
   resetValue: 0x00000000
   fields:
@@ -1741,7 +1663,6 @@ sf_aes_iv_r1_w3:
       bitWidth: 32
       access: read-write
 sf_aes_r1_start:
-  description: sf_aes_r1_start
   addressOffset: 0x2B0
   resetValue: 0x00000000
   fields:
@@ -1766,7 +1687,6 @@ sf_aes_r1_start:
       bitWidth: 1
       access: read-write
 sf_aes_r1_end:
-  description: sf_aes_r1_end
   addressOffset: 0x2B4
   resetValue: 0x00003FFF
   fields:
@@ -1779,7 +1699,6 @@ sf_aes_r1_end:
       bitWidth: 13
       access: read-only
 sf_aes_key_r2_0:
-  description: sf_aes_key_r2_0
   addressOffset: 0x300
   resetValue: 0x00000000
   fields:
@@ -1788,7 +1707,6 @@ sf_aes_key_r2_0:
       bitWidth: 32
       access: read-write
 sf_aes_key_r2_1:
-  description: sf_aes_key_r2_1
   addressOffset: 0x304
   resetValue: 0x00000000
   fields:
@@ -1797,7 +1715,6 @@ sf_aes_key_r2_1:
       bitWidth: 32
       access: read-write
 sf_aes_key_r2_2:
-  description: sf_aes_key_r2_2
   addressOffset: 0x308
   resetValue: 0x00000000
   fields:
@@ -1806,7 +1723,6 @@ sf_aes_key_r2_2:
       bitWidth: 32
       access: read-write
 sf_aes_key_r2_3:
-  description: sf_aes_key_r2_3
   addressOffset: 0x30C
   resetValue: 0x00000000
   fields:
@@ -1815,7 +1731,6 @@ sf_aes_key_r2_3:
       bitWidth: 32
       access: read-write
 sf_aes_key_r2_4:
-  description: sf_aes_key_r2_4
   addressOffset: 0x310
   resetValue: 0x00000000
   fields:
@@ -1824,7 +1739,6 @@ sf_aes_key_r2_4:
       bitWidth: 32
       access: read-write
 sf_aes_key_r2_5:
-  description: sf_aes_key_r2_5
   addressOffset: 0x314
   resetValue: 0x00000000
   fields:
@@ -1833,7 +1747,6 @@ sf_aes_key_r2_5:
       bitWidth: 32
       access: read-write
 sf_aes_key_r2_6:
-  description: sf_aes_key_r2_6
   addressOffset: 0x318
   resetValue: 0x00000000
   fields:
@@ -1842,7 +1755,6 @@ sf_aes_key_r2_6:
       bitWidth: 32
       access: read-write
 sf_aes_key_r2_7:
-  description: sf_aes_key_r2_7
   addressOffset: 0x31C
   resetValue: 0x00000000
   fields:
@@ -1851,7 +1763,6 @@ sf_aes_key_r2_7:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r2_w0:
-  description: sf_aes_iv_r2_w0
   addressOffset: 0x320
   resetValue: 0x00000000
   fields:
@@ -1860,7 +1771,6 @@ sf_aes_iv_r2_w0:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r2_w1:
-  description: sf_aes_iv_r2_w1
   addressOffset: 0x324
   resetValue: 0x00000000
   fields:
@@ -1869,7 +1779,6 @@ sf_aes_iv_r2_w1:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r2_w2:
-  description: sf_aes_iv_r2_w2
   addressOffset: 0x328
   resetValue: 0x00000000
   fields:
@@ -1878,7 +1787,6 @@ sf_aes_iv_r2_w2:
       bitWidth: 32
       access: read-write
 sf_aes_iv_r2_w3:
-  description: sf_aes_iv_r2_w3
   addressOffset: 0x32C
   resetValue: 0x00000000
   fields:
@@ -1887,7 +1795,6 @@ sf_aes_iv_r2_w3:
       bitWidth: 32
       access: read-write
 sf_aes_r2_start:
-  description: sf_aes_r2_start
   addressOffset: 0x330
   resetValue: 0x00000000
   fields:
@@ -1912,7 +1819,6 @@ sf_aes_r2_start:
       bitWidth: 1
       access: read-write
 sf_aes_r2_end:
-  description: sf_aes_r2_end
   addressOffset: 0x334
   resetValue: 0x00003FFF
   fields:
@@ -2153,7 +2059,6 @@ io_dly_4:
       bitWidth: 14
       access: read-only
 sf_aes_key_0:
-  description: sf_aes_key_0
   addressOffset: 0x0
   resetValue: 0x00000000
   fields:
@@ -2162,7 +2067,6 @@ sf_aes_key_0:
       bitWidth: 32
       access: read-write
 sf_aes_key_1:
-  description: sf_aes_key_1
   addressOffset: 0x4
   resetValue: 0x00000000
   fields:
@@ -2171,7 +2075,6 @@ sf_aes_key_1:
       bitWidth: 32
       access: read-write
 sf_aes_key_2:
-  description: sf_aes_key_2
   addressOffset: 0x8
   resetValue: 0x00000000
   fields:
@@ -2180,7 +2083,6 @@ sf_aes_key_2:
       bitWidth: 32
       access: read-write
 sf_aes_key_3:
-  description: sf_aes_key_3
   addressOffset: 0xc
   resetValue: 0x00000000
   fields:
@@ -2189,7 +2091,6 @@ sf_aes_key_3:
       bitWidth: 32
       access: read-write
 sf_aes_key_4:
-  description: sf_aes_key_4
   addressOffset: 0x10
   resetValue: 0x00000000
   fields:
@@ -2198,7 +2099,6 @@ sf_aes_key_4:
       bitWidth: 32
       access: read-write
 sf_aes_key_5:
-  description: sf_aes_key_5
   addressOffset: 0x14
   resetValue: 0x00000000
   fields:
@@ -2207,7 +2107,6 @@ sf_aes_key_5:
       bitWidth: 32
       access: read-write
 sf_aes_key_6:
-  description: sf_aes_key_6
   addressOffset: 0x18
   resetValue: 0x00000000
   fields:
@@ -2216,7 +2115,6 @@ sf_aes_key_6:
       bitWidth: 32
       access: read-write
 sf_aes_key_7:
-  description: sf_aes_key_7
   addressOffset: 0x1c
   resetValue: 0x00000000
   fields:
@@ -2225,7 +2123,6 @@ sf_aes_key_7:
       bitWidth: 32
       access: read-write
 sf_aes_iv_w0:
-  description: sf_aes_iv_w0
   addressOffset: 0x20
   resetValue: 0x00000000
   fields:
@@ -2234,7 +2131,6 @@ sf_aes_iv_w0:
       bitWidth: 32
       access: read-write
 sf_aes_iv_w1:
-  description: sf_aes_iv_w1
   addressOffset: 0x24
   resetValue: 0x00000000
   fields:
@@ -2243,7 +2139,6 @@ sf_aes_iv_w1:
       bitWidth: 32
       access: read-write
 sf_aes_iv_w2:
-  description: sf_aes_iv_w2
   addressOffset: 0x28
   resetValue: 0x00000000
   fields:
@@ -2252,7 +2147,6 @@ sf_aes_iv_w2:
       bitWidth: 32
       access: read-write
 sf_aes_iv_w3:
-  description: sf_aes_iv_w3
   addressOffset: 0x2c
   resetValue: 0x00000000
   fields:
@@ -2261,7 +2155,6 @@ sf_aes_iv_w3:
       bitWidth: 32
       access: read-write
 sf_aes_start:
-  description: sf_aes_start
   addressOffset: 0x30
   resetValue: 0x00000000
   fields:
@@ -2286,7 +2179,6 @@ sf_aes_start:
       bitWidth: 1
       access: read-write
 sf_aes_end:
-  description: sf_aes_end
   addressOffset: 0x34
   resetValue: 0x00003FFF
   fields:

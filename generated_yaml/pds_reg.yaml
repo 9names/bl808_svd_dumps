@@ -1,5 +1,4 @@
-PDS_CTL:
-  description: PDS_CTL
+pds_ctl:
   addressOffset: 0x0
   resetValue: 0x14006B00
   fields:
@@ -111,8 +110,7 @@ PDS_CTL:
       bitOffset: 31
       bitWidth: 1
       access: read-write
-PDS_TIME1:
-  description: PDS_TIME1
+pds_time1:
   addressOffset: 0x4
   resetValue: 0x00000CA8
   fields:
@@ -120,8 +118,7 @@ PDS_TIME1:
       bitOffset: 0
       bitWidth: 32
       access: read-write
-PDS_INT:
-  description: PDS_INT
+pds_int:
   addressOffset: 0xC
   resetValue: 0x001FFC00
   fields:
@@ -173,8 +170,7 @@ PDS_INT:
       bitOffset: 21
       bitWidth: 11
       access: read-only
-PDS_CTL2:
-  description: PDS_CTL2
+pds_ctl2:
   addressOffset: 0x10
   resetValue: 0x00022222
   fields:
@@ -262,8 +258,7 @@ PDS_CTL2:
       bitOffset: 20
       bitWidth: 12
       access: read-only
-PDS_CTL3:
-  description: PDS_CTL3
+pds_ctl3:
   addressOffset: 0x14
   resetValue: 0x64000000
   fields:
@@ -331,8 +326,7 @@ PDS_CTL3:
       bitOffset: 31
       bitWidth: 1
       access: read-only
-PDS_CTL4:
-  description: PDS_CTL4
+pds_ctl4:
   addressOffset: 0x18
   resetValue: 0x0FF0EF0E
   fields:
@@ -429,7 +423,6 @@ PDS_CTL4:
       bitWidth: 4
       access: read-only
 pds_stat:
-  description: pds_stat
   addressOffset: 0x1C
   resetValue: 0x00000000
   fields:
@@ -462,7 +455,6 @@ pds_stat:
       bitWidth: 1
       access: write-only
 pds_ram1:
-  description: pds_ram1
   addressOffset: 0x20
   resetValue: 0x00180800
   fields:
@@ -522,8 +514,7 @@ pds_ram1:
       bitOffset: 31
       bitWidth: 1
       access: read-write
-PDS_CTL5:
-  description: PDS_CTL5
+pds_ctl5:
   addressOffset: 0x24
   resetValue: 0x00070000
   fields:
@@ -571,8 +562,7 @@ PDS_CTL5:
       bitOffset: 19
       bitWidth: 13
       access: read-only
-PDS_RAM2:
-  description: PDS_RAM2
+pds_ram2:
   addressOffset: 0x28
   resetValue: 0x00000000
   fields:
@@ -589,7 +579,6 @@ PDS_RAM2:
       bitWidth: 12
       access: read-only
 pds_gpio_i_set:
-  description: pds_gpio_i_set
   addressOffset: 0x30
   resetValue: 0x00000000
   fields:
@@ -610,7 +599,6 @@ pds_gpio_i_set:
       bitWidth: 23
       access: read-only
 pds_gpio_pd_set:
-  description: pds_gpio_pd_set
   addressOffset: 0x34
   resetValue: 0xFFFFFFFF
   fields:
@@ -619,7 +607,6 @@ pds_gpio_pd_set:
       bitWidth: 32
       access: read-write
 pds_gpio_int:
-  description: pds_gpio_int
   addressOffset: 0x40
   resetValue: 0x00000000
   fields:
@@ -688,7 +675,6 @@ pds_gpio_int:
       bitWidth: 4
       access: read-write
 pds_gpio_stat:
-  description: pds_gpio_stat
   addressOffset: 0x44
   resetValue: 0x00000000
   fields:
@@ -697,7 +683,6 @@ pds_gpio_stat:
       bitWidth: 32
       access: read-only
 cpu_core_cfg0:
-  description: cpu_core_cfg0
   addressOffset: 0x110
   resetValue: 0x00000000
   fields:
@@ -722,7 +707,6 @@ cpu_core_cfg0:
       bitWidth: 1
       access: read-only
 cpu_core_cfg1:
-  description: cpu_core_cfg1
   addressOffset: 0x114
   resetValue: 0x00000130
   fields:
@@ -747,7 +731,6 @@ cpu_core_cfg1:
       bitWidth: 23
       access: read-only
 cpu_core_cfg7:
-  description: cpu_core_cfg7
   addressOffset: 0x12C
   resetValue: 0x00000001
   fields:
@@ -772,7 +755,6 @@ cpu_core_cfg7:
       bitWidth: 1
       access: read-write
 cpu_core_cfg8:
-  description: cpu_core_cfg8
   addressOffset: 0x130
   resetValue: 0x0000000A
   fields:
@@ -793,7 +775,6 @@ cpu_core_cfg8:
       bitWidth: 1
       access: read-write
 cpu_core_cfg9:
-  description: cpu_core_cfg9
   addressOffset: 0x134
   resetValue: 0x00000000
   fields:
@@ -802,7 +783,6 @@ cpu_core_cfg9:
       bitWidth: 32
       access: read-only
 cpu_core_cfg10:
-  description: cpu_core_cfg10
   addressOffset: 0x138
   resetValue: 0x00000000
   fields:
@@ -811,7 +791,6 @@ cpu_core_cfg10:
       bitWidth: 32
       access: read-only
 cpu_core_cfg12:
-  description: cpu_core_cfg12
   addressOffset: 0x140
   resetValue: 0x00000000
   fields:
@@ -832,7 +811,6 @@ cpu_core_cfg12:
       bitWidth: 4
       access: read-only
 cpu_core_cfg13:
-  description: cpu_core_cfg13
   addressOffset: 0x144
   resetValue: 0x22010000
   fields:
@@ -841,7 +819,6 @@ cpu_core_cfg13:
       bitWidth: 32
       access: read-write
 cpu_core_cfg14:
-  description: cpu_core_cfg14
   addressOffset: 0x148
   resetValue: 0x90000000
   fields:
@@ -850,7 +827,6 @@ cpu_core_cfg14:
       bitWidth: 32
       access: read-write
 tzc_pds:
-  description: tzc_pds
   addressOffset: 0x14C
   resetValue: 0x00000000
   fields:
@@ -867,7 +843,6 @@ tzc_pds:
       bitWidth: 30
       access: read-only
 rc32m_ctrl0:
-  description: rc32m_ctrl0
   addressOffset: 0x300
   resetValue: 0x18080018
   fields:
@@ -928,7 +903,6 @@ rc32m_ctrl0:
       bitWidth: 2
       access: read-only
 rc32m_ctrl1:
-  description: rc32m_ctrl1
   addressOffset: 0x304
   resetValue: 0x0F000000
   fields:
@@ -961,7 +935,6 @@ rc32m_ctrl1:
       bitWidth: 8
       access: read-write
 pu_rst_clkpll:
-  description: pu_rst_clkpll
   addressOffset: 0x400
   resetValue: 0x00000000
   fields:
@@ -982,7 +955,6 @@ pu_rst_clkpll:
       bitWidth: 21
       access: read-only
 usb_ctl:
-  description: usb_ctl
   addressOffset: 0x500
   resetValue: 0x00000021
   fields:
@@ -1015,7 +987,6 @@ usb_ctl:
       bitWidth: 26
       access: read-only
 usb_phy_ctrl:
-  description: usb_phy_ctrl
   addressOffset: 0x504
   resetValue: 0x00000000
   fields:
@@ -1230,8 +1201,7 @@ touch3:
       bitOffset: 19
       bitWidth: 13
       access: read-only
-Touch_sleep_time:
-  description: Touch_sleep_time
+touch_sleep_time:
   addressOffset: 0xA0C
   resetValue: 0x0007FFFF
   fields:
@@ -1244,7 +1214,6 @@ Touch_sleep_time:
       bitWidth: 9
       access: read-only
 touch_data_hystersis:
-  description: touch_data_hystersis
   addressOffset: 0xA10
   resetValue: 0x00000000
   fields:
@@ -1256,8 +1225,7 @@ touch_data_hystersis:
       bitOffset: 9
       bitWidth: 23
       access: read-only
-Channel_force_data_0:
-  description: Channel_force_data_0
+channel_force_data_0:
   addressOffset: 0xA14
   resetValue: 0x04000400
   fields:
@@ -1269,8 +1237,7 @@ Channel_force_data_0:
       bitOffset: 16
       bitWidth: 16
       access: read-write
-Channel_force_data_1:
-  description: Channel_force_data_1
+channel_force_data_1:
   addressOffset: 0xA18
   resetValue: 0x04000400
   fields:
@@ -1282,8 +1249,7 @@ Channel_force_data_1:
       bitOffset: 16
       bitWidth: 16
       access: read-write
-Channel_force_data_2:
-  description: Channel_force_data_2
+channel_force_data_2:
   addressOffset: 0xA1C
   resetValue: 0x04000400
   fields:
@@ -1295,8 +1261,7 @@ Channel_force_data_2:
       bitOffset: 16
       bitWidth: 16
       access: read-write
-Channel_force_data_3:
-  description: Channel_force_data_3
+channel_force_data_3:
   addressOffset: 0xA20
   resetValue: 0x04000400
   fields:
@@ -1308,8 +1273,7 @@ Channel_force_data_3:
       bitOffset: 16
       bitWidth: 16
       access: read-write
-Channel_force_data_4:
-  description: Channel_force_data_4
+channel_force_data_4:
   addressOffset: 0xA24
   resetValue: 0x04000400
   fields:
@@ -1321,8 +1285,7 @@ Channel_force_data_4:
       bitOffset: 16
       bitWidth: 16
       access: read-write
-Channel_force_data_5:
-  description: Channel_force_data_5
+channel_force_data_5:
   addressOffset: 0xA28
   resetValue: 0x04000400
   fields:
@@ -1334,8 +1297,7 @@ Channel_force_data_5:
       bitOffset: 16
       bitWidth: 16
       access: read-write
-Channel_vth_data_0:
-  description: Channel_vth_data_0
+channel_vth_data_0:
   addressOffset: 0xA2C
   resetValue: 0x3F3F3F3F
   fields:
@@ -1355,8 +1317,7 @@ Channel_vth_data_0:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-Channel_vth_data_1:
-  description: Channel_vth_data_1
+channel_vth_data_1:
   addressOffset: 0xA30
   resetValue: 0x3F1F1F1F
   fields:
@@ -1376,8 +1337,7 @@ Channel_vth_data_1:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-Channel_vth_data_2:
-  description: Channel_vth_data_2
+channel_vth_data_2:
   addressOffset: 0xA34
   resetValue: 0x3F3F3F3F
   fields:
@@ -1397,8 +1357,7 @@ Channel_vth_data_2:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-Channel_raw_data_0:
-  description: Channel_raw_data_0
+channel_raw_data_0:
   addressOffset: 0xA38
   resetValue: 0x00000000
   fields:
@@ -1410,8 +1369,7 @@ Channel_raw_data_0:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_1:
-  description: Channel_raw_data_1
+channel_raw_data_1:
   addressOffset: 0xA3C
   resetValue: 0x00000000
   fields:
@@ -1423,8 +1381,7 @@ Channel_raw_data_1:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_2:
-  description: Channel_raw_data_2
+channel_raw_data_2:
   addressOffset: 0xA40
   resetValue: 0x00000000
   fields:
@@ -1436,8 +1393,7 @@ Channel_raw_data_2:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_3:
-  description: Channel_raw_data_3
+channel_raw_data_3:
   addressOffset: 0xA44
   resetValue: 0x00000000
   fields:
@@ -1449,8 +1405,7 @@ Channel_raw_data_3:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_4:
-  description: Channel_raw_data_4
+channel_raw_data_4:
   addressOffset: 0xA48
   resetValue: 0x00000000
   fields:
@@ -1462,8 +1417,7 @@ Channel_raw_data_4:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_5:
-  description: Channel_raw_data_5
+channel_raw_data_5:
   addressOffset: 0xA4C
   resetValue: 0x00000000
   fields:
@@ -1475,8 +1429,7 @@ Channel_raw_data_5:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_6:
-  description: Channel_raw_data_6
+channel_raw_data_6:
   addressOffset: 0xA50
   resetValue: 0x00000000
   fields:
@@ -1488,8 +1441,7 @@ Channel_raw_data_6:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_7:
-  description: Channel_raw_data_7
+channel_raw_data_7:
   addressOffset: 0xA54
   resetValue: 0x00000000
   fields:
@@ -1501,8 +1453,7 @@ Channel_raw_data_7:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_8:
-  description: Channel_raw_data_8
+channel_raw_data_8:
   addressOffset: 0xA58
   resetValue: 0x00000000
   fields:
@@ -1514,8 +1465,7 @@ Channel_raw_data_8:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_9:
-  description: Channel_raw_data_9
+channel_raw_data_9:
   addressOffset: 0xA5C
   resetValue: 0x00000000
   fields:
@@ -1527,8 +1477,7 @@ Channel_raw_data_9:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_10:
-  description: Channel_raw_data_10
+channel_raw_data_10:
   addressOffset: 0xA60
   resetValue: 0x00000000
   fields:
@@ -1540,8 +1489,7 @@ Channel_raw_data_10:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_raw_data_11:
-  description: Channel_raw_data_11
+channel_raw_data_11:
   addressOffset: 0xA64
   resetValue: 0x00000000
   fields:
@@ -1553,8 +1501,7 @@ Channel_raw_data_11:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_0:
-  description: Channel_LTA_data_0
+channel_lta_data_0:
   addressOffset: 0xA68
   resetValue: 0x00000000
   fields:
@@ -1566,8 +1513,7 @@ Channel_LTA_data_0:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_1:
-  description: Channel_LTA_data_1
+channel_lta_data_1:
   addressOffset: 0xA6C
   resetValue: 0x00000000
   fields:
@@ -1579,8 +1525,7 @@ Channel_LTA_data_1:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_2:
-  description: Channel_LTA_data_2
+channel_lta_data_2:
   addressOffset: 0xA70
   resetValue: 0x00000000
   fields:
@@ -1592,8 +1537,7 @@ Channel_LTA_data_2:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_3:
-  description: Channel_LTA_data_3
+channel_lta_data_3:
   addressOffset: 0xA74
   resetValue: 0x00000000
   fields:
@@ -1605,8 +1549,7 @@ Channel_LTA_data_3:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_4:
-  description: Channel_LTA_data_4
+channel_lta_data_4:
   addressOffset: 0xA78
   resetValue: 0x00000000
   fields:
@@ -1618,8 +1561,7 @@ Channel_LTA_data_4:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_5:
-  description: Channel_LTA_data_5
+channel_lta_data_5:
   addressOffset: 0xA7C
   resetValue: 0x00000000
   fields:
@@ -1631,8 +1573,7 @@ Channel_LTA_data_5:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_6:
-  description: Channel_LTA_data_6
+channel_lta_data_6:
   addressOffset: 0xA80
   resetValue: 0x00000000
   fields:
@@ -1644,8 +1585,7 @@ Channel_LTA_data_6:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_7:
-  description: Channel_LTA_data_7
+channel_lta_data_7:
   addressOffset: 0xA84
   resetValue: 0x00000000
   fields:
@@ -1657,8 +1597,7 @@ Channel_LTA_data_7:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_8:
-  description: Channel_LTA_data_8
+channel_lta_data_8:
   addressOffset: 0xA88
   resetValue: 0x00000000
   fields:
@@ -1670,8 +1609,7 @@ Channel_LTA_data_8:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_9:
-  description: Channel_LTA_data_9
+channel_lta_data_9:
   addressOffset: 0xA8C
   resetValue: 0x00000000
   fields:
@@ -1683,8 +1621,7 @@ Channel_LTA_data_9:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_10:
-  description: Channel_LTA_data_10
+channel_lta_data_10:
   addressOffset: 0xA90
   resetValue: 0x00000000
   fields:
@@ -1696,8 +1633,7 @@ Channel_LTA_data_10:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_LTA_data_11:
-  description: Channel_LTA_data_11
+channel_lta_data_11:
   addressOffset: 0xA94
   resetValue: 0x00000000
   fields:
@@ -1709,8 +1645,7 @@ Channel_LTA_data_11:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_0:
-  description: Channel_FLT_data_0
+channel_flt_data_0:
   addressOffset: 0xA98
   resetValue: 0x00000000
   fields:
@@ -1722,8 +1657,7 @@ Channel_FLT_data_0:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_1:
-  description: Channel_FLT_data_1
+channel_flt_data_1:
   addressOffset: 0xA9C
   resetValue: 0x00000000
   fields:
@@ -1735,8 +1669,7 @@ Channel_FLT_data_1:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_2:
-  description: Channel_FLT_data_2
+channel_flt_data_2:
   addressOffset: 0xAA0
   resetValue: 0x00000000
   fields:
@@ -1748,8 +1681,7 @@ Channel_FLT_data_2:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_3:
-  description: Channel_FLT_data_3
+channel_flt_data_3:
   addressOffset: 0xAA4
   resetValue: 0x00000000
   fields:
@@ -1761,8 +1693,7 @@ Channel_FLT_data_3:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_4:
-  description: Channel_FLT_data_4
+channel_flt_data_4:
   addressOffset: 0xAA8
   resetValue: 0x00000000
   fields:
@@ -1774,8 +1705,7 @@ Channel_FLT_data_4:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_5:
-  description: Channel_FLT_data_5
+channel_flt_data_5:
   addressOffset: 0xAAC
   resetValue: 0x00000000
   fields:
@@ -1787,8 +1717,7 @@ Channel_FLT_data_5:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_6:
-  description: Channel_FLT_data_6
+channel_flt_data_6:
   addressOffset: 0xAB0
   resetValue: 0x00000000
   fields:
@@ -1800,8 +1729,7 @@ Channel_FLT_data_6:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_7:
-  description: Channel_FLT_data_7
+channel_flt_data_7:
   addressOffset: 0xAB4
   resetValue: 0x00000000
   fields:
@@ -1813,8 +1741,7 @@ Channel_FLT_data_7:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_8:
-  description: Channel_FLT_data_8
+channel_flt_data_8:
   addressOffset: 0xAB8
   resetValue: 0x00000000
   fields:
@@ -1826,8 +1753,7 @@ Channel_FLT_data_8:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_9:
-  description: Channel_FLT_data_9
+channel_flt_data_9:
   addressOffset: 0xABC
   resetValue: 0x00000000
   fields:
@@ -1839,8 +1765,7 @@ Channel_FLT_data_9:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_10:
-  description: Channel_FLT_data_10
+channel_flt_data_10:
   addressOffset: 0xAC0
   resetValue: 0x00000000
   fields:
@@ -1852,8 +1777,7 @@ Channel_FLT_data_10:
       bitOffset: 16
       bitWidth: 16
       access: read-only
-Channel_FLT_data_11:
-  description: Channel_FLT_data_11
+channel_flt_data_11:
   addressOffset: 0xAC4
   resetValue: 0x00000000
   fields:
@@ -1866,7 +1790,6 @@ Channel_FLT_data_11:
       bitWidth: 16
       access: read-only
 touch_rsvd:
-  description: touch_rsvd
   addressOffset: 0xAC8
   resetValue: 0x00000000
   fields:
@@ -1879,7 +1802,6 @@ touch_rsvd:
       bitWidth: 24
       access: read-only
 touch_int_setting:
-  description: touch_int_setting
   addressOffset: 0xACC
   resetValue: 0x80000000
   fields:
@@ -1904,7 +1826,6 @@ touch_int_setting:
       bitWidth: 1
       access: read-write
 touch_int_status:
-  description: touch_int_status
   addressOffset: 0xAD0
   resetValue: 0x00000000
   fields:

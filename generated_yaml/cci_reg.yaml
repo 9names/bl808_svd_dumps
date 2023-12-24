@@ -1,5 +1,4 @@
 cci_cfg:
-  description: cci_cfg
   addressOffset: 0x0
   resetValue: 0x00000221
   fields:
@@ -44,7 +43,6 @@ cci_cfg:
       bitWidth: 22
       access: read-only
 cci_addr:
-  description: cci_addr
   addressOffset: 0x4
   resetValue: 0x00000000
   fields:
@@ -53,7 +51,6 @@ cci_addr:
       bitWidth: 32
       access: read-write
 cci_wdata:
-  description: cci_wdata
   addressOffset: 0x8
   resetValue: 0x00000000
   fields:
@@ -62,7 +59,6 @@ cci_wdata:
       bitWidth: 32
       access: read-write
 cci_rdata:
-  description: cci_rdata
   addressOffset: 0xC
   resetValue: 0x00000000
   fields:
@@ -71,7 +67,6 @@ cci_rdata:
       bitWidth: 32
       access: read-only
 cci_ctl:
-  description: cci_ctl
   addressOffset: 0x10
   resetValue: 0x00000000
   fields:
@@ -92,7 +87,6 @@ cci_ctl:
       bitWidth: 28
       access: read-only
 audio_pll_cfg0:
-  description: audio_pll_cfg0
   addressOffset: 0x750
   resetValue: 0x000009FF
   fields:
@@ -149,7 +143,6 @@ audio_pll_cfg0:
       bitWidth: 20
       access: read-only
 audio_pll_cfg1:
-  description: audio_pll_cfg1
   addressOffset: 0x754
   resetValue: 0x01100412
   fields:
@@ -194,7 +187,6 @@ audio_pll_cfg1:
       bitWidth: 6
       access: read-only
 audio_pll_cfg2:
-  description: audio_pll_cfg2
   addressOffset: 0x758
   resetValue: 0x00000741
   fields:
@@ -231,7 +223,6 @@ audio_pll_cfg2:
       bitWidth: 21
       access: read-only
 audio_pll_cfg3:
-  description: audio_pll_cfg3
   addressOffset: 0x75C
   resetValue: 0x0005A021
   fields:
@@ -276,7 +267,6 @@ audio_pll_cfg3:
       bitWidth: 13
       access: read-only
 audio_pll_cfg4:
-  description: audio_pll_cfg4
   addressOffset: 0x760
   resetValue: 0x00000111
   fields:
@@ -305,7 +295,6 @@ audio_pll_cfg4:
       bitWidth: 23
       access: read-only
 audio_pll_cfg5:
-  description: audio_pll_cfg5
   addressOffset: 0x764
   resetValue: 0x00000003
   fields:
@@ -318,7 +307,6 @@ audio_pll_cfg5:
       bitWidth: 29
       access: read-only
 audio_pll_cfg6:
-  description: audio_pll_cfg6
   addressOffset: 0x768
   resetValue: 0x000161E5
   fields:
@@ -339,7 +327,6 @@ audio_pll_cfg6:
       bitWidth: 7
       access: read-only
 audio_pll_cfg7:
-  description: audio_pll_cfg7
   addressOffset: 0x76C
   resetValue: 0x00000001
   fields:
@@ -360,7 +347,6 @@ audio_pll_cfg7:
       bitWidth: 14
       access: read-only
 audio_pll_cfg8:
-  description: audio_pll_cfg8
   addressOffset: 0x770
   resetValue: 0x00000000
   fields:
@@ -409,7 +395,6 @@ audio_pll_cfg8:
       bitWidth: 22
       access: read-only
 audio_pll_cfg9:
-  description: audio_pll_cfg9
   addressOffset: 0x774
   resetValue: 0x00000400
   fields:
@@ -462,7 +447,6 @@ audio_pll_cfg9:
       bitWidth: 21
       access: read-only
 audio_pll_cfg10:
-  description: audio_pll_cfg10
   addressOffset: 0x778
   resetValue: 0x00104640
   fields:
@@ -503,7 +487,6 @@ audio_pll_cfg10:
       bitWidth: 11
       access: read-only
 audio_pll_cfg11:
-  description: audio_pll_cfg11
   addressOffset: 0x77C
   resetValue: 0x00000000
   fields:
@@ -552,7 +535,6 @@ audio_pll_cfg11:
       bitWidth: 1
       access: read-write
 cpu_pll_cfg0:
-  description: cpu_pll_cfg0
   addressOffset: 0x7D0
   resetValue: 0x000009EF
   fields:
@@ -609,7 +591,6 @@ cpu_pll_cfg0:
       bitWidth: 20
       access: read-only
 cpu_pll_cfg1:
-  description: cpu_pll_cfg1
   addressOffset: 0x7D4
   resetValue: 0x01100418
   fields:
@@ -654,7 +635,6 @@ cpu_pll_cfg1:
       bitWidth: 6
       access: read-only
 cpu_pll_cfg2:
-  description: cpu_pll_cfg2
   addressOffset: 0x7D8
   resetValue: 0x00000741
   fields:
@@ -691,7 +671,6 @@ cpu_pll_cfg2:
       bitWidth: 21
       access: read-only
 cpu_pll_cfg3:
-  description: cpu_pll_cfg3
   addressOffset: 0x7DC
   resetValue: 0x0005A021
   fields:
@@ -736,7 +715,6 @@ cpu_pll_cfg3:
       bitWidth: 13
       access: read-only
 cpu_pll_cfg4:
-  description: cpu_pll_cfg4
   addressOffset: 0x7E0
   resetValue: 0x00000111
   fields:
@@ -765,7 +743,6 @@ cpu_pll_cfg4:
       bitWidth: 23
       access: read-only
 cpu_pll_cfg5:
-  description: cpu_pll_cfg5
   addressOffset: 0x7E4
   resetValue: 0x00000003
   fields:
@@ -778,7 +755,6 @@ cpu_pll_cfg5:
       bitWidth: 29
       access: read-only
 cpu_pll_cfg6:
-  description: cpu_pll_cfg6
   addressOffset: 0x7E8
   resetValue: 0x000161E5
   fields:
@@ -799,7 +775,6 @@ cpu_pll_cfg6:
       bitWidth: 7
       access: read-only
 cpu_pll_cfg7:
-  description: cpu_pll_cfg7
   addressOffset: 0x7EC
   resetValue: 0x00000001
   fields:
@@ -820,7 +795,6 @@ cpu_pll_cfg7:
       bitWidth: 14
       access: read-only
 cpu_pll_cfg8:
-  description: cpu_pll_cfg8
   addressOffset: 0x7F0
   resetValue: 0x00000001
   fields:
@@ -869,7 +843,6 @@ cpu_pll_cfg8:
       bitWidth: 22
       access: read-only
 cpu_pll_cfg9:
-  description: cpu_pll_cfg9
   addressOffset: 0x7F4
   resetValue: 0x00000400
   fields:
@@ -922,7 +895,6 @@ cpu_pll_cfg9:
       bitWidth: 21
       access: read-only
 cpu_pll_cfg10:
-  description: cpu_pll_cfg10
   addressOffset: 0x7F8
   resetValue: 0x00104640
   fields:
@@ -963,7 +935,6 @@ cpu_pll_cfg10:
       bitWidth: 11
       access: read-only
 cpu_pll_cfg11:
-  description: cpu_pll_cfg11
   addressOffset: 0x7FC
   resetValue: 0x00000000
   fields:

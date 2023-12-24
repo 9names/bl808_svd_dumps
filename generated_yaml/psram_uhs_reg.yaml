@@ -1,5 +1,4 @@
-UHS_basic:
-  description: UHS_basic
+uhs_basic:
   addressOffset: 0x0
   resetValue: 0xA01F0000
   fields:
@@ -27,7 +26,7 @@ UHS_basic:
       bitOffset: 8
       bitWidth: 8
       access: read-write
-    reg_addrMB_msk:
+    reg_addrmb_msk:
       bitOffset: 16
       bitWidth: 8
       access: read-write
@@ -39,8 +38,7 @@ UHS_basic:
       bitOffset: 28
       bitWidth: 4
       access: read-write
-UHS_cmd:
-  description: UHS_cmd
+uhs_cmd:
   addressOffset: 0x4
   resetValue: 0x00000000
   fields:
@@ -100,8 +98,7 @@ UHS_cmd:
       bitOffset: 24
       bitWidth: 8
       access: read-only
-UHS_fifo_thre:
-  description: UHS_fifo_thre
+uhs_fifo_thre:
   addressOffset: 0x8
   resetValue: 0x00000000
   fields:
@@ -113,8 +110,7 @@ UHS_fifo_thre:
       bitOffset: 16
       bitWidth: 16
       access: read-write
-UHS_manual:
-  description: UHS_manual
+uhs_manual:
   addressOffset: 0xC
   resetValue: 0x4000001C
   fields:
@@ -154,8 +150,7 @@ UHS_manual:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-UHS_auto_fresh_1:
-  description: UHS_auto_fresh_1
+uhs_auto_fresh_1:
   addressOffset: 0x10
   resetValue: 0x00027100
   fields:
@@ -167,8 +162,7 @@ UHS_auto_fresh_1:
       bitOffset: 28
       bitWidth: 4
       access: read-only
-UHS_auto_fresh_2:
-  description: UHS_auto_fresh_2
+uhs_auto_fresh_2:
   addressOffset: 0x14
   resetValue: 0x10000027
   fields:
@@ -184,8 +178,7 @@ UHS_auto_fresh_2:
       bitOffset: 29
       bitWidth: 3
       access: read-only
-UHS_auto_fresh_3:
-  description: UHS_auto_fresh_3
+uhs_auto_fresh_3:
   addressOffset: 0x18
   resetValue: 0x00000000
   fields:
@@ -205,8 +198,7 @@ UHS_auto_fresh_3:
       bitOffset: 28
       bitWidth: 4
       access: read-only
-UHS_auto_fresh_4:
-  description: UHS_auto_fresh_4
+uhs_auto_fresh_4:
   addressOffset: 0x1C
   resetValue: 0x0000001D
   fields:
@@ -218,8 +210,7 @@ UHS_auto_fresh_4:
       bitOffset: 7
       bitWidth: 25
       access: read-only
-UHS_psram_configure:
-  description: UHS_psram_configure
+uhs_psram_configure:
   addressOffset: 0x20
   resetValue: 0x000000A5
   fields:
@@ -251,8 +242,7 @@ UHS_psram_configure:
       bitOffset: 11
       bitWidth: 21
       access: read-only
-UHS_psram_status:
-  description: UHS_psram_status
+uhs_psram_status:
   addressOffset: 0x24
   resetValue: 0x000000A5
   fields:
@@ -284,8 +274,7 @@ UHS_psram_status:
       bitOffset: 11
       bitWidth: 21
       access: read-only
-UHS_timing_ctrl:
-  description: UHS_timing_ctrl
+uhs_timing_ctrl:
   addressOffset: 0x30
   resetValue: 0x00000000
   fields:
@@ -305,8 +294,7 @@ UHS_timing_ctrl:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-UHS_rsvd_reg:
-  description: UHS_rsvd_reg
+uhs_rsvd_reg:
   addressOffset: 0x34
   resetValue: 0x00000000
   fields:
@@ -326,8 +314,7 @@ UHS_rsvd_reg:
       bitOffset: 6
       bitWidth: 26
       access: read-only
-UHS_dbg_sel:
-  description: UHS_dbg_sel
+uhs_dbg_sel:
   addressOffset: 0xC0
   resetValue: 0x00000000
   fields:
@@ -347,8 +334,7 @@ UHS_dbg_sel:
       bitOffset: 8
       bitWidth: 24
       access: read-only
-UHS_dummy_reg:
-  description: UHS_dummy_reg
+uhs_dummy_reg:
   addressOffset: 0xF0
   resetValue: 0xFFFF0000
   fields:
@@ -357,7 +343,6 @@ UHS_dummy_reg:
       bitWidth: 32
       access: read-write
 phy_cfg_00:
-  description: phy_cfg_00
   addressOffset: 0x100
   resetValue: 0x80080000
   fields:
@@ -398,7 +383,6 @@ phy_cfg_00:
       bitWidth: 4
       access: read-write
 phy_cfg_04:
-  description: phy_cfg_04
   addressOffset: 0x104
   resetValue: 0x80008000
   fields:
@@ -435,7 +419,6 @@ phy_cfg_04:
       bitWidth: 4
       access: read-write
 phy_cfg_08:
-  description: phy_cfg_08
   addressOffset: 0x108
   resetValue: 0x81008100
   fields:
@@ -471,8 +454,7 @@ phy_cfg_08:
       bitOffset: 28
       bitWidth: 4
       access: read-write
-phy_cfg_0C:
-  description: phy_cfg_0C
+phy_cfg_0c:
   addressOffset: 0x10C
   resetValue: 0x81008100
   fields:
@@ -509,7 +491,6 @@ phy_cfg_0C:
       bitWidth: 4
       access: read-write
 phy_cfg_10:
-  description: phy_cfg_10
   addressOffset: 0x110
   resetValue: 0x81008100
   fields:
@@ -546,7 +527,6 @@ phy_cfg_10:
       bitWidth: 4
       access: read-write
 phy_cfg_14:
-  description: phy_cfg_14
   addressOffset: 0x114
   resetValue: 0x81008100
   fields:
@@ -583,7 +563,6 @@ phy_cfg_14:
       bitWidth: 4
       access: read-write
 phy_cfg_18:
-  description: phy_cfg_18
   addressOffset: 0x118
   resetValue: 0x81008100
   fields:
@@ -619,8 +598,7 @@ phy_cfg_18:
       bitOffset: 28
       bitWidth: 4
       access: read-write
-phy_cfg_1C:
-  description: phy_cfg_1C
+phy_cfg_1c:
   addressOffset: 0x11C
   resetValue: 0x81008100
   fields:
@@ -657,7 +635,6 @@ phy_cfg_1C:
       bitWidth: 4
       access: read-write
 phy_cfg_20:
-  description: phy_cfg_20
   addressOffset: 0x120
   resetValue: 0x81008100
   fields:
@@ -694,7 +671,6 @@ phy_cfg_20:
       bitWidth: 4
       access: read-write
 phy_cfg_24:
-  description: phy_cfg_24
   addressOffset: 0x124
   resetValue: 0x81008100
   fields:
@@ -731,7 +707,6 @@ phy_cfg_24:
       bitWidth: 4
       access: read-write
 phy_cfg_28:
-  description: phy_cfg_28
   addressOffset: 0x128
   resetValue: 0x38300300
   fields:
@@ -767,8 +742,7 @@ phy_cfg_28:
       bitOffset: 28
       bitWidth: 4
       access: read-write
-phy_cfg_2C:
-  description: phy_cfg_2C
+phy_cfg_2c:
   addressOffset: 0x12C
   resetValue: 0x38300306
   fields:
@@ -817,7 +791,6 @@ phy_cfg_2C:
       bitWidth: 4
       access: read-write
 phy_cfg_30:
-  description: phy_cfg_30
   addressOffset: 0x130
   resetValue: 0xAA331020
   fields:
@@ -882,7 +855,6 @@ phy_cfg_30:
       bitWidth: 4
       access: read-write
 phy_cfg_34:
-  description: phy_cfg_34
   addressOffset: 0x134
   resetValue: 0x05000101
   fields:
@@ -903,7 +875,6 @@ phy_cfg_34:
       bitWidth: 8
       access: read-write
 phy_cfg_38:
-  description: phy_cfg_38
   addressOffset: 0x138
   resetValue: 0x02080107
   fields:
@@ -923,8 +894,7 @@ phy_cfg_38:
       bitOffset: 24
       bitWidth: 8
       access: read-write
-phy_cfg_3C:
-  description: phy_cfg_3C
+phy_cfg_3c:
   addressOffset: 0x13C
   resetValue: 0x02720808
   fields:
@@ -945,7 +915,6 @@ phy_cfg_3C:
       bitWidth: 2
       access: read-only
 phy_cfg_40:
-  description: phy_cfg_40
   addressOffset: 0x140
   resetValue: 0xA2FF0000
   fields:
@@ -998,7 +967,6 @@ phy_cfg_40:
       bitWidth: 1
       access: read-write
 phy_cfg_44:
-  description: phy_cfg_44
   addressOffset: 0x144
   resetValue: 0x040B0308
   fields:
@@ -1019,7 +987,6 @@ phy_cfg_44:
       bitWidth: 8
       access: read-write
 phy_cfg_48:
-  description: phy_cfg_48
   addressOffset: 0x148
   resetValue: 0x00208908
   fields:
@@ -1075,8 +1042,7 @@ phy_cfg_48:
       bitOffset: 24
       bitWidth: 8
       access: read-only
-phy_cfg_4C:
-  description: phy_cfg_4C
+phy_cfg_4c:
   addressOffset: 0x14C
   resetValue: 0x00130000
   fields:
@@ -1097,7 +1063,6 @@ phy_cfg_4C:
       bitWidth: 11
       access: read-only
 phy_cfg_50:
-  description: phy_cfg_50
   addressOffset: 0x150
   resetValue: 0x01444444
   fields:
